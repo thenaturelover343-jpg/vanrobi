@@ -1,3 +1,4 @@
+import { withBase } from "./base";
 export type Product = {
   id: string;
   index: string;
@@ -18,7 +19,7 @@ export const products: Product[] = [
     badge: "Events · Over-bar",
     description:
       "Compacte mobiele koeler voor events, beurzen en craft. Over-bar installatie — gepatenteerd door Golderos.",
-    image: "/assets/products/goldy.jpg",
+    image: withBase("/assets/products/goldy.jpg"),
     alt: "Golderos Goldy — compacte over-bar ijsbankkoeler met twee kranen",
     cropClass: "crop-goldy",
     specs: [
@@ -37,7 +38,7 @@ export const products: Product[] = [
     badge: "Horeca · Onder-bar",
     description:
       "Vaste onder-bar installatie in medium formaat. Stabiel debiet voor restaurants en bars met beperkte ruimte.",
-    image: "/assets/products/v100.jpg",
+    image: withBase("/assets/products/v100.jpg"),
     alt: "Golderos V100 — verticale onder-bar ijsbankkoeler",
     cropClass: "crop-v100",
     specs: [
@@ -56,7 +57,7 @@ export const products: Product[] = [
     badge: "Events · Mobiel",
     description:
       "Mobiele V100 voor festivals en feesten. Klaar voor snelle opbouw — optioneel met zuil en kranen.",
-    image: "/assets/products/v100-portable.jpg",
+    image: withBase("/assets/products/v100-portable.jpg"),
     alt: "Golderos V100 portable — mobiele eventkoeler op wielen met tapzuil",
     cropClass: "crop-v100p",
     specs: [
@@ -75,7 +76,7 @@ export const products: Product[] = [
     badge: "High volume · Onder-bar",
     description:
       "Voor drukke bars en high-volume service. Maximale ijsreserve en debiet — ook als horizontale variant.",
-    image: "/assets/products/v200.jpg",
+    image: withBase("/assets/products/v200.jpg"),
     alt: "Golderos V200 — grote verticale onder-bar ijsbankkoeler",
     cropClass: "crop-v200",
     specs: [
@@ -92,7 +93,7 @@ export const products: Product[] = [
 export const categories = [
   {
     href: "#offerte",
-    image: "/assets/cats/horeca.jpg",
+    image: withBase("/assets/cats/horeca.jpg"),
     alt: "Bier tappen aan een professionele zuil",
     index: "01",
     label: "Horeca vast",
@@ -100,7 +101,7 @@ export const categories = [
   },
   {
     href: "#offerte",
-    image: "/assets/cats/events.jpg",
+    image: withBase("/assets/cats/events.jpg"),
     alt: "Festivalterrein met high-volume drankvoorziening",
     index: "02",
     label: "Events & festivals",
@@ -108,7 +109,7 @@ export const categories = [
   },
   {
     href: "#offerte",
-    image: "/assets/cats/craft.jpg",
+    image: withBase("/assets/cats/craft.jpg"),
     alt: "Detail van Golderos ijsbankkoeler met kraan",
     index: "03",
     label: "Craft & brouwerijen",
@@ -116,7 +117,7 @@ export const categories = [
   },
   {
     href: "#offerte",
-    image: "/assets/cats/install.jpg",
+    image: withBase("/assets/cats/install.jpg"),
     alt: "Koperen koeltechniek en compressor van een ijsbankkoeler",
     index: "04",
     label: "Installateurs",
@@ -124,7 +125,7 @@ export const categories = [
   },
   {
     href: "#offerte",
-    image: "/assets/cats/bars.jpg",
+    image: withBase("/assets/cats/bars.jpg"),
     alt: "Sfeervolle bar met professionele taplijn",
     index: "05",
     label: "Bars & restaurants",
@@ -132,7 +133,7 @@ export const categories = [
   },
   {
     href: "#offerte",
-    image: "/assets/cats/service.jpg",
+    image: withBase("/assets/cats/service.jpg"),
     alt: "Technisch detail van koelleidingen en motor",
     index: "06",
     label: "Onderdelen & service",

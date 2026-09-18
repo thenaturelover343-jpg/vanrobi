@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers: Goldy, V100, V100 portable en V200 voor horeca, events en installateurs.",
   icons: {
-    icon: "/assets/logo.svg",
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/assets/logo.svg`,
   },
 };
 

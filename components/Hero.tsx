@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { MagneticButton } from "./MagneticButton";
+import { withBase } from "@/lib/base";
 
 export function Hero() {
   const mediaRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export function Hero() {
       <div className="hero-media" data-parallax ref={mediaRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/hero-bar.jpg"
+          src={withBase("/assets/hero-bar.jpg")}
           alt="Atmosferische craft bar met professionele taplijn"
           width={2400}
           height={1800}

@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { withBase } from "@/lib/base";
 
 export function Partner() {
   return (
@@ -6,7 +7,7 @@ export function Partner() {
       <div className="partner-media">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/products/cooler-extra-2.jpg"
+          src={withBase("/assets/products/cooler-extra-2.jpg")}
           alt="Golderos professionele ijsbankkoeler — industrieel RVS"
           loading="lazy"
           width={1300}
