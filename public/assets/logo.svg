@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none" role="img" aria-label="VanRobi">
+  <path d="M8 8 L20 32 L32 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M14 20h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+  <text x="44" y="27" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="600" letter-spacing="0.04em" fill="currentColor">VanRobi</text>
+</svg>
