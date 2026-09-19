@@ -27,6 +27,12 @@ type Props = HTMLAttributes<HTMLElement> & {
   href?: string;
 };
 
+/** Enable reveal animations only when JS runs (progressive enhancement). */
+function enableJsReveal() {
+  if (typeof document === "undefined") return;
+  document.documentElement.classList.add("js-reveal");
+}
+
 export function Reveal({
   children,
   className = "",
@@ -36,6 +42,9 @@ export function Reveal({
   const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    // Gate CSS hide behind html.js-reveal before observers run
+    enableJsReveal();
+
     const el = ref.current;
     if (!el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

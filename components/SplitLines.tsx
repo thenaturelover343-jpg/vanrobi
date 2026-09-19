@@ -26,6 +26,9 @@ export function SplitLines({
   const ref = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.add("js-reveal");
+    }
     const el = ref.current;
     if (!el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

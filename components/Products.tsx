@@ -124,7 +124,11 @@ export function Products() {
             >
               <div className="prod-visual reveal-child">
                 <a href={withBase(`/producten/${p.id}/`)} className="prod-frame-link">
-                  <div className={`prod-frame ${p.cropClass} img-mask`}>
+                  <div
+                    className={`prod-frame ${p.cropClass} img-mask${
+                      p.imageKind === "diagram" ? " is-diagram" : ""
+                    }`}
+                  >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.image}
@@ -138,6 +142,9 @@ export function Products() {
                   </div>
                 </a>
                 <span className="prod-badge">{p.badge}</span>
+                {p.imageKind === "diagram" ? (
+                  <span className="diagram-badge">Technische tekening</span>
+                ) : null}
               </div>
               <div className="prod-copy">
                 <span className="prod-index reveal-child">{p.index}</span>

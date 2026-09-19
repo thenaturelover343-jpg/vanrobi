@@ -45,7 +45,11 @@ export default async function FrProductPage({ params }: Props) {
         <section className="product-detail">
           <div className="wrap product-detail-grid">
             <Reveal className="product-detail-visual">
-              <div className={`prod-frame ${p.cropClass}`}>
+              <div
+                className={`prod-frame ${p.cropClass}${
+                  p.imageKind === "diagram" ? " is-diagram" : ""
+                }`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.image}
@@ -56,6 +60,9 @@ export default async function FrProductPage({ params }: Props) {
                 />
               </div>
               <span className="prod-badge">{copy.badge}</span>
+              {p.imageKind === "diagram" ? (
+                <span className="diagram-badge">Schéma technique</span>
+              ) : null}
             </Reveal>
             <Reveal className="product-detail-copy reveal-delay-1">
               <p className="eyebrow">Golderos · via VanRobi</p>

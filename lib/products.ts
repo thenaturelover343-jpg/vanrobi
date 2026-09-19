@@ -15,6 +15,8 @@ export type Product = {
   uses: ProductUse[];
   specs: { label: string; value: string }[];
   featured?: boolean;
+  /** photo = lifestyle/product shot; diagram = technical line drawing (not a photo) */
+  imageKind?: "photo" | "diagram";
 };
 
 export const useLabels: Record<ProductUse, string> = {
@@ -81,10 +83,11 @@ export const products: Product[] = [
     longDescription:
       "Gold Ice van Golderos combineert ijsreserve met eenvoudig onderhoud. Via VanRobi beschikbaar voor Belgische en Nederlandse horeca die betrouwbare koude nodig heeft zonder complexe installatie.",
     image: withBase("/assets/products-catalog/gold-ice.jpg"),
-    alt: "Golderos Gold Ice — via VanRobi",
+    alt: "Golderos Gold Ice — technische tekening via VanRobi",
     cropClass: "crop-gold-ice",
     uses: ["horeca", "events"],
     featured: false,
+    imageKind: "diagram",
     specs: [
       { label: "Herkomst", value: "Golderos · Spanje" },
       { label: "Distributeur", value: "VanRobi · BE & NL" },

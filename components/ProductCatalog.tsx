@@ -42,7 +42,11 @@ export function ProductCatalog() {
         {filtered.map((p) => (
           <Reveal as="article" key={p.id} className="catalog-card">
             <a href={withBase(`/producten/${p.id}/`)} className="catalog-card-link">
-              <div className={`catalog-card-media ${p.cropClass}`}>
+              <div
+                className={`catalog-card-media ${p.cropClass}${
+                  p.imageKind === "diagram" ? " is-diagram" : ""
+                }`}
+              >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={p.image}
@@ -51,6 +55,9 @@ export function ProductCatalog() {
                   height={800}
                   loading="lazy"
                 />
+                {p.imageKind === "diagram" ? (
+                  <span className="diagram-badge">Technische tekening</span>
+                ) : null}
               </div>
               <div className="catalog-card-body">
                 <span className="prod-index">{p.index}</span>
