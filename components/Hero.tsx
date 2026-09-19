@@ -51,7 +51,7 @@ export function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           ref={imgRef}
-          src={withBase("/assets/hero-clean.jpg")}
+          src={withBase("/assets/hero-official.jpg")}
           alt="Golderos V200 ijsbankkoeler — professionele drankkoeling via VanRobi"
           width={2400}
           height={1500}
