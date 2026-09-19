@@ -33,12 +33,12 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <p>
  <strong>Gamko</strong> is een bekende naam in Benelux-horecakeeling
  (vaak gekoppeld aan complete tap- en koelmeubelen).{" "}
- <strong>VanRobi</strong> specialiseert zich in professionele ijsbankkoelers: van compacte over-bar (Goldy) tot high-volume onder-bar (V100, V200, V500). Ons assortiment komt uit meer dan 50 jaar Spaanse koudetechniek; VanRobi is het BE/NL-kanaal voor selectie, advies en levering.
+ <strong>VanRobi</strong> specialiseert zich in professionele ijsbankkoelers: van compacte over-bar (Goldy) tot high-volume onder-bar (V100, V200, V500). VanRobi is het merk voor selectie, advies en levering in België en Nederland — heldere specs, lokale opvolging.
  </p>
  <h2>Wanneer kiezen voor VanRobi?</h2>
  <ul className="guide-list">
  <li>U zoekt een dedicated ijsbankkoeler met heldere debiet- en ijsspecs.</li>
- <li>U wilt een officieel BE/NL-kanaal met lokale opvolging (geen grijze import).</li>
+ <li>U wilt het merk VanRobi met lokale opvolging in BE/NL (geen grijze import).</li>
  <li>Events/festivals: portable-modellen (V100/V200 portable, Goldy).</li>
  <li>Onderhoud en reiniging dichtbij via Taponderhoud.</li>
  </ul>
@@ -474,9 +474,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <p>
  <strong>VanRobi</strong> is de specialist in professionele ijsbankkoelers voor <strong>België en Nederland</strong>. U koopt via een erkend kanaal: juiste machine-specs, levering, advies en lokale opvolging, zonder grijze import of onduidelijke documentatie.
  </p>
- <h2>Wat betekent &quot;officieel kanaal&quot;?</h2>
+ <h2>Wat betekent het merk VanRobi?</h2>
  <ul className="guide-list">
- <li>Assortiment rechtstreeks uit de productlijn (Spanje)</li>
+ <li>Assortiment VanRobi met industriële kwaliteit en heldere specs</li>
  <li>Heldere debiet-, cuba- en ijsreservespecs voor installateurs</li>
  <li>Eén aanspreekpunt in de Benelux: info@vanrobi.be</li>
  <li>Onderhoudspartner: Taponderhoud · taponderhoud.be</li>
@@ -526,7 +526,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  , koelgecertificeerd,zelfde regio. Zo blijft de taplijn
  professioneel opgevolgd na aankoop.
  </p>
- <h2>Contact voor distributeursvragen</h2>
+ <h2>Contact voor advies &amp; offerte</h2>
  <p>
  Bent u installateur, horecaondernemer of eventorganisator? Stuur
  uw project naar{" "}
@@ -834,7 +834,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h2>Geen #1-claim, wel een match</h2>
  <p>
  Wij claimen geen universele winnaar. VanRobi verkoopt
- professionele ijsbankkoelers als officieel BE/NL-kanaal. Past een ander
+ professionele ijsbankkoelers als merk voor BE &amp; NL. Past een ander
  principe beter bij uw bestaande installatie, dan zeggen we dat
  eerlijk. Mail volume, aantal kranen en een barfoto naar{" "}
  <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
@@ -1020,9 +1020,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  . Twijfel? Mail ons. We forceren geen ijsbank als die niet past.
  </p>
 
- <h2>Stap 7: Officieel kanaal + onderhoud</h2>
+ <h2>Stap 7: Merk VanRobi + onderhoud</h2>
  <p>
- Koop via VanRobi (erkend kanaal BE/NL) voor correcte specs en
+ Koop via VanRobi (merk &amp; specialist BE/NL) voor correcte specs en
  opvolging. Onderhoud en reiniging via Taponderhoud. Start met{" "}
  <a href={withBase("/contact/")}>contact</a> of{" "}
  <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.

@@ -42,8 +42,8 @@ const CHECKLIST_STEPS = [
  text: "IJsbank vs dry cooler / doorstroom afwegen op pieken en ruimte.",
  },
  {
- name: "Officieel kanaal + onderhoud",
- text: "Aankoop via VanRobi (erkend kanaal BE/NL); onderhoud via Taponderhoud.",
+ name: "Merk VanRobi + onderhoud",
+ text: "Aankoop via VanRobi (merk & specialist BE/NL); onderhoud via Taponderhoud.",
  },
 ];
 

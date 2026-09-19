@@ -61,10 +61,10 @@ export default function FrAboutPage() {
  </Reveal>
  <div className="fact-grid">
  {[
- { t: "Origine", d: "Espagne · 50+ ans de froid professionnel" },
- { t: "Distributeur", d: "VanRobi · Belgique & Pays-Bas" },
+ { t: "Marque", d: "VanRobi · refroidisseurs à banquise" },
+ { t: "Région", d: "Belgique & Pays-Bas" },
+ { t: "Focus", d: "Froid bière & boissons Horeca" },
  { t: "Service", d: `${contact.company} · certifié froid` },
- { t: "Base", d: contact.address.line },
  ].map((f) => (
  <Reveal key={f.t} className="fact-card">
  <h3>{f.t}</h3>

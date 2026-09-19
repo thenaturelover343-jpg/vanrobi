@@ -118,25 +118,25 @@ const productSeo: Record<string, ProductSeo> = {
  goldy: {
  title: "Goldy ijsbankkoeler over-bar | VanRobi",
  description:
- "Goldy: compacte over-bar ijsbankkoeler voor events en craftbars. ±44 L/u, 9 kg ijs. Officieel via VanRobi België & Nederland.",
+ "Goldy: compacte over-bar ijsbankkoeler voor events en craftbars. ±44 L/u, 9 kg ijs. Via VanRobi, specialist BE & NL.",
  h1: "Goldy — over-bar ijsbankkoeler",
  },
  picky: {
  title: "Picky compacte ijsbankkoeler | VanRobi",
  description:
- "Picky: ultracompacte over-bar bierkoeler voor foodtrucks, pop-ups en kleine bars. Via VanRobi, distributeur BE & NL.",
+ "Picky: ultracompacte over-bar bierkoeler voor foodtrucks, pop-ups en kleine bars. Via VanRobi BE & NL.",
  h1: "Picky — compacte over-bar bierkoeler",
  },
  "gold-ice": {
  title: "Gold Ice ijsbankkoeler | VanRobi",
  description:
- "Gold Ice: ijsreserve en stabiele koude voor horeca en events. Officieel geleverd door VanRobi in België en Nederland.",
+ "Gold Ice: ijsreserve en stabiele koude voor horeca en events. Geleverd via VanRobi in België en Nederland.",
  h1: "Gold Ice — ijsbankkoeler voor horeca",
  },
  v100: {
  title: "V100 onder-bar bierkoeler | VanRobi",
  description:
- "V100: onder-bar ijsbankkoeler ±87 L/u, 19 kg ijs. Werkpaard voor restaurants en bars. Officieel via VanRobi BE & NL.",
+ "V100: onder-bar ijsbankkoeler ±87 L/u, 19 kg ijs. Werkpaard voor restaurants en bars. Via VanRobi BE & NL.",
  h1: "V100 — onder-bar bierkoeler",
  },
  "v100-portable": {
@@ -148,7 +148,7 @@ const productSeo: Record<string, ProductSeo> = {
  v200: {
  title: "V200 high-volume bierkoeler | VanRobi",
  description:
- "V200: high-volume onder-bar ijsbankkoeler ±160 L/u, 38 kg ijs. Voor drukke horeca. Officieel via VanRobi BE & NL.",
+ "V200: high-volume onder-bar ijsbankkoeler ±160 L/u, 38 kg ijs. Voor drukke horeca. Via VanRobi BE & NL.",
  h1: "V200 — high-volume onder-bar bierkoeler",
  },
  "v200-portable": {
@@ -172,7 +172,7 @@ const productSeo: Record<string, ProductSeo> = {
  h50: {
  title: "H50 horizontale ijsbankkoeler | VanRobi",
  description:
- "H50: horizontale onder-bar ijsbankkoeler voor lage baropstellingen. Via VanRobi, distributeur BE & NL.",
+ "H50: horizontale onder-bar ijsbankkoeler voor lage baropstellingen. Via VanRobi, specialist BE & NL.",
  h1: "H50 — horizontale onder-bar ijsbankkoeler",
  },
  v500: {
@@ -190,13 +190,13 @@ const productSeo: Record<string, ProductSeo> = {
  "unidad-condensadora": {
  title: "Condensorunit | VanRobi BE/NL",
  description:
- "Condensorunit voor split-opstellingen en technische ruimtes. Officieel leverbaar via VanRobi in België en Nederland.",
+ "Condensorunit voor split-opstellingen en technische ruimtes. Leverbaar via VanRobi in België en Nederland.",
  h1: "Condensorunit — VanRobi component",
  },
  "g8-agua-aire": {
  title: "G8 water/lucht roermotor | VanRobi",
  description:
- "G8 water/lucht roermotor met condensor voor ijsbankcirculatie. Onderdeel via VanRobi, distributeur BE & NL.",
+ "G8 water/lucht roermotor met condensor voor ijsbankcirculatie. Onderdeel via VanRobi BE & NL.",
  h1: "G8 water/lucht — roermotor met condensor",
  },
  "g8-aire": {
@@ -214,7 +214,7 @@ const productSeo: Record<string, ProductSeo> = {
  "g98-con": {
  title: "G98 roermotor met condensor | VanRobi",
  description:
- "G98 roermotor met condensor (220/115V) voor ijsbanksystemen. Via VanRobi, distributeur BE & NL.",
+ "G98 roermotor met condensor (220/115V) voor ijsbanksystemen. Via VanRobi, specialist BE & NL.",
  h1: "G98 met condensor — roermotor",
  },
  "g98-sin": {
@@ -249,7 +249,7 @@ const guideMetaTitle: Record<string, string> = {
  "bierkoeler-voor-events": "Bierkoeler voor events & festivals",
  "wat-is-een-ijsbankkoeler": "Wat is een ijsbankkoeler? Uitleg",
  "bierkoeler-kopen-belgie-nederland": "Bierkoeler kopen België & Nederland",
- "vanrobi-distributeur-belgie-nederland": "VanRobi distributeur België & Nederland",
+ "vanrobi-distributeur-belgie-nederland": "VanRobi specialist België & Nederland",
  "onder-bar-bierkoeler": "Onder-bar bierkoeler: V100 & V200",
  "goldy-vs-v100": "Goldy vs V100: over-bar of onder-bar?",
  "ijsbankkoeler-vs-dry-cooler": "Ijsbankkoeler vs dry cooler: verschil",

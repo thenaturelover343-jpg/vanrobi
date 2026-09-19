@@ -12,12 +12,12 @@ export function Statement() {
           as="p"
           className="statement-text"
           lines={[
-            "Niet sneller tapen.",
+            "Niet sneller tappen.",
             <em key="e">Juister koelen.</em>,
           ]}
         />
         <Reveal as="p" className="statement-sub reveal-delay-2">
-          Spaans maakwerk. Benelux-nabijheid. Koude die blijft presteren
+          Maatwerk. Benelux-nabijheid. Koude die blijft presteren
           tijdens elke shift.
         </Reveal>
       </div>

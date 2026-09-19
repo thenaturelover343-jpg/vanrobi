@@ -1,5 +1,6 @@
 import { Reveal } from "./Reveal";
 import { withBase } from "@/lib/base";
+import { contact } from "@/lib/contact";
 
 export function Partner() {
   return (
@@ -20,30 +21,31 @@ export function Partner() {
         <h2>
           Professionele ijsbankkoelers.
           <br />
-          <em>Via VanRobi.</em>
+          <em>Het merk VanRobi.</em>
         </h2>
         <p>
-          Ons assortiment bouwt op meer dan 50 jaar Spaanse koudetechniek en
-          industrieel leiderschap in ijsbankkoeling. VanRobi is het aanspreekpunt
-          voor België en Nederland: selectie, advies en levering vanuit één loket,
-          met heldere specs en opvolging na aankoop.
+          VanRobi staat voor professionele ijsbankkoelers voor de Benelux-horeca:
+          industriële kwaliteit, heldere specs en machines die elke shift meegaan.
+          Wij zijn het aanspreekpunt voor België en Nederland — selectie, advies en
+          levering vanuit één loket, met lokale opvolging en onderhoud via{" "}
+          {contact.company}.
         </p>
         <dl className="partner-facts">
           <div>
-            <dt>Herkomst</dt>
-            <dd>Spanje · industriële koude</dd>
+            <dt>Merk</dt>
+            <dd>VanRobi · ijsbankkoelers</dd>
           </div>
           <div>
-            <dt>Distributeur</dt>
-            <dd>VanRobi · BE &amp; NL</dd>
+            <dt>Regio</dt>
+            <dd>België &amp; Nederland</dd>
           </div>
           <div>
             <dt>Focus</dt>
             <dd>Bier- &amp; drankkoeling</dd>
           </div>
           <div>
-            <dt>Erfenis</dt>
-            <dd>50+ jaar · ISO 9001</dd>
+            <dt>Service</dt>
+            <dd>{contact.company} · koelgecertificeerd</dd>
           </div>
         </dl>
       </Reveal>

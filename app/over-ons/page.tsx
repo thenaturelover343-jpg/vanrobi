@@ -18,7 +18,7 @@ export default function OverOnsPage() {
  <PageHero
  eyebrow="Over ons"
  title={["VanRobi ×", <em key="e">ijsbankkoelers.</em>]}
- lede="Officieel distributiekanaal voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek."
+ lede="Het merk VanRobi voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek."
  />
 
  <section className="page-section">
@@ -26,7 +26,7 @@ export default function OverOnsPage() {
  <Reveal className="prose">
  <h2>Partnerschap</h2>
  <p>
- Ons assortiment bouwt op meer dan 50 jaar Spaanse koudetechniek en ISO 9001-kwaliteit. VanRobi is het aanspreekpunt voor België en Nederland: selectie, advies en levering vanuit één loket, met heldere specs en lokale opvolging.
+ VanRobi staat voor professionele ijsbankkoelers met industriële kwaliteit en heldere specs. Wij zijn het aanspreekpunt voor België en Nederland: selectie, advies en levering vanuit één loket, met lokale opvolging en onderhoud via Taponderhoud.
  </p>
  <p>
  Geen grijze import. Wel heldere specs, betrouwbare levering en
@@ -71,20 +71,20 @@ export default function OverOnsPage() {
  <div className="fact-grid">
  {[
  {
- t: "Herkomst",
- d: "Spanje · 50+ jaar koudetechniek",
+ t: "Merk",
+ d: "VanRobi · ijsbankkoelers BE & NL",
  },
  {
- t: "Distributeur",
- d: "VanRobi · België & Nederland",
+ t: "Regio",
+ d: "België & Nederland",
+ },
+ {
+ t: "Focus",
+ d: "Bier- & drankkoeling voor horeca",
  },
  {
  t: "Service",
  d: `${contact.company} · koelgecertificeerd`,
- },
- {
- t: "Basis",
- d: contact.address.line,
  },
  ].map((f) => (
  <Reveal key={f.t} className="fact-card">
@@ -99,7 +99,7 @@ export default function OverOnsPage() {
 
  <section className="page-section">
  <div className="wrap prose" style={{ maxWidth: "46rem" }}>
- <h2>Waarom een professioneel VanRobi-kanaal?</h2>
+ <h2>Waarom VanRobi als merk?</h2>
  <p>
  Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent —
  geen grijze import. VanRobi levert ijsbankkoelers en bierkoelers vanuit{" "}

@@ -1,7 +1,7 @@
 import { withBase } from "./base";
 
 export const frHome = {
- eyebrow: "Distributeur officiel BE & NL",
+ eyebrow: "Marque VanRobi · BE & NL",
  title: ["Refroidissement", "à la hauteur"],
  titleEm: "du service",
  lede:
@@ -12,8 +12,8 @@ export const frHome = {
  why: [
  {
  n: "01",
- title: "Canal officiel",
- text: "Canal VanRobi certifié pour la Belgique et les Pays-Bas. Pas d'import gris, specs correctes.",
+ title: "Marque VanRobi",
+ text: "VanRobi, marque de refroidisseurs à banquise pour la Belgique et les Pays-Bas. Specs correctes, suivi local.",
  },
  {
  n: "02",
@@ -111,7 +111,7 @@ export const frServices = {
  {
  n: "02",
  title: "Livraison BE & NL",
- text: "Distribution VanRobi de refroidisseurs pour la Belgique et les Pays-Bas. Pas d'import gris : bonnes specs, garantie et suivi.",
+ text: "Livraison VanRobi de refroidisseurs pour la Belgique et les Pays-Bas. Pas d'import gris : bonnes specs, garantie et suivi.",
  },
  {
  n: "03",
@@ -140,9 +140,9 @@ export const frAbout = {
  eyebrow: "À propos",
  title: ["VanRobi ×", "refroidisseurs."],
  lede:
- "Canal de distribution officiel pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas, avec expertise locale en tirage et froid.",
+ "La marque VanRobi pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas, avec expertise locale en tirage et froid.",
  partnership:
- "Notre assortiment s'appuie sur plus de 50 ans de froid professionnel espagnol et une qualité industrielle éprouvée. VanRobi est le canal pour la Belgique et les Pays-Bas : sélection, conseil et livraison depuis un seul interlocuteur. Pas d'import gris : specs correctes et suivi local.",
+ "VanRobi regroupe des refroidisseurs à banquise professionnels pour le Horeca Benelux : qualité industrielle, specs claires et machines conçues pour tenir chaque service. Nous sommes l'interlocuteur pour la Belgique et les Pays-Bas — sélection, conseil et livraison depuis un seul point de contact, avec suivi local. Pas d'import gris.",
  local:
  "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine (Kasterlee / Tielen). Ainsi, refroidisseurs professionnels VanRobi et service belge restent alignés après l'achat.",
  coverage:
@@ -153,7 +153,7 @@ export const frFaq = {
  eyebrow: "FAQ",
  title: ["Réponses,", "sans détour"],
  lede:
- "Canal VanRobi pour les refroidisseurs, maintenance via Taponderhoud, délais honnêtes. Votre question n'y figure pas, écrivez à info@vanrobi.be.",
+ "VanRobi pour les refroidisseurs, maintenance via Taponderhoud, délais honnêtes. Votre question n'y figure pas, écrivez à info@vanrobi.be.",
  items: [
  {
  question:

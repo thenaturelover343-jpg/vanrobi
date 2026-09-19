@@ -17,8 +17,8 @@ export function Why() {
  ]}
  />
  <p>
- Wij brengen professionele ijsbankkoelers naar de Benelux, met advies, specs en levering
- die horeca begrijpt.
+ VanRobi is het merk voor professionele ijsbankkoelers in de Benelux-horeca,
+ met advies, specs en levering die de bar begrijpt.
  </p>
  </Reveal>
  <ol className="why-list">

@@ -167,8 +167,8 @@ export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
  <div className="wrap footer-base">
  <span className="footer-copy">© 2026 VanRobi</span>
  <span className="footer-legal">
- VanRobi levert professionele ijsbankkoelers als
- distributeur BE/NL. Onderhoudspartner:{" "}
+ VanRobi levert professionele ijsbankkoelers als merk voor
+ BE &amp; NL. Onderhoudspartner:{" "}
  <a href={contact.companyUrl} target="_blank" rel="noopener noreferrer">
  {contact.company}
  </a>

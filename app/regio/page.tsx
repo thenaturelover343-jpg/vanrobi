@@ -151,7 +151,7 @@ export default function RegioPage() {
  "/gids/vanrobi-distributeur-belgie-nederland/"
  )}
  >
- VanRobi-distributeurspagina
+ VanRobi-specialistenpagina
  </a>
  .
  </p>

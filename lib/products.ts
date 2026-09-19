@@ -89,8 +89,8 @@ export const products: Product[] = [
  featured: false,
  imageKind: "diagram",
  specs: [
- { label: "Herkomst", value: "Spanje · industriële koude" },
- { label: "Distributeur", value: "VanRobi · BE & NL" },
+ { label: "Merk", value: "VanRobi · BE & NL" },
+ { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
  {
@@ -292,8 +292,8 @@ export const products: Product[] = [
  uses: ["horeca", "onder-bar"],
  featured: false,
  specs: [
- { label: "Herkomst", value: "Spanje · industriële koude" },
- { label: "Distributeur", value: "VanRobi · BE & NL" },
+ { label: "Merk", value: "VanRobi · BE & NL" },
+ { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
  {
@@ -311,8 +311,8 @@ export const products: Product[] = [
  uses: ["horeca"],
  featured: false,
  specs: [
- { label: "Herkomst", value: "Spanje · industriële koude" },
- { label: "Distributeur", value: "VanRobi · BE & NL" },
+ { label: "Merk", value: "VanRobi · BE & NL" },
+ { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
  {
@@ -450,8 +450,8 @@ export const products: Product[] = [
  uses: ["horeca"],
  featured: false,
  specs: [
- { label: "Herkomst", value: "Spanje · industriële koude" },
- { label: "Distributeur", value: "VanRobi · BE & NL" },
+ { label: "Merk", value: "VanRobi · BE & NL" },
+ { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
  {
@@ -469,8 +469,8 @@ export const products: Product[] = [
  uses: ["horeca"],
  featured: false,
  specs: [
- { label: "Herkomst", value: "Spanje · industriële koude" },
- { label: "Distributeur", value: "VanRobi · BE & NL" },
+ { label: "Merk", value: "VanRobi · BE & NL" },
+ { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
 ];
@@ -536,8 +536,8 @@ export const categories = [
 export const whyItems = [
  {
  n: "01",
- title: "Officieel kanaal",
- text: "Erkende leverancier van ijsbankkoelers voor België en Nederland. Heldere specs, geen grijze import.",
+ title: "Merk VanRobi",
+ text: "VanRobi is het merk voor ijsbankkoelers in België en Nederland. Heldere specs, geen grijze import.",
  delay: "",
  },
  {

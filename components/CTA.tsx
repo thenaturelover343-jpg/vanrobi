@@ -14,8 +14,8 @@ export function CTA() {
           lines={["Klaar voor", <em key="e">stabiele koude?</em>]}
         />
         <p>
-          Vertel ons over uw bar, event of installatie. Wij sturen een gerichte
-          offerte vanuit {contact.address.city}.
+          Vertel ons over uw bar, event of installatie. Wij sturen u een
+          offerte.
         </p>
         <div className="cta-actions">
           <MagneticButton

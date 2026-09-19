@@ -56,7 +56,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler kopen in België & Nederland",
  eyebrow: "Koopgids",
  description:
- "Bierkoeler kopen in België of Nederland: checklist, lokale levering vanuit Kasterlee/Kempen, ijsbankkoelers via VanRobi. Officieel kanaal BE & NL.",
+ "Bierkoeler kopen in België of Nederland: checklist, lokale levering vanuit Kasterlee/Kempen, ijsbankkoelers via VanRobi. Specialist BE & NL.",
  lede: "Van Antwerpen tot Amsterdam: waar u let op bij aankoop, welke capaciteit u nodig heeft, en waarom een professioneel VanRobi-kanaal telt.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -64,7 +64,7 @@ export const guides: Guide[] = [
  {
  slug: "vanrobi-distributeur-belgie-nederland",
  title: "VanRobi: ijsbankkoelers België & Nederland",
- eyebrow: "Officieel",
+ eyebrow: "Specialist",
  description:
  "VanRobi is de specialist in professionele ijsbankkoelers voor België en Nederland. Assortiment, advies, levering en onderhoudspartner Taponderhoud.",
  lede: "Zoekt u een betrouwbaar kanaal voor professionele ijsbankkoelers in de Benelux? VanRobi levert en adviseert vanuit Kasterlee (Tielen) voor BE en NL.",
@@ -116,7 +116,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler kiezen: checklist in 7 stappen",
  eyebrow: "Checklist",
  description:
- "Checklist bierkoeler kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom, spiralen en officieel kanaal. Praktisch via VanRobi BE/NL.",
+ "Checklist bierkoeler kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom, spiralen en merk VanRobi. Praktisch via VanRobi BE/NL.",
  lede: "Zeven concrete stappen, van piekvolume tot onderhoudspartner, zodat u geen machine koopt die te klein of te groot is.",
  updated: "2026-09-19",
  published: "2026-09-19",
