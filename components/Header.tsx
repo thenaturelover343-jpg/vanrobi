@@ -3,6 +3,15 @@
 import { useEffect, useState } from "react";
 import { Brand } from "./Brand";
 import { MagneticButton } from "./MagneticButton";
+import { withBase } from "@/lib/base";
+
+const navLinks = [
+  { href: "/producten/", label: "Producten" },
+  { href: "/diensten/", label: "Diensten" },
+  { href: "/voor-wie/", label: "Voor wie" },
+  { href: "/over-ons/", label: "Over ons" },
+  { href: "/contact/", label: "Contact" },
+];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,19 +66,23 @@ export function Header() {
 
   return (
     <>
-      <a className="skip-link" href="#producten">
-        Naar producten
+      <a className="skip-link" href="#main">
+        Naar inhoud
       </a>
 
       <header className={headerClass} id="header">
         <Brand />
         <nav className="nav" aria-label="Hoofdnavigatie">
-          <a href="#producten">Producten</a>
-          <a href="#categorieen">Toepassingen</a>
-          <a href="#waarom">Waarom</a>
-          <a href="#partnerschap">Partnerschap</a>
+          {navLinks.map((l) => (
+            <a key={l.href} href={withBase(l.href)}>
+              {l.label}
+            </a>
+          ))}
         </nav>
-        <MagneticButton className="btn btn-ink btn-sm header-cta magnetic" href="#offerte">
+        <MagneticButton
+          className="btn btn-ink btn-sm header-cta magnetic"
+          href={withBase("/contact/")}
+        >
           <span className="magnetic-label">Offerte</span>
         </MagneticButton>
         <button
@@ -86,19 +99,16 @@ export function Header() {
       </header>
 
       <div className="mobile-nav" id="mobile-nav" hidden={!navOpen}>
-        <a href="#producten" onClick={closeNav}>
-          Producten
-        </a>
-        <a href="#categorieen" onClick={closeNav}>
-          Toepassingen
-        </a>
-        <a href="#waarom" onClick={closeNav}>
-          Waarom
-        </a>
-        <a href="#partnerschap" onClick={closeNav}>
-          Partnerschap
-        </a>
-        <a className="btn btn-ink" href="#offerte" onClick={closeNav}>
+        {navLinks.map((l) => (
+          <a key={l.href} href={withBase(l.href)} onClick={closeNav}>
+            {l.label}
+          </a>
+        ))}
+        <a
+          className="btn btn-ink"
+          href={withBase("/contact/")}
+          onClick={closeNav}
+        >
           Offerte aanvragen
         </a>
       </div>

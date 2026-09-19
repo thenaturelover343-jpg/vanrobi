@@ -70,20 +70,20 @@ export function Hero() {
           <SplitLines
             as="h1"
             className="hero-title"
-            lines={[
-              "Koude die",
-              <em key="e">de bar draagt.</em>,
-            ]}
+            lines={["Koude die", <em key="e">de bar draagt.</em>]}
           />
           <p className="hero-lede reveal-hero reveal-hero-3">
             Golderos ijsbankkoelers via VanRobi — industriële precisie voor
             horeca, events en installateurs die geen compromis dulden.
           </p>
           <div className="hero-actions reveal-hero reveal-hero-4">
-            <MagneticButton className="btn btn-ink magnetic" href="#offerte">
+            <MagneticButton
+              className="btn btn-ink magnetic"
+              href={withBase("/contact/")}
+            >
               <span className="magnetic-label">Vraag een offerte</span>
             </MagneticButton>
-            <a className="btn btn-ghost" href="#producten">
+            <a className="btn btn-ghost" href={withBase("/producten/")}>
               Bekijk machines
             </a>
           </div>

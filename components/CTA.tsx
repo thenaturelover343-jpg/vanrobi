@@ -1,6 +1,8 @@
 import { Reveal } from "./Reveal";
 import { MagneticButton } from "./MagneticButton";
 import { SplitLines } from "./SplitLines";
+import { withBase } from "@/lib/base";
+import { contact, offerteMailto } from "@/lib/contact";
 
 export function CTA() {
   return (
@@ -13,17 +15,24 @@ export function CTA() {
         />
         <p>
           Vertel ons over uw bar, event of installatie. Wij sturen een gerichte
-          offerte.
+          offerte vanuit {contact.address.city}.
         </p>
-        <MagneticButton
-          className="btn btn-ink btn-lg magnetic"
-          href="mailto:info@vanrobi.be?subject=Offerteaanvraag%20VanRobi"
-          id="cta-primary"
-        >
-          <span className="magnetic-label">Mail uw aanvraag</span>
-        </MagneticButton>
+        <div className="cta-actions">
+          <MagneticButton
+            className="btn btn-ink btn-lg magnetic"
+            href={offerteMailto()}
+            id="cta-primary"
+          >
+            <span className="magnetic-label">Mail uw aanvraag</span>
+          </MagneticButton>
+          <a className="btn btn-ghost-ink btn-lg" href={`tel:${contact.phoneTel}`}>
+            Bel {contact.phone}
+          </a>
+        </div>
         <p className="cta-note">
-          Of bel uw VanRobi-contact — antwoord binnen één werkdag.
+          {contact.address.line} ·{" "}
+          <a href={withBase("/contact/")}>Contactformulier</a> · antwoord binnen
+          één werkdag.
         </p>
       </Reveal>
     </section>

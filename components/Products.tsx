@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { products } from "@/lib/products";
+import { featuredProducts as products } from "@/lib/products";
+import { withBase } from "@/lib/base";
+import { offerteMailto } from "@/lib/contact";
 import { Reveal } from "./Reveal";
 import { SplitLines } from "./SplitLines";
 
@@ -70,12 +72,7 @@ export function Products() {
   const onProductCta = (name: string) => {
     const mail = document.getElementById("cta-primary");
     if (mail && name) {
-      mail.setAttribute(
-        "href",
-        `mailto:info@vanrobi.be?subject=${encodeURIComponent(
-          `Offerteaanvraag VanRobi — ${name}`
-        )}`
-      );
+      mail.setAttribute("href", offerteMailto(name));
     }
   };
 
@@ -126,23 +123,27 @@ export function Products() {
               id={`prod-${p.id}`}
             >
               <div className="prod-visual reveal-child">
-                <div className={`prod-frame ${p.cropClass} img-mask`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={p.image}
-                    alt={p.alt}
-                    width={1300}
-                    height={1300}
-                    loading="lazy"
-                    className="img-shimmer"
-                    onLoad={(e) => e.currentTarget.classList.add("is-loaded")}
-                  />
-                </div>
+                <a href={withBase(`/producten/${p.id}/`)} className="prod-frame-link">
+                  <div className={`prod-frame ${p.cropClass} img-mask`}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={p.image}
+                      alt={p.alt}
+                      width={1300}
+                      height={1300}
+                      loading="lazy"
+                      className="img-shimmer"
+                      onLoad={(e) => e.currentTarget.classList.add("is-loaded")}
+                    />
+                  </div>
+                </a>
                 <span className="prod-badge">{p.badge}</span>
               </div>
               <div className="prod-copy">
                 <span className="prod-index reveal-child">{p.index}</span>
-                <h3 className="reveal-child">{p.name}</h3>
+                <h3 className="reveal-child">
+                  <a href={withBase(`/producten/${p.id}/`)}>{p.name}</a>
+                </h3>
                 <p className="prod-desc reveal-child">{p.description}</p>
                 <ul className="prod-specs reveal-child">
                   {p.specs.map((s) => (
@@ -153,10 +154,17 @@ export function Products() {
                   ))}
                 </ul>
                 <a
-                  href="#offerte"
+                  href={withBase(`/producten/${p.id}/`)}
+                  className="text-link reveal-child"
+                >
+                  Bekijk {p.name} <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href={withBase("/contact/")}
                   className="text-link reveal-child"
                   data-product={p.name}
                   onClick={() => onProductCta(p.name)}
+                  style={{ marginTop: "0.5rem" }}
                 >
                   Offerte voor {p.name} <span aria-hidden="true">→</span>
                 </a>
@@ -164,6 +172,12 @@ export function Products() {
             </Reveal>
           ))}
         </div>
+
+        <p className="catalog-more">
+          <a className="btn btn-ink" href={withBase("/producten/")}>
+            Volledige catalogus
+          </a>
+        </p>
       </div>
     </section>
   );

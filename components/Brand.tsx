@@ -1,3 +1,5 @@
+import { withBase } from "@/lib/base";
+
 type BrandProps = {
   markSize?: number;
   className?: string;
@@ -5,7 +7,11 @@ type BrandProps = {
 
 export function Brand({ markSize = 28, className }: BrandProps) {
   return (
-    <a className={`brand${className ? ` ${className}` : ""}`} href="#" aria-label="VanRobi home">
+    <a
+      className={`brand${className ? ` ${className}` : ""}`}
+      href={withBase("/")}
+      aria-label="VanRobi home"
+    >
       <svg
         className="brand-mark"
         width={markSize}
