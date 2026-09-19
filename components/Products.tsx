@@ -89,7 +89,7 @@ export function Products() {
             <em>Eén standaard.</em>
           </h2>
           <p className="block-lede">
-            Industriële ijsbankkoelers — gefotografeerd als ze zijn. Specs die
+            Industriële ijsbankkoelers — gefotografeerd als object. Specs die
             installateurs en barontwerp begrijpen.
           </p>
         </Reveal>

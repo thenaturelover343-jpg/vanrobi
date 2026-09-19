@@ -7,14 +7,13 @@ export function Partner() {
       <div className="partner-media">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={withBase("/assets/products/cooler-extra-2.jpg")}
+          src={withBase("/assets/products-stage/cooler-extra-2.jpg")}
           alt="Golderos professionele ijsbankkoeler — industrieel RVS"
           loading="lazy"
           width={1300}
           height={1300}
-          className="crop-partner"
         />
-        <div className="partner-media-veil"></div>
+        <div className="partner-media-veil" aria-hidden="true"></div>
       </div>
       <Reveal className="partner-panel">
         <p className="partner-label">Partnerschap</p>

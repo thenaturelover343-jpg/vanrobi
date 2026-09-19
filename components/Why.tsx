@@ -8,7 +8,7 @@ export function Why() {
         <Reveal className="why-intro">
           <p className="eyebrow">VanRobi</p>
           <h2>
-            Waarom <em>VanRobi</em>
+            Waarom <em>wij</em>
           </h2>
           <p>
             Wij brengen Golderos naar de Benelux — met advies, specs en levering
