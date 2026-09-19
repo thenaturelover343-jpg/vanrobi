@@ -335,7 +335,7 @@ ul, ol { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: 68% 50%;
   transform: scale(1.08);
   will-change: transform;
   animation: kenburns 38s var(--ease) infinite alternate;

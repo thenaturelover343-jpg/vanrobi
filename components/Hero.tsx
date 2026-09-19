@@ -33,8 +33,8 @@ export function Hero() {
       <div className="hero-media" data-parallax ref={mediaRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={withBase("/assets/hero-bar-v2.jpg")}
-          alt="Atmosferische craft bar met professionele taplijn"
+          src={withBase("/assets/hero-bar-v3.jpg")}
+          alt="Golderos V200 ijsbankkoeler — professionele drankkoeling via VanRobi"
           width={2400}
           height={1800}
           fetchPriority="high"
