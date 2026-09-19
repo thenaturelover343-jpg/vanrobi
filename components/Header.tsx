@@ -19,6 +19,7 @@ export function Header({ lang = "nl" }: { lang?: "nl" | "fr" }) {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [onDark, setOnDark] = useState(true);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -27,7 +28,7 @@ export function Header({ lang = "nl" }: { lang?: "nl" | "fr" }) {
 
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 40);
+      setScrolled(y > 72);
       if (!reduce && y > 220) {
         if (y > lastY + 4) setHidden(true);
         else if (y < lastY - 4) setHidden(false);
@@ -52,6 +53,54 @@ export function Header({ lang = "nl" }: { lang?: "nl" | "fr" }) {
   }, []);
 
   useEffect(() => {
+    const darkSecs = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".hero-cold, .categories, .why, .partner, .cta, .site-footer"
+      )
+    );
+    if (!darkSecs.length) return;
+    const io = new IntersectionObserver(
+      () => {
+        // Prefer dark chrome when any observed dark section intersects header band
+        const headerBand = window.scrollY + 64;
+        let dark = false;
+        for (const el of darkSecs) {
+          const r = el.getBoundingClientRect();
+          const top = r.top + window.scrollY;
+          const bottom = top + r.height;
+          if (headerBand >= top && headerBand <= bottom) {
+            dark = true;
+            break;
+          }
+        }
+        setOnDark(dark || window.scrollY < window.innerHeight * 0.85);
+      },
+      { rootMargin: "-48px 0px -70% 0px", threshold: [0, 0.1, 0.25] }
+    );
+    darkSecs.forEach((el) => io.observe(el));
+    const onScrollDark = () => {
+      const headerBand = window.scrollY + 64;
+      let dark = false;
+      for (const el of darkSecs) {
+        const r = el.getBoundingClientRect();
+        const top = r.top + window.scrollY;
+        const bottom = top + r.height;
+        if (headerBand >= top && headerBand <= bottom) {
+          dark = true;
+          break;
+        }
+      }
+      setOnDark(dark || window.scrollY < window.innerHeight * 0.85);
+    };
+    window.addEventListener("scroll", onScrollDark, { passive: true });
+    onScrollDark();
+    return () => {
+      io.disconnect();
+      window.removeEventListener("scroll", onScrollDark);
+    };
+  }, []);
+
+  useEffect(() => {
     document.body.classList.toggle("nav-open", navOpen);
     return () => document.body.classList.remove("nav-open");
   }, [navOpen]);
@@ -62,6 +111,7 @@ export function Header({ lang = "nl" }: { lang?: "nl" | "fr" }) {
     "site-header",
     scrolled ? "scrolled" : "",
     hidden ? "hidden" : "",
+    onDark ? "on-dark" : "on-light",
   ]
     .filter(Boolean)
     .join(" ");

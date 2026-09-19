@@ -10,6 +10,7 @@ export function Why() {
           <p className="eyebrow">VanRobi</p>
           <SplitLines
             as="h2"
+            instant
             lines={[
               <span key="waarom">
                 Waarom <em>wij</em>

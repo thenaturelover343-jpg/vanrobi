@@ -52,19 +52,29 @@ export function Reveal({
       el.classList.add("in");
       return;
     }
+    const show = () => el.classList.add("in");
+    // Products/categories: reveal early so cards never look "empty"
+    const early = Boolean(el.closest(".products, .categories, .partner"));
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            e.target.classList.add("in");
+            show();
             io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" }
+      {
+        threshold: early ? 0.04 : 0.08,
+        rootMargin: early ? "0px 0px 12% 0px" : "0px 0px -6% 0px",
+      }
     );
     io.observe(el);
-    return () => io.disconnect();
+    const safety = window.setTimeout(show, early ? 600 : 1800);
+    return () => {
+      io.disconnect();
+      window.clearTimeout(safety);
+    };
   }, []);
 
   return (

@@ -11,6 +11,7 @@ export function Statement() {
         <SplitLines
           as="p"
           className="statement-text"
+          instant
           lines={[
             "Niet sneller tappen.",
             <em key="e">Juister koelen.</em>,

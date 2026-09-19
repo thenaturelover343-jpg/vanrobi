@@ -102,6 +102,7 @@ export function Products() {
           <p className="eyebrow">Assortiment</p>
           <SplitLines
             as="h2"
+            instant
             lines={["Vier machines.", <em key="e">Eén standaard.</em>]}
           />
           <p className="block-lede">

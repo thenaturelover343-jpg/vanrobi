@@ -11,6 +11,7 @@ export function CTA() {
         <p className="eyebrow">Contact</p>
         <SplitLines
           as="h2"
+          instant
           lines={["Klaar voor", <em key="e">stabiele koude?</em>]}
         />
         <p>
