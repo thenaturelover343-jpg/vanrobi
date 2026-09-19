@@ -3,18 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { getProduct } from "@/lib/products";
 import { frFeaturedIds, frProductCopy, frProductsIntro } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "Produits Golderos, VanRobi",
-  description:
-    "Goldy, V100, V200 et V100 portable, refroidisseurs Golderos via VanRobi, distributeur officiel Belgique & Pays-Bas.",
-  path: "/fr/produits/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frProduits);
 
 export default function FrProduitsPage() {
   const items = frFeaturedIds.map((id) => {

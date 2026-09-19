@@ -138,6 +138,41 @@ export const productFaqs: Record<string, FaqItem[]> = {
         "Plan vooruit: levertijden zijn voorraad-afhankelijk. Vermeld uw eventdatum bij de aanvraag zodat we eerlijk kunnen plannen.",
     },
   ],
+  picky: [
+    {
+      question: "Wanneer kies ik de Picky?",
+      answer:
+        "De Picky is de kleinste over-bar ijsbankkoeler van Golderos — ideaal voor foodtrucks, pop-ups en compacte craftbars waar elke centimeter telt.",
+    },
+    {
+      question: "Picky of Goldy?",
+      answer:
+        "Goldy biedt meer debiet en ijsreserve (±44 L/u, 9 kg). Picky is nóg compacter voor de kleinste opstellingen. Mail info@vanrobi.be met uw ruimte en volume.",
+    },
+    {
+      question: "Offerte voor de Picky?",
+      answer:
+        "Mail info@vanrobi.be of gebruik het contactformulier met vermelding Picky. We bevestigen beschikbaarheid en levertijd bij de offerte.",
+    },
+  ],
+  "v200-portable": [
+    {
+      question: "Wanneer een V200 portable?",
+      answer:
+        "Bij festivals en grote tijdelijke bars die high-volume nodig hebben zonder vaste installatie. ±160 L/u en 38 kg ijsreserve, mobiel op wielen.",
+    },
+    {
+      question: "V100 portable of V200 portable?",
+      answer:
+        "V100 portable voor de meeste events; V200 portable bij zware pieken of meerdere kranen. Lees de gids bierkoeler voor events of vraag advies.",
+    },
+    {
+      question: "Stroom op het terrein?",
+      answer:
+        "Standaard 220V / 50 Hz. Voorzie een stabiele voeding en plaatsing uit de zon. We geven opbouwadvies bij de offerte.",
+    },
+  ],
+
 };
 
 export function faqsForProduct(id: string): FaqItem[] {

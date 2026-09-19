@@ -12,7 +12,7 @@ import {
   articleSchema,
   howToSchema,
 } from "@/lib/schema";
-import { pageMeta } from "@/lib/site";
+import { metaForGuide } from "@/lib/seo-meta";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -55,12 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const g = getGuide(slug);
   if (!g) return { title: "Gids | VanRobi" };
-  return pageMeta({
-    title: `${g.title} | Golderos via VanRobi`,
-    description: g.description,
-    path: `/gids/${g.slug}/`,
-    ogType: "article",
-  });
+  return metaForGuide(g);
 }
 
 export default async function GuidePage({ params }: Props) {

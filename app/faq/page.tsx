@@ -8,15 +8,10 @@ import { CTA } from "@/components/CTA";
 import { Reveal } from "@/components/Reveal";
 import { generalFaqs } from "@/lib/faq";
 import { faqPageSchema } from "@/lib/schema";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 
-export const metadata: Metadata = pageMeta({
-  title: "FAQ bierkoeler & ijsbankkoeler, VanRobi",
-  description:
-    "Veelgestelde vragen: ijsbank vs doorstroom, installatie België, festivals, Goldy vs V100, Golderos-verdeler BE/NL, onderhoud via taponderhoud.be.",
-  path: "/faq/",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.faq);
 
 export default function FaqPage() {
   return (

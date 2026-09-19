@@ -113,7 +113,7 @@ export function Hero() {
             <img
               ref={imgRef}
               src={withBase("/assets/hero-editorial.jpg")}
-              alt="Golderos Goldy, over-bar ijsbankkoeler met twee kranen, via VanRobi"
+              alt="Golderos Goldy over-bar ijsbankkoeler met twee kranen, officiële bierkoeler via VanRobi BE/NL"
               width={2400}
               height={1500}
               fetchPriority="high"

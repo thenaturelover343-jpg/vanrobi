@@ -16,7 +16,7 @@ function orgCore() {
     image: absoluteUrl("/assets/logo.svg"),
     logo: absoluteUrl("/assets/logo.svg"),
     description:
-      "Officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers voor horeca en events.",
+      "Officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers en bierkoelers voor horeca en events.",
     address: {
       "@type": "PostalAddress",
       streetAddress: contact.address.street,
@@ -33,7 +33,14 @@ function orgCore() {
     areaServed: [
       { "@type": "Country", name: "Belgium" },
       { "@type": "Country", name: "Netherlands" },
+      { "@type": "AdministrativeArea", name: "Antwerpen" },
+      { "@type": "AdministrativeArea", name: "Limburg" },
+      { "@type": "AdministrativeArea", name: "Vlaams-Brabant" },
+      { "@type": "AdministrativeArea", name: "Brussel" },
+      { "@type": "AdministrativeArea", name: "Oost-Vlaanderen" },
+      { "@type": "AdministrativeArea", name: "Kempen" },
     ],
+    priceRange: "€€",
     sameAs: [contact.companyUrl],
     contactPoint: {
       "@type": "ContactPoint",

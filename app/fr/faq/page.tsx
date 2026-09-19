@@ -5,18 +5,12 @@ import { PageHero } from "@/components/PageHero";
 import { FaqBlock } from "@/components/FaqBlock";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { faqPageSchema } from "@/lib/schema";
 import { frFaq } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "FAQ, VanRobi",
-  description:
-    "FAQ VanRobi : distributeur officiel Golderos BE/NL, maintenance Taponderhoud, devis et livraison Pays-Bas.",
-  path: "/fr/faq/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frFaq);
 
 export default function FrFaqPage() {
   return (

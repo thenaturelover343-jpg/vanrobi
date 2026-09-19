@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -8,12 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
-export const metadata: Metadata = pageMeta({
-  title: 'Over ons, VanRobi & Taponderhoud',
-  description:
-    'VanRobi is de officiële Golderos-distributeur BE/NL, met onderhoudspartner Taponderhoud vanuit Kasterlee.',
-  path: '/over-ons/',
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.overOns);
 
 export default function OverOnsPage() {
   return (
@@ -100,6 +95,30 @@ export default function OverOnsPage() {
                 </Reveal>
               ))}
             </div>
+          </div>
+        </section>
+
+
+        <section className="page-section">
+          <div className="wrap prose" style={{ maxWidth: "46rem" }}>
+            <h2>Waarom een officieel Golderos-kanaal?</h2>
+            <p>
+              Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent —
+              geen grijze import. VanRobi levert ijsbankkoelers en bierkoelers vanuit{" "}
+              {contact.address.line}. Regio&apos;s: {contact.regions}, plus Nederland.
+            </p>
+            <h3>Assortiment &amp; kennis</h3>
+            <p>
+              Van over-bar (<a href={withBase("/producten/goldy/")}>Goldy</a>) tot
+              high-volume onder-bar (<a href={withBase("/producten/v200/")}>V200</a>).
+              Verdiep via onze <a href={withBase("/gids/")}>gidsen</a> of de{" "}
+              <a href={withBase("/faq/")}>FAQ</a>.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Neem contact op <span aria-hidden="true">→</span>
+              </a>
+            </p>
           </div>
         </section>
 

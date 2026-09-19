@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -9,12 +9,7 @@ import { ServicesSticky } from "@/components/ServicesSticky";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
-export const metadata: Metadata = pageMeta({
-  title: 'Diensten, Levering, advies & onderhoud | VanRobi',
-  description:
-    'VanRobi levert Golderos-machines met advies, plus onderhoud, reiniging en herstellingen via Taponderhoud. Koelgecertificeerd in de Kempen en wijde regio.',
-  path: '/diensten/',
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.diensten);
 
 const services = [
   {
@@ -81,6 +76,43 @@ export default function DienstenPage() {
               <a className="text-link" href={withBase("/contact/")}>
                 Plan een afspraak <span aria-hidden="true">→</span>
               </a>
+            </Reveal>
+          </div>
+        </section>
+
+
+        <section className="page-section page-section-alt">
+          <div className="wrap">
+            <Reveal className="prose" style={{ maxWidth: "46rem" }}>
+              <h2>Ijsbankkoeler advies voor horeca &amp; events</h2>
+              <p>
+                Of u een{" "}
+                <a href={withBase("/producten/v100/")}>V100 onder-bar bierkoeler</a>{" "}
+                zoekt of een{" "}
+                <a href={withBase("/producten/goldy/")}>Goldy over-bar ijsbankkoeler</a>{" "}
+                voor events: we dimensioneren op piekvolume, meubel en leidingwerk.
+                Lees ook de gidsen{" "}
+                <a href={withBase("/gids/wat-is-een-ijsbankkoeler/")}>wat is een ijsbankkoeler</a>,{" "}
+                <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a> en{" "}
+                <a href={withBase("/gids/bierkoeler-voor-events/")}>bierkoeler voor events</a>.
+              </p>
+              <h3>Regio&apos;s die we bedienen</h3>
+              <p>
+                Vanuit Kasterlee (Tielen) adviseren en leveren we in{" "}
+                {contact.regions}, plus Nederland als officieel Golderos-kanaal.
+                Details op de <a href={withBase("/regio/")}>regiopagina</a>.
+              </p>
+              <h3>Van offerte tot onderhoud</h3>
+              <p>
+                Machines en selectie via VanRobi (
+                <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                ). Plaatsing, reiniging en herstellingen via{" "}
+                <a href={contact.companyUrl} target="_blank" rel="noopener noreferrer">
+                  {contact.company}
+                </a>
+                . Vragen? Zie de <a href={withBase("/faq/")}>FAQ</a> of{" "}
+                <a href={withBase("/contact/")}>vraag een offerte</a>.
+              </p>
             </Reveal>
           </div>
         </section>

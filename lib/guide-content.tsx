@@ -65,7 +65,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               </a>
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Gerelateerd"
             links={[
               { href: "/gids/v100-vs-v200/", label: "V100 vs V200" },
@@ -142,7 +159,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <a href={withBase("/gids/onder-bar-bierkoeler/")}>onder-bar bierkoeler</a>.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Machines"
             links={[
               { href: "/producten/v100/", label: "V100 detail" },
@@ -193,7 +227,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               via <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Volgende stap"
             links={[
               { href: "/producten/", label: "Catalogus" },
@@ -282,7 +333,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               </a>
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Verder"
             links={[
               { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Bierkoeler kopen BE/NL" },
@@ -368,7 +436,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               </a>
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Hulp"
             links={[
               { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
@@ -460,7 +545,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               </a>
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Links"
             links={[
               { href: "/over-ons/", label: "Over VanRobi" },
@@ -540,7 +642,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               </a>
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Machines"
             links={[
               { href: "/producten/v100/", label: "V100" },
@@ -656,7 +775,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               van de bar. We zeggen eerlijk welk formaat past.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Vergelijkingen"
             links={[
               { href: "/gids/v100-vs-v200/", label: "V100 vs V200" },
@@ -723,7 +859,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <a href={withBase("/producten/")}>catalogus</a>.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Gerelateerd"
             links={[
               { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
@@ -785,7 +938,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <a href={withBase("/gids/onder-bar-bierkoeler/")}>onder-bar gids</a>.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Volgende stap"
             links={[
               { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
@@ -864,7 +1034,24 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
             </p>
           </Reveal>
-          <GuideAside
+
+            <h2>Conclusie &amp; volgende stap</h2>
+            <p>
+              Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+              catalogusromantiek. VanRobi adviseert als officiële Golderos-distributeur
+              voor België en Nederland; onderhoud via Taponderhoud.
+            </p>
+            <p>
+              <a className="text-link" href={withBase("/contact/")}>
+                Vraag een offerte of advies <span aria-hidden="true">→</span>
+              </a>
+              {" · "}
+              <a href={withBase("/producten/")}>Bekijk producten</a>
+              {" · "}
+              <a href={withBase("/faq/")}>FAQ</a>
+            </p>
+
+            <GuideAside
             eyebrow="Hulp"
             links={[
               { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Koopgids BE/NL" },

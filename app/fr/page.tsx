@@ -4,20 +4,14 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
 import { JsonLd } from "@/components/JsonLd";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { getProduct } from "@/lib/products";
 import { websiteSchema } from "@/lib/schema";
 import { contact } from "@/lib/contact";
 import { frHome, frFeaturedIds, frProductCopy } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "VanRobi, Distributeur officiel Golderos Belgique & Pays-Bas",
-  description:
-    "VanRobi, distributeur officiel Golderos pour la Belgique et les Pays-Bas. Refroidisseurs Goldy, V100, V200 pour Horeca et events.",
-  path: "/fr/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frHome);
 
 export default function FrHomePage() {
   const products = frFeaturedIds

@@ -3,18 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 import { frAbout } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "À propos, VanRobi & Taponderhoud",
-  description:
-    "VanRobi, distributeur officiel Golderos BE/NL, avec partenaire maintenance Taponderhoud depuis Kasterlee.",
-  path: "/fr/a-propos/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frAPropos);
 
 export default function FrAboutPage() {
   return (

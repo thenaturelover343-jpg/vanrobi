@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -7,12 +7,7 @@ import { CTA } from "@/components/CTA";
 import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 
-export const metadata: Metadata = pageMeta({
-  title: 'Voor wie, Horeca, events & installateurs | VanRobi',
-  description:
-    'Golderos-koelers via VanRobi voor horeca, festivals, craftbars en installateurs in België en Nederland.',
-  path: '/voor-wie/',
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.voorWie);
 
 const audiences = [
   {
@@ -58,6 +53,37 @@ export default function VoorWiePage() {
                 </a>
               </Reveal>
             ))}
+          </div>
+        </section>
+
+
+        <section className="page-section page-section-alt">
+          <div className="wrap prose" style={{ maxWidth: "46rem" }}>
+            <h2>Welke machine past bij welk publiek?</h2>
+            <h3>Vaste horeca</h3>
+            <p>
+              Restaurants en bars kiezen vaak een onder-bar ijsbankkoeler (
+              <a href={withBase("/producten/v100/")}>V100</a> of{" "}
+              <a href={withBase("/producten/v200/")}>V200</a>). Zie de gids{" "}
+              <a href={withBase("/gids/onder-bar-bierkoeler/")}>onder-bar bierkoeler</a>.
+            </p>
+            <h3>Events &amp; festivals</h3>
+            <p>
+              Mobiele units zoals{" "}
+              <a href={withBase("/producten/v100-portable/")}>V100 portable</a>,{" "}
+              <a href={withBase("/producten/v200-portable/")}>V200 portable</a> of{" "}
+              <a href={withBase("/producten/goldy/")}>Goldy</a>. Lees{" "}
+              <a href={withBase("/gids/bierkoeler-voor-events/")}>bierkoeler voor events</a>.
+            </p>
+            <h3>Installateurs &amp; craft</h3>
+            <p>
+              Heldere specs en een officieel Golderos-kanaal: bekijk de{" "}
+              <a href={withBase("/producten/")}>catalogus</a> of de pagina{" "}
+              <a href={withBase("/gids/golderos-distributeur-belgie-nederland/")}>
+                Golderos distributeur België &amp; Nederland
+              </a>
+              . Offerte via <a href={withBase("/contact/")}>contact</a>.
+            </p>
           </div>
         </section>
 

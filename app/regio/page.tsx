@@ -1,19 +1,16 @@
+import { JsonLd } from "@/components/JsonLd";
+import { faqPageSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CTA } from "@/components/CTA";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
-export const metadata: Metadata = pageMeta({
-  title: "Regio's België & Nederland, VanRobi Golderos",
-  description:
-    "VanRobi levert Golderos-ijsbankkoelers in Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen en Nederland. Basis: Kasterlee (Kempen).",
-  path: "/regio/",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.regio);
 
 const regions = [
   {
@@ -42,6 +39,24 @@ const regions = [
   },
 ];
 
+const regioFaqs = [
+  {
+    question: "Leveren jullie in heel België?",
+    answer:
+      "Ja. VanRobi adviseert en levert Golderos-ijsbankkoelers in Vlaanderen en Brussel, met basis in Kasterlee (Tielen). Regiodekking via Antwerpen, Limburg, Vlaams-Brabant, Brussel en Oost-Vlaanderen, plus projecten elders op aanvraag.",
+  },
+  {
+    question: "Werken jullie ook in Nederland?",
+    answer:
+      "Ja. VanRobi is het officiële Golderos-kanaal voor Nederland én België. Levering en advies landelijk.",
+  },
+  {
+    question: "Waar is VanRobi gevestigd?",
+    answer:
+      "Kemelbeekstraat 16, 2460 Kasterlee (Tielen). Telefoon +32 (0)14 71 80 80 · info@vanrobi.be.",
+  },
+];
+
 const capsules = [
   {
     q: "Leveren jullie in heel België?",
@@ -64,6 +79,7 @@ const capsules = [
 export default function RegioPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(regioFaqs)} />
       <Header />
       <main id="main">
         <PageHero

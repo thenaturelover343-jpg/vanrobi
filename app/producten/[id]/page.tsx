@@ -20,7 +20,7 @@ import {
   faqPageSchema,
   breadcrumbSchema,
 } from "@/lib/schema";
-import { pageMeta } from "@/lib/site";
+import { metaForProduct, productH1 } from "@/lib/seo-meta";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -32,14 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = getProduct(id);
   if (!p) return { title: "Product | VanRobi" };
-  return pageMeta({
-    title: `${p.name}, Golderos via VanRobi`,
-    description: p.description,
-    path: `/producten/${p.id}/`,
-    ogImage: p.image.includes("/assets/")
-      ? `/assets/${p.image.split("/assets/").pop()}`
-      : undefined,
-  });
+  return metaForProduct(p);
 }
 
 export default async function ProductDetailPage({ params }: Props) {
@@ -91,7 +84,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <p className="eyebrow">
                 {p.index} · Golderos · via VanRobi
               </p>
-              <h1>{p.name}</h1>
+              <h1>{productH1(p)}</h1>
               <p className="product-detail-lede">{p.longDescription}</p>
               <ul className="catalog-tags">
                 {p.uses.map((u) => (

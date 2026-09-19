@@ -8,7 +8,7 @@ export function Partner() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={withBase("/assets/products-stage/cooler-extra-2.jpg")}
-          alt="Golderos professionele ijsbankkoeler, industrieel RVS"
+          alt="Golderos professionele ijsbankkoeler in RVS, bierkoeler voor horeca via VanRobi"
           loading="lazy"
           width={1300}
           height={1300}

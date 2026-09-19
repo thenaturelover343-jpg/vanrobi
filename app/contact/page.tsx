@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
 import { contact } from "@/lib/contact";
+import { withBase } from "@/lib/base";
 
-export const metadata: Metadata = pageMeta({
-  title: 'Contact & offerte, VanRobi',
-  description:
-    'Contacteer VanRobi voor een Golderos-offerte. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 (0)14 71 80 80.',
-  path: '/contact/',
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.contact);
 
 export default function ContactPage() {
   return (
@@ -71,6 +67,28 @@ export default function ContactPage() {
             </Reveal>
           </div>
         </section>
+
+        <section className="page-section page-section-alt">
+          <div className="wrap prose" style={{ maxWidth: "42rem" }}>
+            <h2>Ijsbankkoeler offerte: wat we nodig hebben</h2>
+            <p>
+              Vermeld model (of piekvolume), vast versus mobiel, aantal kranen en
+              eventueel barfoto&apos;s. Zo adviseren we gericht tussen bijvoorbeeld{" "}
+              <a href={withBase("/producten/v100/")}>V100</a>,{" "}
+              <a href={withBase("/producten/v200/")}>V200</a> of{" "}
+              <a href={withBase("/producten/goldy/")}>Goldy</a>.
+            </p>
+            <h3>NAP &amp; regio</h3>
+            <p>
+              {contact.address.line} · {contact.phone} · {contact.email}. We werken in{" "}
+              {contact.regions}, en leveren in Nederland. Zie{" "}
+              <a href={withBase("/regio/")}>regio&apos;s</a>,{" "}
+              <a href={withBase("/diensten/")}>diensten</a> of de{" "}
+              <a href={withBase("/faq/")}>FAQ</a>.
+            </p>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>

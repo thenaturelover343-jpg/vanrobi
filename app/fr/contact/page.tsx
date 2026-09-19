@@ -3,18 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { contact, offerteMailto } from "@/lib/contact";
 import { withBase } from "@/lib/base";
 import { frContact } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "Contact & devis, VanRobi",
-  description:
-    "Contactez VanRobi pour un devis Golderos. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 14 71 80 80.",
-  path: "/fr/contact/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frContact);
 
 export default function FrContactPage() {
   return (

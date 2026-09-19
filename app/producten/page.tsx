@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,12 +8,7 @@ import { ProductCatalog } from "@/components/ProductCatalog";
 import { CTA } from "@/components/CTA";
 import { products } from "@/lib/products";
 
-export const metadata: Metadata = pageMeta({
-  title: 'Bierkoelers & ijsbankkoelers kopen, Golderos catalogus | VanRobi',
-  description:
-    'Golderos ijsbankkoelers via VanRobi: Goldy, Picky, V100, V200, portable. Onder-bar en over-bar voor horeca en events in België & Nederland.',
-  path: '/producten/',
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.producten);
 
 export default function ProductenPage() {
   return (

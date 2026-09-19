@@ -9,7 +9,7 @@ import { getProduct } from "@/lib/products";
 import { withBase } from "@/lib/base";
 import { offerteMailto, contact } from "@/lib/contact";
 import { productSchema } from "@/lib/schema";
-import { pageMeta } from "@/lib/site";
+import { metaForFrProduct } from "@/lib/seo-meta";
 import { frFeaturedIds, frProductCopy } from "@/lib/fr";
 
 type Props = { params: Promise<{ id: string }> };
@@ -23,12 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProduct(id);
   const copy = frProductCopy[id];
   if (!p || !copy) return { title: "Produit | VanRobi" };
-  return pageMeta({
-    title: `${p.name}, Golderos via VanRobi`,
-    description: copy.description,
-    path: `/fr/produits/${id}/`,
-    locale: "fr_BE",
-  });
+  return metaForFrProduct(p, copy.description);
 }
 
 export default async function FrProductPage({ params }: Props) {

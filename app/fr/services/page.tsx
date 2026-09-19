@@ -4,18 +4,12 @@ import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { ServicesSticky } from "@/components/ServicesSticky";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 import { frServices } from "@/lib/fr";
 
-export const metadata: Metadata = pageMeta({
-  title: "Services, Livraison, conseil & maintenance | VanRobi",
-  description:
-    "VanRobi livre les machines Golderos avec conseil. Maintenance, nettoyage et réparations via Taponderhoud. Belgique & Pays-Bas.",
-  path: "/fr/services/",
-  locale: "fr_BE",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.frServices);
 
 export default function FrServicesPage() {
   return (

@@ -5,15 +5,10 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { CTA } from "@/components/CTA";
 import { guides } from "@/lib/guides";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 
-export const metadata: Metadata = pageMeta({
-  title: "Gidsen: ijsbankkoeler, bierkoeler kopen & Golderos, VanRobi",
-  description:
-    "Gidsen over ijsbankkoelers en bierkoelers: kopen BE/NL, checklist, ijsbank vs dry cooler, spiralen, onder-bar, Goldy vs V100, Golderos-distributeur. Via VanRobi.",
-  path: "/gids/",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.gids);
 
 export default function GidsIndexPage() {
   return (

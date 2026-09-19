@@ -11,22 +11,17 @@ import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { guides } from "@/lib/guides";
-import { pageMeta } from "@/lib/site";
+import { pageSeo, metaFromEntry } from "@/lib/seo-meta";
 import { withBase } from "@/lib/base";
 import { JsonLd } from "@/components/JsonLd";
-import { websiteSchema } from "@/lib/schema";
+import { homeGraphSchema } from "@/lib/schema";
 
-export const metadata: Metadata = pageMeta({
-  title: "Bierkoeler & ijsbankkoeler, Golderos via VanRobi BE/NL",
-  description:
-    "Officiële Golderos-distributeur België & Nederland. Ijsbankkoelers en bierkoelers: Goldy, V100, V200, portable. Advies vanuit Kasterlee (Kempen).",
-  path: "/",
-});
+export const metadata: Metadata = metaFromEntry(pageSeo.home);
 
 export default function Home() {
   return (
     <>
-      <JsonLd data={websiteSchema()} />
+      <JsonLd data={homeGraphSchema()} />
       <Intro />
       <Header />
       <main id="main">
