@@ -3,13 +3,14 @@ import { withBase } from "@/lib/base";
 type BrandProps = {
   markSize?: number;
   className?: string;
+  homeHref?: string;
 };
 
-export function Brand({ markSize = 28, className }: BrandProps) {
+export function Brand({ markSize = 28, className, homeHref = "/" }: BrandProps) {
   return (
     <a
       className={`brand${className ? ` ${className}` : ""}`}
-      href={withBase("/")}
+      href={withBase(homeHref)}
       aria-label="VanRobi home"
     >
       <svg

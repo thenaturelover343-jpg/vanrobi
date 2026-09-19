@@ -1877,3 +1877,192 @@ body:has(.hero-light) .site-header:not(.scrolled) .menu-toggle {
   letter-spacing: 0.1em; text-transform: uppercase;
 }
 .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+
+
+/* ——— SEO / FAQ / Guides / i18n ——— */
+.header-tools {
+  display: none;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+@media (min-width: 900px) {
+  .header-tools { display: flex; }
+}
+.site-header .header-cta { margin-left: 0; }
+.nav { gap: 1.15rem; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lang-switch a {
+  color: var(--muted);
+  padding: 0.2rem 0.15rem;
+  transition: color 0.25s var(--ease);
+}
+.lang-switch a:hover,
+.lang-switch a.is-active { color: var(--ink); }
+.lang-switch-mobile {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 52rem;
+}
+.faq-item {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.1rem 1.35rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--brass);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p {
+  padding: 0 1.35rem 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 40rem;
+}
+
+.guide-body {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 900px) {
+  .guide-body {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 3.5rem;
+    align-items: start;
+  }
+}
+.guide-prose h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.55rem, 2.4vw, 1.9rem);
+  margin: 2rem 0 0.75rem;
+}
+.guide-prose h2:first-child { margin-top: 0; }
+.guide-prose p { color: var(--muted); margin-bottom: 1rem; max-width: 40rem; }
+.guide-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+.guide-list li { margin-bottom: 0.45rem; }
+.guide-aside { position: sticky; top: calc(var(--header-h) + 1rem); }
+.guide-card {
+  border: 1px solid var(--line);
+  background: var(--cream);
+  border-radius: 14px;
+  padding: 1.35rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.guide-card a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.guide-card a:hover {
+  color: var(--brass-deep);
+  border-bottom-color: var(--brass-soft);
+}
+
+.guide-index-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 720px) {
+  .guide-index-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+}
+@media (min-width: 1040px) {
+  .guide-index-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+.guide-index-card {
+  display: block;
+  padding: 1.6rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--cream);
+  height: 100%;
+  transition: border-color 0.3s var(--ease), transform 0.35s var(--ease);
+}
+.guide-index-card:hover {
+  border-color: var(--brass-soft);
+  transform: translateY(-2px);
+}
+.guide-index-card h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin: 0.35rem 0 0.75rem;
+}
+.guide-index-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.compare-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.compare-table th,
+.compare-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.compare-table th {
+  background: var(--paper-2);
+  font-weight: 600;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table td:first-child { color: var(--muted); font-weight: 500; }

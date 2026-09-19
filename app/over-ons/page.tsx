@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -7,11 +8,12 @@ import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
-export const metadata: Metadata = {
-  title: "Over ons — VanRobi × Golderos",
+export const metadata: Metadata = pageMeta({
+  title: 'Over ons — VanRobi & Taponderhoud',
   description:
-    "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Partnerschap met Spaanse fabrikant, onderhoud via Taponderhoud.",
-};
+    'VanRobi is de officiële Golderos-distributeur BE/NL, met onderhoudspartner Taponderhoud vanuit Kasterlee.',
+  path: '/over-ons/',
+});
 
 export default function OverOnsPage() {
   return (

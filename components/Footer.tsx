@@ -2,8 +2,72 @@ import { Brand } from "./Brand";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 import { featuredProducts } from "@/lib/products";
+import { guides } from "@/lib/guides";
 
-export function Footer() {
+export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
+  if (lang === "fr") {
+    return (
+      <footer className="site-footer">
+        <div className="wrap footer-grid">
+          <div className="footer-brand">
+            <Brand markSize={24} homeHref="/fr/" />
+            <p>
+              Distributeur officiel Golderos pour la Belgique et les Pays-Bas.
+              Maintenance via {contact.company}.
+            </p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <a className="footer-link" href={withBase("/fr/")}>
+              Accueil
+            </a>
+            <a className="footer-link" href={withBase("/fr/produits/")}>
+              Produits
+            </a>
+            <a className="footer-link" href={withBase("/fr/contact/")}>
+              Contact
+            </a>
+            <a className="footer-link" href={withBase("/")}>
+              Site néerlandais
+            </a>
+          </div>
+          <div>
+            <h4>Machines</h4>
+            {["goldy", "v100", "v200", "v100-portable"].map((id) => {
+              const p = featuredProducts.find((x) => x.id === id);
+              if (!p) return null;
+              return (
+                <a
+                  key={id}
+                  className="footer-link"
+                  href={withBase(`/fr/produits/${id}/`)}
+                >
+                  {p.name}
+                </a>
+              );
+            })}
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <a className="footer-link" href={`mailto:${contact.email}`}>
+              {contact.email}
+            </a>
+            <a className="footer-link" href={`tel:${contact.phoneTel}`}>
+              {contact.phone}
+            </a>
+            <p className="muted">{contact.address.line}</p>
+          </div>
+        </div>
+        <div className="wrap footer-base">
+          <span className="footer-copy">© 2026 VanRobi</span>
+          <span className="footer-legal">
+            Golderos® — fabricant espagnol. VanRobi, distributeur officiel BE/NL.
+          </span>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="site-footer">
       <div className="wrap footer-grid">
@@ -22,6 +86,12 @@ export function Footer() {
           <a className="footer-link" href={withBase("/diensten/")}>
             Diensten
           </a>
+          <a className="footer-link" href={withBase("/gids/")}>
+            Gidsen
+          </a>
+          <a className="footer-link" href={withBase("/faq/")}>
+            FAQ
+          </a>
           <a className="footer-link" href={withBase("/voor-wie/")}>
             Voor wie
           </a>
@@ -31,10 +101,26 @@ export function Footer() {
           <a className="footer-link" href={withBase("/contact/")}>
             Contact
           </a>
+          <a className="footer-link" href={withBase("/fr/")}>
+            Français
+          </a>
         </div>
         <div>
-          <h4>Machines</h4>
-          {featuredProducts.slice(0, 6).map((p) => (
+          <h4>Gidsen</h4>
+          {guides.map((g) => (
+            <a
+              key={g.slug}
+              className="footer-link"
+              href={withBase(`/gids/${g.slug}/`)}
+            >
+              {g.title.split(":")[0]}
+            </a>
+          ))}
+          <a className="footer-link" href={withBase("/faq/")}>
+            Veelgestelde vragen
+          </a>
+          <h4 style={{ marginTop: "1.25rem" }}>Machines</h4>
+          {featuredProducts.slice(0, 4).map((p) => (
             <a
               key={p.id}
               className="footer-link"

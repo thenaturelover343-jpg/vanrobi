@@ -4,6 +4,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { FaqBlock } from "@/components/FaqBlock";
+import { JsonLd } from "@/components/JsonLd";
 import {
   products,
   getProduct,
@@ -12,6 +14,13 @@ import {
 } from "@/lib/products";
 import { withBase } from "@/lib/base";
 import { offerteMailto, contact } from "@/lib/contact";
+import { faqsForProduct } from "@/lib/faq";
+import {
+  productSchema,
+  faqPageSchema,
+  breadcrumbSchema,
+} from "@/lib/schema";
+import { pageMeta } from "@/lib/site";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -23,10 +32,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = getProduct(id);
   if (!p) return { title: "Product — VanRobi" };
-  return {
+  return pageMeta({
     title: `${p.name} — Golderos via VanRobi`,
     description: p.description,
-  };
+    path: `/producten/${p.id}/`,
+    ogImage: p.image.includes("/assets/")
+      ? `/assets/${p.image.split("/assets/").pop()}`
+      : undefined,
+  });
 }
 
 export default async function ProductDetailPage({ params }: Props) {
@@ -35,9 +48,20 @@ export default async function ProductDetailPage({ params }: Props) {
   if (!p) notFound();
 
   const others = featuredProducts.filter((x) => x.id !== p.id).slice(0, 4);
+  const faqs = faqsForProduct(p.id);
+  const schemas: Record<string, unknown>[] = [
+    productSchema(p),
+    breadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Producten", path: "/producten/" },
+      { name: p.name, path: `/producten/${p.id}/` },
+    ]),
+  ];
+  if (faqs.length) schemas.push(faqPageSchema(faqs));
 
   return (
     <>
+      <JsonLd data={schemas} />
       <Header />
       <main id="main">
         <section className="product-detail">
@@ -89,10 +113,35 @@ export default async function ProductDetailPage({ params }: Props) {
               <p className="cta-note">
                 Of vul het{" "}
                 <a href={withBase("/contact/")}>contactformulier</a> in.
+                {" "}Lees ook de{" "}
+                <a href={withBase("/faq/")}>FAQ</a>
+                {p.id === "v100" || p.id === "v200" ? (
+                  <>
+                    {" "}of{" "}
+                    <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a>
+                  </>
+                ) : null}
+                {p.uses.includes("events") || p.uses.includes("mobiel") ? (
+                  <>
+                    {" "}·{" "}
+                    <a href={withBase("/gids/bierkoeler-voor-events/")}>
+                      Eventgids
+                    </a>
+                  </>
+                ) : null}
+                .
               </p>
             </Reveal>
           </div>
         </section>
+
+        {faqs.length ? (
+          <FaqBlock
+            faqs={faqs}
+            title={`FAQ over ${p.name}`}
+            id={`faq-${p.id}`}
+          />
+        ) : null}
 
         <section className="page-section page-section-alt">
           <div className="wrap">

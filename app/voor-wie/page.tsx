@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -6,11 +7,12 @@ import { CTA } from "@/components/CTA";
 import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 
-export const metadata: Metadata = {
-  title: "Voor wie — Horeca, events & installateurs | VanRobi",
+export const metadata: Metadata = pageMeta({
+  title: 'Voor wie — Horeca, events & installateurs | VanRobi',
   description:
-    "Golderos via VanRobi voor horeca, events, installateurs en brouwerijen in België en Nederland.",
-};
+    'Golderos-koelers via VanRobi voor horeca, festivals, craftbars en installateurs in België en Nederland.',
+  path: '/voor-wie/',
+});
 
 const audiences = [
   {

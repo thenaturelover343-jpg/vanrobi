@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -7,11 +8,12 @@ import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
-export const metadata: Metadata = {
-  title: "Diensten — Levering, advies & onderhoud | VanRobi",
+export const metadata: Metadata = pageMeta({
+  title: 'Diensten — Levering, advies & onderhoud | VanRobi',
   description:
-    "VanRobi levert Golderos-machines met advies, plus onderhoud, reiniging en herstellingen via Taponderhoud. Koelgecertificeerd in de Kempen en wijde regio.",
-};
+    'VanRobi levert Golderos-machines met advies, plus onderhoud, reiniging en herstellingen via Taponderhoud. Koelgecertificeerd in de Kempen en wijde regio.',
+  path: '/diensten/',
+});
 
 const services = [
   {

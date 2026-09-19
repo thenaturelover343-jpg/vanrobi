@@ -1,12 +1,36 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@/components/Analytics";
+import { organizationSchema } from "@/lib/schema";
+import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL + "/"),
   title: "VanRobi — Officiële Golderos-distributeur België & Nederland",
   description:
     "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers: Goldy, V100, V100 portable en V200 voor horeca, events en installateurs.",
   icons: {
-    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/assets/logo.svg`,
+    icon: `${process.env.NEXT_PUBLIC_BASE_PATH || "/vanrobi"}/assets/logo.svg`,
+  },
+  openGraph: {
+    type: "website",
+    locale: "nl_BE",
+    siteName: "VanRobi",
+    url: absoluteUrl("/"),
+    images: [
+      {
+        url: absoluteUrl("/assets/hero-official.jpg"),
+        alt: "VanRobi — Golderos distributeur",
+      },
+    ],
+  },
+  alternates: {
+    canonical: absoluteUrl("/"),
+    languages: {
+      "nl-BE": absoluteUrl("/"),
+      "fr-BE": absoluteUrl("/fr/"),
+    },
   },
 };
 
@@ -35,7 +59,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={organizationSchema()} />
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }

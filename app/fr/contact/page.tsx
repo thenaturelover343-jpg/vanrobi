@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
-import { contact } from "@/lib/contact";
+import { pageMeta } from "@/lib/site";
+import { contact, offerteMailto } from "@/lib/contact";
+import { withBase } from "@/lib/base";
+import { frContact } from "@/lib/fr";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Contact & offerte — VanRobi',
+  title: "Contact & devis — VanRobi",
   description:
-    'Contacteer VanRobi voor een Golderos-offerte. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 (0)14 71 80 80.',
-  path: '/contact/',
+    "Contactez VanRobi pour un devis Golderos. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 14 71 80 80.",
+  path: "/fr/contact/",
 });
 
-export default function ContactPage() {
+export default function FrContactPage() {
   return (
     <>
-      <Header />
-      <main id="main">
+      <Header lang="fr" />
+      <main id="main" lang="fr">
         <PageHero
-          eyebrow="Contact"
-          title={["Offerte of", <em key="e">vraag?</em>]}
-          lede="Stuur uw aanvraag — we antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud."
+          eyebrow={frContact.eyebrow}
+          title={["Devis ou", <em key="e">question ?</em>]}
+          lede={frContact.lede}
         />
-
         <section className="page-section">
           <div className="wrap contact-layout">
             <Reveal className="contact-details">
-              <h2>Gegevens</h2>
+              <h2>Coordonnées</h2>
               <dl className="contact-dl">
                 <div>
                   <dt>E-mail</dt>
@@ -37,21 +37,17 @@ export default function ContactPage() {
                   </dd>
                 </div>
                 <div>
-                  <dt>Telefoon</dt>
+                  <dt>Téléphone</dt>
                   <dd>
                     <a href={`tel:${contact.phoneTel}`}>{contact.phone}</a>
                   </dd>
                 </div>
                 <div>
-                  <dt>Adres</dt>
+                  <dt>Adresse</dt>
                   <dd>{contact.address.line}</dd>
                 </div>
                 <div>
-                  <dt>Regio</dt>
-                  <dd>{contact.regions}</dd>
-                </div>
-                <div>
-                  <dt>Onderhoud</dt>
+                  <dt>Maintenance</dt>
                   <dd>
                     <a
                       href={contact.companyUrl}
@@ -64,15 +60,24 @@ export default function ContactPage() {
                 </div>
               </dl>
             </Reveal>
-
-            <Reveal className="contact-form-wrap reveal-delay-1">
-              <h2>Offerteformulier</h2>
-              <ContactForm />
+            <Reveal className="contact-form-wrap reveal-delay-1 prose">
+              <h2>Demander un devis</h2>
+              <p>{frContact.formNote}</p>
+              <p style={{ marginTop: "1.5rem" }}>
+                <a className="btn btn-ink btn-lg" href={offerteMailto()}>
+                  Écrire à {contact.email}
+                </a>
+              </p>
+              <p style={{ marginTop: "1rem" }}>
+                <a className="text-link" href={withBase("/contact/")}>
+                  Formulaire complet (NL) <span aria-hidden="true">→</span>
+                </a>
+              </p>
             </Reveal>
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer lang="fr" />
     </>
   );
 }
