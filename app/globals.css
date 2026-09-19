@@ -3978,3 +3978,19 @@ html.js-reveal .products .reveal:not(.in) .prod-frame.img-mask {
   animation: none !important;
   background: none !important;
 }
+
+
+/* Statement italic descenders */
+.statement-text .split-line {
+  overflow: visible !important;
+  padding-bottom: 0.28em;
+  margin-bottom: 0.06em;
+}
+.statement-text em,
+.statement-text .split-line-inner em {
+  display: inline-block;
+  padding-bottom: 0.08em;
+}
+.statement-text {
+  line-height: 1.18 !important;
+}
