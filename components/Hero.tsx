@@ -46,13 +46,13 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="hero" aria-label="Introductie">
+    <section className="hero hero-light" aria-label="Introductie">
       <div className="hero-media" data-parallax ref={mediaRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           ref={imgRef}
-          src={withBase("/assets/hero-official.jpg")}
-          alt="Golderos V200 ijsbankkoeler — professionele drankkoeling via VanRobi"
+          src={withBase("/assets/hero-editorial.jpg")}
+          alt="Golderos Goldy — over-bar ijsbankkoeler met twee kranen, via VanRobi"
           width={2400}
           height={1500}
           fetchPriority="high"
@@ -80,7 +80,7 @@ export function Hero() {
             horeca, events en installateurs die geen compromis dulden.
           </p>
           <div className="hero-actions reveal-hero reveal-hero-4">
-            <MagneticButton className="btn btn-light magnetic" href="#offerte">
+            <MagneticButton className="btn btn-ink magnetic" href="#offerte">
               <span className="magnetic-label">Vraag een offerte</span>
             </MagneticButton>
             <a className="btn btn-ghost" href="#producten">
@@ -92,15 +92,15 @@ export function Hero() {
         <aside className="hero-meta reveal-hero reveal-hero-5" aria-hidden="true">
           <div className="hero-meta-item">
             <span>Model</span>
-            <strong>V200</strong>
+            <strong>Goldy</strong>
           </div>
           <div className="hero-meta-item">
             <span>IJsreserve</span>
-            <strong>38 kg</strong>
+            <strong>9 kg</strong>
           </div>
           <div className="hero-meta-item">
             <span>Debiet</span>
-            <strong>160 L/u</strong>
+            <strong>44 L/u</strong>
           </div>
         </aside>
       </div>

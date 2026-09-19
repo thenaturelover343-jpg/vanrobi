@@ -201,6 +201,23 @@ ul, ol { list-style: none; }
 
 .site-header.hidden { transform: translateY(-110%); }
 
+/* Header readable over light editorial hero */
+body:has(.hero-light) .site-header:not(.scrolled) {
+  color: var(--ink);
+}
+body:has(.hero-light) .site-header:not(.scrolled) .header-cta.btn-ink {
+  background: var(--ink);
+  color: var(--cream);
+}
+body:has(.hero-light) .site-header:not(.scrolled) .header-cta.btn-ink:hover {
+  background: #1a1714;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+body:has(.hero-light) .site-header:not(.scrolled) .menu-toggle {
+  color: var(--ink);
+}
+
+
 .site-header:not(.scrolled) .header-cta.btn-ink {
   background: var(--cream);
   color: var(--ink);
@@ -328,6 +345,59 @@ ul, ol { list-style: none; }
   color: var(--cream);
   overflow: hidden;
   background: var(--dark);
+}
+
+
+/* ——— Editorial light hero (product as object, full machine visible) ——— */
+.hero.hero-light {
+  color: var(--ink);
+  background: #f6f1e8;
+}
+.hero.hero-light .hero-veil {
+  background:
+    linear-gradient(90deg,
+      rgba(246, 241, 232, 0.97) 0%,
+      rgba(246, 241, 232, 0.88) 22%,
+      rgba(246, 241, 232, 0.35) 42%,
+      rgba(246, 241, 232, 0) 58%),
+    linear-gradient(180deg, rgba(246, 241, 232, 0.55) 0%, transparent 18%, transparent 82%, rgba(246, 241, 232, 0.4) 100%);
+}
+.hero.hero-light .hero-img {
+  object-position: 72% 50%;
+  transform: scale(1.02);
+  animation: none;
+}
+.hero.hero-light .hero-grain { opacity: 0.018; mix-blend-mode: multiply; }
+.hero.hero-light .hero-kicker { color: var(--brass); opacity: 1; }
+.hero.hero-light .hero-lede { color: rgba(20, 18, 16, 0.72); }
+.hero.hero-light .btn-ghost {
+  color: var(--ink);
+  border-color: rgba(20, 18, 16, 0.28);
+}
+.hero.hero-light .btn-ghost:hover {
+  border-color: rgba(20, 18, 16, 0.55);
+  background: rgba(20, 18, 16, 0.04);
+}
+.hero.hero-light .hero-meta-item span { color: rgba(20, 18, 16, 0.45); }
+.hero.hero-light .hero-meta-item strong { color: var(--ink); }
+.hero.hero-light .hero-scroll { color: rgba(20, 18, 16, 0.45); }
+.hero.hero-light .hero-scroll i { background: rgba(20, 18, 16, 0.35); }
+.hero.hero-light .hero-scroll i::after { border-color: rgba(20, 18, 16, 0.35); }
+@media (max-width: 959px) {
+  .hero.hero-light .hero-img {
+    object-position: 78% 42%;
+  }
+  .hero.hero-light .hero-veil {
+    background:
+      linear-gradient(180deg,
+        rgba(246, 241, 232, 0.2) 0%,
+        rgba(246, 241, 232, 0.15) 38%,
+        rgba(246, 241, 232, 0.92) 62%,
+        rgba(246, 241, 232, 0.98) 100%);
+  }
+  .hero.hero-light .hero-stage {
+    justify-content: flex-end;
+  }
 }
 
 .hero-media {
