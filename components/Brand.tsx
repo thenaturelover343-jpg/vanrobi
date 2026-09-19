@@ -29,11 +29,10 @@ export function Brand({ markSize = 28, className, homeHref = "/" }: BrandProps) 
           strokeLinejoin="round"
         />
         <path
+          className="brand-mark-accent"
           d="M9 14h10"
-          stroke="currentColor"
           strokeWidth="1.25"
           strokeLinecap="round"
-          opacity=".5"
         />
       </svg>
       <span className="brand-name">VanRobi</span>

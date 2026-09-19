@@ -266,6 +266,14 @@ body:has(.product-catalog) .site-header:not(.scrolled) .menu-toggle {
   font-weight: 500;
 }
 .brand-mark { flex-shrink: 0; }
+.brand-mark-accent {
+  stroke: var(--ice-sharp);
+  opacity: 0.9;
+}
+.site-header.scrolled .brand-mark-accent {
+  stroke: var(--ice-sharp);
+  opacity: 1;
+}
 
 .nav {
   display: none;
