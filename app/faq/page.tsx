@@ -12,7 +12,7 @@ import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 
 export const metadata: Metadata = pageMeta({
-  title: "FAQ bierkoeler & ijsbankkoeler — VanRobi",
+  title: "FAQ bierkoeler & ijsbankkoeler, VanRobi",
   description:
     "Veelgestelde vragen: ijsbank vs doorstroom, installatie België, festivals, Goldy vs V100, Golderos-verdeler BE/NL, onderhoud via taponderhoud.be.",
   path: "/faq/",
@@ -27,7 +27,7 @@ export default function FaqPage() {
         <PageHero
           eyebrow="FAQ"
           title={["Antwoorden,", <em key="e">zonder omwegen</em>]}
-          lede="Officieel Golderos-kanaal, onderhoud via Taponderhoud, eerlijke levertijden. Staat uw vraag er niet bij — mail info@vanrobi.be."
+          lede="Officieel Golderos-kanaal, onderhoud via Taponderhoud, eerlijke levertijden. Staat uw vraag er niet bij, mail info@vanrobi.be."
         />
         <FaqBlock faqs={generalFaqs} title="Veelgestelde vragen" />
         <section className="page-section">
@@ -62,7 +62,7 @@ export default function FaqPage() {
             <Reveal className="prose reveal-delay-1">
               <h2>Contact</h2>
               <p>
-                Liever persoonlijk advies? Bel of mail — we antwoorden binnen één
+                Liever persoonlijk advies? Bel of mail. We antwoorden binnen één
                 werkdag.
               </p>
               <p>

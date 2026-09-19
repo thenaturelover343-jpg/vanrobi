@@ -5,7 +5,7 @@ export const generalFaqs: FaqItem[] = [
   {
     question: "Is VanRobi de officiële Golderos-verdeler voor België en Nederland?",
     answer:
-      "Ja. VanRobi is de officiële Golderos-distributeur voor België en Nederland. U koopt via een erkend kanaal — geen grijze import — met correcte specs, garantieopvolging en lokale support.",
+      "Ja. VanRobi is de officiële Golderos-distributeur voor België en Nederland. U koopt via een erkend kanaal, geen grijze import, met correcte specs, garantieopvolging en lokale support.",
   },
   {
     question: "Wie doet het onderhoud van mijn tapinstallatie?",
@@ -15,12 +15,12 @@ export const generalFaqs: FaqItem[] = [
   {
     question: "Hoe vraag ik een offerte aan?",
     answer:
-      "Stuur een mail naar info@vanrobi.be, bel +32 14 71 80 80, of gebruik het contactformulier op de site. Vermeld model, toepassing (horeca/events) en eventueel aantal kranen — dan kunnen we gericht adviseren.",
+      "Stuur een mail naar info@vanrobi.be, bel +32 14 71 80 80, of gebruik het contactformulier op de site. Vermeld model, toepassing (horeca/events) en eventueel aantal kranen, dan kunnen we gericht adviseren.",
   },
   {
     question: "Wat is de levertijd?",
     answer:
-      "Levertijden hangen af van model en voorraad bij Golderos. Reken indicatief op enkele weken voor standaardunits; portable- en specials kunnen langer duren. We bevestigen een realistische planning bij elke offerte — geen beloftes die we niet kunnen houden.",
+      "Levertijden hangen af van model en voorraad bij Golderos. Reken indicatief op enkele weken voor standaardunits; portable- en specials kunnen langer duren. We bevestigen een realistische planning bij elke offerte, geen beloftes die we niet kunnen houden.",
   },
   {
     question: "Wat is het verschil tussen de V100 en de V200?",
@@ -35,32 +35,32 @@ export const generalFaqs: FaqItem[] = [
   {
     question: "Kan ik een machine voor festivals of events huren of kopen?",
     answer:
-      "We focussen op verkoop van Golderos-koelers (o.a. Goldy, V100 portable, V200 portable). Voor events helpen we met de juiste mobiele unit en opbouwadvies. Huurvragen bekijken we case by case — mail info@vanrobi.be.",
+      "We focussen op verkoop van Golderos-koelers (o.a. Goldy, V100 portable, V200 portable). Voor events helpen we met de juiste mobiele unit en opbouwadvies. Huurvragen bekijken we case by case, mail info@vanrobi.be.",
   },
   {
     question: "Wat is het verschil tussen een ijsbankkoeler en een doorstroomkoeler?",
     answer:
-      "Een ijsbankkoeler houdt een ijsreserve in een waterbad (cuba) aan — dat geeft buffer bij pieken. Een doorstroomkoeler koelt vooral terwijl er getapt wordt en is vaak compacter, maar heeft minder reserve. Welke beter is, hangt af van piekvolume, leidingen en ruimte. Lees onze gids “Wat is een ijsbankkoeler?” of vraag advies via info@vanrobi.be.",
+      'Een ijsbankkoeler houdt een ijsreserve in een waterbad (cuba) aan, dat geeft buffer bij pieken. Een doorstroomkoeler koelt vooral terwijl er getapt wordt en is vaak compacter, maar heeft minder reserve. Welke beter is, hangt af van piekvolume, leidingen en ruimte. Lees onze gids "Wat is een ijsbankkoeler?" of vraag advies via info@vanrobi.be.',
   },
   {
     question: "Installeren jullie bierkoelers in België?",
     answer:
-      "VanRobi levert en adviseert. Plaatsing, demontage en technische opvolging van koelingen verlopen via Taponderhoud (koelgecertificeerd, Kempen). Samen dekken we Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen — en levering in NL. Contact: info@vanrobi.be of +32 14 71 80 80.",
+      "VanRobi levert en adviseert. Plaatsing, demontage en technische opvolging van koelingen verlopen via Taponderhoud (koelgecertificeerd, Kempen). Samen dekken we Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen, en levering in NL. Contact: info@vanrobi.be of +32 14 71 80 80.",
   },
   {
     question: "Welke bierkoeler voor een festival of outdoor event?",
     answer:
-      "Voor de meeste festivals: V100 portable (capaciteit op wielen) of Goldy (compact over-bar). Grote pieken: V200 portable. Voorzie stabiele 220V, plaats uit de zon, en plan levertijd vooruit. Zie de gids “Bierkoeler voor events”.",
+      'Voor de meeste festivals: V100 portable (capaciteit op wielen) of Goldy (compact over-bar). Grote pieken: V200 portable. Voorzie stabiele 220V, plaats uit de zon, en plan levertijd vooruit. Zie de gids "Bierkoeler voor events".',
   },
   {
-    question: "Goldy of V100 — wat past bij mijn bar?",
+    question: "Goldy of V100, wat past bij mijn bar?",
     answer:
-      "Goldy is over-bar (zichtbaar, compact, ±44 L/u) — sterk voor events en craft. V100 is onder-bar (±87 L/u, meer ijs) voor vaste horeca. Vergelijking met echte specs staat in onze gids Goldy vs V100.",
+      "Goldy is over-bar (zichtbaar, compact, ±44 L/u), sterk voor events en craft. V100 is onder-bar (±87 L/u, meer ijs) voor vaste horeca. Vergelijking met echte specs staat in onze gids Goldy vs V100.",
   },
   {
     question: "Wat kost een Golderos-bierkoeler?",
     answer:
-      "Prijs hangt af van model, opties (zuil, spiralen) en leveringsvoorwaarden. We geven geen catalogusprijzen online zonder context — stuur uw toepassing naar info@vanrobi.be voor een gerichte offerte.",
+      "Prijs hangt af van model, opties (zuil, spiralen) en leveringsvoorwaarden. We geven geen catalogusprijzen online zonder context, stuur uw toepassing naar info@vanrobi.be voor een gerichte offerte.",
   },
   {
     question: "Kan ik een onder-bar koeler in een bestaand barmeubel plaatsen?",
@@ -84,7 +84,7 @@ export const productFaqs: Record<string, FaqItem[]> = {
     {
       question: "Hoe vraag ik een offerte voor de Goldy?",
       answer:
-        "Mail info@vanrobi.be of gebruik het contactformulier met vermelding “Goldy”. We bevestigen beschikbaarheid en levertijd bij de offerte.",
+        'Mail info@vanrobi.be of gebruik het contactformulier met vermelding "Goldy". We bevestigen beschikbaarheid en levertijd bij de offerte.',
     },
   ],
   v100: [
@@ -94,7 +94,7 @@ export const productFaqs: Record<string, FaqItem[]> = {
         "De V100 is het standaard werkpaard voor horeca: medium formaat, stabiel debiet (±87 L/u) en voldoende ijsreserve voor dagelijks gebruik.",
     },
     {
-      question: "V100 of V200 — wat kies ik?",
+      question: "V100 of V200, wat kies ik?",
       answer:
         "V100 voor normale tot drukke service; V200 wanneer u structureel high volume draait. Lees onze gids V100 vs V200 of vraag advies via info@vanrobi.be.",
     },
@@ -125,7 +125,7 @@ export const productFaqs: Record<string, FaqItem[]> = {
     {
       question: "Wat maakt de V100 portable anders?",
       answer:
-        "Zelfde V100-capaciteit, maar mobiel op wielen voor festivals, feesten en tijdelijke bars — optioneel met tapzuil.",
+        "Zelfde V100-capaciteit, maar mobiel op wielen voor festivals, feesten en tijdelijke bars, optioneel met tapzuil.",
     },
     {
       question: "Heb ik speciale stroom nodig?",

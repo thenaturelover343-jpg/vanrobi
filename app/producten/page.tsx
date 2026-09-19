@@ -9,7 +9,7 @@ import { CTA } from "@/components/CTA";
 import { products } from "@/lib/products";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Bierkoelers & ijsbankkoelers kopen — Golderos catalogus | VanRobi',
+  title: 'Bierkoelers & ijsbankkoelers kopen, Golderos catalogus | VanRobi',
   description:
     'Golderos ijsbankkoelers via VanRobi: Goldy, Picky, V100, V200, portable. Onder-bar en over-bar voor horeca en events in België & Nederland.',
   path: '/producten/',
@@ -23,7 +23,7 @@ export default function ProductenPage() {
         <PageHero
           eyebrow="Assortiment"
           title={["Golderos-catalogus.", <em key="e">Via VanRobi.</em>]}
-          lede={`${products.length} machines en componenten uit de officiële Golderos-lijn — gefilterd op gebruik. Specs en beelden voor installateurs, horeca en events.`}
+          lede={`${products.length} machines en componenten uit de officiële Golderos-lijn, gefilterd op gebruik. Specs en beelden voor installateurs, horeca en events.`}
         />
         <section className="page-section">
           <div className="wrap">
@@ -34,12 +34,12 @@ export default function ProductenPage() {
           <div className="wrap prose">
             <h2>Hulp bij de keuze?</h2>
             <p>
-              Lees onze gidsen —{" "}
+              Lees onze gidsen:{" "}
               <a href={withBase("/gids/wat-is-een-ijsbankkoeler/")}>wat is een ijsbankkoeler</a>,{" "}
               <a href={withBase("/gids/bierkoeler-kopen-belgie-nederland/")}>bierkoeler kopen BE/NL</a>,{" "}
               <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a>,{" "}
-              <a href={withBase("/gids/goldy-vs-v100/")}>Goldy vs V100</a>
-              — of de <a href={withBase("/faq/")}>FAQ</a> en{" "}
+              <a href={withBase("/gids/goldy-vs-v100/")}>Goldy vs V100</a>.
+              Bekijk ook de <a href={withBase("/faq/")}>FAQ</a> en{" "}
               <a href={withBase("/regio/")}>regio&apos;s</a>.
             </p>
           </div>

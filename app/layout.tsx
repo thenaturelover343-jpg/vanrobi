@@ -7,7 +7,7 @@ import { SITE_URL, absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL + "/"),
-  title: "VanRobi — Officiële Golderos-distributeur België & Nederland",
+  title: "VanRobi, Officiële Golderos-distributeur België & Nederland",
   description:
     "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers: Goldy, V100, V100 portable en V200 voor horeca, events en installateurs.",
   icons: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: absoluteUrl("/assets/hero-official.jpg"),
-        alt: "VanRobi — Golderos distributeur",
+        alt: "VanRobi, Golderos distributeur",
       },
     ],
   },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VanRobi — Officiële Golderos-distributeur België & Nederland",
+    title: "VanRobi, Officiële Golderos-distributeur België & Nederland",
     description:
       "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers voor horeca, events en installateurs.",
     images: [absoluteUrl("/assets/hero-official.jpg")],

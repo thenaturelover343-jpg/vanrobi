@@ -54,7 +54,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const g = getGuide(slug);
-  if (!g) return { title: "Gids — VanRobi" };
+  if (!g) return { title: "Gids | VanRobi" };
   return pageMeta({
     title: `${g.title} | Golderos via VanRobi`,
     description: g.description,

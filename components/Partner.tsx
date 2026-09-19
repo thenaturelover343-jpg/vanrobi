@@ -8,7 +8,7 @@ export function Partner() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={withBase("/assets/products-stage/cooler-extra-2.jpg")}
-          alt="Golderos professionele ijsbankkoeler — industrieel RVS"
+          alt="Golderos professionele ijsbankkoeler, industrieel RVS"
           loading="lazy"
           width={1300}
           height={1300}
@@ -23,8 +23,7 @@ export function Partner() {
           <em>Via VanRobi.</em>
         </h2>
         <p>
-          Golderos is de Spaanse fabrikant van professionele ijsbankkoelers —
-          meer dan 50 jaar leiderschap in koudetechniek. VanRobi is de officiële
+          Golderos is de Spaanse fabrikant van professionele ijsbankkoelers,           meer dan 50 jaar leiderschap in koudetechniek. VanRobi is de officiële
           distributeur voor België en Nederland: selectie, advies en levering
           vanuit één aanspreekpunt.
         </p>

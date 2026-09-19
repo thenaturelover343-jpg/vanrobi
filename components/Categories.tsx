@@ -11,7 +11,7 @@ export function Categories() {
             Waar de koude <em>telt</em>
           </h2>
           <p className="block-lede">
-            Van vaste bar tot festivalterrein — dezelfde industriële
+            Van vaste bar tot festivalterrein, dezelfde industriële
             betrouwbaarheid.
           </p>
         </Reveal>

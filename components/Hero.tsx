@@ -51,7 +51,7 @@ export function Hero() {
         <img
           ref={imgRef}
           src={withBase("/assets/hero-editorial.jpg")}
-          alt="Golderos Goldy — over-bar ijsbankkoeler met twee kranen, via VanRobi"
+          alt="Golderos Goldy, over-bar ijsbankkoeler met twee kranen, via VanRobi"
           width={2400}
           height={1500}
           fetchPriority="high"
@@ -73,9 +73,9 @@ export function Hero() {
             <em>Koude die de bar draagt.</em>
           </p>
           <p className="hero-lede reveal-hero reveal-hero-4">
-            Via VanRobi — officiële Golderos-distributeur. Industriële precisie
-            voor bars, restaurants, events en installateurs die geen compromis
-            dulden.
+            Via VanRobi, officiële Golderos-distributeur voor België en
+            Nederland. Professionele koeling voor bars, restaurants, events en
+            installateurs die stabiele tapkoude nodig hebben.
           </p>
           <div className="hero-actions reveal-hero reveal-hero-5">
             <MagneticButton

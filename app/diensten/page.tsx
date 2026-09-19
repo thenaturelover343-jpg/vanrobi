@@ -9,7 +9,7 @@ import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Diensten — Levering, advies & onderhoud | VanRobi',
+  title: 'Diensten, Levering, advies & onderhoud | VanRobi',
   description:
     'VanRobi levert Golderos-machines met advies, plus onderhoud, reiniging en herstellingen via Taponderhoud. Koelgecertificeerd in de Kempen en wijde regio.',
   path: '/diensten/',
@@ -19,7 +19,7 @@ const services = [
   {
     n: "01",
     title: "Advies & selectie",
-    text: "Welke Golderos-unit past bij uw bar, event of brouwerij? We matchen volume, ruimte, spiralen en debiet — zonder verkooppraatjes.",
+    text: "Welke Golderos-unit past bij uw bar, event of brouwerij? We matchen volume, ruimte, spiralen en debiet, zonder verkooppraatjes.",
   },
   {
     n: "02",
@@ -34,7 +34,7 @@ const services = [
   {
     n: "04",
     title: "Onderhoud & reiniging",
-    text: "Periodiek onderhoud en reiniging van tapinstallaties — via Taponderhoud, koelgecertificeerd, vanuit de Kempen.",
+    text: "Periodiek onderhoud en reiniging van tapinstallaties, via Taponderhoud, koelgecertificeerd, vanuit de Kempen.",
   },
   {
     n: "05",
@@ -56,7 +56,7 @@ export default function DienstenPage() {
         <PageHero
           eyebrow="Diensten"
           title={["Van machine tot", <em key="e">onderhoud.</em>]}
-          lede="VanRobi levert en adviseert Golderos-ijsbankkoelers. Onderhoud, reiniging en herstellingen gebeuren via Taponderhoud — één lokaal team."
+          lede="VanRobi levert en adviseert Golderos-ijsbankkoelers. Onderhoud, reiniging en herstellingen gebeuren via Taponderhoud, met één lokaal team."
         />
 
         <section className="page-section">

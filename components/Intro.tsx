@@ -22,7 +22,7 @@ export function Intro() {
         sessionStorage.setItem(KEY, "1");
       }, 760);
     } catch {
-      /* private mode — skip */
+      /* private mode, skip */
     }
     return () => {
       if (timer) window.clearTimeout(timer);

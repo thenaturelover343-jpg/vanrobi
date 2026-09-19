@@ -70,7 +70,7 @@ export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
         <div className="wrap footer-base">
           <span className="footer-copy">© 2026 VanRobi</span>
           <span className="footer-legal">
-            Golderos® — fabricant espagnol. VanRobi, distributeur officiel BE/NL.
+            Golderos®, fabricant espagnol. VanRobi, distributeur officiel BE/NL.
           </span>
         </div>
       </footer>

@@ -17,8 +17,8 @@ export function Statement() {
           ]}
         />
         <Reveal as="p" className="statement-sub reveal-delay-2">
-          Spaans maakwerk. Benelux-nabijheid. Koude die stand houdt —
-          shift na shift.
+          Spaans maakwerk. Benelux-nabijheid. Koude die blijft presteren
+          tijdens elke shift.
         </Reveal>
       </div>
     </section>

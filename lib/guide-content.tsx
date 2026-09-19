@@ -34,7 +34,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <strong>Gamko</strong> is een bekende naam in Benelux-horecakeeling
               (vaak gekoppeld aan complete tap- en koelmeubelen).{" "}
               <strong>Golderos</strong> is een Spaanse specialist in
-              ijsbankkoelers — van compacte over-bar (Goldy) tot high-volume
+              ijsbankkoelers, van compacte over-bar (Goldy) tot high-volume
               onder-bar (V100, V200, V500). VanRobi is de officiële
               Golderos-verdeler voor België en Nederland.
             </p>
@@ -49,13 +49,13 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <p>
               Bij bestaande Gamko-installaties, merkspecifieke onderdelen of
               complete barmeubellijnen kan Gamko de logische route blijven. Het
-              is geen &quot;beter/slechter&quot;-wedstrijd — het hangt af van wat u al
+              is geen &quot;beter/slechter&quot;-wedstrijd, het hangt af van wat u al
               heeft staan en welk koelprincipe u nodig heeft.
             </p>
             <h2>Praktisch advies</h2>
             <p>
               Stuur ons uw huidige opstelling, aantal kranen en piekvolume. We
-              zeggen eerlijk of een Golderos-unit past — of dat u beter bij uw
+              zeggen eerlijk of een Golderos-unit past, of dat u beter bij uw
               huidige merk blijft. Mail{" "}
               <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
             </p>
@@ -135,10 +135,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <h2>Twijfelt u?</h2>
             <p>
               Mail volume (glazen/uur), aantal kranen en barfoto&apos;s naar{" "}
-              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a> — we
+              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>, we
               dimensioneren mee. Zie ook{" "}
               <a href={withBase("/producten/v100/")}>V100</a> en{" "}
-              <a href={withBase("/producten/v200/")}>V200</a>, of de gids{" "}
+              <a href={withBase("/producten/v200/")}>V200</a>. Of de gids{" "}
               <a href={withBase("/gids/onder-bar-bierkoeler/")}>onder-bar bierkoeler</a>.
             </p>
           </Reveal>
@@ -171,7 +171,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             </ul>
             <h2>Goldy</h2>
             <p>
-              Compacte over-bar ijsbankkoeler — ideaal voor craftbars, pop-ups en
+              Compacte over-bar ijsbankkoeler, ideaal voor craftbars, pop-ups en
               zichtbare bars op events waar ruimte schaars is.{" "}
               <a href={withBase("/producten/goldy/")}>Goldy bekijken</a>
             </p>
@@ -188,7 +188,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             </p>
             <h2>Planning &amp; levertijd</h2>
             <p>
-              Events hebben vaste data — plan vooruit. Levertijden zijn
+              Events hebben vaste data, plan vooruit. Levertijden zijn
               voorraad-afhankelijk; vermeld uw eventdatum bij de offerteaanvraag
               via <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
             </p>
@@ -218,7 +218,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Een <strong>ijsbankkoeler</strong> (vaak ook bierkoeler genoemd) koelt
               drank door spiralen in een bad met ijswater. De ijsreserve fungeert
               als buffer: bij piekuren blijft de temperatuur stabieler dan bij
-              systemen zonder die reserve. Golderos bouwt dit principe uit — van
+              systemen zonder die reserve. Golderos bouwt dit principe uit, van
               compacte over-bar (Goldy, Picky) tot high-volume onder-bar (V100,
               V200, V500).
             </p>
@@ -226,7 +226,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <ul className="guide-list">
               <li>Een compressor houdt een ijsbank in stand in de cuba (waterbad).</li>
               <li>Bier (of andere drank) stroomt door spiralen in dat koude bad.</li>
-              <li>Bij elke tapbeurt blijft de koude beschikbaar — mits correct gedimensioneerd.</li>
+              <li>Bij elke tapbeurt blijft de koude beschikbaar, mits correct gedimensioneerd.</li>
               <li>Roermotoren zorgen voor circulatie zodat de ijsbank gelijkmatig blijft.</li>
             </ul>
             <h2>IJsbank vs doorstroomkoeling</h2>
@@ -234,9 +234,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <strong>Doorstroomkoelers</strong> koelen vooral terwijl er getapt
               wordt; ze zijn vaak compacter, maar hebben minder &quot;buffer&quot; bij
               harde pieken. Een <strong>ijsbankkoeler</strong> investeert in
-              ijsreserve (kg) en cuba-volume — handig bij restaurants, festivals
+              ijsreserve (kg) en cuba-volume, handig bij restaurants, festivals
               en bars waar iedereen tegelijk bestelt. Welke beter is, hangt af
-              van uw piek, leidinglengte en beschikbare ruimte — geen dogma.
+              van uw piek, leidinglengte en beschikbare ruimte, geen dogma.
             </p>
             <h3>Wanneer ijsbank?</h3>
             <ul className="guide-list">
@@ -251,16 +251,16 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             </p>
             <ul className="guide-list">
               <li>
-                <a href={withBase("/producten/goldy/")}>Goldy</a> — over-bar, events &amp; craft (±44 L/u, 9 kg ijs)
+                <a href={withBase("/producten/goldy/")}>Goldy</a>, over-bar, events &amp; craft (±44 L/u, 9 kg ijs)
               </li>
               <li>
-                <a href={withBase("/producten/v100/")}>V100</a> — onder-bar medium (±87 L/u, 19 kg ijs)
+                <a href={withBase("/producten/v100/")}>V100</a>, onder-bar medium (±87 L/u, 19 kg ijs)
               </li>
               <li>
-                <a href={withBase("/producten/v200/")}>V200</a> — onder-bar high volume (±160 L/u, 38 kg ijs)
+                <a href={withBase("/producten/v200/")}>V200</a>, onder-bar high volume (±160 L/u, 38 kg ijs)
               </li>
               <li>
-                Portable-varianten voor festivals — zie{" "}
+                Portable-varianten voor festivals, zie{" "}
                 <a href={withBase("/gids/bierkoeler-voor-events/")}>bierkoeler voor events</a>
               </li>
             </ul>
@@ -307,7 +307,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Of u in <strong>België</strong> of <strong>Nederland</strong> koopt:
               de juiste bierkoeler hangt af van piekvolume, barmeubel, stroom en
               of u vast of mobiel werkt. VanRobi is de officiële
-              Golderos-distributeur voor beide landen — basis in{" "}
+              Golderos-distributeur voor beide landen, basis in{" "}
               <strong>Kasterlee (Tielen)</strong>, Kempen.
             </p>
             <h3>1. Vast of mobiel?</h3>
@@ -337,14 +337,14 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <h3>3. Lokaal kanaal telt</h3>
             <p>
               Officiële distributie betekent correcte specs, garantieopvolging en
-              iemand die BE/NL-praktijk kent — geen grijze import. Service en
+              iemand die BE/NL-praktijk kent, geen grijze import. Service en
               reiniging lopen via Taponderhoud (taponderhoud.be), vanuit dezelfde
               regio.
             </p>
             <h2>Regio&apos;s die we bedienen</h2>
             <p>
               Vanuit de Kempen leveren en adviseren we o.a. in Antwerpen,
-              Limburg, Vlaams-Brabant, Brussel en Oost-Vlaanderen — plus
+              Limburg, Vlaams-Brabant, Brussel en Oost-Vlaanderen, plus
               Nederland als officieel Golderos-kanaal. Meer detail op onze{" "}
               <a href={withBase("/regio/")}>regiopagina</a>.
             </p>
@@ -393,7 +393,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <strong>VanRobi</strong> is de officiële distributeur van{" "}
               <strong>Golderos</strong> voor <strong>België en Nederland</strong>.
               U koopt via een erkend kanaal: juiste machine-specs, levering,
-              advies en lokale opvolging — geen grijze import.
+              advies en lokale opvolging, geen grijze import.
             </p>
             <h2>Wat betekent &quot;officieel kanaal&quot;?</h2>
             <ul className="guide-list">
@@ -430,8 +430,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             </p>
             <h2>Waar zitten we?</h2>
             <p>
-              Basis: <strong>Kemelbeekstraat 16, 2460 Kasterlee (Tielen)</strong> —
-              in de Kempen. Telefoon{" "}
+              Basis: <strong>Kemelbeekstraat 16, 2460 Kasterlee (Tielen)</strong>,               in de Kempen. Telefoon{" "}
               <a href="tel:+3214718080">+32 (0)14 71 80 80</a>. Levering en advies
               in Vlaanderen en Nederland; zie{" "}
               <a href={withBase("/regio/")}>regio&apos;s</a> en{" "}
@@ -445,14 +444,14 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               <a href="https://www.taponderhoud.be" target="_blank" rel="noopener noreferrer">
                 Taponderhoud
               </a>{" "}
-              — koelgecertificeerd,zelfde regio. Zo blijft de taplijn
+             , koelgecertificeerd,zelfde regio. Zo blijft de taplijn
               professioneel opgevolgd na aankoop.
             </p>
             <h2>Contact voor distributeursvragen</h2>
             <p>
               Bent u installateur, horecaondernemer of eventorganisator? Stuur
               uw project naar{" "}
-              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a> — we reageren
+              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>. We reageren
               binnen één werkdag.
             </p>
             <p>
@@ -486,10 +485,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Een <strong>onder-bar bierkoeler</strong> verdwijnt in het meubel:
               meer werkruimte op het blad, rustiger uitzicht, en ruimte voor een
               nette taplijn. Golderos V-serie (V100, V200, …) is gebouwd voor
-              vaste horeca — restaurants, cafés, hotels — waar elke service
+              vaste horeca, restaurants, cafés, hotels, waar elke service
               stabiele koude vraagt.
             </p>
-            <h2>V100 — medium werkpaard</h2>
+            <h2>V100, medium werkpaard</h2>
             <p>
               De <a href={withBase("/producten/v100/")}>V100</a> is het standaard
               onder-bar model voor de meeste bars:
@@ -504,7 +503,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Ideaal bij één tot enkele kranen en dagelijkse horecabelasting
               zonder extreme festivalpieken.
             </p>
-            <h2>V200 — high volume</h2>
+            <h2>V200, high volume</h2>
             <p>
               De <a href={withBase("/producten/v200/")}>V200</a> voor drukke
               service:
@@ -564,10 +563,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <h2>Twee rollen, één merk</h2>
             <p>
               <strong>Goldy</strong> is de compacte <em>over-bar</em> ijsbankkoeler
-              — zichtbaar, mobiel inzetbaar, ideaal voor events en craft.{" "}
+             , zichtbaar, mobiel inzetbaar, ideaal voor events en craft.{" "}
               <strong>V100</strong> is het vaste <em>onder-bar</em> werkpaard voor
               restaurants en bars. Beide van Golderos, beide via VanRobi (BE &amp;
-              NL) — andere plek in de bar, andere capaciteit.
+              NL), andere plek in de bar, andere capaciteit.
             </p>
             <h2>Specs naast elkaar</h2>
             <div className="compare-table-wrap">
@@ -654,7 +653,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <p>
               Mail{" "}
               <a href="mailto:info@vanrobi.be">info@vanrobi.be</a> met foto&apos;s
-              van de bar — we zeggen eerlijk welk formaat past.
+              van de bar. We zeggen eerlijk welk formaat past.
             </p>
           </Reveal>
           <GuideAside
@@ -684,7 +683,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               waterbad met ijsreserve (buffer). Een <strong>dry cooler</strong>{" "}
               (vaak een luchtgekoelde doorstroom- of platenkoeler) koelt vooral
               terwijl er getapt wordt, zonder die ijsbank als thermische buffer.
-              Beide kunnen uitstekend werken — het hangt af van pieken, ruimte en
+              Beide kunnen uitstekend werken, het hangt af van pieken, ruimte en
               leidinglengte.
             </p>
             <h2>Wanneer past een ijsbankkoeler beter?</h2>
@@ -692,7 +691,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Kies ijsbank wanneer u stabiele koude wilt bij wisselende drukte,
               meerdere kranen/spiralen op één unit, of events waar de piek kort
               maar hard is. De ijsreserve (kg) en cuba (L) geven buffer wanneer
-              iedereen tegelijk bestelt — typisch voor Golderos Goldy, V100,
+              iedereen tegelijk bestelt, typisch voor Golderos Goldy, V100,
               V200 en portable-varianten via VanRobi.
             </p>
             <h2>Wanneer speelt een dry cooler vaker?</h2>
@@ -700,9 +699,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               Dry coolers / doorstroomkoelers zijn vaak compacter in footprint en
               kunnen volstaan bij lage tot middelmatige, voorspelbare belasting
               en korte leidingen. Ze hebben minder &quot;koude voorraad&quot; in
-              het bad — bij harde pieken voelt u dat sneller in het glas.
+              het bad, bij harde pieken voelt u dat sneller in het glas.
             </p>
-            <h2>Geen #1-claim — wel een match</h2>
+            <h2>Geen #1-claim, wel een match</h2>
             <p>
               Wij claimen geen universele winnaar. VanRobi verkoopt
               Golderos-ijsbankkoelers als officieel BE/NL-kanaal. Past een ander
@@ -772,7 +771,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             <ul className="guide-list">
               <li>Aantal kranen / productlijnen die gelijktijdig tappen</li>
               <li>Afstand koeler → kraan (korte, geïsoleerde leidingen)</li>
-              <li>Piekglazen per uur — niet alleen &quot;gemiddeld&quot;</li>
+              <li>Piekglazen per uur, niet alleen &quot;gemiddeld&quot;</li>
               <li>Of de unit over-bar (Goldy) of onder-bar (V100/V200) staat</li>
             </ul>
             <h2>Praktisch advies via VanRobi</h2>
@@ -808,32 +807,32 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
           <Reveal className="prose guide-prose">
             <h2>Hoe kiest u een bierkoeler in 7 stappen?</h2>
             <p>
-              Volg deze checklist — van piekvolume tot onderhoud — vóór u een
+              Volg deze checklist, van piekvolume tot onderhoud, vóór u een
               Golderos-ijsbankkoeler via VanRobi bestelt. Geen rankingclaims:
               wel een volgorde die misdimensionering voorkomt.
             </p>
 
-            <h2>Stap 1 — Vast of mobiel?</h2>
+            <h2>Stap 1: Vast of mobiel?</h2>
             <p>
               Vaste horeca → onder-bar (V100, V200, …). Events/festivals → Goldy
               of portable (V100/V200 portable). Craft/pop-up met zichtbare bar →
               vaak Goldy of Picky.
             </p>
 
-            <h2>Stap 2 — Schat piekvolume</h2>
+            <h2>Stap 2: Schat piekvolume</h2>
             <p>
               Tel glazen in het drukste uur, niet het daggemiddelde. Debiet (L/u)
               en ijsreserve (kg) moeten die piek aankunnen. Vergelijk{" "}
               <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a>.
             </p>
 
-            <h2>Stap 3 — Meet het meubel</h2>
+            <h2>Stap 3: Meet het meubel</h2>
             <p>
               Diepte, hoogte, ventilatie. Onder-bar verdwijnt uit het zicht maar
               heeft ruimte en warmteafvoer nodig. Over-bar vraagt bladruimte.
             </p>
 
-            <h2>Stap 4 — Tel kranen en spiralen</h2>
+            <h2>Stap 4: Tel kranen en spiralen</h2>
             <p>
               Meerdere productlijnen of lange leidingen vragen meer buffer. Lees{" "}
               <a href={withBase("/gids/spiralen-tapinstallatie/")}>
@@ -842,22 +841,22 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               .
             </p>
 
-            <h2>Stap 5 — Check stroom</h2>
+            <h2>Stap 5: Check stroom</h2>
             <p>
               Golderos-units op de site: typisch 220V / 50 Hz. Op events: stabiele
               voeding, geen gedeelde zwakke groepen.
             </p>
 
-            <h2>Stap 6 — Kies het koelprincipe</h2>
+            <h2>Stap 6: Kies het koelprincipe</h2>
             <p>
               IJsbank vs dry cooler / doorstroom: zie{" "}
               <a href={withBase("/gids/ijsbankkoeler-vs-dry-cooler/")}>
                 ijsbankkoeler vs dry cooler
               </a>
-              . Twijfel? Mail ons — we forceren geen ijsbank als die niet past.
+              . Twijfel? Mail ons. We forceren geen ijsbank als die niet past.
             </p>
 
-            <h2>Stap 7 — Officieel kanaal + onderhoud</h2>
+            <h2>Stap 7: Officieel kanaal + onderhoud</h2>
             <p>
               Koop via VanRobi (officieel Golderos BE/NL) voor correcte specs en
               opvolging. Onderhoud en reiniging via Taponderhoud. Start met{" "}

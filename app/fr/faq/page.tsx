@@ -11,7 +11,7 @@ import { faqPageSchema } from "@/lib/schema";
 import { frFaq } from "@/lib/fr";
 
 export const metadata: Metadata = pageMeta({
-  title: "FAQ — VanRobi",
+  title: "FAQ, VanRobi",
   description:
     "FAQ VanRobi : distributeur officiel Golderos BE/NL, maintenance Taponderhoud, devis et livraison Pays-Bas.",
   path: "/fr/faq/",

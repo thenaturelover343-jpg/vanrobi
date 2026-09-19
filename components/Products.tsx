@@ -86,8 +86,8 @@ export function Products() {
             lines={["Vier machines.", <em key="e">Eén standaard.</em>]}
           />
           <p className="block-lede">
-            Industriële ijsbankkoelers — gefotografeerd als object. Specs die
-            installateurs en barontwerp begrijpen.
+            Industriële ijsbankkoelers, helder getoond met de specs die
+            installateurs nodig hebben.
           </p>
         </Reveal>
 

@@ -18,7 +18,7 @@ export const frHome = {
     {
       n: "02",
       title: "Technique claire",
-      text: "Capacité, spirales, débit — specs nettes pour installateurs et conception de bar.",
+      text: "Capacité, spirales, débit, specs nettes pour installateurs et conception de bar.",
     },
     {
       n: "03",
@@ -28,7 +28,7 @@ export const frHome = {
     {
       n: "04",
       title: "Sur mesure",
-      text: "De la Goldy à la V200 — nous associons volume, espace et events à la bonne machine.",
+      text: "De la Goldy à la V200, nous associons volume, espace et events à la bonne machine.",
     },
   ],
 };
@@ -47,7 +47,7 @@ export const frProductCopy: Record<
   goldy: {
     badge: "Events · Sur bar",
     description:
-      "Refroidisseur compact sur bar pour events, salons et craft — breveté par Golderos.",
+      "Refroidisseur compact sur bar pour events, salons et craft, breveté par Golderos.",
     longDescription:
       "La Goldy est le refroidisseur à banc de glace compact sur bar de Golderos : idéal quand l'espace manque et que le bar doit rester visible. Parfait pour events, craft bars et pop-ups. Livré via VanRobi avec conseil sur spirales, débit et implantation.",
   },
@@ -56,26 +56,26 @@ export const frProductCopy: Record<
     description:
       "Refroidisseur ultra-compact sur bar pour petits bars, foodtrucks et pop-ups.",
     longDescription:
-      "La Picky est le plus petit refroidisseur à banc de glace sur bar de Golderos — conçu pour les espaces étroits sans sacrifier le froid professionnel. Idéale pour foodtrucks, pop-ups et craft bars compactes.",
+      "La Picky est le plus petit refroidisseur à banc de glace sur bar de Golderos, conçu pour les espaces étroits sans sacrifier le froid professionnel. Idéale pour foodtrucks, pop-ups et craft bars compactes.",
   },
   v100: {
     badge: "Horeca · Sous bar",
     description:
       "Installation fixe sous bar format medium. Débit stable pour restaurants et bars.",
     longDescription:
-      "La V100 est le cheval de bataille pour restaurants et bars. Format medium, débit stable et réserve de glace suffisante pour un usage Horeca quotidien. Aussi en variante horizontale — VanRobi vous aide à choisir.",
+      "La V100 est le cheval de bataille pour restaurants et bars. Format medium, débit stable et réserve de glace suffisante pour un usage Horeca quotidien. Aussi en variante horizontale, VanRobi vous aide à choisir.",
   },
   v200: {
     badge: "High volume · Sous bar",
     description:
       "Pour bars très fréquentés et service high volume. Réserve de glace et débit max.",
     longDescription:
-      "La V200 est conçue pour les bars intensifs. Réserve de glace maximale et haut débit. Aussi disponible en horizontal — VanRobi aligne volume, espace et horaires d'ouverture.",
+      "La V200 est conçue pour les bars intensifs. Réserve de glace maximale et haut débit. Aussi disponible en horizontal, VanRobi aligne volume, espace et horaires d'ouverture.",
   },
   "v100-portable": {
     badge: "Events · Mobile",
     description:
-      "V100 mobile pour festivals et fêtes. Prête pour un montage rapide — option colonne.",
+      "V100 mobile pour festivals et fêtes. Prête pour un montage rapide, option colonne.",
     longDescription:
       "La V100 portable apporte la capacité V100 sur le terrain festival. Sur roues, montage rapide, colonne de tirage en option. Idéale pour traiteurs et bars temporaires.",
   },
@@ -92,7 +92,7 @@ export const frContact = {
   eyebrow: "Contact",
   title: ["Devis ou", "question ?"],
   lede:
-    "Envoyez votre demande — réponse sous un jour ouvrable. Machines via VanRobi, maintenance via Taponderhoud.",
+    "Envoyez votre demande, réponse sous un jour ouvrable. Machines via VanRobi, maintenance via Taponderhoud.",
   formNote:
     "Le formulaire complet est disponible en néerlandais ; vous pouvez aussi écrire directement à info@vanrobi.be (FR bienvenu).",
 };
@@ -101,12 +101,12 @@ export const frServices = {
   eyebrow: "Services",
   title: ["De la machine à", "la maintenance."],
   lede:
-    "VanRobi livre et conseille les refroidisseurs Golderos. Maintenance, nettoyage et réparations via Taponderhoud — une équipe locale.",
+    "VanRobi livre et conseille les refroidisseurs Golderos. Maintenance, nettoyage et réparations via Taponderhoud, une équipe locale.",
   items: [
     {
       n: "01",
       title: "Conseil & sélection",
-      text: "Quelle machine Golderos pour votre bar, event ou brasserie ? Nous alignons volume, espace, spirales et débit — sans discours commercial.",
+      text: "Quelle machine Golderos pour votre bar, event ou brasserie ? Nous alignons volume, espace, spirales et débit, sans discours commercial.",
     },
     {
       n: "02",
@@ -121,7 +121,7 @@ export const frServices = {
     {
       n: "04",
       title: "Maintenance & nettoyage",
-      text: "Entretien périodique et nettoyage des installations de tirage — via Taponderhoud, certifié froid, depuis la Campine.",
+      text: "Entretien périodique et nettoyage des installations de tirage, via Taponderhoud, certifié froid, depuis la Campine.",
     },
     {
       n: "05",
@@ -131,7 +131,7 @@ export const frServices = {
     {
       n: "06",
       title: "Couverture régionale",
-      text: "Anvers, Limbourg, Brabant flamand, Bruxelles, Flandre orientale — et livraison aux Pays-Bas.",
+      text: "Anvers, Limbourg, Brabant flamand, Bruxelles, Flandre orientale, et livraison aux Pays-Bas.",
     },
   ],
 };
@@ -140,9 +140,9 @@ export const frAbout = {
   eyebrow: "À propos",
   title: ["VanRobi ×", "Golderos."],
   lede:
-    "Canal de distribution officiel pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas — avec expertise locale en tirage et froid.",
+    "Canal de distribution officiel pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas, avec expertise locale en tirage et froid.",
   partnership:
-    "Golderos est le fabricant espagnol de refroidisseurs à banc de glace professionnels — plus de 50 ans d'expérience en froid professionnel. VanRobi est le canal officiel pour la Belgique et les Pays-Bas : sélection, conseil et livraison depuis un seul interlocuteur. Pas d'import gris : specs correctes et suivi local.",
+    "Golderos est le fabricant espagnol de refroidisseurs à banc de glace professionnels, plus de 50 ans d'expérience en froid professionnel. VanRobi est le canal officiel pour la Belgique et les Pays-Bas : sélection, conseil et livraison depuis un seul interlocuteur. Pas d'import gris : specs correctes et suivi local.",
   local:
     "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine (Kasterlee / Tielen). Ainsi, machines industrielles Golderos et service belge restent alignés après l'achat.",
   coverage:
@@ -153,13 +153,13 @@ export const frFaq = {
   eyebrow: "FAQ",
   title: ["Réponses,", "sans détour"],
   lede:
-    "Canal officiel Golderos, maintenance via Taponderhoud, délais honnêtes. Votre question n'y figure pas — écrivez à info@vanrobi.be.",
+    "Canal officiel Golderos, maintenance via Taponderhoud, délais honnêtes. Votre question n'y figure pas, écrivez à info@vanrobi.be.",
   items: [
     {
       question:
         "VanRobi est-il le distributeur officiel Golderos pour la BE et les NL ?",
       answer:
-        "Oui. VanRobi est le distributeur officiel Golderos pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu — pas d'import gris — avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
+        "Oui. VanRobi est le distributeur officiel Golderos pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu, pas d'import gris, avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
     },
     {
       question: "Qui assure la maintenance de mon installation de tirage ?",
@@ -174,7 +174,7 @@ export const frFaq = {
     {
       question: "Livrez-vous aussi aux Pays-Bas ?",
       answer:
-        "Oui. VanRobi dessert la Belgique et les Pays-Bas comme canal officiel Golderos. La livraison et le conseil sont planifiés avec vous — sans promesse de délai inventée : tout dépend du stock.",
+        "Oui. VanRobi dessert la Belgique et les Pays-Bas comme canal officiel Golderos. La livraison et le conseil sont planifiés avec vous, sans promesse de délai inventée : tout dépend du stock.",
     },
     {
       question: "Quelle machine pour un festival ?",
@@ -184,12 +184,12 @@ export const frFaq = {
     {
       question: "Quelle différence entre Goldy et V100 ?",
       answer:
-        "Goldy est un refroidisseur compact sur bar (events, craft, pop-ups). V100 est le cheval de bataille sous bar pour Horeca fixe — plus de débit et de réserve de glace. Le catalogue complet et les guides détaillés sont disponibles en néerlandais.",
+        "Goldy est un refroidisseur compact sur bar (events, craft, pop-ups). V100 est le cheval de bataille sous bar pour Horeca fixe, plus de débit et de réserve de glace. Le catalogue complet et les guides détaillés sont disponibles en néerlandais.",
     },
     {
       question: "Où êtes-vous situés ?",
       answer:
-        "Kemelbeekstraat 16, 2460 Kasterlee (Tielen), Belgique — Campine. E-mail info@vanrobi.be · tél. +32 (0)14 71 80 80.",
+        "Kemelbeekstraat 16, 2460 Kasterlee (Tielen), Belgique, Campine. E-mail info@vanrobi.be · tél. +32 (0)14 71 80 80.",
     },
   ],
 };

@@ -14,7 +14,7 @@ export const contact = {
     line: "Kemelbeekstraat 16, 2460 Kasterlee (Tielen)",
   },
   regions:
-    "Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen — basis in de Kempen",
+    "Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen, basis in de Kempen",
   work: [
     "Tapinstallatie onderhoud",
     "Reiniging",
@@ -26,7 +26,7 @@ export const contact = {
 
 export function offerteMailto(product?: string) {
   const subject = product
-    ? `Offerteaanvraag VanRobi — ${product}`
+    ? `Offerteaanvraag VanRobi, ${product}`
     : "Offerteaanvraag VanRobi";
   return `mailto:${contact.email}?subject=${encodeURIComponent(subject)}`;
 }

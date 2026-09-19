@@ -22,9 +22,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = getProduct(id);
   const copy = frProductCopy[id];
-  if (!p || !copy) return { title: "Produit — VanRobi" };
+  if (!p || !copy) return { title: "Produit | VanRobi" };
   return pageMeta({
-    title: `${p.name} — Golderos via VanRobi`,
+    title: `${p.name}, Golderos via VanRobi`,
     description: copy.description,
     path: `/fr/produits/${id}/`,
     locale: "fr_BE",

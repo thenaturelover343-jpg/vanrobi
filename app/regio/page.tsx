@@ -9,7 +9,7 @@ import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
 export const metadata: Metadata = pageMeta({
-  title: "Regio's België & Nederland — VanRobi Golderos",
+  title: "Regio's België & Nederland, VanRobi Golderos",
   description:
     "VanRobi levert Golderos-ijsbankkoelers in Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen en Nederland. Basis: Kasterlee (Kempen).",
   path: "/regio/",
@@ -18,15 +18,15 @@ export const metadata: Metadata = pageMeta({
 const regions = [
   {
     name: "Antwerpen",
-    text: "Van stad tot Kempen: restaurants, cafés en eventlocaties. Snelle opvolging vanuit Kasterlee — advies, levering en doorverwijzing naar Taponderhoud voor plaatsing.",
+    text: "Van stad tot Kempen: restaurants, cafés en eventlocaties. Snelle opvolging vanuit Kasterlee, advies, levering en doorverwijzing naar Taponderhoud voor plaatsing.",
   },
   {
     name: "Limburg",
-    text: "Horeca en festivals in Limburg — dimensionering op volume, plus onderhoudspartner dichtbij via het Kempen-netwerk.",
+    text: "Horeca en festivals in Limburg, dimensionering op volume, plus onderhoudspartner dichtbij via het Kempen-netwerk.",
   },
   {
     name: "Vlaams-Brabant",
-    text: "Bars en restaurants rond Leuven en de rand — onder-bar (V100/V200) of over-bar (Goldy) afgestemd op meubel en piekuren.",
+    text: "Bars en restaurants rond Leuven en de rand, onder-bar (V100/V200) of over-bar (Goldy) afgestemd op meubel en piekuren.",
   },
   {
     name: "Brussel",
@@ -38,14 +38,14 @@ const regions = [
   },
   {
     name: "Nederland",
-    text: "Officieel Golderos-kanaal voor NL. Levering en advies landelijk — mail of bel voor planning, levertijd en modelkeuze.",
+    text: "Officieel Golderos-kanaal voor NL. Levering en advies landelijk, mail of bel voor planning, levertijd en modelkeuze.",
   },
 ];
 
 const capsules = [
   {
     q: "Leveren jullie in heel België?",
-    a: "Ja. VanRobi adviseert en levert Golderos-ijsbankkoelers in Vlaanderen en Brussel, met basis in Kasterlee (Tielen). Regiodekking via Antwerpen, Limburg, Vlaams-Brabant, Brussel en Oost-Vlaanderen — plus projecten elders op aanvraag.",
+    a: "Ja. VanRobi adviseert en levert Golderos-ijsbankkoelers in Vlaanderen en Brussel, met basis in Kasterlee (Tielen). Regiodekking via Antwerpen, Limburg, Vlaams-Brabant, Brussel en Oost-Vlaanderen, plus projecten elders op aanvraag.",
   },
   {
     q: "Werken jullie ook in Nederland?",
@@ -57,7 +57,7 @@ const capsules = [
   },
   {
     q: "Plaatsing en onderhoud lokaal?",
-    a: "Machines en selectie via VanRobi. Plaatsing, demontage, reiniging en herstellingen via Taponderhoud (koelgecertificeerd) — zodat de taplijn na aankoop professioneel opgevolgd blijft.",
+    a: "Machines en selectie via VanRobi. Plaatsing, demontage, reiniging en herstellingen via Taponderhoud (koelgecertificeerd), zodat de taplijn na aankoop professioneel opgevolgd blijft.",
   },
 ];
 

@@ -9,7 +9,7 @@ import { contact } from "@/lib/contact";
 import { frServices } from "@/lib/fr";
 
 export const metadata: Metadata = pageMeta({
-  title: "Services — Livraison, conseil & maintenance | VanRobi",
+  title: "Services, Livraison, conseil & maintenance | VanRobi",
   description:
     "VanRobi livre les machines Golderos avec conseil. Maintenance, nettoyage et réparations via Taponderhoud. Belgique & Pays-Bas.",
   path: "/fr/services/",
@@ -58,8 +58,7 @@ export default function FrServicesPage() {
               <h2>Comment se déroule un projet ?</h2>
               <p>
                 Vous décrivez le volume, le nombre de robinets et le meuble (ou
-                l&apos;event). Nous proposons une machine Golderos adaptée —
-                Goldy, V100, V200 ou portable — avec des specs visibles (débit,
+                l&apos;event). Nous proposons une machine Golderos adaptée,                 Goldy, V100, V200 ou portable, avec des specs visibles (débit,
                 réserve de glace, cuba). La livraison BE/NL est planifiée avec
                 vous ; le placement et l&apos;entretien peuvent suivre via
                 Taponderhoud.

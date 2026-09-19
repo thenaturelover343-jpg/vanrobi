@@ -16,7 +16,7 @@ export function ContactForm() {
     const message = String(fd.get("message") || "").trim();
 
     const subject = product
-      ? `Offerteaanvraag VanRobi — ${product}`
+      ? `Offerteaanvraag VanRobi: ${product}`
       : "Offerteaanvraag VanRobi";
     const body = [
       `Naam: ${name}`,
@@ -66,7 +66,7 @@ export function ContactForm() {
         <label htmlFor="product">
           Product (optioneel)
           <select id="product" name="product" defaultValue="">
-            <option value="">— kies —</option>
+            <option value="">Kies model</option>
             <option value="Goldy">Goldy</option>
             <option value="Picky">Picky</option>
             <option value="Gold Ice">Gold Ice</option>
@@ -113,7 +113,7 @@ export function ContactForm() {
         </p>
       ) : (
         <p className="form-hint">
-          Opent uw e-mailprogramma — geen server nodig (static site).
+          Opent uw e-mailprogramma. Geen server nodig (static site).
         </p>
       )}
     </form>

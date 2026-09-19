@@ -33,11 +33,11 @@ export const products: Product[] = [
     name: "Goldy",
     badge: "Events · Over-bar",
     description:
-      "Compacte over-bar ijsbankkoeler voor events, beurzen en craft — gepatenteerd door Golderos.",
+      "Compacte over-bar ijsbankkoeler voor events, beurzen en craft, gepatenteerd door Golderos.",
     longDescription:
       "De Goldy is de compacte over-bar ijsbankkoeler van Golderos: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Via VanRobi geleverd met advies over spiralen, debiet en opstelling.",
     image: withBase("/assets/products-official/goldy.jpg"),
-    alt: "Golderos Goldy over-bar ijsbankkoeler met kranen — via VanRobi",
+    alt: "Golderos Goldy over-bar ijsbankkoeler met kranen, via VanRobi",
     cropClass: "crop-goldy",
     uses: ["events", "mobiel", "horeca"],
     featured: true,
@@ -58,9 +58,9 @@ export const products: Product[] = [
     description:
       "Ultracompacte over-bar koeler voor kleine bars, foodtrucks en pop-ups.",
     longDescription:
-      "De Picky is de kleinste over-bar ijsbankkoeler van Golderos — gemaakt voor krappe ruimtes zonder in te boeten op professionele koeling. Ideaal voor foodtrucks, pop-ups en compacte craftbars.",
+      "De Picky is de kleinste over-bar ijsbankkoeler van Golderos, gemaakt voor krappe ruimtes zonder in te boeten op professionele koeling. Ideaal voor foodtrucks, pop-ups en compacte craftbars.",
     image: withBase("/assets/products-catalog/picky.jpg"),
-    alt: "Golderos Picky compacte over-bar ijsbankkoeler — via VanRobi",
+    alt: "Golderos Picky compacte over-bar ijsbankkoeler, via VanRobi",
     cropClass: "crop-picky",
     uses: ["events", "mobiel", "horeca"],
     featured: true,
@@ -79,11 +79,11 @@ export const products: Product[] = [
     name: "Gold Ice",
     badge: "IJs · Horeca",
     description:
-      "Gold Ice — snelle ijsproductie en stabiele koude voor horeca en events.",
+      "Gold Ice, snelle ijsproductie en stabiele koude voor horeca en events.",
     longDescription:
       "Gold Ice van Golderos combineert ijsreserve met eenvoudig onderhoud. Via VanRobi beschikbaar voor Belgische en Nederlandse horeca die betrouwbare koude nodig heeft zonder complexe installatie.",
     image: withBase("/assets/products-catalog/gold-ice.jpg"),
-    alt: "Golderos Gold Ice — technische tekening via VanRobi",
+    alt: "Golderos Gold Ice, technische tekening via VanRobi",
     cropClass: "crop-gold-ice",
     uses: ["horeca", "events"],
     featured: false,
@@ -101,9 +101,9 @@ export const products: Product[] = [
     description:
       "Vaste onder-bar installatie in medium formaat. Stabiel debiet voor restaurants en bars.",
     longDescription:
-      "De V100 is het werkpaard voor restaurants en bars. Medium formaat, stabiel debiet en voldoende ijsreserve voor dagelijks horecagebruik. Ook als horizontale variant — VanRobi helpt bij de juiste keuze.",
+      "De V100 is het werkpaard voor restaurants en bars. Medium formaat, stabiel debiet en voldoende ijsreserve voor dagelijks horecagebruik. Ook als horizontale variant, VanRobi helpt bij de juiste keuze.",
     image: withBase("/assets/products-official/v100.jpg"),
-    alt: "Golderos V100 onder-bar ijsbankkoeler — via VanRobi",
+    alt: "Golderos V100 onder-bar ijsbankkoeler, via VanRobi",
     cropClass: "crop-v100",
     uses: ["horeca", "onder-bar"],
     featured: true,
@@ -122,11 +122,11 @@ export const products: Product[] = [
     name: "V100 portable",
     badge: "Events · Mobiel",
     description:
-      "Mobiele V100 voor festivals en feesten. Klaar voor snelle opbouw — optioneel met zuil.",
+      "Mobiele V100 voor festivals en feesten. Klaar voor snelle opbouw, optioneel met zuil.",
     longDescription:
       "De V100 portable brengt V100-capaciteit naar het festivalterrein. Op wielen, snel opgebouwd, optioneel met tapzuil. Ideaal voor cateraars en tijdelijke bars.",
     image: withBase("/assets/products-official/v100-portable.jpg"),
-    alt: "Golderos V100 portable mobiele ijsbankkoeler op wielen — via VanRobi",
+    alt: "Golderos V100 portable mobiele ijsbankkoeler op wielen, via VanRobi",
     cropClass: "crop-v100-portable",
     uses: ["events", "mobiel"],
     featured: true,
@@ -147,9 +147,9 @@ export const products: Product[] = [
     description:
       "Voor drukke bars en high-volume service. Maximale ijsreserve en debiet.",
     longDescription:
-      "De V200 is gebouwd voor drukke bars. Maximale ijsreserve en hoog debiet. Ook horizontaal leverbaar — VanRobi matcht volume, ruimte en openingsuren.",
+      "De V200 is gebouwd voor drukke bars. Maximale ijsreserve en hoog debiet. Ook horizontaal leverbaar, VanRobi matcht volume, ruimte en openingsuren.",
     image: withBase("/assets/products-official/v200.jpg"),
-    alt: "Golderos V200 high-volume onder-bar ijsbankkoeler — via VanRobi",
+    alt: "Golderos V200 high-volume onder-bar ijsbankkoeler, via VanRobi",
     cropClass: "crop-v200",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,
@@ -172,7 +172,7 @@ export const products: Product[] = [
     longDescription:
       "De V200 portable combineert high-volume capaciteit met mobiliteit. Voor festivals, stadions en grote tijdelijke bars die geen vaste installatie kunnen plaatsen.",
     image: withBase("/assets/products-catalog/v200-portable.jpg"),
-    alt: "Golderos V200 portable high-volume eventkoeler — via VanRobi",
+    alt: "Golderos V200 portable high-volume eventkoeler, via VanRobi",
     cropClass: "crop-v200-portable",
     uses: ["events", "mobiel"],
     featured: true,
@@ -193,9 +193,9 @@ export const products: Product[] = [
     description:
       "Grote onder-bar koeler voor intense service en meerdere spiralen.",
     longDescription:
-      "De V300 levert hogere capaciteit voor drukke horeca. Meer spiralen, meer debiet — wanneer de V200 net niet genoeg is.",
+      "De V300 levert hogere capaciteit voor drukke horeca. Meer spiralen, meer debiet, wanneer de V200 net niet genoeg is.",
     image: withBase("/assets/products-catalog/v300.jpg"),
-    alt: "Golderos V300 onder-bar ijsbankkoeler — via VanRobi",
+    alt: "Golderos V300 onder-bar ijsbankkoeler, via VanRobi",
     cropClass: "crop-v300",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,
@@ -218,7 +218,7 @@ export const products: Product[] = [
     longDescription:
       "De V90 is ontworpen voor bars waar diepte beperkt is. Professionele ijsbankkoeling in een compacter footprint.",
     image: withBase("/assets/products-catalog/v90.jpg"),
-    alt: "Golderos V90 compacte onder-bar ijsbankkoeler — via VanRobi",
+    alt: "Golderos V90 compacte onder-bar ijsbankkoeler, via VanRobi",
     cropClass: "crop-v90",
     uses: ["horeca", "onder-bar"],
     featured: false,
@@ -241,7 +241,7 @@ export const products: Product[] = [
     longDescription:
       "De H50 is de horizontale variant voor lage onder-bar opstellingen. Zelfde Golderos-kwaliteit, aangepast aan barhoogte en meubelontwerp.",
     image: withBase("/assets/products-catalog/h50.jpg"),
-    alt: "Golderos H50 horizontale ijsbankkoeler — via VanRobi",
+    alt: "Golderos H50 horizontale ijsbankkoeler, via VanRobi",
     cropClass: "crop-h50",
     uses: ["horeca", "onder-bar"],
     featured: false,
@@ -260,11 +260,11 @@ export const products: Product[] = [
     name: "V500",
     badge: "High volume · Industrie",
     description:
-      "Topmodel voor extreme volumes — tot 282 L/u en 60 kg ijsreserve.",
+      "Topmodel voor extreme volumes, tot 282 L/u en 60 kg ijsreserve.",
     longDescription:
       "De V500 is het topmodel van Golderos voor extreme volumes: 100 L cuba, 60 kg ijs, tot 282 L/u. Ook als speciale tankkoelvariant. VanRobi adviseert bij dimensionering.",
     image: withBase("/assets/products-catalog/v500.jpg"),
-    alt: "Golderos V500 high-volume ijsbankkoeler — via VanRobi",
+    alt: "Golderos V500 high-volume ijsbankkoeler, via VanRobi",
     cropClass: "crop-v500",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,
@@ -287,7 +287,7 @@ export const products: Product[] = [
     longDescription:
       "De Barrilero doble houdt twee vaten op temperatuur, dicht bij de taplijn. Voor bars die korte leidingen en stabiele vatkoeling willen.",
     image: withBase("/assets/products-catalog/barrilero-doble.jpg"),
-    alt: "Golderos Barrilero doble — via VanRobi",
+    alt: "Golderos Barrilero doble, via VanRobi",
     cropClass: "crop-barrilero-doble",
     uses: ["horeca", "onder-bar"],
     featured: false,
@@ -304,9 +304,9 @@ export const products: Product[] = [
     description:
       "Externe condensorunit voor split-opstellingen en technische ruimtes.",
     longDescription:
-      "Condensorunit van Golderos voor installaties waarbij de warmteafvoer gescheiden moet — technische ruimtes, lange leidingen, split-systemen.",
+      "Condensorunit van Golderos voor installaties waarbij de warmteafvoer gescheiden moet, technische ruimtes, lange leidingen, split-systemen.",
     image: withBase("/assets/products-catalog/unidad-condensadora.jpg"),
-    alt: "Golderos Condensorunit — via VanRobi",
+    alt: "Golderos Condensorunit, via VanRobi",
     cropClass: "crop-unidad-condensadora",
     uses: ["horeca"],
     featured: false,
@@ -321,11 +321,11 @@ export const products: Product[] = [
     name: "G8 water/lucht met condensor",
     badge: "Roermotor · G8",
     description:
-      "G8 roermotor water/lucht met condensor — voor ijsbankcirculatie.",
+      "G8 roermotor water/lucht met condensor, voor ijsbankcirculatie.",
     longDescription:
       "G8-serie roermotoren van Golderos voor betrouwbare ijsbankcirculatie. Water/lucht-variant met condensor.",
     image: withBase("/assets/products-catalog/g8-agua-aire.jpg"),
-    alt: "Golderos G8 water/lucht met condensor — via VanRobi",
+    alt: "Golderos G8 water/lucht met condensor, via VanRobi",
     cropClass: "crop-g8-agua-aire",
     uses: ["horeca"],
     featured: false,
@@ -343,9 +343,9 @@ export const products: Product[] = [
     description:
       "G8 roermotor luchtgekoeld met condensor.",
     longDescription:
-      "G8 luchtgekoelde roermotor met condensor — onderdeel van het Golderos-ecosysteem voor ijsbankkoelers.",
+      "G8 luchtgekoelde roermotor met condensor, onderdeel van het Golderos-ecosysteem voor ijsbankkoelers.",
     image: withBase("/assets/products-catalog/g8-aire.jpg"),
-    alt: "Golderos G8 lucht met condensor — via VanRobi",
+    alt: "Golderos G8 lucht met condensor, via VanRobi",
     cropClass: "crop-g8-aire",
     uses: ["horeca"],
     featured: false,
@@ -365,7 +365,7 @@ export const products: Product[] = [
     longDescription:
       "G8 watergekoelde roermotor met condensor voor stabiele ijsbankcirculatie in professionele installaties.",
     image: withBase("/assets/products-catalog/g8-agua.jpg"),
-    alt: "Golderos G8 water met condensor — via VanRobi",
+    alt: "Golderos G8 water met condensor, via VanRobi",
     cropClass: "crop-g8-agua",
     uses: ["horeca"],
     featured: false,
@@ -381,11 +381,11 @@ export const products: Product[] = [
     name: "G98 met condensor",
     badge: "Roermotor · G98",
     description:
-      "G98 roermotor met condensor — 220/115V.",
+      "G98 roermotor met condensor, 220/115V.",
     longDescription:
       "G98 met condensor: flexibele spanning (220/115V), ontworpen voor Golderos-ijsbanksystemen.",
     image: withBase("/assets/products-catalog/g98-con.jpg"),
-    alt: "Golderos G98 met condensor — via VanRobi",
+    alt: "Golderos G98 met condensor, via VanRobi",
     cropClass: "crop-g98-con",
     uses: ["horeca"],
     featured: false,
@@ -401,11 +401,11 @@ export const products: Product[] = [
     name: "G98 zonder condensor",
     badge: "Roermotor · G98",
     description:
-      "G98 roermotor zonder condensor — voor split-opstellingen.",
+      "G98 roermotor zonder condensor, voor split-opstellingen.",
     longDescription:
-      "G98 zonder ingebouwde condensor — wanneer de condensor elders geplaatst wordt.",
+      "G98 zonder ingebouwde condensor, wanneer de condensor elders geplaatst wordt.",
     image: withBase("/assets/products-catalog/g98-sin.jpg"),
-    alt: "Golderos G98 zonder condensor — via VanRobi",
+    alt: "Golderos G98 zonder condensor, via VanRobi",
     cropClass: "crop-g98-sin",
     uses: ["horeca"],
     featured: false,
@@ -425,7 +425,7 @@ export const products: Product[] = [
     longDescription:
       "G92-serie zonder condensor voor specifieke Golderos-configuraties en vervangingsprojecten.",
     image: withBase("/assets/products-catalog/g92-sin.jpg"),
-    alt: "Golderos G92 zonder condensor — via VanRobi",
+    alt: "Golderos G92 zonder condensor, via VanRobi",
     cropClass: "crop-g92-sin",
     uses: ["horeca"],
     featured: false,
@@ -443,9 +443,9 @@ export const products: Product[] = [
     description:
       "Koudwaterbad voor proceskoeling en speciale toepassingen.",
     longDescription:
-      "Koudwaterbad van Golderos voor industriële en speciale toepassingen — van deeg tot chemische processen. Via VanRobi op aanvraag.",
+      "Koudwaterbad van Golderos voor industriële en speciale toepassingen, van deeg tot chemische processen. Via VanRobi op aanvraag.",
     image: withBase("/assets/products-catalog/cuba-frio.jpg"),
-    alt: "Golderos Koudwaterbad — via VanRobi",
+    alt: "Golderos Koudwaterbad, via VanRobi",
     cropClass: "crop-cuba-frio",
     uses: ["horeca"],
     featured: false,
@@ -464,7 +464,7 @@ export const products: Product[] = [
     longDescription:
       "Warmwaterbad van Golderos voor industriële toepassingen. Op aanvraag via VanRobi.",
     image: withBase("/assets/products-catalog/cuba-caliente.jpg"),
-    alt: "Golderos Warmwaterbad — via VanRobi",
+    alt: "Golderos Warmwaterbad, via VanRobi",
     cropClass: "crop-cuba-caliente",
     uses: ["horeca"],
     featured: false,
@@ -543,7 +543,7 @@ export const whyItems = [
   {
     n: "02",
     title: "Techniek die klopt",
-    text: "IJsbankcapaciteit, spiralen, debiet — heldere specs voor installateurs en barontwerp.",
+    text: "IJsbankcapaciteit, spiralen, debiet, heldere specs voor installateurs en barontwerp.",
     delay: "reveal-delay-1",
   },
   {
@@ -555,7 +555,7 @@ export const whyItems = [
   {
     n: "04",
     title: "Op maat",
-    text: "Van Goldy tot V200 — we matchen volume, ruimte en events aan de juiste unit.",
+    text: "Van Goldy tot V200. We matchen volume, ruimte en events aan de juiste unit.",
     delay: "reveal-delay-3",
   },
 ];

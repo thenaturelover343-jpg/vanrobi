@@ -9,7 +9,7 @@ import { withBase } from "@/lib/base";
 import { frContact } from "@/lib/fr";
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact & devis — VanRobi",
+  title: "Contact & devis, VanRobi",
   description:
     "Contactez VanRobi pour un devis Golderos. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 14 71 80 80.",
   path: "/fr/contact/",

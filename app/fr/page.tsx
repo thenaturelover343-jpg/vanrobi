@@ -12,7 +12,7 @@ import { contact } from "@/lib/contact";
 import { frHome, frFeaturedIds, frProductCopy } from "@/lib/fr";
 
 export const metadata: Metadata = pageMeta({
-  title: "VanRobi — Distributeur officiel Golderos Belgique & Pays-Bas",
+  title: "VanRobi, Distributeur officiel Golderos Belgique & Pays-Bas",
   description:
     "VanRobi, distributeur officiel Golderos pour la Belgique et les Pays-Bas. Refroidisseurs Goldy, V100, V200 pour Horeca et events.",
   path: "/fr/",

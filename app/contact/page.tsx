@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { contact } from "@/lib/contact";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Contact & offerte — VanRobi',
+  title: 'Contact & offerte, VanRobi',
   description:
     'Contacteer VanRobi voor een Golderos-offerte. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 (0)14 71 80 80.',
   path: '/contact/',
@@ -22,7 +22,7 @@ export default function ContactPage() {
         <PageHero
           eyebrow="Contact"
           title={["Offerte of", <em key="e">vraag?</em>]}
-          lede="Stuur uw aanvraag — we antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud."
+          lede="Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud."
         />
 
         <section className="page-section">

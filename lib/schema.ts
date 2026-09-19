@@ -61,7 +61,7 @@ export function websiteSchema() {
     url: absoluteUrl("/"),
     inLanguage: ["nl-BE", "fr-BE"],
     description:
-      "Officiële Golderos-distributeur België & Nederland — ijsbankkoelers en bierkoelers voor horeca en events.",
+      "Officiële Golderos-distributeur België & Nederland, ijsbankkoelers en bierkoelers voor horeca en events.",
     publisher: { "@id": absoluteUrl("/#organization") },
   };
 }
@@ -78,7 +78,7 @@ export function homeGraphSchema() {
         url: absoluteUrl("/"),
         inLanguage: ["nl-BE", "fr-BE"],
         description:
-          "Officiële Golderos-distributeur België & Nederland — ijsbankkoelers en bierkoelers voor horeca en events.",
+          "Officiële Golderos-distributeur België & Nederland, ijsbankkoelers en bierkoelers voor horeca en events.",
         publisher: { "@id": absoluteUrl("/#organization") },
       },
       orgCore(),

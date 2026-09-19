@@ -8,7 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { withBase } from "@/lib/base";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Voor wie — Horeca, events & installateurs | VanRobi',
+  title: 'Voor wie, Horeca, events & installateurs | VanRobi',
   description:
     'Golderos-koelers via VanRobi voor horeca, festivals, craftbars en installateurs in België en Nederland.',
   path: '/voor-wie/',
@@ -18,7 +18,7 @@ const audiences = [
   {
     n: "01",
     title: "Horeca",
-    text: "Restaurants, bars en hotels die stabiele tapkoude willen — onder-bar of over-bar, afgestemd op openingsuren en volume.",
+    text: "Restaurants, bars en hotels die stabiele tapkoude willen, onder-bar of over-bar, afgestemd op openingsuren en volume.",
     href: "/producten/?filter=horeca",
   },
   {
@@ -43,7 +43,7 @@ export default function VoorWiePage() {
         <PageHero
           eyebrow="Voor wie"
           title={["Waar de koude", <em key="e">telt.</em>]}
-          lede="Van vaste bar tot festivalterrein — dezelfde industriële betrouwbaarheid, met lokaal advies vanuit de Kempen."
+          lede="Van vaste bar tot festivalterrein, dezelfde industriële betrouwbaarheid, met lokaal advies vanuit de Kempen."
         />
 
         <section className="page-section">

@@ -17,7 +17,7 @@ export function Why() {
             ]}
           />
           <p>
-            Wij brengen Golderos naar de Benelux — met advies, specs en levering
+            Wij brengen Golderos naar de Benelux, met advies, specs en levering
             die horeca begrijpt.
           </p>
         </Reveal>

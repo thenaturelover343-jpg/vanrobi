@@ -31,9 +31,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const p = getProduct(id);
-  if (!p) return { title: "Product — VanRobi" };
+  if (!p) return { title: "Product | VanRobi" };
   return pageMeta({
-    title: `${p.name} — Golderos via VanRobi`,
+    title: `${p.name}, Golderos via VanRobi`,
     description: p.description,
     path: `/producten/${p.id}/`,
     ogImage: p.image.includes("/assets/")

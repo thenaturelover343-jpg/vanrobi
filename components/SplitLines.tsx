@@ -36,7 +36,7 @@ export function SplitLines({
       el.classList.add("lines-in");
       return;
     }
-    // Hero is above the fold — reveal immediately after paint
+    // Hero is above the fold, reveal immediately after paint
     if (el.closest(".hero")) {
       requestAnimationFrame(() => el.classList.add("lines-in"));
       return;

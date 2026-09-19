@@ -9,7 +9,7 @@ import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
 export const metadata: Metadata = pageMeta({
-  title: 'Over ons — VanRobi & Taponderhoud',
+  title: 'Over ons, VanRobi & Taponderhoud',
   description:
     'VanRobi is de officiële Golderos-distributeur BE/NL, met onderhoudspartner Taponderhoud vanuit Kasterlee.',
   path: '/over-ons/',
@@ -23,7 +23,7 @@ export default function OverOnsPage() {
         <PageHero
           eyebrow="Over ons"
           title={["VanRobi ×", <em key="e">Golderos.</em>]}
-          lede="Officieel distributiekanaal voor professionele ijsbankkoelers in België en Nederland — met lokale expertise in tap- en koeltechniek."
+          lede="Officieel distributiekanaal voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek."
         />
 
         <section className="page-section">
@@ -31,14 +31,13 @@ export default function OverOnsPage() {
             <Reveal className="prose">
               <h2>Partnerschap</h2>
               <p>
-                Golderos is de Spaanse fabrikant van professionele ijsbankkoelers —
-                meer dan 50 jaar leiderschap in koudetechniek, ISO 9001. VanRobi
+                Golderos is de Spaanse fabrikant van professionele ijsbankkoelers,                 meer dan 50 jaar leiderschap in koudetechniek, ISO 9001. VanRobi
                 is het officiële kanaal voor België en Nederland: selectie,
                 advies en levering vanuit één aanspreekpunt.
               </p>
               <p>
                 Geen grijze import. Wel heldere specs, betrouwbare levering en
-                een lokale partner die de bar begrijpt — van vaste horeca tot
+                een lokale partner die de bar begrijpt, van vaste horeca tot
                 festivalterrein.
               </p>
             </Reveal>

@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { websiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
-  title: "Bierkoeler & ijsbankkoeler — Golderos via VanRobi BE/NL",
+  title: "Bierkoeler & ijsbankkoeler, Golderos via VanRobi BE/NL",
   description:
     "Officiële Golderos-distributeur België & Nederland. Ijsbankkoelers en bierkoelers: Goldy, V100, V200, portable. Advies vanuit Kasterlee (Kempen).",
   path: "/",

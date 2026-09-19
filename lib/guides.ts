@@ -4,7 +4,7 @@ export type Guide = {
   eyebrow: string;
   description: string;
   lede: string;
-  /** Visible last-updated (ISO date YYYY-MM-DD) — real editorial date only */
+  /** Visible last-updated (ISO date YYYY-MM-DD), real editorial date only */
   updated: string;
   /** Optional first published date */
   published?: string;
@@ -17,7 +17,7 @@ export const guides: Guide[] = [
     eyebrow: "Vergelijking",
     description:
       "Vergelijk Golderos ijsbankkoelers (via VanRobi) met Gamko-achtige oplossingen: focus, onderhoud en wanneer Golderos de betere match is voor BE/NL horeca.",
-    lede: "Twee namen die vaak vallen bij bierkoeling. Wij zetten de praktische verschillen op een rij — vanuit het perspectief van een officiële Golderos-verdeler.",
+    lede: "Twee namen die vaak vallen bij bierkoeling. Wij zetten de praktische verschillen op een rij, vanuit het perspectief van een officiële Golderos-verdeler.",
     updated: "2026-09-19",
     published: "2026-09-18",
   },
@@ -27,7 +27,7 @@ export const guides: Guide[] = [
     eyebrow: "Vergelijking",
     description:
       "Verschil tussen Golderos V100 en V200: debiet, ijsreserve, formaat en typische toepassingen. Helder advies via VanRobi.",
-    lede: "Beide zijn onder-bar werkpaarden. Het verschil zit in volume en piekbelasting — niet in “goedkoop versus duur”.",
+    lede: 'Beide zijn onder-bar werkpaarden. Het verschil zit in volume en piekbelasting, niet in "goedkoop versus duur".',
     updated: "2026-09-19",
     published: "2026-09-18",
   },
@@ -36,7 +36,7 @@ export const guides: Guide[] = [
     title: "Bierkoeler voor events & festivals",
     eyebrow: "Gids",
     description:
-      "Welke Golderos-koeler voor festivals en events? Goldy, V100 portable en V200 portable — opbouw, stroom en capaciteit via VanRobi.",
+      "Welke Golderos-koeler voor festivals en events? Goldy, V100 portable en V200 portable, opbouw, stroom en capaciteit via VanRobi.",
     lede: "Op het terrein telt mobiliteit, snelle opbouw en genoeg koude wanneer de piek komt. Deze gids helpt u kiezen.",
     updated: "2026-09-19",
     published: "2026-09-18",
@@ -46,8 +46,8 @@ export const guides: Guide[] = [
     title: "Wat is een ijsbankkoeler?",
     eyebrow: "Uitleg",
     description:
-      "Uitleg ijsbankkoeler (bierkoeler): werking, verschil met doorstroomkoeling, wanneer u er één nodig heeft. Advies via VanRobi — officiële Golderos BE/NL.",
-    lede: "Een ijsbankkoeler koelt bier (of andere drank) via een ijsreserve in een waterbad — stabiel, stil en geschikt voor professionele horeca en events.",
+      "Uitleg ijsbankkoeler (bierkoeler): werking, verschil met doorstroomkoeling, wanneer u er één nodig heeft. Advies via VanRobi, officiële Golderos BE/NL.",
+    lede: "Een ijsbankkoeler koelt bier (of andere drank) via een ijsreserve in een waterbad, stabiel, stil en geschikt voor professionele horeca en events.",
     updated: "2026-09-19",
     published: "2026-09-18",
   },
@@ -76,8 +76,8 @@ export const guides: Guide[] = [
     title: "Onder-bar bierkoeler: V100 & V200",
     eyebrow: "Onder-bar",
     description:
-      "Onder-bar bierkoeler kiezen: Golderos V100 en V200 voor vaste horeca. Debiet, ijsreserve en barmeubel — advies via VanRobi.",
-    lede: "Onder de bar verdwijnt de machine uit het zicht — maar capaciteit en voetafdruk blijven cruciaal. Zo kiest u tussen V100 en V200.",
+      "Onder-bar bierkoeler kiezen: Golderos V100 en V200 voor vaste horeca. Debiet, ijsreserve en barmeubel, advies via VanRobi.",
+    lede: "Onder de bar verdwijnt de machine uit het zicht, maar capaciteit en voetafdruk blijven cruciaal. Zo kiest u tussen V100 en V200.",
     updated: "2026-09-19",
     published: "2026-09-18",
   },
@@ -97,7 +97,7 @@ export const guides: Guide[] = [
     eyebrow: "Uitleg",
     description:
       "Verschil tussen ijsbankkoeler en dry cooler (luchtgekoelde doorstroomkoeler): buffer, pieken, ruimte en wanneer Golderos ijsbank via VanRobi past.",
-    lede: "Beide koelen bier — maar het principe, de buffer en het gedrag bij pieken verschillen. Geen dogma: wel een heldere keuze.",
+    lede: "Beide koelen bier, maar het principe, de buffer en het gedrag bij pieken verschillen. Geen dogma: wel een heldere keuze.",
     updated: "2026-09-19",
     published: "2026-09-19",
   },
@@ -117,7 +117,7 @@ export const guides: Guide[] = [
     eyebrow: "Checklist",
     description:
       "Checklist bierkoeler kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom, spiralen en officieel kanaal. Praktisch via VanRobi BE/NL.",
-    lede: "Zeven concrete stappen — van piekvolume tot onderhoudspartner — zodat u geen machine koopt die te klein of te groot is.",
+    lede: "Zeven concrete stappen, van piekvolume tot onderhoudspartner, zodat u geen machine koopt die te klein of te groot is.",
     updated: "2026-09-19",
     published: "2026-09-19",
   },

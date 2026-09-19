@@ -72,7 +72,7 @@ export function pageMeta({
           url: image,
           width: 1200,
           height: 630,
-          alt: "VanRobi — officiële Golderos-distributeur België & Nederland",
+          alt: "VanRobi, officiële Golderos-distributeur België & Nederland",
         },
       ],
     },
