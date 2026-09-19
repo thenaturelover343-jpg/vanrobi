@@ -2519,17 +2519,18 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 52% 42%;
-  transform: scale(1.08);
+  /* Zoom into the machine so the empty cream studio plate is cropped out */
+  object-position: 72% 38%;
+  transform: scale(1.55);
 }
 .hero.hero-cold .hero-pressure-lines {
   position: absolute;
   inset: auto 0 28% 0;
-  display: grid;
+  display: none;
   gap: 0.52rem;
   padding-inline: 8%;
   pointer-events: none;
-  opacity: 0.58;
+  opacity: 0.35;
   transform: skewY(-6deg);
 }
 .hero.hero-cold .hero-pressure-lines span {
@@ -2641,8 +2642,8 @@ body {
     display: none;
   }
   .hero.hero-cold .hero-product-frame img {
-    object-position: 50% 40%;
-    transform: scale(1.06);
+    object-position: 68% 36%;
+    transform: scale(1.35);
   }
   .hero.hero-cold .hero-orbit {
     inset: -18% -18% 12% 28%;
