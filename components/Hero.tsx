@@ -127,7 +127,7 @@ export function Hero() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               ref={imgRef}
-              src={withBase("/assets/hero-editorial.jpg")}
+              src={withBase("/assets/hero-editorial-tight.jpg")}
               alt="Goldy over-bar ijsbankkoeler met twee kranen, professionele bierkoeler via VanRobi BE/NL"
               width={2400}
               height={1500}

@@ -2520,8 +2520,8 @@ body {
   height: 100%;
   object-fit: cover;
   /* Zoom into the machine so the empty cream studio plate is cropped out */
-  object-position: 72% 38%;
-  transform: scale(1.55);
+  object-position: 50% 45%;
+  transform: scale(1.02);
 }
 .hero.hero-cold .hero-pressure-lines {
   position: absolute;
@@ -2642,8 +2642,8 @@ body {
     display: none;
   }
   .hero.hero-cold .hero-product-frame img {
-    object-position: 68% 36%;
-    transform: scale(1.35);
+    object-position: 50% 42%;
+    transform: scale(1.02);
   }
   .hero.hero-cold .hero-orbit {
     inset: -18% -18% 12% 28%;
