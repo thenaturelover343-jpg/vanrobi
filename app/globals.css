@@ -331,7 +331,15 @@ body:has(.product-catalog) .site-header:not(.scrolled) .menu-toggle {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  padding: 1.75rem 1.5rem 3rem;
+  padding: 1.25rem 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
+  height: calc(100dvh - var(--header-h));
+  height: calc(100svh - var(--header-h));
+  max-height: calc(100dvh - var(--header-h));
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
 }
 .mobile-nav[hidden] { display: none !important; }
 .mobile-nav a {
@@ -1987,13 +1995,25 @@ html.js-reveal .reveal.in .prod-frame.img-mask img {
 .lang-switch a:hover,
 .lang-switch a.is-active { color: var(--ink); }
 .lang-switch-mobile {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin: 1rem 0;
-  font-size: 0.95rem;
+  align-items: stretch;
+  gap: 0;
+  margin: 0.5rem 0 0;
+  font-size: inherit;
   text-transform: none;
   letter-spacing: 0;
+  width: 100%;
+}
+.lang-switch-mobile a {
+  font-family: var(--serif);
+  font-size: 2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  width: 100%;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .faq-list {
