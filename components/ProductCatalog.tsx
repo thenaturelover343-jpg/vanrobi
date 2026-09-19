@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   products,
   useLabels,
@@ -38,6 +38,36 @@ function labelFor(f: FilterKey): string {
 export function ProductCatalog() {
   const [active, setActive] = useState<FilterKey>("all");
 
+  const selectFilter = (f: FilterKey) => {
+    setActive(f);
+    if (typeof window === "undefined") return;
+    if (f === "all") {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    } else if (groupFilters.includes(f as ProductGroup)) {
+      history.replaceState(null, "", `${window.location.pathname}${window.location.search}#${f}`);
+    }
+  };
+
+  useEffect(() => {
+    const apply = () => {
+      const raw = (window.location.hash || "").replace(/^#/, "");
+      const q = new URLSearchParams(window.location.search).get("groep") || "";
+      const key = (raw || q) as FilterKey;
+      const allowed: FilterKey[] = [
+        "all",
+        "horeca",
+        "events",
+        "onder-bar",
+        "mobiel",
+        ...groupFilters,
+      ];
+      if (key && allowed.includes(key)) setActive(key);
+    };
+    apply();
+    window.addEventListener("hashchange", apply);
+    return () => window.removeEventListener("hashchange", apply);
+  }, []);
+
   const filtered = useMemo(() => {
     if (active === "all") return products;
     if (active in useLabels) {
@@ -56,7 +86,7 @@ export function ProductCatalog() {
             role="tab"
             aria-selected={active === f}
             className={`filter-chip${active === f ? " is-active" : ""}`}
-            onClick={() => setActive(f)}
+            onClick={() => selectFilter(f)}
           >
             {labelFor(f)}
           </button>
@@ -75,7 +105,7 @@ export function ProductCatalog() {
             role="tab"
             aria-selected={active === f}
             className={`filter-chip${active === f ? " is-active" : ""}`}
-            onClick={() => setActive(f)}
+            onClick={() => selectFilter(f)}
           >
             {labelFor(f)}
           </button>

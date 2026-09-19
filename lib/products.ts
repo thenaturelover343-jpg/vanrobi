@@ -537,39 +537,39 @@ export function getProduct(id: string): Product | undefined {
 
 export const categories = [
  {
- href: withBase("/voor-wie/"),
- image: withBase("/assets/cats/horeca.jpg"),
- alt: "Bier tappen aan een professionele zuil",
+ href: withBase("/producten/#koelers"),
+ image: withBase("/assets/cats/koelers.jpg"),
+ alt: "Ijsbankkoelers en bierkoelers in het VanRobi-assortiment",
  index: "01",
- label: "Horeca vast",
+ label: "Ijsbankkoelers",
  delay: "",
  },
  {
- href: withBase("/voor-wie/"),
- image: withBase("/assets/cats/events.jpg"),
- alt: "Festivalterrein met high-volume drankvoorziening",
+ href: withBase("/producten/#serpentijnen"),
+ image: withBase("/assets/cats/serpentijnen.jpg"),
+ alt: "RVS-serpentijnen voor bier en drank via VanRobi",
  index: "02",
- label: "Events & festivals",
+ label: "Serpentijnen",
  delay: "reveal-delay-1",
  },
  {
- href: withBase("/voor-wie/"),
- image: withBase("/assets/cats/craft.jpg"),
- alt: "Detail van een VanRobi ijsbankkoeler met kraan",
+ href: withBase("/producten/#dispensing"),
+ image: withBase("/assets/cats/dispensing.jpg"),
+ alt: "Tapzuilen, kranen en lekbakken voor horeca",
  index: "03",
- label: "Craft & brouwerijen",
+ label: "Dispensing & tap",
  delay: "reveal-delay-2",
  },
  {
- href: withBase("/voor-wie/"),
- image: withBase("/assets/cats/install.jpg"),
- alt: "Koperen koeltechniek en compressor van een ijsbankkoeler",
+ href: withBase("/producten/#onderdelen"),
+ image: withBase("/assets/cats/roermotoren.jpg"),
+ alt: "Roermotoren en technische onderdelen",
  index: "04",
- label: "Installateurs",
+ label: "Roermotoren & onderdelen",
  delay: "",
  },
  {
- href: withBase("/diensten/"),
+ href: withBase("/voor-wie/"),
  image: withBase("/assets/cats/bars.jpg"),
  alt: "Sfeervolle bar met professionele taplijn",
  index: "05",
@@ -577,14 +577,15 @@ export const categories = [
  delay: "reveal-delay-1",
  },
  {
- href: withBase("/diensten/"),
+ href: withBase("/producten/#service"),
  image: withBase("/assets/cats/service.jpg"),
- alt: "Technisch detail van koelleidingen en motor",
+ alt: "Service, reiniging en op-maat projecten",
  index: "06",
- label: "Onderdelen & service",
+ label: "Service & op maat",
  delay: "reveal-delay-2",
  },
 ];
+
 
 export const whyItems = [
  {

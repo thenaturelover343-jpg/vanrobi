@@ -6,13 +6,13 @@ export function Categories() {
     <section className="categories" id="categorieen">
       <div className="wrap">
         <Reveal as="header" className="block-head light">
-          <p className="eyebrow">Toepassingen</p>
+          <p className="eyebrow">Assortiment</p>
           <h2>
-            Waar de koude <em>telt</em>
+            Het volledige <em>assortiment</em>
           </h2>
           <p className="block-lede">
-            Van vaste bar tot festivalterrein, dezelfde industriële
-            betrouwbaarheid.
+            Ijsbankkoelers, serpentijnen, dispensing en onderdelen, het
+            volledige assortiment via VanRobi.
           </p>
         </Reveal>
         <div className="cat-grid">
