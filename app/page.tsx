@@ -3,6 +3,7 @@ import { Intro } from "@/components/Intro";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { TempRail } from "@/components/TempRail";
+import { ColdShift } from "@/components/ColdShift";
 import { Statement } from "@/components/Statement";
 import { IceBank } from "@/components/IceBank";
 import { Products } from "@/components/Products";
@@ -26,6 +27,7 @@ export default function Home() {
       <JsonLd data={homeGraphSchema()} />
       <Intro />
       <Header />
+      <ColdShift />
       <TempRail />
       <main id="main">
         <Hero />
