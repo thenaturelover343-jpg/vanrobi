@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { MagneticButton } from "./MagneticButton";
-import { SplitLines } from "./SplitLines";
 import { withBase } from "@/lib/base";
 
 export function Hero() {
@@ -67,16 +66,18 @@ export function Hero() {
           <p className="hero-kicker reveal-hero">
             Officiële distributeur · België &amp; Nederland
           </p>
-          <SplitLines
-            as="h1"
-            className="hero-title"
-            lines={["Koude die", <em key="e">de bar draagt.</em>]}
-          />
-          <p className="hero-lede reveal-hero reveal-hero-3">
-            Golderos ijsbankkoelers via VanRobi — industriële precisie voor
-            horeca, events en installateurs die geen compromis dulden.
+          <h1 className="hero-title reveal-hero reveal-hero-2">
+            Golderos ijsbankkoelers voor horeca in België &amp; Nederland
+          </h1>
+          <p className="hero-slogan reveal-hero reveal-hero-3">
+            <em>Koude die de bar draagt.</em>
           </p>
-          <div className="hero-actions reveal-hero reveal-hero-4">
+          <p className="hero-lede reveal-hero reveal-hero-4">
+            Via VanRobi — officiële Golderos-distributeur. Industriële precisie
+            voor bars, restaurants, events en installateurs die geen compromis
+            dulden.
+          </p>
+          <div className="hero-actions reveal-hero reveal-hero-5">
             <MagneticButton
               className="btn btn-ink magnetic"
               href={withBase("/contact/")}

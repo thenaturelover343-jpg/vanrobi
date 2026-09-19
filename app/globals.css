@@ -514,6 +514,23 @@ body:has(.product-catalog) .site-header:not(.scrolled) .menu-toggle {
   margin-bottom: 1.35rem;
 }
 .hero h1 em,
+.hero-slogan {
+  font-family: var(--serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: -0.35rem 0 1.1rem;
+  max-width: 22rem;
+  line-height: 1.35;
+}
+.hero-slogan em {
+  color: var(--brass);
+  font-style: italic;
+  font-weight: 500;
+}
+.hero.hero-light .hero-slogan { color: var(--ink); }
+
 .hero .hero-title em {
   color: #e8d9c4;
   font-weight: 400;
