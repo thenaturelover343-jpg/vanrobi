@@ -18,7 +18,7 @@ export default function ProductenPage() {
  <PageHero
  eyebrow="Assortiment"
  title={["Ijsbankkoeler-catalogus.", <em key="e">Via VanRobi.</em>]}
- lede={`${products.length} machines en componenten uit de officiële VanRobi-productlijn, gefilterd op gebruik. Specs en beelden voor installateurs, horeca en events in België & Nederland.`}
+ lede={`${products.length} producten in de VanRobi-catalogus: koelers, serpentijnen, dispensing en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`}
  />
  <section className="page-section">
  <div className="wrap">

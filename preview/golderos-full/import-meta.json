@@ -1,0 +1,128 @@
+{
+  "golderos_count": 95,
+  "existing_mapped": 21,
+  "skipped_dups": [
+    "serpentines-a-medida-2",
+    "grifos-acero-inoxidable-2"
+  ],
+  "new_count": 72,
+  "new_ids_by_group": {
+    "serpentijnen": [
+      "serpentijnen-bier",
+      "serpentijnen-bier-helicoidal",
+      "serpentijnen-bier-alcoholvrij",
+      "serpentijnen-sangria-frisdrank",
+      "serpentijnen-cider",
+      "serpentijnen-water",
+      "serpentijnen-op-maat"
+    ],
+    "dispensing": [
+      "mojacopas",
+      "manorreductor-1",
+      "manorreductor-2",
+      "manorreductor-3",
+      "tapzuil-circulair-dubbel",
+      "bandeja-1-zonder-mojacopas",
+      "bandeja-2-zonder-mojacopas",
+      "bandeja-3-met-mojacopas",
+      "bandeja-3-zonder-mojacopas",
+      "bandeja-4-plus",
+      "manorreductor-4",
+      "tapzuilen-afwerkingen",
+      "kranen-rvs",
+      "kranen-water-rvs",
+      "kraanstaart-45",
+      "tapzuil-circulair",
+      "tapzuil-boa",
+      "medaillon-tapzuil",
+      "bandeja-1-met-mojacopas",
+      "bandeja-2-met-mojacopas",
+      "steun-lekbak",
+      "koppeling-type-a",
+      "koppeling-type-s",
+      "koppeling-type-g",
+      "koppeling-key-keg",
+      "ball-lock-gas",
+      "ball-lock-vloeistof"
+    ],
+    "onderdelen": [
+      "bierleiding",
+      "thermostaat-elektronisch",
+      "thermostaat-digitaal",
+      "thermostaat-mechanisch",
+      "sonde-digitaal",
+      "relais-compressor",
+      "startcondensator-compressor",
+      "filter-moleculair-20g",
+      "filter-ceramisch-32s",
+      "ventilator",
+      "wielen",
+      "bevestigingsklemmen",
+      "flenzen",
+      "snelkoppelingen",
+      "bocht-retourkoeling",
+      "y-stuk-water",
+      "y-stuk-co2",
+      "rubberdoppen-overstroming",
+      "glycol",
+      "aansluiting-pompuitgang",
+      "startcondensator-roermotor",
+      "buisuiteinden",
+      "pvc-cristal-slang",
+      "isolatieslang",
+      "pootdoppen",
+      "irrigatieslang-contact",
+      "irrigatieslang-overstroming",
+      "versterkte-co2-slang",
+      "afvoerslang",
+      "neopreen-isolatieplaat",
+      "reinigingsvloeistof-serpentijn",
+      "reinigingstanks",
+      "bedieningspaneel"
+    ],
+    "koelers": [
+      "sin-bomba"
+    ],
+    "service": [
+      "project-op-maat",
+      "reparatie-koelers",
+      "reparatie-roermotoren",
+      "reparatie-kranen"
+    ]
+  },
+  "img_fail": [
+    {
+      "id": "sin-bomba",
+      "url": null
+    },
+    {
+      "id": "tapzuil-circulair-dubbel",
+      "url": null
+    },
+    {
+      "id": "bandeja-1-zonder-mojacopas",
+      "url": null
+    },
+    {
+      "id": "bandeja-2-zonder-mojacopas",
+      "url": null
+    },
+    {
+      "id": "bandeja-3-met-mojacopas",
+      "url": null
+    },
+    {
+      "id": "bandeja-3-zonder-mojacopas",
+      "url": null
+    },
+    {
+      "id": "bandeja-4-plus",
+      "url": null
+    },
+    {
+      "id": "manorreductor-4",
+      "url": null
+    }
+  ],
+  "missing_def": []
+}

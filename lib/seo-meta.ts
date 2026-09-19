@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { Product } from "./products";
+import { productSeoExtra } from "./seo-product-extra.generated";
 import type { Guide } from "./guides";
 import { pageMeta } from "./site";
 
@@ -21,9 +22,9 @@ export const pageSeo: Record<string, SeoEntry> = {
  path: "/",
  },
  producten: {
- title: "Professionele ijsbankkoelers & bierkoelers | VanRobi",
+ title: "Catalogus ijsbankkoelers & tap | VanRobi",
  description:
- "Catalogus via VanRobi: Goldy, Picky, V100, V200, portable. Onder-bar en over-bar ijsbankkoelers voor horeca en events in België & Nederland.",
+ "Volledige VanRobi-catalogus: koelers, serpentijnen, kranen, zuilen en onderdelen voor horeca en events in België & Nederland.",
  path: "/producten/",
  },
  diensten: {
@@ -114,7 +115,7 @@ export const pageSeo: Record<string, SeoEntry> = {
 
 type ProductSeo = { title: string; description: string; h1: string };
 
-const productSeo: Record<string, ProductSeo> = {
+const productSeoCore: Record<string, ProductSeo> = {
  goldy: {
  title: "Goldy ijsbankkoeler over-bar | VanRobi",
  description:
@@ -241,6 +242,11 @@ const productSeo: Record<string, ProductSeo> = {
  "Warmwaterbad voor industriële procesverwarming. Op aanvraag via VanRobi in België en Nederland.",
  h1: "Warmwaterbad — industrieel via VanRobi",
  },
+};
+
+const productSeo: Record<string, ProductSeo> = {
+  ...productSeoCore,
+  ...productSeoExtra,
 };
 
 const guideMetaTitle: Record<string, string> = {

@@ -1,32 +1,52 @@
 import { withBase } from "./base";
+import { productsExtra } from "./products-extra.generated";
 
 export type ProductUse = "horeca" | "events" | "onder-bar" | "mobiel";
 
+export type ProductGroup =
+  | "koelers"
+  | "serpentijnen"
+  | "dispensing"
+  | "onderdelen"
+  | "service"
+  | "overig";
+
 export type Product = {
- id: string;
- index: string;
- name: string;
- badge: string;
- description: string;
- longDescription: string;
- image: string;
- alt: string;
- cropClass: string;
- uses: ProductUse[];
- specs: { label: string; value: string }[];
- featured?: boolean;
- /** photo = lifestyle/product shot; diagram = technical line drawing (not a photo) */
- imageKind?: "photo" | "diagram";
+  id: string;
+  index: string;
+  name: string;
+  badge: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  alt: string;
+  cropClass: string;
+  uses: ProductUse[];
+  /** Catalog group for browse filters (koelers, serpentijnen, …) */
+  group?: ProductGroup;
+  specs: { label: string; value: string }[];
+  featured?: boolean;
+  /** photo = lifestyle/product shot; diagram = technical line drawing (not a photo) */
+  imageKind?: "photo" | "diagram";
 };
 
 export const useLabels: Record<ProductUse, string> = {
- horeca: "Horeca",
- events: "Events",
- "onder-bar": "Onder-bar",
- mobiel: "Mobiel",
+  horeca: "Horeca",
+  events: "Events",
+  "onder-bar": "Onder-bar",
+  mobiel: "Mobiel",
 };
 
-export const products: Product[] = [
+export const groupLabels: Record<ProductGroup, string> = {
+  koelers: "Koelers",
+  serpentijnen: "Serpentijnen",
+  dispensing: "Dispensing",
+  onderdelen: "Onderdelen",
+  service: "Service",
+  overig: "Overig",
+};
+
+const productsCore: Product[] = [
  {
  id: "goldy",
  index: "01",
@@ -473,6 +493,39 @@ export const products: Product[] = [
  { label: "Leverancier", value: "VanRobi · België & Nederland" },
  ],
  },
+];
+
+/** Existing core machines get group koelers (or onderdelen for motors/components). */
+const coreGroupById: Record<string, ProductGroup> = {
+  goldy: "koelers",
+  picky: "koelers",
+  "gold-ice": "koelers",
+  v100: "koelers",
+  "v100-portable": "koelers",
+  v200: "koelers",
+  "v200-portable": "koelers",
+  v300: "koelers",
+  v90: "koelers",
+  h50: "koelers",
+  v500: "koelers",
+  "barrilero-doble": "koelers",
+  "unidad-condensadora": "onderdelen",
+  "g8-agua-aire": "onderdelen",
+  "g8-aire": "onderdelen",
+  "g8-agua": "onderdelen",
+  "g98-con": "onderdelen",
+  "g98-sin": "onderdelen",
+  "g92-sin": "onderdelen",
+  "cuba-frio": "overig",
+  "cuba-caliente": "overig",
+};
+
+export const products: Product[] = [
+  ...productsCore.map((p) => ({
+    ...p,
+    group: p.group ?? coreGroupById[p.id] ?? "koelers",
+  })),
+  ...productsExtra,
 ];
 
 export const featuredProducts = products.filter((p) => p.featured);

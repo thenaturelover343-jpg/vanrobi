@@ -1,11 +1,19 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { products, useLabels, type ProductUse } from "@/lib/products";
+import {
+  products,
+  useLabels,
+  groupLabels,
+  type ProductUse,
+  type ProductGroup,
+} from "@/lib/products";
 import { withBase } from "@/lib/base";
 import { Reveal } from "./Reveal";
 
-const filters: Array<ProductUse | "all"> = [
+type FilterKey = "all" | ProductUse | ProductGroup;
+
+const useFilters: Array<ProductUse | "all"> = [
   "all",
   "horeca",
   "events",
@@ -13,18 +21,35 @@ const filters: Array<ProductUse | "all"> = [
   "mobiel",
 ];
 
+const groupFilters: ProductGroup[] = [
+  "koelers",
+  "serpentijnen",
+  "dispensing",
+  "onderdelen",
+  "service",
+];
+
+function labelFor(f: FilterKey): string {
+  if (f === "all") return "Alles";
+  if (f in useLabels) return useLabels[f as ProductUse];
+  return groupLabels[f as ProductGroup];
+}
+
 export function ProductCatalog() {
-  const [active, setActive] = useState<ProductUse | "all">("all");
+  const [active, setActive] = useState<FilterKey>("all");
 
   const filtered = useMemo(() => {
     if (active === "all") return products;
-    return products.filter((p) => p.uses.includes(active));
+    if (active in useLabels) {
+      return products.filter((p) => p.uses.includes(active as ProductUse));
+    }
+    return products.filter((p) => p.group === active);
   }, [active]);
 
   return (
     <div className="catalog">
       <div className="catalog-filters" role="tablist" aria-label="Filter op gebruik">
-        {filters.map((f) => (
+        {useFilters.map((f) => (
           <button
             key={f}
             type="button"
@@ -33,7 +58,26 @@ export function ProductCatalog() {
             className={`filter-chip${active === f ? " is-active" : ""}`}
             onClick={() => setActive(f)}
           >
-            {f === "all" ? "Alles" : useLabels[f]}
+            {labelFor(f)}
+          </button>
+        ))}
+      </div>
+      <div
+        className="catalog-filters catalog-filters-groups"
+        role="tablist"
+        aria-label="Filter op productgroep"
+        style={{ marginTop: "0.75rem" }}
+      >
+        {groupFilters.map((f) => (
+          <button
+            key={f}
+            type="button"
+            role="tab"
+            aria-selected={active === f}
+            className={`filter-chip${active === f ? " is-active" : ""}`}
+            onClick={() => setActive(f)}
+          >
+            {labelFor(f)}
           </button>
         ))}
       </div>
@@ -64,6 +108,7 @@ export function ProductCatalog() {
                 <h2>{p.name}</h2>
                 <p>{p.description}</p>
                 <ul className="catalog-tags">
+                  {p.group ? <li>{groupLabels[p.group]}</li> : null}
                   {p.uses.map((u) => (
                     <li key={u}>{useLabels[u]}</li>
                   ))}
@@ -78,7 +123,7 @@ export function ProductCatalog() {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="catalog-empty">Geen machines in deze categorie.</p>
+        <p className="catalog-empty">Geen producten in deze categorie.</p>
       ) : null}
     </div>
   );
