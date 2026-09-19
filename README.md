@@ -1,4 +1,4 @@
-# VanRobi — Officiële Golderos-distributeur (BE & NL)
+# VanRobi — Specialist in ijsbankkoelers (BE & NL)
 
 Production Next.js (App Router) + TypeScript site for VanRobi.
 
@@ -55,22 +55,22 @@ If unset, `lib/analytics.ts` / `components/Analytics.tsx` skip loading scripts. 
 
 - `/sitemap.xml` · `/robots.txt`
 - `/faq/` — algemene FAQ (NL)
-- `/gids/` — index + `golderos-vs-gamko`, `v100-vs-v200`, `bierkoeler-voor-events`
+- `/gids/` — index + `ijsbankkoeler-vs-gamko`, `v100-vs-v200`, `bierkoeler-voor-events`
 - Product pages: Product JSON-LD + FAQ blocks on Goldy, V100, V200, V100 portable
 - Layout: Organization / LocalBusiness JSON-LD (Kemelbeekstraat 16, 2460 Kasterlee, +32 14 71 80 80, info@vanrobi.be)
 
 ## Structure
 
 ```
-app/           # Routes (NL + /fr + gids + faq) + sitemap/robots
-components/    # UI + FaqBlock, JsonLd, Analytics
-lib/           # products, faq, guides, schema, site, analytics, fr
+app/ # Routes (NL + /fr + gids + faq) + sitemap/robots
+components/ # UI + FaqBlock, JsonLd, Analytics
+lib/ # products, faq, guides, schema, site, analytics, fr
 public/assets/ # Images + logo
 ```
 
 ## Brand notes
 
 - Logo: **VanRobi** only
-- Copy: Golderos = Spanish manufacturer; VanRobi = official distributor BE/NL
+- Copy: VanRobi = BE/NL specialist for professional ice-bank coolers; product line of Spanish origin, sold without naming the factory brand on-site
 - Contact everywhere: **info@vanrobi.be**
 - Maintenance partner: [taponderhoud.be](https://www.taponderhoud.be)
