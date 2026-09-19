@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { Analytics } from "@/components/Analytics";
+import { IceCursor } from "@/components/IceCursor";
 import { organizationSchema } from "@/lib/schema";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0908",
+  themeColor: "#0A1628",
   width: "device-width",
   initialScale: 1,
 };
@@ -68,13 +69,14 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
         <JsonLd data={organizationSchema()} />
         <Analytics />
+        <IceCursor />
         {children}
       </body>
     </html>

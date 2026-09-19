@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { featuredProducts as products } from "@/lib/products";
 import { withBase } from "@/lib/base";
 import { offerteMailto } from "@/lib/contact";
@@ -69,6 +69,25 @@ export function Products() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+
+  const onProdPointerMove = (e: ReactPointerEvent<HTMLElement>) => {
+    const reduce =
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (reduce) return;
+    const frame = e.currentTarget.querySelector<HTMLElement>(".prod-frame");
+    if (!frame) return;
+    const r = frame.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    frame.style.transform = `perspective(900px) rotateY(${px * 7}deg) rotateX(${-py * 6}deg) translateY(-4px)`;
+  };
+
+  const onProdPointerLeave = (e: ReactPointerEvent<HTMLElement>) => {
+    const frame = e.currentTarget.querySelector<HTMLElement>(".prod-frame");
+    if (frame) frame.style.transform = "";
+  };
+
   const onProductCta = (name: string) => {
     const mail = document.getElementById("cta-primary");
     if (mail && name) {
@@ -121,11 +140,13 @@ export function Products() {
               data-index={p.index}
               data-name={p.name}
               id={`prod-${p.id}`}
+              onPointerMove={onProdPointerMove}
+              onPointerLeave={onProdPointerLeave}
             >
               <div className="prod-visual reveal-child">
                 <a href={withBase(`/producten/${p.id}/`)} className="prod-frame-link">
                   <div
-                    className={`prod-frame ${p.cropClass} img-mask${
+                    className={`prod-frame has-tilt ${p.cropClass} img-mask${
                       p.imageKind === "diagram" ? " is-diagram" : ""
                     }`}
                   >

@@ -1,20 +1,33 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, type CSSProperties } from "react";
 import { MagneticButton } from "./MagneticButton";
 import { withBase } from "@/lib/base";
 
 export function Hero() {
-  const mediaRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const productRef = useRef<HTMLDivElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
+
+  const particles = useMemo(
+    () =>
+      Array.from({ length: 18 }, (_, i) => ({
+        id: i,
+        left: `${4 + ((i * 17) % 92)}%`,
+        delay: `${(i * 0.55) % 8}s`,
+        duration: `${10 + (i % 7) * 1.4}s`,
+        drift: `${(i % 2 === 0 ? 1 : -1) * (12 + (i % 5) * 8)}px`,
+        size: `${2 + (i % 3)}px`,
+      })),
+    []
+  );
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
-    const heroMedia = mediaRef.current;
     const stage = stageRef.current;
-    if (!heroMedia) return;
+    const product = productRef.current;
+    if (!stage) return;
     let heroTick = false;
     const onScroll = () => {
       if (heroTick) return;
@@ -22,11 +35,11 @@ export function Hero() {
       requestAnimationFrame(() => {
         const y = window.scrollY;
         if (y < window.innerHeight * 1.2) {
-          heroMedia.style.transform = `translate3d(0,${y * 0.22}px,0)`;
-          if (stage) {
-            const fade = Math.min(1, y / (window.innerHeight * 0.85));
-            stage.style.transform = `translate3d(0,${y * -0.08}px,0)`;
-            stage.style.opacity = String(1 - fade * 0.55);
+          const fade = Math.min(1, y / (window.innerHeight * 0.85));
+          stage.style.transform = `translate3d(0,${y * -0.06}px,0)`;
+          stage.style.opacity = String(1 - fade * 0.45);
+          if (product) {
+            product.style.transform = `translate3d(0,${y * 0.12}px,0)`;
           }
         }
         heroTick = false;
@@ -45,20 +58,24 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="hero hero-light" aria-label="Introductie">
-      <div className="hero-media" data-parallax ref={mediaRef}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          ref={imgRef}
-          src={withBase("/assets/hero-editorial.jpg")}
-          alt="Golderos Goldy, over-bar ijsbankkoeler met twee kranen, via VanRobi"
-          width={2400}
-          height={1500}
-          fetchPriority="high"
-          className="hero-img img-shimmer"
-        />
-        <div className="hero-veil" aria-hidden="true"></div>
-        <div className="hero-grain" aria-hidden="true"></div>
+    <section className="hero hero-cold" aria-label="Introductie">
+      <div className="hero-wave" aria-hidden="true" />
+      <div className="hero-particles" aria-hidden="true">
+        {particles.map((p) => (
+          <span
+            key={p.id}
+            className="ice-particle"
+            style={{
+              left: p.left,
+              bottom: "-4%",
+              width: p.size,
+              height: p.size,
+              animationDelay: p.delay,
+              animationDuration: p.duration,
+              ["--drift" as string]: p.drift,
+            } as CSSProperties}
+          />
+        ))}
       </div>
 
       <div className="hero-stage" ref={stageRef}>
@@ -90,20 +107,35 @@ export function Hero() {
           </div>
         </div>
 
-        <aside className="hero-meta reveal-hero reveal-hero-5" aria-hidden="true">
-          <div className="hero-meta-item">
-            <span>Model</span>
-            <strong>Goldy</strong>
+        <div className="hero-product" ref={productRef}>
+          <div className="hero-product-frame">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              ref={imgRef}
+              src={withBase("/assets/hero-editorial.jpg")}
+              alt="Golderos Goldy, over-bar ijsbankkoeler met twee kranen, via VanRobi"
+              width={2400}
+              height={1500}
+              fetchPriority="high"
+              className="hero-img img-shimmer"
+            />
+            <div className="hero-product-veil" aria-hidden="true" />
+            <aside className="hero-meta" aria-hidden="true">
+              <div className="hero-meta-item">
+                <span>Model</span>
+                <strong>Goldy</strong>
+              </div>
+              <div className="hero-meta-item">
+                <span>IJsreserve</span>
+                <strong>9 kg</strong>
+              </div>
+              <div className="hero-meta-item">
+                <span>Debiet</span>
+                <strong>44 L/u</strong>
+              </div>
+            </aside>
           </div>
-          <div className="hero-meta-item">
-            <span>IJsreserve</span>
-            <strong>9 kg</strong>
-          </div>
-          <div className="hero-meta-item">
-            <span>Debiet</span>
-            <strong>44 L/u</strong>
-          </div>
-        </aside>
+        </div>
       </div>
 
       <a className="hero-scroll" href="#statement" aria-label="Verder scrollen">

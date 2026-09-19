@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
+import { ServicesSticky } from "@/components/ServicesSticky";
 import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
@@ -28,15 +29,7 @@ export default function FrServicesPage() {
         />
         <section className="page-section">
           <div className="wrap">
-            <div className="service-grid">
-              {frServices.items.map((s) => (
-                <Reveal key={s.n} className="service-card">
-                  <span className="service-n">{s.n}</span>
-                  <h2>{s.title}</h2>
-                  <p>{s.text}</p>
-                </Reveal>
-              ))}
-            </div>
+            <ServicesSticky services={frServices.items} moreHref="/fr/contact/" />
             <Reveal
               className="prose"
               style={{ marginTop: "3rem", maxWidth: "42rem" }}

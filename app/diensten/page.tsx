@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { CTA } from "@/components/CTA";
 import { Reveal } from "@/components/Reveal";
+import { ServicesSticky } from "@/components/ServicesSticky";
 import { withBase } from "@/lib/base";
 import { contact } from "@/lib/contact";
 
@@ -61,15 +62,7 @@ export default function DienstenPage() {
 
         <section className="page-section">
           <div className="wrap">
-            <div className="service-grid">
-              {services.map((s) => (
-                <Reveal key={s.n} className="service-card">
-                  <span className="service-n">{s.n}</span>
-                  <h2>{s.title}</h2>
-                  <p>{s.text}</p>
-                </Reveal>
-              ))}
-            </div>
+            <ServicesSticky services={services} moreHref="/contact/" />
             <Reveal className="prose" style={{ marginTop: "3rem", maxWidth: "40rem" }}>
               <h2>Onderhoudspartner</h2>
               <p>
