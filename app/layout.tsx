@@ -54,31 +54,26 @@ export default function RootLayout({
 }: Readonly<{
  children: React.ReactNode;
 }>) {
- return (
- <html lang="nl">
- <head>
- <script
- dangerouslySetInnerHTML={{
- __html: "document.documentElement.classList.add('js-reveal')",
- }}
- />
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link
- rel="preconnect"
- href="https://fonts.gstatic.com"
- crossOrigin="anonymous"
- />
- <link
- href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
- rel="stylesheet"
- />
- </head>
- <body>
- <JsonLd data={organizationSchema()} />
- <Analytics />
- <IceCursor />
- {children}
- </body>
- </html>
- );
+  return (
+    <html lang="nl" className="js-reveal">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <JsonLd data={organizationSchema()} />
+        <Analytics />
+        <IceCursor />
+        {children}
+      </body>
+    </html>
+  );
 }

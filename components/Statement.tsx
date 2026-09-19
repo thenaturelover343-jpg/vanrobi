@@ -6,7 +6,7 @@ export function Statement() {
     <section className="statement" id="statement" aria-label="Statement">
       <div className="wrap statement-inner">
         <Reveal as="p" className="statement-kicker">
-          De maat van koude
+          Koude onder controle
         </Reveal>
         <SplitLines
           as="p"
