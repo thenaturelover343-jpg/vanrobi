@@ -4,28 +4,28 @@ import { withBase } from "@/lib/base";
 
 const LAYERS = [
   {
-    id: "reserve",
-    n: "01",
-    title: "Reserve",
-    body: "9 kg ijs. De bar merkt de piek niet.",
-    img: "/assets/hero-editorial-tight.jpg",
-    alt: "Goldy ijsbankkoeler, RVS, twee kranen",
-  },
-  {
     id: "bar",
-    n: "02",
+    n: "01",
     title: "Bar",
-    body: "Over-bar. Twee kranen. Geen theaterstuk, een werktuig.",
-    img: "/assets/hero-cinematic.jpg",
-    alt: "Ijsbankkoeler in donkere, cinematische setting",
+    body: "De nacht, het hout, de tap. Koude hoort hier, niet op een witte achtergrond.",
+    img: "/assets/cats/bars.jpg",
+    alt: "Horecabar bij avond",
   },
   {
     id: "shift",
-    n: "03",
+    n: "02",
     title: "Shift",
-    body: "Horeca die blijft tappen. Koude die de nacht uitzit.",
-    img: "/assets/cats/bars.jpg",
-    alt: "Barinterieur, horeca",
+    body: "Horeca die blijft tappen tot sluit.",
+    img: "/assets/cats/horeca.jpg",
+    alt: "Horeca-service",
+  },
+  {
+    id: "event",
+    n: "03",
+    title: "Event",
+    body: "Volume op de vloer. Koude die meegaat.",
+    img: "/assets/cats/events.jpg",
+    alt: "Event en volume",
   },
 ] as const;
 
@@ -37,9 +37,7 @@ export function IceBank() {
         <h2>
           Koude die je <em>ziet</em>.
         </h2>
-        <p className="icebank-lede">
-          Geen diagram. De machine, het licht, de bar.
-        </p>
+        <p className="icebank-lede">De bar. Niet de achterkant van een machine op wit.</p>
       </div>
       <div className="icebank-film">
         {LAYERS.map((layer) => (
