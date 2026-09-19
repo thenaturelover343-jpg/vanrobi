@@ -33,7 +33,7 @@ export function Hero() {
       <div className="hero-media" data-parallax ref={mediaRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={withBase("/assets/hero-bar.jpg")}
+          src={withBase("/assets/hero-bar-v2.jpg")}
           alt="Atmosferische craft bar met professionele taplijn"
           width={2400}
           height={1800}
