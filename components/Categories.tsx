@@ -11,7 +11,7 @@ export function Categories() {
             Het volledige <em>assortiment</em>
           </h2>
           <p className="block-lede">
-            Ijsbankkoelers, serpentijnen, dispensing en onderdelen, het
+            Ijsbankkoelers, serpentijnen, tap & uitschenken en onderdelen, het
             volledige assortiment via VanRobi.
           </p>
         </Reveal>

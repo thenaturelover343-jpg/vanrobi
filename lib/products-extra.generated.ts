@@ -26,12 +26,12 @@ export const productsExtra: Product[] = [
   {
     id: "serpentijnen-bier-helicoidal",
     index: "23",
-    name: "Serpentijnen bier helicoidal",
-    badge: "Serpentijnen · Helicoidal",
-    description: "Helicoidale RVS-serpentijnen voor bier, compacte spoelvorm.",
-    longDescription: "Helicoidale serpentijnen bier in RVS voor compacte spoelopbouw in de ijsbank. Voedselveilig, typische buislengte ±27 m. Via VanRobi voor horeca en installateurs in BE & NL.",
+    name: "Serpentijnen bier spiraalvormig",
+    badge: "Serpentijnen · Spiraal",
+    description: "Spiraalvormige RVS-serpentijnen voor bier, compacte spoelvorm.",
+    longDescription: "Spiraalvormige serpentijnen bier in RVS voor compacte spoelopbouw in de ijsbank. Voedselveilig, typische buislengte ±27 m. Via VanRobi voor horeca en installateurs in BE & NL.",
     image: withBase("/assets/products-catalog/serpentijnen-bier-helicoidal.jpg"),
-    alt: "Serpentijnen bier helicoidal, via VanRobi België & Nederland",
+    alt: "Serpentijnen bier spiraalvormig, via VanRobi België & Nederland",
     cropClass: "crop-serpentijnen-bier-helicoidal",
     uses: ["horeca", "onder-bar"],
     group: "serpentijnen",
@@ -88,7 +88,7 @@ export const productsExtra: Product[] = [
     index: "26",
     name: "Serpentijnen cider",
     badge: "Serpentijnen · Cider",
-    description: "RVS 316-serpentijnen voor cider/sidra.",
+    description: "RVS 316-serpentijnen voor cider.",
     longDescription: "Serpentijnen cider in RVS 316, voedselveilig. Buisdiameter Ø7, lengtes o.a. 11–12 m. Speciaal voor ciderlijnen via VanRobi.",
     image: withBase("/assets/products-catalog/serpentijnen-cider.jpg"),
     alt: "Serpentijnen cider, via VanRobi België & Nederland",
@@ -138,34 +138,34 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Diámetros de tubo", value: "Ø6, Ø7 , Ø8 ¡Pregúntanos por materiales y las medidas que necesitas!" }
+      { label: "Buisdiameters", value: "Ø6, Ø7, Ø8 — vraag ons naar materialen en de maten die u nodig heeft!" }
     ],
   },
   {
     id: "mojacopas",
     index: "29",
-    name: "Glasreiniger (mojacopas)",
-    badge: "Dispensing · Mojacopas",
-    description: "Mojacopas-glasreiniger voor nette tapafwerking.",
-    longDescription: "Mojacopas (glasreiniger) voor professionele tapstations. Houdt glazen schoon en presentatie strak. Via VanRobi.",
+    name: "Glasreiniger",
+    badge: "Tap & uitschenken · Glasreiniger",
+    description: "Glasreiniger voor nette tapafwerking.",
+    longDescription: "Glasreiniger voor professionele tapstations. Houdt glazen schoon en presentatie strak. Via VanRobi.",
     image: withBase("/assets/products-catalog/mojacopas.jpg"),
-    alt: "Glasreiniger (mojacopas), via VanRobi België & Nederland",
+    alt: "Glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS o plástico" }
+      { label: "Info", value: "Gemaakt van RVS of kunststof" }
     ],
   },
   {
     id: "manorreductor-1",
     index: "30",
     name: "Drukregelaar 1 product",
-    badge: "Dispensing · CO₂",
-    description: "Manorreductor/drukregelaar voor één dranklijn.",
-    longDescription: "Drukregelaar (manorreductor) voor één productlijn. Stabiele CO₂- of gasdruk voor consistente tapkwaliteit via VanRobi.",
+    badge: "Tap & uitschenken · CO₂",
+    description: "Drukregelaar voor één dranklijn.",
+    longDescription: "Drukregelaar voor één productlijn. Stabiele CO₂- of gasdruk voor consistente tapkwaliteit via VanRobi.",
     image: withBase("/assets/products-catalog/manorreductor-1.jpg"),
     alt: "Drukregelaar 1 product, via VanRobi België & Nederland",
     cropClass: "crop-manorreductor-1",
@@ -174,17 +174,17 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "1 Esfera de alta y 1 esfera de baja" },
-      { label: "Info", value: "Esferas protegidas con funda de plástico amortigua golpes" }
+      { label: "Info", value: "1 hogedrukbol en 1 lagedrukbol" },
+      { label: "Info", value: "Bollen beschermd met kunststof hoes die schokken dempt" }
     ],
   },
   {
     id: "manorreductor-2",
     index: "31",
     name: "Drukregelaar 2 producten",
-    badge: "Dispensing · CO₂",
+    badge: "Tap & uitschenken · CO₂",
     description: "Drukregelaar voor twee dranklijnen.",
-    longDescription: "Manorreductor voor twee producten. Ideaal wanneer u twee bieren of mix van bier/frisdrank tapt. Via VanRobi.",
+    longDescription: "Drukregelaar voor twee producten. Ideaal wanneer u twee bieren of mix van bier/frisdrank tapt. Via VanRobi.",
     image: withBase("/assets/products-catalog/manorreductor-2.jpg"),
     alt: "Drukregelaar 2 producten, via VanRobi België & Nederland",
     cropClass: "crop-manorreductor-2",
@@ -193,17 +193,17 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "2 Esfera de alta y 1 esfera de baja" },
-      { label: "Info", value: "Esferas protegidas con funda de plástico amortigua golpes" }
+      { label: "Info", value: "2 hogedrukbollen en 1 lagedrukbol" },
+      { label: "Info", value: "Bollen beschermd met kunststof hoes die schokken dempt" }
     ],
   },
   {
     id: "manorreductor-3",
     index: "32",
     name: "Drukregelaar 3 producten",
-    badge: "Dispensing · CO₂",
+    badge: "Tap & uitschenken · CO₂",
     description: "Drukregelaar voor drie dranklijnen.",
-    longDescription: "Manorreductor voor drie productlijnen. Voor bars met een breder tapaanbod. Leverbaar via VanRobi BE & NL.",
+    longDescription: "Drukregelaar voor drie productlijnen. Voor bars met een breder tapaanbod. Leverbaar via VanRobi BE & NL.",
     image: withBase("/assets/products-catalog/manorreductor-3.jpg"),
     alt: "Drukregelaar 3 producten, via VanRobi België & Nederland",
     cropClass: "crop-manorreductor-3",
@@ -212,8 +212,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "3 Esfera de alta y 1 esfera de baja" },
-      { label: "Info", value: "Esferas protegidas con funda de plastico amortigua golpes" }
+      { label: "Info", value: "3 hogedrukbollen en 1 lagedrukbol" },
+      { label: "Info", value: "Bollen beschermd met kunststof hoes die schokken dempt" }
     ],
   },
   {
@@ -231,7 +231,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Varias medidas", value: "Tubo lupulus 5/16″ – especial – Tubo lupulus 7 x 10 mm Tubo lupulus 6,7 x 9,5 mm" }
+      { label: "Diverse maten", value: "Lupulus-slang 5/16″ – speciaal – Lupulus-slang 7 x 10 mm · Lupulus-slang 6,7 x 9,5 mm" }
     ],
   },
   {
@@ -257,9 +257,9 @@ export const productsExtra: Product[] = [
     id: "tapzuil-circulair-dubbel",
     index: "35",
     name: "Tapzuil circulair dubbel",
-    badge: "Dispensing · Zuil",
+    badge: "Tap & uitschenken · Zuil",
     description: "Ronde dubbele tapzuil voor twee kranen.",
-    longDescription: "Circulaire dubbele tapzuil voor twee services. Zichtbare barpresentatie met professionele afwerking via VanRobi.",
+    longDescription: "Circulaire dubbele tapzuil voor twee kranen. Zichtbare barpresentatie met professionele afwerking via VanRobi.",
     image: withBase("/assets/products-catalog/tapzuil-circulair-dubbel.jpg"),
     alt: "Tapzuil circulair dubbel, via VanRobi België & Nederland",
     cropClass: "crop-tapzuil-circulair-dubbel",
@@ -275,105 +275,105 @@ export const productsExtra: Product[] = [
   {
     id: "bandeja-1-zonder-mojacopas",
     index: "36",
-    name: "Lekbak 1 service zonder mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 1 kraan, zonder mojacopas.",
-    longDescription: "RVS-lekbak (bandeja) voor één service, zonder glasreiniger. Netjes afgewerkt onder de kraan. Via VanRobi.",
+    name: "Lekbak 1 kraan zonder glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 1 kraan, zonder glasreiniger.",
+    longDescription: "RVS-lekbak voor één kraan, zonder glasreiniger. Netjes afgewerkt onder de kraan. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-1-zonder-mojacopas.jpg"),
-    alt: "Lekbak 1 service zonder mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 1 kraan zonder glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-1-zonder-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desague para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "bandeja-2-zonder-mojacopas",
     index: "37",
-    name: "Lekbak 2 services zonder mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 2 kranen, zonder mojacopas.",
-    longDescription: "Lekbak voor twee services zonder mojacopas. Passend bij dubbele zuilen. Via VanRobi.",
+    name: "Lekbak 2 kranen zonder glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 2 kranen, zonder glasreiniger.",
+    longDescription: "Lekbak voor twee kranen zonder glasreiniger. Passend bij dubbele zuilen. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-2-zonder-mojacopas.jpg"),
-    alt: "Lekbak 2 services zonder mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 2 kranen zonder glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-2-zonder-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desagüe para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "bandeja-3-met-mojacopas",
     index: "38",
-    name: "Lekbak 3 services met mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 3 kranen, met mojacopas.",
-    longDescription: "Lekbak voor drie services met mojacopas. Via VanRobi.",
+    name: "Lekbak 3 kranen met glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 3 kranen, met glasreiniger.",
+    longDescription: "Lekbak voor drie kranen met glasreiniger. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-3-met-mojacopas.jpg"),
-    alt: "Lekbak 3 services met mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 3 kranen met glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-3-met-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desagüe para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "bandeja-3-zonder-mojacopas",
     index: "39",
-    name: "Lekbak 3 services zonder mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 3 kranen, zonder mojacopas.",
-    longDescription: "Lekbak voor drie services zonder mojacopas. Voor bredere tapstations. Via VanRobi.",
+    name: "Lekbak 3 kranen zonder glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 3 kranen, zonder glasreiniger.",
+    longDescription: "Lekbak voor drie kranen zonder glasreiniger. Voor bredere tapstations. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-3-zonder-mojacopas.jpg"),
-    alt: "Lekbak 3 services zonder mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 3 kranen zonder glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-3-zonder-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desagüe para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "bandeja-4-plus",
     index: "40",
-    name: "Lekbak 4+ services",
-    badge: "Dispensing · Lekbak",
+    name: "Lekbak 4+ kranen",
+    badge: "Tap & uitschenken · Lekbak",
     description: "Lekbak voor 4 of meer kranen.",
-    longDescription: "Lekbak voor vier of meer services. Voor high-volume bars en festivalbars. Via VanRobi.",
+    longDescription: "Lekbak voor vier of meer kranen. Voor high-volume bars en festivalbars. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-4-plus.jpg"),
-    alt: "Lekbak 4+ services, via VanRobi België & Nederland",
+    alt: "Lekbak 4+ kranen, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-4-plus",
     uses: ["horeca", "events"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desagüe para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "manorreductor-4",
     index: "41",
     name: "Drukregelaar 4 producten",
-    badge: "Dispensing · CO₂",
+    badge: "Tap & uitschenken · CO₂",
     description: "Drukregelaar voor vier dranklijnen.",
-    longDescription: "Manorreductor voor vier producten. High-volume tapstations met meerdere lijnen. Via VanRobi.",
+    longDescription: "Drukregelaar voor vier producten. High-volume tapstations met meerdere lijnen. Via VanRobi.",
     image: withBase("/assets/products-catalog/manorreductor-4.jpg"),
     alt: "Drukregelaar 4 producten, via VanRobi België & Nederland",
     cropClass: "crop-manorreductor-4",
@@ -382,15 +382,15 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "4 Esfera de alta y 1 esfera de baja" },
-      { label: "Info", value: "Esferas protegidas con funda de plástico amortigua golpes" }
+      { label: "Info", value: "4 hogedrukbollen en 1 lagedrukbol" },
+      { label: "Info", value: "Bollen beschermd met kunststof hoes die schokken dempt" }
     ],
   },
   {
     id: "tapzuilen-afwerkingen",
     index: "42",
     name: "Tapzuilen diverse afwerkingen",
-    badge: "Dispensing · Zuil",
+    badge: "Tap & uitschenken · Zuil",
     description: "Tapzuilen met verschillende afwerkingen en finishes.",
     longDescription: "Tapzuilen met diverse afwerkingen — kies look en materiaal passend bij uw bar. VanRobi helpt bij selectie.",
     image: withBase("/assets/products-catalog/tapzuilen-afwerkingen.jpg"),
@@ -409,7 +409,7 @@ export const productsExtra: Product[] = [
     id: "kranen-rvs",
     index: "43",
     name: "RVS-tapkranen",
-    badge: "Dispensing · Kranen",
+    badge: "Tap & uitschenken · Kranen",
     description: "Professionele RVS-tapkranen voor bier en frisdrank.",
     longDescription: "Roestvrijstalen tapkranen voor horeca en events. Passend bij zuilen, serpentijnen en ijsbankkoelers in het VanRobi-assortiment.",
     image: withBase("/assets/products-catalog/kranen-rvs.jpg"),
@@ -428,7 +428,7 @@ export const productsExtra: Product[] = [
     id: "kranen-water-rvs",
     index: "44",
     name: "RVS-waterkranen",
-    badge: "Dispensing · Water",
+    badge: "Tap & uitschenken · Water",
     description: "RVS-kranen voor gekoeld water aan de bar.",
     longDescription: "Roestvrijstalen waterkranen voor gekoeld water in horeca-opstellingen. Combineerbaar met water-serpentijnen via VanRobi.",
     image: withBase("/assets/products-catalog/kranen-water-rvs.jpg"),
@@ -447,9 +447,9 @@ export const productsExtra: Product[] = [
     id: "kraanstaart-45",
     index: "45",
     name: "Kraanstaart 45 tanden",
-    badge: "Dispensing · Koppeling",
-    description: "Cola/kraanstaart 45 tanden voor kraan–zuil verbinding.",
-    longDescription: "Kraanstaart (cola) 45 tanden voor betrouwbare verbinding tussen kraan en zuil. Onderdeel van de VanRobi dispensing-lijn.",
+    badge: "Tap & uitschenken · Koppeling",
+    description: "Kraanstaart 45 tanden voor kraan–zuil verbinding.",
+    longDescription: "Kraanstaart 45 tanden voor betrouwbare verbinding tussen kraan en zuil. Onderdeel van de VanRobi tap- & uitschenklijn.",
     image: withBase("/assets/products-catalog/kraanstaart-45.jpg"),
     alt: "Kraanstaart 45 tanden, via VanRobi België & Nederland",
     cropClass: "crop-kraanstaart-45",
@@ -466,7 +466,7 @@ export const productsExtra: Product[] = [
     id: "tapzuil-circulair",
     index: "46",
     name: "Tapzuil circulair",
-    badge: "Dispensing · Zuil",
+    badge: "Tap & uitschenken · Zuil",
     description: "Ronde enkele tapzuil.",
     longDescription: "Circulaire enkele tapzuil voor één kraan. Klassieke look voor bars en events. Via VanRobi.",
     image: withBase("/assets/products-catalog/tapzuil-circulair.jpg"),
@@ -485,7 +485,7 @@ export const productsExtra: Product[] = [
     id: "tapzuil-boa",
     index: "47",
     name: "Tapzuil Boa",
-    badge: "Dispensing · Zuil",
+    badge: "Tap & uitschenken · Zuil",
     description: "Tapzuil Boa, enkele uitvoering.",
     longDescription: "Tapzuil Boa in enkele uitvoering. Designzuil voor craftbars en horeca. Leverbaar via VanRobi.",
     image: withBase("/assets/products-catalog/tapzuil-boa.jpg"),
@@ -504,7 +504,7 @@ export const productsExtra: Product[] = [
     id: "medaillon-tapzuil",
     index: "48",
     name: "Medaillon voor tapzuil",
-    badge: "Dispensing · Accessoire",
+    badge: "Tap & uitschenken · Accessoire",
     description: "Medaillon/badge voor branding op de tapzuil.",
     longDescription: "Medaillon voor tapzuilen: plaats merk of productnaam zichtbaar aan de bar. Via VanRobi.",
     image: withBase("/assets/products-catalog/medaillon-tapzuil.jpg"),
@@ -521,46 +521,46 @@ export const productsExtra: Product[] = [
   {
     id: "bandeja-1-met-mojacopas",
     index: "49",
-    name: "Lekbak 1 service met mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 1 kraan, met mojacopas.",
-    longDescription: "Lekbak voor één service met geïntegreerde mojacopas. Voor nette glazen en hygiënische tap. Via VanRobi.",
+    name: "Lekbak 1 kraan met glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 1 kraan, met glasreiniger.",
+    longDescription: "Lekbak voor één kraan met geïntegreerde glasreiniger. Voor nette glazen en hygiënische tap. Via VanRobi.",
     image: withBase("/assets/products-catalog/bandeja-1-met-mojacopas.jpg"),
-    alt: "Lekbak 1 service met mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 1 kraan met glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-1-met-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desague para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "bandeja-2-met-mojacopas",
     index: "50",
-    name: "Lekbak 2 services met mojacopas",
-    badge: "Dispensing · Lekbak",
-    description: "Lekbak voor 2 kranen, met mojacopas.",
-    longDescription: "Lekbak voor twee services met mojacopas. Via VanRobi voor horeca in BE & NL.",
+    name: "Lekbak 2 kranen met glasreiniger",
+    badge: "Tap & uitschenken · Lekbak",
+    description: "Lekbak voor 2 kranen, met glasreiniger.",
+    longDescription: "Lekbak voor twee kranen met glasreiniger. Via VanRobi voor horeca in BE & NL.",
     image: withBase("/assets/products-catalog/bandeja-2-met-mojacopas.jpg"),
-    alt: "Lekbak 2 services met mojacopas, via VanRobi België & Nederland",
+    alt: "Lekbak 2 kranen met glasreiniger, via VanRobi België & Nederland",
     cropClass: "crop-bandeja-2-met-mojacopas",
     uses: ["horeca"],
     group: "dispensing",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS" },
-      { label: "Info", value: "Dispone de desagüe para vaciado y limpieza" }
+      { label: "Info", value: "Gemaakt van RVS" },
+      { label: "Info", value: "Voorzien van afvoer voor ledigen en reiniging" }
     ],
   },
   {
     id: "steun-lekbak",
     index: "51",
     name: "Steun voor lekbak",
-    badge: "Dispensing · Steun",
+    badge: "Tap & uitschenken · Steun",
     description: "Montagesteun voor lekbakken.",
     longDescription: "Steun/montage voor lekbakken. Stabiele bevestiging aan bar of zuil. Via VanRobi.",
     image: withBase("/assets/products-catalog/steun-lekbak.jpg"),
@@ -571,16 +571,16 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Fabricada en RVS y en varias medidas" }
+      { label: "Info", value: "Gemaakt van RVS, diverse maten" }
     ],
   },
   {
     id: "koppeling-type-a",
     index: "52",
     name: "Vatkoppeling type A",
-    badge: "Dispensing · Koppeling",
-    description: "Vacuümkoppeling type A voor vaten.",
-    longDescription: "Vatkoppeling type A (cabezal vacío). Voor standaard vatinterfaces in horeca. Via VanRobi.",
+    badge: "Tap & uitschenken · Koppeling",
+    description: "Vatkoppeling type A voor vaten.",
+    longDescription: "Vatkoppeling type A. Voor standaard vatinterfaces in horeca. Via VanRobi.",
     image: withBase("/assets/products-catalog/koppeling-type-a.jpg"),
     alt: "Vatkoppeling type A, via VanRobi België & Nederland",
     cropClass: "crop-koppeling-type-a",
@@ -589,17 +589,17 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Brida circular" },
-      { label: "Info", value: "Acoplamiento por desplazamiento" },
-      { label: "Info", value: "Pistón de RVS" }
+      { label: "Info", value: "Ronde flens" },
+      { label: "Info", value: "Koppeling door verschuiving" },
+      { label: "Info", value: "RVS-zuiger" }
     ],
   },
   {
     id: "koppeling-type-s",
     index: "53",
     name: "Vatkoppeling type S",
-    badge: "Dispensing · Koppeling",
-    description: "Vacuümkoppeling type S voor vaten.",
+    badge: "Tap & uitschenken · Koppeling",
+    description: "Vatkoppeling type S voor vaten.",
     longDescription: "Vatkoppeling type S. Passend bij specifieke vatstandaarden. Via VanRobi BE & NL.",
     image: withBase("/assets/products-catalog/koppeling-type-s.jpg"),
     alt: "Vatkoppeling type S, via VanRobi België & Nederland",
@@ -609,17 +609,17 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "2 enganches" },
-      { label: "Info", value: "Acoplamiento por giro con tope" },
-      { label: "Info", value: "Pistón RVS" }
+      { label: "Info", value: "2 haken" },
+      { label: "Info", value: "Draaikoppeling met aanslag" },
+      { label: "Info", value: "RVS-zuiger" }
     ],
   },
   {
     id: "koppeling-type-g",
     index: "54",
     name: "Vatkoppeling type G",
-    badge: "Dispensing · Koppeling",
-    description: "Vacuümkoppeling type G voor vaten.",
+    badge: "Tap & uitschenken · Koppeling",
+    description: "Vatkoppeling type G voor vaten.",
     longDescription: "Vatkoppeling type G. Voor G-type vatinterfaces. Leverbaar via VanRobi.",
     image: withBase("/assets/products-catalog/koppeling-type-g.jpg"),
     alt: "Vatkoppeling type G, via VanRobi België & Nederland",
@@ -629,16 +629,16 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Brida trilobular" },
-      { label: "Info", value: "Acoplamiento por giro con tope" },
-      { label: "Info", value: "Pistón RVS" }
+      { label: "Info", value: "Driebladige flens" },
+      { label: "Info", value: "Draaikoppeling met aanslag" },
+      { label: "Info", value: "RVS-zuiger" }
     ],
   },
   {
     id: "koppeling-key-keg",
     index: "55",
     name: "Vatkoppeling KeyKeg",
-    badge: "Dispensing · KeyKeg",
+    badge: "Tap & uitschenken · KeyKeg",
     description: "Koppeling voor KeyKeg-vaten.",
     longDescription: "KeyKeg-koppeling voor craft en events. Snel wisselen van vaten zonder klassieke speerpunt. Via VanRobi.",
     image: withBase("/assets/products-catalog/koppeling-key-keg.jpg"),
@@ -649,16 +649,16 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "3 enganches" },
-      { label: "Info", value: "Acoplamiento por giro con tope" },
-      { label: "Info", value: "Pistón RVS" }
+      { label: "Info", value: "3 haken" },
+      { label: "Info", value: "Draaikoppeling met aanslag" },
+      { label: "Info", value: "RVS-zuiger" }
     ],
   },
   {
     id: "ball-lock-gas",
     index: "56",
     name: "Ball lock gas",
-    badge: "Dispensing · Ball lock",
+    badge: "Tap & uitschenken · Ball lock",
     description: "Ball-lock koppeling voor gaszijde.",
     longDescription: "Ball-lock koppeling gas. Voor systemen met ball-lock interfaces (o.a. Cornelius-stijl). Via VanRobi.",
     image: withBase("/assets/products-catalog/ball-lock-gas.jpg"),
@@ -669,15 +669,15 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "1 entrada" },
-      { label: "Info", value: "Acoplamiento a presión" }
+      { label: "Info", value: "1 ingang" },
+      { label: "Info", value: "Drukkoppeling" }
     ],
   },
   {
     id: "ball-lock-vloeistof",
     index: "57",
     name: "Ball lock vloeistof",
-    badge: "Dispensing · Ball lock",
+    badge: "Tap & uitschenken · Ball lock",
     description: "Ball-lock koppeling voor vloeistofzijde.",
     longDescription: "Ball-lock koppeling vloeistof. Combineer met ball-lock gas voor complete disconnects. Via VanRobi.",
     image: withBase("/assets/products-catalog/ball-lock-vloeistof.jpg"),
@@ -688,8 +688,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "1 entrada" },
-      { label: "Info", value: "Acoplamiento a presión" }
+      { label: "Info", value: "1 ingang" },
+      { label: "Info", value: "Drukkoppeling" }
     ],
   },
   {
@@ -707,7 +707,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -725,7 +725,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -743,7 +743,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -761,7 +761,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -779,7 +779,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -797,7 +797,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -881,7 +881,7 @@ export const productsExtra: Product[] = [
     name: "Bevestigingsklemmen",
     badge: "Onderdelen · Montage",
     description: "Klemmen voor leiding- en slangmontage.",
-    longDescription: "Bevestigingsklemmen (abrazaderas) voor slangen en leidingen. Via VanRobi.",
+    longDescription: "Bevestigingsklemmen voor slangen en leidingen. Via VanRobi.",
     image: withBase("/assets/products-catalog/bevestigingsklemmen.jpg"),
     alt: "Bevestigingsklemmen, via VanRobi België & Nederland",
     cropClass: "crop-bevestigingsklemmen",
@@ -890,7 +890,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Amplia gama de modelos y medidas", value: "Abrazadera 10.9 Abrazadera 11.8 Abrazadera 12.8 Abrazadera 14.0 Abrazadera 15…" }
+      { label: "Ruim assortiment modellen en maten", value: "Klem 10.9 Klem 11.8 Klem 12.8 Klem 14.0 Klem 15…" }
     ],
   },
   {
@@ -899,7 +899,7 @@ export const productsExtra: Product[] = [
     name: "Flenzen",
     badge: "Onderdelen · Montage",
     description: "Flenzen voor leidingverbindingen.",
-    longDescription: "Flenzen (bridas) voor vaste leidingverbindingen in tap- en koelinstallaties. Via VanRobi.",
+    longDescription: "Flenzen voor vaste leidingverbindingen in tap- en koelinstallaties. Via VanRobi.",
     image: withBase("/assets/products-catalog/flenzen.jpg"),
     alt: "Flenzen, via VanRobi België & Nederland",
     cropClass: "crop-flenzen",
@@ -908,7 +908,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Amplia gama de modelos y medidas", value: "Brida grande CV 280 Brida grande CV 280 negra Brida mediana CV 200 Brida pequ…" }
+      { label: "Ruim assortiment modellen en maten", value: "Grote flens CV 280 Grote flens CV 280 zwart Middelgrote flens CV 200 Kleine flens…" }
     ],
   },
   {
@@ -926,7 +926,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -944,7 +944,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "PLÁSTICO" }
+      { label: "Info", value: "Kunststof" }
     ],
   },
   {
@@ -962,7 +962,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "PLÁSTICO" }
+      { label: "Info", value: "Kunststof" }
     ],
   },
   {
@@ -980,7 +980,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "PLÁSTICO" }
+      { label: "Info", value: "Kunststof" }
     ],
   },
   {
@@ -998,7 +998,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "1 – 4 agujeros" }
+      { label: "Info", value: "1–4 openingen" }
     ],
   },
   {
@@ -1016,7 +1016,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Botella de 10 litros" }
+      { label: "Info", value: "Fles van 10 liter" }
     ],
   },
   {
@@ -1034,7 +1034,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Plástico" }
+      { label: "Info", value: "Kunststof" }
     ],
   },
   {
@@ -1042,8 +1042,8 @@ export const productsExtra: Product[] = [
     index: "77",
     name: "Startcondensator roermotor",
     badge: "Onderdelen · Elektrisch",
-    description: "Startcondensator voor roermotor/agitator.",
-    longDescription: "Startcondensator voor roermotoren (agitadores). Passend bij G8/G98-serie. Via VanRobi.",
+    description: "Startcondensator voor roermotor.",
+    longDescription: "Startcondensator voor roermotoren. Passend bij G8/G98-serie. Via VanRobi.",
     image: withBase("/assets/products-catalog/startcondensator-roermotor.jpg"),
     alt: "Startcondensator roermotor, via VanRobi België & Nederland",
     cropClass: "crop-startcondensator-roermotor",
@@ -1052,7 +1052,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Amplia gama de modelos" }
+      { label: "Info", value: "Ruim assortiment modellen" }
     ],
   },
   {
@@ -1060,8 +1060,8 @@ export const productsExtra: Product[] = [
     index: "78",
     name: "Buisuiteinden",
     badge: "Onderdelen · Leiding",
-    description: "Eindstukken/conteras voor buizen.",
-    longDescription: "Buisuiteinden (conteras) voor nette afwerking van leidingen. Via VanRobi.",
+    description: "Eindstukken voor buizen.",
+    longDescription: "Buisuiteinden voor nette afwerking van leidingen. Via VanRobi.",
     image: withBase("/assets/products-catalog/buisuiteinden.jpg"),
     alt: "Buisuiteinden, via VanRobi België & Nederland",
     cropClass: "crop-buisuiteinden",
@@ -1070,43 +1070,43 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Plástico – ABS Color negro Color plata – cromadas" }
+      { label: "Info", value: "Kunststof – ABS, kleur zwart / zilver – verchroomd" }
     ],
   },
   {
     id: "pvc-cristal-slang",
     index: "79",
-    name: "PVC cristal slang",
+    name: "Transparante PVC-slang",
     badge: "Onderdelen · Slang",
-    description: "Transparante PVC cristal slang.",
-    longDescription: "PVC cristal slang voor zichtbare of tijdelijke leidingen. Via VanRobi.",
+    description: "Transparante PVC-slang.",
+    longDescription: "Transparante PVC-slang voor zichtbare of tijdelijke leidingen. Via VanRobi.",
     image: withBase("/assets/products-catalog/pvc-cristal-slang.jpg"),
-    alt: "PVC cristal slang, via VanRobi België & Nederland",
+    alt: "Transparante PVC-slang, via VanRobi België & Nederland",
     cropClass: "crop-pvc-cristal-slang",
     uses: ["horeca", "events"],
     group: "onderdelen",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Varias medidas", value: "Tubo pvc cristal 6 x 9 mm Tubo pvc cristal 7 x 10 mm" }
+      { label: "Diverse maten", value: "PVC-slang 6 x 9 mm PVC-slang 7 x 10 mm" }
     ],
   },
   {
     id: "isolatieslang",
     index: "80",
-    name: "Isolatieslang (coquilla)",
+    name: "Isolatieslang",
     badge: "Onderdelen · Isolatie",
     description: "Isolatieslang voor koude leidingen.",
-    longDescription: "Isolatieslang (coquilla) tegen condens en warmte-inlek op koude leidingen. Via VanRobi.",
+    longDescription: "Isolatieslang tegen condens en warmte-inlek op koude leidingen. Via VanRobi.",
     image: withBase("/assets/products-catalog/isolatieslang.jpg"),
-    alt: "Isolatieslang (coquilla), via VanRobi België & Nederland",
+    alt: "Isolatieslang, via VanRobi België & Nederland",
     cropClass: "crop-isolatieslang",
     uses: ["horeca"],
     group: "onderdelen",
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Varias medidas", value: "Tubo aislante 6 x 10 mm Tubo aislante 6 x 12 mm" }
+      { label: "Diverse maten", value: "Isolatieslang 6 x 10 mm · Isolatieslang 6 x 12 mm" }
     ],
   },
   {
@@ -1115,7 +1115,7 @@ export const productsExtra: Product[] = [
     name: "Pootdoppen",
     badge: "Onderdelen · Frame",
     description: "Doppen voor machinepoten.",
-    longDescription: "Pootdoppen (conteras pata) voor stabiele plaatsing van units. Via VanRobi.",
+    longDescription: "Pootdoppen voor stabiele plaatsing van units. Via VanRobi.",
     image: withBase("/assets/products-catalog/pootdoppen.jpg"),
     alt: "Pootdoppen, via VanRobi België & Nederland",
     cropClass: "crop-pootdoppen",
@@ -1124,7 +1124,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Plástico – ABS Color blanco Color negro" }
+      { label: "Info", value: "Kunststof – ABS, kleur wit / zwart" }
     ],
   },
   {
@@ -1190,7 +1190,7 @@ export const productsExtra: Product[] = [
     name: "Afvoerslang",
     badge: "Onderdelen · Afvoer",
     description: "Afvoerslang voor condens/drainage.",
-    longDescription: "Afvoerslang (desagüe) voor condenswater en drainage van koelers. Via VanRobi.",
+    longDescription: "Afvoerslang voor condenswater en drainage van koelers. Via VanRobi.",
     image: withBase("/assets/products-catalog/afvoerslang.jpg"),
     alt: "Afvoerslang, via VanRobi België & Nederland",
     cropClass: "crop-afvoerslang",
@@ -1237,7 +1237,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Botella de 50 litros" }
+      { label: "Info", value: "Fles van 50 liter" }
     ],
   },
   {
@@ -1246,7 +1246,7 @@ export const productsExtra: Product[] = [
     name: "Reinigingstanks",
     badge: "Onderdelen · Reiniging",
     description: "Tanks voor circuitreiniging van taplijnen.",
-    longDescription: "Reinigingstanks (tanquetas) voor doorspoelen van serpentijnen en leidingen. Via VanRobi.",
+    longDescription: "Reinigingstanks voor doorspoelen van serpentijnen en leidingen. Via VanRobi.",
     image: withBase("/assets/products-catalog/reinigingstanks.jpg"),
     alt: "Reinigingstanks, via VanRobi België & Nederland",
     cropClass: "crop-reinigingstanks",
@@ -1255,8 +1255,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "9 Litros – 18 Litros" },
-      { label: "Info", value: "1- 4 bocas de limpieza" }
+      { label: "Info", value: "9 liter – 18 liter" },
+      { label: "Info", value: "1–4 reinigingsaansluitingen" }
     ],
   },
   {
@@ -1274,7 +1274,7 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "¡Consúltanos!" }
+      { label: "Info", value: "Vraag ons advies!" }
     ],
   },
   {
@@ -1282,7 +1282,7 @@ export const productsExtra: Product[] = [
     index: "90",
     name: "Reparatie koelers",
     badge: "Service · Reparatie",
-    description: "Reparatie van ijsbankkoelers en enfriadores.",
+    description: "Reparatie van ijsbankkoelers.",
     longDescription: "Reparatie van ijsbankkoelers: diagnose, onderdelen en herstel. Via VanRobi en partner Taponderhoud in België & Nederland.",
     image: withBase("/assets/products-catalog/reparatie-koelers.jpg"),
     alt: "Reparatie koelers, via VanRobi België & Nederland",
@@ -1292,8 +1292,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Limpieza" },
-      { label: "Info", value: "Sustitución de piezas" }
+      { label: "Info", value: "Reiniging" },
+      { label: "Info", value: "Vervanging van onderdelen" }
     ],
   },
   {
@@ -1301,7 +1301,7 @@ export const productsExtra: Product[] = [
     index: "91",
     name: "Reparatie roermotoren",
     badge: "Service · Reparatie",
-    description: "Reparatie van roermotoren/agitadores.",
+    description: "Reparatie van roermotoren.",
     longDescription: "Reparatie van roermotoren (G8/G98 e.d.). Snel weer circulatie in de ijsbank. Via VanRobi.",
     image: withBase("/assets/products-catalog/reparatie-roermotoren.jpg"),
     alt: "Reparatie roermotoren, via VanRobi België & Nederland",
@@ -1311,8 +1311,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Limpieza" },
-      { label: "Info", value: "Sustitución de piezas" }
+      { label: "Info", value: "Reiniging" },
+      { label: "Info", value: "Vervanging van onderdelen" }
     ],
   },
   {
@@ -1330,8 +1330,8 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Limpieza" },
-      { label: "Info", value: "Sustitución de piezas" }
+      { label: "Info", value: "Reiniging" },
+      { label: "Info", value: "Vervanging van onderdelen" }
     ],
   },
   {
@@ -1340,7 +1340,7 @@ export const productsExtra: Product[] = [
     name: "Bedieningspaneel",
     badge: "Onderdelen · Besturing",
     description: "Bedienings-/schakelpaneel voor koelinstallaties.",
-    longDescription: "Paneel de maniobra: schakel- en bedieningspaneel voor koel- en pompinstallaties. Via VanRobi.",
+    longDescription: "Schakel- en bedieningspaneel voor koel- en pompinstallaties. Via VanRobi.",
     image: withBase("/assets/products-catalog/bedieningspaneel.jpg"),
     alt: "Bedieningspaneel, via VanRobi België & Nederland",
     cropClass: "crop-bedieningspaneel",
@@ -1349,9 +1349,9 @@ export const productsExtra: Product[] = [
     featured: false,
     imageKind: "photo",
     specs: [
-      { label: "Info", value: "Panel manorreductores" },
-      { label: "Info", value: "Panel bocas limpieza" },
-      { label: "Info", value: "Panel otros componentes" }
+      { label: "Info", value: "Paneel drukregelaars" },
+      { label: "Info", value: "Paneel reinigingsaansluitingen" },
+      { label: "Info", value: "Paneel overige componenten" }
     ],
   },
 ];

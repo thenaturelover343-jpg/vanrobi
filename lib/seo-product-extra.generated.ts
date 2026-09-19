@@ -6,9 +6,9 @@ export const productSeoExtra: Record<string, { title: string; description: strin
     h1: "Serpentijnen bier — via VanRobi",
   },
   "serpentijnen-bier-helicoidal": {
-    title: "Serpentijnen bier helicoidal | VanRobi",
-    description: "Helicoidale RVS-serpentijnen voor bier, compacte spoelvorm. Via VanRobi, specialist BE & NL.",
-    h1: "Serpentijnen bier helicoidal — via VanRobi",
+    title: "Serpentijnen bier spiraalvormig | VanRobi",
+    description: "Spiraalvormige RVS-serpentijnen voor bier, compacte spoelvorm. Via VanRobi, specialist BE & NL.",
+    h1: "Serpentijnen bier spiraalvormig — via VanRobi",
   },
   "serpentijnen-bier-alcoholvrij": {
     title: "Serpentijnen bier alcoholvrij | VanRobi",
@@ -22,7 +22,7 @@ export const productSeoExtra: Record<string, { title: string; description: strin
   },
   "serpentijnen-cider": {
     title: "Serpentijnen cider | VanRobi",
-    description: "RVS 316-serpentijnen voor cider/sidra. Via VanRobi, specialist BE & NL.",
+    description: "RVS 316-serpentijnen voor cider. Via VanRobi, specialist BE & NL.",
     h1: "Serpentijnen cider — via VanRobi",
   },
   "serpentijnen-water": {
@@ -36,13 +36,13 @@ export const productSeoExtra: Record<string, { title: string; description: strin
     h1: "Serpentijnen op maat — via VanRobi",
   },
   "mojacopas": {
-    title: "Glasreiniger (mojacopas) | VanRobi",
-    description: "Mojacopas-glasreiniger voor nette tapafwerking. Via VanRobi, specialist BE & NL.",
-    h1: "Glasreiniger (mojacopas) — via VanRobi",
+    title: "Glasreiniger | VanRobi",
+    description: "Glasreiniger voor nette tapafwerking. Via VanRobi, specialist BE & NL.",
+    h1: "Glasreiniger — via VanRobi",
   },
   "manorreductor-1": {
     title: "Drukregelaar 1 product | VanRobi",
-    description: "Manorreductor/drukregelaar voor één dranklijn. Via VanRobi, specialist BE & NL.",
+    description: "Drukregelaar voor één dranklijn. Via VanRobi, specialist BE & NL.",
     h1: "Drukregelaar 1 product — via VanRobi",
   },
   "manorreductor-2": {
@@ -71,29 +71,29 @@ export const productSeoExtra: Record<string, { title: string; description: strin
     h1: "Tapzuil circulair dubbel — via VanRobi",
   },
   "bandeja-1-zonder-mojacopas": {
-    title: "Lekbak 1 service zonder mojacopas | VanRobi",
-    description: "Lekbak voor 1 kraan, zonder mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 1 service zonder mojacopas — via VanRobi",
+    title: "Lekbak 1 kraan zonder glasreiniger | VanRobi",
+    description: "Lekbak voor 1 kraan, zonder glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 1 kraan zonder glasreiniger — via VanRobi",
   },
   "bandeja-2-zonder-mojacopas": {
-    title: "Lekbak 2 services zonder mojacopas | VanRobi",
-    description: "Lekbak voor 2 kranen, zonder mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 2 services zonder mojacopas — via VanRobi",
+    title: "Lekbak 2 kranen zonder glasreiniger | VanRobi",
+    description: "Lekbak voor 2 kranen, zonder glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 2 kranen zonder glasreiniger — via VanRobi",
   },
   "bandeja-3-met-mojacopas": {
-    title: "Lekbak 3 services met mojacopas | VanRobi",
-    description: "Lekbak voor 3 kranen, met mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 3 services met mojacopas — via VanRobi",
+    title: "Lekbak 3 kranen met glasreiniger | VanRobi",
+    description: "Lekbak voor 3 kranen, met glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 3 kranen met glasreiniger — via VanRobi",
   },
   "bandeja-3-zonder-mojacopas": {
-    title: "Lekbak 3 services zonder mojacopas | VanRobi",
-    description: "Lekbak voor 3 kranen, zonder mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 3 services zonder mojacopas — via VanRobi",
+    title: "Lekbak 3 kranen zonder glasreiniger | VanRobi",
+    description: "Lekbak voor 3 kranen, zonder glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 3 kranen zonder glasreiniger — via VanRobi",
   },
   "bandeja-4-plus": {
-    title: "Lekbak 4+ services | VanRobi",
+    title: "Lekbak 4+ kranen | VanRobi",
     description: "Lekbak voor 4 of meer kranen. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 4+ services — via VanRobi",
+    h1: "Lekbak 4+ kranen — via VanRobi",
   },
   "manorreductor-4": {
     title: "Drukregelaar 4 producten | VanRobi",
@@ -117,7 +117,7 @@ export const productSeoExtra: Record<string, { title: string; description: strin
   },
   "kraanstaart-45": {
     title: "Kraanstaart 45 tanden | VanRobi",
-    description: "Cola/kraanstaart 45 tanden voor kraan–zuil verbinding. Via VanRobi, specialist BE & NL.",
+    description: "Kraanstaart 45 tanden voor kraan–zuil verbinding. Via VanRobi, specialist BE & NL.",
     h1: "Kraanstaart 45 tanden — via VanRobi",
   },
   "tapzuil-circulair": {
@@ -136,14 +136,14 @@ export const productSeoExtra: Record<string, { title: string; description: strin
     h1: "Medaillon voor tapzuil — via VanRobi",
   },
   "bandeja-1-met-mojacopas": {
-    title: "Lekbak 1 service met mojacopas | VanRobi",
-    description: "Lekbak voor 1 kraan, met mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 1 service met mojacopas — via VanRobi",
+    title: "Lekbak 1 kraan met glasreiniger | VanRobi",
+    description: "Lekbak voor 1 kraan, met glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 1 kraan met glasreiniger — via VanRobi",
   },
   "bandeja-2-met-mojacopas": {
-    title: "Lekbak 2 services met mojacopas | VanRobi",
-    description: "Lekbak voor 2 kranen, met mojacopas. Via VanRobi, specialist BE & NL.",
-    h1: "Lekbak 2 services met mojacopas — via VanRobi",
+    title: "Lekbak 2 kranen met glasreiniger | VanRobi",
+    description: "Lekbak voor 2 kranen, met glasreiniger. Via VanRobi, specialist BE & NL.",
+    h1: "Lekbak 2 kranen met glasreiniger — via VanRobi",
   },
   "steun-lekbak": {
     title: "Steun voor lekbak | VanRobi",
@@ -152,17 +152,17 @@ export const productSeoExtra: Record<string, { title: string; description: strin
   },
   "koppeling-type-a": {
     title: "Vatkoppeling type A | VanRobi",
-    description: "Vacuümkoppeling type A voor vaten. Via VanRobi, specialist BE & NL.",
+    description: "Vatkoppeling type A voor vaten. Via VanRobi, specialist BE & NL.",
     h1: "Vatkoppeling type A — via VanRobi",
   },
   "koppeling-type-s": {
     title: "Vatkoppeling type S | VanRobi",
-    description: "Vacuümkoppeling type S voor vaten. Via VanRobi, specialist BE & NL.",
+    description: "Vatkoppeling type S voor vaten. Via VanRobi, specialist BE & NL.",
     h1: "Vatkoppeling type S — via VanRobi",
   },
   "koppeling-type-g": {
     title: "Vatkoppeling type G | VanRobi",
-    description: "Vacuümkoppeling type G voor vaten. Via VanRobi, specialist BE & NL.",
+    description: "Vatkoppeling type G voor vaten. Via VanRobi, specialist BE & NL.",
     h1: "Vatkoppeling type G — via VanRobi",
   },
   "koppeling-key-keg": {
@@ -277,23 +277,23 @@ export const productSeoExtra: Record<string, { title: string; description: strin
   },
   "startcondensator-roermotor": {
     title: "Startcondensator roermotor | VanRobi",
-    description: "Startcondensator voor roermotor/agitator. Via VanRobi, specialist BE & NL.",
+    description: "Startcondensator voor roermotor. Via VanRobi, specialist BE & NL.",
     h1: "Startcondensator roermotor — via VanRobi",
   },
   "buisuiteinden": {
     title: "Buisuiteinden | VanRobi",
-    description: "Eindstukken/conteras voor buizen. Via VanRobi, specialist BE & NL.",
+    description: "Eindstukken voor buizen. Via VanRobi, specialist BE & NL.",
     h1: "Buisuiteinden — via VanRobi",
   },
   "pvc-cristal-slang": {
-    title: "PVC cristal slang | VanRobi",
-    description: "Transparante PVC cristal slang. Via VanRobi, specialist BE & NL.",
-    h1: "PVC cristal slang — via VanRobi",
+    title: "Transparante PVC-slang | VanRobi",
+    description: "Transparante PVC-slang. Via VanRobi, specialist BE & NL.",
+    h1: "Transparante PVC-slang — via VanRobi",
   },
   "isolatieslang": {
-    title: "Isolatieslang (coquilla) | VanRobi",
+    title: "Isolatieslang | VanRobi",
     description: "Isolatieslang voor koude leidingen. Via VanRobi, specialist BE & NL.",
-    h1: "Isolatieslang (coquilla) — via VanRobi",
+    h1: "Isolatieslang — via VanRobi",
   },
   "pootdoppen": {
     title: "Pootdoppen | VanRobi",
@@ -342,12 +342,12 @@ export const productSeoExtra: Record<string, { title: string; description: strin
   },
   "reparatie-koelers": {
     title: "Reparatie koelers | VanRobi",
-    description: "Reparatie van ijsbankkoelers en enfriadores. Via VanRobi, specialist BE & NL.",
+    description: "Reparatie van ijsbankkoelers. Via VanRobi, specialist BE & NL.",
     h1: "Reparatie koelers — via VanRobi",
   },
   "reparatie-roermotoren": {
     title: "Reparatie roermotoren | VanRobi",
-    description: "Reparatie van roermotoren/agitadores. Via VanRobi, specialist BE & NL.",
+    description: "Reparatie van roermotoren. Via VanRobi, specialist BE & NL.",
     h1: "Reparatie roermotoren — via VanRobi",
   },
   "reparatie-kranen": {
