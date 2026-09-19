@@ -45,7 +45,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 1/4" },
       { label: "Cuba", value: "(l): 20" },
       { label: "IJsreserve", value: "9" },
-      { label: "Capacidad de dispensado (l/h", value: "44" },
+      { label: "Debiet (L/u)", value: "44" },
     ],
   },
   {
@@ -68,7 +68,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 1/8" },
       { label: "Cuba", value: "(l): 6" },
       { label: "IJsreserve", value: "4" },
-      { label: "Capacidad de dispensado (l/h", value: "20" },
+      { label: "Debiet (L/u)", value: "20" },
     ],
   },
   {
@@ -110,7 +110,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 3/8" },
       { label: "Cuba", value: "(l): 40" },
       { label: "IJsreserve", value: "19" },
-      { label: "Capacidad de dispensado (l/h", value: "87" },
+      { label: "Debiet (L/u)", value: "87" },
     ],
   },
   {
@@ -131,9 +131,9 @@ export const products: Product[] = [
       { label: "Afmetingen", value: "890 x 450 x 450" },
       { label: "Spanning", value: "220V / 50 Hz" },
       { label: "Compressor", value: "( Cv ): 3/8" },
-      { label: "Capacité du réservoir (l)", value: "40" },
-      { label: "Bloc de glace (Kg)", value: "21" },
-      { label: "Capacité de distribution (l/", value: "87" },
+      { label: "Cuba (L)", value: "40" },
+      { label: "IJsreserve (kg)", value: "21" },
+      { label: "Debiet (L/u)", value: "87" },
     ],
   },
   {
@@ -156,7 +156,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 5/8" },
       { label: "Cuba", value: "(l): 66" },
       { label: "IJsreserve", value: "38" },
-      { label: "Capacidad de dispensado (l/h", value: "160" },
+      { label: "Debiet (L/u)", value: "160" },
     ],
   },
   {
@@ -176,10 +176,10 @@ export const products: Product[] = [
     specs: [
       { label: "Afmetingen", value: "996 x 500 x 500" },
       { label: "Spanning", value: "220V/ 50 Hz" },
-      { label: "Potencia de compresor ( Cv )", value: "1/2" },
-      { label: "Capacidad de cuba (l)", value: "66" },
+      { label: "Compressor (pk)", value: "1/2" },
+      { label: "Cuba (L)", value: "66" },
       { label: "IJsreserve", value: "38" },
-      { label: "Capacidad e despensado (l/h)", value: "160" },
+      { label: "Debiet (L/u)", value: "160" },
     ],
   },
   {
@@ -202,7 +202,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 1" },
       { label: "Cuba", value: "(l): 66" },
       { label: "IJsreserve", value: "40" },
-      { label: "Capacidad de dispensado (l/h", value: "207" },
+      { label: "Debiet (L/u)", value: "207" },
     ],
   },
   {
@@ -223,9 +223,9 @@ export const products: Product[] = [
       { label: "Afmetingen", value: "720 x 430 x 290" },
       { label: "Spanning", value: "220V / 50 Hz" },
       { label: "Compressor", value: "( Cv ): 3/8" },
-      { label: "Capacité du réservoir (l)", value: "–" },
-      { label: "Bloc de glace (Kg)", value: "–" },
-      { label: "Capacité de distribution (l/", value: "–" },
+      { label: "Cuba (L)", value: "–" },
+      { label: "IJsreserve (kg)", value: "–" },
+      { label: "Debiet (L/u)", value: "–" },
     ],
   },
   {
@@ -248,7 +248,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 11/4" },
       { label: "Cuba", value: "(l): 100" },
       { label: "IJsreserve", value: "60" },
-      { label: "Capacidad de dispensado (l/h", value: "282" },
+      { label: "Debiet (L/u)", value: "282" },
     ],
   },
   {
@@ -271,7 +271,7 @@ export const products: Product[] = [
       { label: "Compressor", value: "(Cv): 11/4" },
       { label: "Cuba", value: "(l): 100" },
       { label: "IJsreserve", value: "60" },
-      { label: "Capacidad de dispensado (l/h", value: "282" },
+      { label: "Debiet (L/u)", value: "282" },
     ],
   },
   {
@@ -329,7 +329,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: ":" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "carcasa plástico" },
+      { label: "Draaibescherming", value: "carcasa plástico" },
     ],
   },
   {
@@ -349,7 +349,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: "V 220, Hz 50, W 60/80/120" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "carcasa de  acero inoxidable + carcasa plástico" },
+      { label: "Draaibescherming", value: "carcasa de  acero inoxidable + carcasa plástico" },
     ],
   },
   {
@@ -369,7 +369,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: "V 220, Hz 50, W 60/80/120" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "carcasa de acero inoxidable" },
+      { label: "Draaibescherming", value: "carcasa de acero inoxidable" },
     ],
   },
   {
@@ -389,7 +389,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: "V 220/ V 115, Hz 50/ 60 Hz, W 55" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "carcasa plástico" },
+      { label: "Draaibescherming", value: "carcasa plástico" },
     ],
   },
   {
@@ -409,7 +409,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: "V 220/ V 115, Hz 50/ 60 Hz, W 55" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "–" },
+      { label: "Draaibescherming", value: "–" },
     ],
   },
   {
@@ -429,7 +429,7 @@ export const products: Product[] = [
     specs: [
       { label: "Specificaties", value: "V 220/ V 115, Hz 50/ 60 Hz, W 55" },
       { label: "Uitgangen", value: "1- 3 salidas para riego" },
-      { label: "Protector de giro", value: "–" },
+      { label: "Draaibescherming", value: "–" },
     ],
   },
   {
