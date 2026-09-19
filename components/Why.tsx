@@ -1,5 +1,6 @@
 import { whyItems } from "@/lib/products";
 import { Reveal } from "./Reveal";
+import { SplitLines } from "./SplitLines";
 
 export function Why() {
   return (
@@ -7,9 +8,14 @@ export function Why() {
       <div className="wrap why-layout">
         <Reveal className="why-intro">
           <p className="eyebrow">VanRobi</p>
-          <h2>
-            Waarom <em>wij</em>
-          </h2>
+          <SplitLines
+            as="h2"
+            lines={[
+              <>
+                Waarom <em>wij</em>
+              </>,
+            ]}
+          />
           <p>
             Wij brengen Golderos naar de Benelux — met advies, specs en levering
             die horeca begrijpt.

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { products } from "@/lib/products";
 import { Reveal } from "./Reveal";
+import { SplitLines } from "./SplitLines";
 
 export function Products() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -83,11 +84,10 @@ export function Products() {
       <div className="wrap">
         <Reveal as="header" className="block-head">
           <p className="eyebrow">Assortiment</p>
-          <h2>
-            Vier machines.
-            <br />
-            <em>Eén standaard.</em>
-          </h2>
+          <SplitLines
+            as="h2"
+            lines={["Vier machines.", <em key="e">Eén standaard.</em>]}
+          />
           <p className="block-lede">
             Industriële ijsbankkoelers — gefotografeerd als object. Specs die
             installateurs en barontwerp begrijpen.
@@ -126,7 +126,7 @@ export function Products() {
               id={`prod-${p.id}`}
             >
               <div className="prod-visual reveal-child">
-                <div className={`prod-frame ${p.cropClass}`}>
+                <div className={`prod-frame ${p.cropClass} img-mask`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={p.image}
@@ -134,6 +134,8 @@ export function Products() {
                     width={1300}
                     height={1300}
                     loading="lazy"
+                    className="img-shimmer"
+                    onLoad={(e) => e.currentTarget.classList.add("is-loaded")}
                   />
                 </div>
                 <span className="prod-badge">{p.badge}</span>

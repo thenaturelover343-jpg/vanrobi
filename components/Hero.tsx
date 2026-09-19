@@ -2,11 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import { MagneticButton } from "./MagneticButton";
+import { SplitLines } from "./SplitLines";
 import { withBase } from "@/lib/base";
 
 export function Hero() {
   const mediaRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -21,9 +23,11 @@ export function Hero() {
       requestAnimationFrame(() => {
         const y = window.scrollY;
         if (y < window.innerHeight * 1.2) {
-          heroMedia.style.transform = `translate3d(0,${y * 0.18}px,0)`;
+          heroMedia.style.transform = `translate3d(0,${y * 0.22}px,0)`;
           if (stage) {
-            stage.style.transform = `translate3d(0,${y * -0.06}px,0)`;
+            const fade = Math.min(1, y / (window.innerHeight * 0.85));
+            stage.style.transform = `translate3d(0,${y * -0.08}px,0)`;
+            stage.style.opacity = String(1 - fade * 0.55);
           }
         }
         heroTick = false;
@@ -33,17 +37,26 @@ export function Hero() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img) return;
+    const mark = () => img.classList.add("is-loaded");
+    if (img.complete && img.naturalWidth > 0) mark();
+    else img.addEventListener("load", mark, { once: true });
+  }, []);
+
   return (
     <section className="hero" aria-label="Introductie">
       <div className="hero-media" data-parallax ref={mediaRef}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          ref={imgRef}
           src={withBase("/assets/hero-cinematic.jpg")}
           alt="Golderos V200 ijsbankkoeler — professionele drankkoeling via VanRobi"
           width={2400}
           height={1500}
           fetchPriority="high"
-          className="hero-img"
+          className="hero-img img-shimmer"
         />
         <div className="hero-veil" aria-hidden="true"></div>
         <div className="hero-grain" aria-hidden="true"></div>
@@ -54,11 +67,14 @@ export function Hero() {
           <p className="hero-kicker reveal-hero">
             Officiële distributeur · België &amp; Nederland
           </p>
-          <h1 className="reveal-hero reveal-hero-2">
-            Koude die
-            <br />
-            <em>de bar draagt.</em>
-          </h1>
+          <SplitLines
+            as="h1"
+            className="hero-title"
+            lines={[
+              "Koude die",
+              <em key="e">de bar draagt.</em>,
+            ]}
+          />
           <p className="hero-lede reveal-hero reveal-hero-3">
             Golderos ijsbankkoelers via VanRobi — industriële precisie voor
             horeca, events en installateurs die geen compromis dulden.

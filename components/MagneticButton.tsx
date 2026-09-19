@@ -31,14 +31,17 @@ export function MagneticButton({
       const r = el.getBoundingClientRect();
       const x = e.clientX - r.left - r.width / 2;
       const y = e.clientY - r.top - r.height / 2;
+      el.style.transition = 'transform 0.18s var(--ease, cubic-bezier(0.22,1,0.36,1))';
       el.style.transform = `translate(${x * strength}px,${y * strength}px)`;
       if (label) {
         label.style.transform = `translate(${x * strength * 0.35}px,${y * strength * 0.35}px)`;
       }
     };
     const onLeave = () => {
+      el.style.transition = 'transform 0.55s var(--ease, cubic-bezier(0.22,1,0.36,1))';
       el.style.transform = "";
-      if (label) label.style.transform = "";
+      if (label) label.style.transition = 'transform 0.55s var(--ease, cubic-bezier(0.22,1,0.36,1))';
+      el.style.transform = "";
     };
 
     el.addEventListener("pointermove", onMove);

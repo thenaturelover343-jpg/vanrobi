@@ -1,16 +1,16 @@
 import { Reveal } from "./Reveal";
 import { MagneticButton } from "./MagneticButton";
+import { SplitLines } from "./SplitLines";
 
 export function CTA() {
   return (
     <section className="cta" id="offerte">
       <Reveal className="wrap cta-inner">
         <p className="eyebrow">Contact</p>
-        <h2>
-          Klaar voor
-          <br />
-          <em>stabiele koude?</em>
-        </h2>
+        <SplitLines
+          as="h2"
+          lines={["Klaar voor", <em key="e">stabiele koude?</em>]}
+        />
         <p>
           Vertel ons over uw bar, event of installatie. Wij sturen een gerichte
           offerte.
