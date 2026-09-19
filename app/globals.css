@@ -669,18 +669,16 @@ ul, ol { list-style: none; }
 .prod-visual { position: relative; }
 
 .prod-frame {
-  background:
-    radial-gradient(ellipse at 50% 38%, #2a261f 0%, transparent 58%),
-    linear-gradient(165deg, #161410 0%, #0a0908 100%);
+  background: #f7f3eb;
   border-radius: 0.35rem;
   overflow: hidden;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(10, 9, 8, 0.35);
+  border: 1px solid rgba(10, 9, 8, 0.08);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.04) inset,
-    0 28px 64px rgba(10, 9, 8, 0.18);
+    0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 18px 48px rgba(10, 9, 8, 0.08);
   transition: transform 0.8s var(--ease), box-shadow 0.8s var(--ease);
 }
 

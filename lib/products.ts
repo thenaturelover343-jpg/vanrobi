@@ -19,7 +19,7 @@ export const products: Product[] = [
     badge: "Events · Over-bar",
     description:
       "Compacte mobiele koeler voor events, beurzen en craft. Over-bar installatie — gepatenteerd door Golderos.",
-    image: withBase("/assets/products-stage/goldy.jpg"),
+    image: withBase("/assets/products-clean/goldy.jpg"),
     alt: "Golderos Goldy — compacte over-bar ijsbankkoeler met twee kranen",
     cropClass: "crop-goldy",
     specs: [
@@ -38,7 +38,7 @@ export const products: Product[] = [
     badge: "Horeca · Onder-bar",
     description:
       "Vaste onder-bar installatie in medium formaat. Stabiel debiet voor restaurants en bars met beperkte ruimte.",
-    image: withBase("/assets/products-stage/v100.jpg"),
+    image: withBase("/assets/products-clean/v100.jpg"),
     alt: "Golderos V100 — verticale onder-bar ijsbankkoeler",
     cropClass: "crop-v100",
     specs: [
@@ -57,7 +57,7 @@ export const products: Product[] = [
     badge: "Events · Mobiel",
     description:
       "Mobiele V100 voor festivals en feesten. Klaar voor snelle opbouw — optioneel met zuil en kranen.",
-    image: withBase("/assets/products-stage/v100-portable.jpg"),
+    image: withBase("/assets/products-clean/v100-portable.jpg"),
     alt: "Golderos V100 portable — mobiele eventkoeler op wielen met tapzuil",
     cropClass: "crop-v100p",
     specs: [
@@ -76,7 +76,7 @@ export const products: Product[] = [
     badge: "High volume · Onder-bar",
     description:
       "Voor drukke bars en high-volume service. Maximale ijsreserve en debiet — ook als horizontale variant.",
-    image: withBase("/assets/products-stage/v200.jpg"),
+    image: withBase("/assets/products-clean/v200.jpg"),
     alt: "Golderos V200 — grote verticale onder-bar ijsbankkoeler",
     cropClass: "crop-v200",
     specs: [
