@@ -3,9 +3,9 @@
 import {
   useEffect,
   useRef,
-  createElement,
   type ReactNode,
   type HTMLAttributes,
+  type ElementType,
 } from "react";
 
 type TagName = "h1" | "h2" | "p" | "div";
@@ -24,6 +24,7 @@ export function SplitLines({
   ...rest
 }: Props) {
   const ref = useRef<HTMLElement | null>(null);
+  const Tag = as as ElementType;
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -56,19 +57,17 @@ export function SplitLines({
     return () => io.disconnect();
   }, []);
 
-  return createElement(
-    as,
-    {
-      ...rest,
-      className: `split-lines ${className}`.trim(),
-      ref: (node: HTMLElement | null) => {
-        ref.current = node;
-      },
-    },
-    lines.map((line, i) => (
-      <span className="split-line" key={i} style={{ ["--i" as string]: i }}>
-        <span className="split-line-inner">{line}</span>
-      </span>
-    ))
+  return (
+    <Tag
+      {...rest}
+      className={`split-lines ${className}`.trim()}
+      ref={ref}
+    >
+      {lines.map((line, i) => (
+        <span className="split-line" key={i} style={{ ["--i" as string]: i }}>
+          <span className="split-line-inner">{line}</span>
+        </span>
+      ))}
+    </Tag>
   );
 }

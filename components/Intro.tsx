@@ -9,6 +9,7 @@ export function Intro() {
 
   useEffect(() => {
     let timer = 0;
+    let start = 0;
     try {
       if (sessionStorage.getItem(KEY)) return;
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -16,15 +17,19 @@ export function Intro() {
         sessionStorage.setItem(KEY, "1");
         return;
       }
-      setShow(true);
-      timer = window.setTimeout(() => {
-        setShow(false);
-        sessionStorage.setItem(KEY, "1");
-      }, 760);
+      // Defer setState out of the synchronous effect body (react-hooks/set-state-in-effect)
+      start = window.setTimeout(() => {
+        setShow(true);
+        timer = window.setTimeout(() => {
+          setShow(false);
+          sessionStorage.setItem(KEY, "1");
+        }, 760);
+      }, 0);
     } catch {
       /* private mode, skip */
     }
     return () => {
+      if (start) window.clearTimeout(start);
       if (timer) window.clearTimeout(timer);
     };
   }, []);

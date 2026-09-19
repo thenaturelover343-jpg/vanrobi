@@ -5,7 +5,7 @@ import {
   useRef,
   type ReactNode,
   type HTMLAttributes,
-  createElement,
+  type ElementType,
 } from "react";
 
 type TagName =
@@ -40,9 +40,9 @@ export function Reveal({
   ...rest
 }: Props) {
   const ref = useRef<HTMLElement | null>(null);
+  const Tag = as as ElementType;
 
   useEffect(() => {
-    // Gate CSS hide behind html.js-reveal before observers run
     enableJsReveal();
 
     const el = ref.current;
@@ -67,15 +67,13 @@ export function Reveal({
     return () => io.disconnect();
   }, []);
 
-  return createElement(
-    as,
-    {
-      ...rest,
-      className: `reveal ${className}`.trim(),
-      ref: (node: HTMLElement | null) => {
-        ref.current = node;
-      },
-    },
-    children
+  return (
+    <Tag
+      {...rest}
+      className={`reveal ${className}`.trim()}
+      ref={ref}
+    >
+      {children}
+    </Tag>
   );
 }
