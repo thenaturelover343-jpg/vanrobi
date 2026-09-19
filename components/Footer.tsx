@@ -24,6 +24,15 @@ export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
             <a className="footer-link" href={withBase("/fr/produits/")}>
               Produits
             </a>
+            <a className="footer-link" href={withBase("/fr/services/")}>
+              Services
+            </a>
+            <a className="footer-link" href={withBase("/fr/a-propos/")}>
+              À propos
+            </a>
+            <a className="footer-link" href={withBase("/fr/faq/")}>
+              FAQ
+            </a>
             <a className="footer-link" href={withBase("/fr/contact/")}>
               Contact
             </a>
@@ -33,7 +42,7 @@ export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
           </div>
           <div>
             <h4>Machines</h4>
-            {["goldy", "v100", "v200", "v100-portable"].map((id) => {
+            {["goldy", "picky", "v100", "v200", "v100-portable", "v200-portable"].map((id) => {
               const p = featuredProducts.find((x) => x.id === id);
               if (!p) return null;
               return (
@@ -97,6 +106,9 @@ export function Footer({ lang = "nl" }: { lang?: "nl" | "fr" }) {
           </a>
           <a className="footer-link" href={withBase("/over-ons/")}>
             Over ons
+          </a>
+          <a className="footer-link" href={withBase("/regio/")}>
+            Regio&apos;s
           </a>
           <a className="footer-link" href={withBase("/contact/")}>
             Contact

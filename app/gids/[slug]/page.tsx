@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { CTA } from "@/components/CTA";
 import { guides, getGuide } from "@/lib/guides";
 import { GuideBody } from "@/lib/guide-content";
-import { breadcrumbSchema } from "@/lib/schema";
+import { breadcrumbSchema, articleSchema } from "@/lib/schema";
 import { pageMeta } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const g = getGuide(slug);
   if (!g) return { title: "Gids — VanRobi" };
   return pageMeta({
-    title: `${g.title} — VanRobi`,
+    title: `${g.title} | Golderos via VanRobi`,
     description: g.description,
     path: `/gids/${g.slug}/`,
   });
@@ -46,6 +46,13 @@ export default async function GuidePage({ params }: Props) {
           { name: "Gidsen", path: "/gids/" },
           { name: g.title, path: `/gids/${g.slug}/` },
         ])}
+      />
+      <JsonLd
+        data={articleSchema({
+          title: g.title,
+          description: g.description,
+          path: `/gids/${g.slug}/`,
+        })}
       />
       <Header />
       <main id="main">

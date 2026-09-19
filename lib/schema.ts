@@ -109,3 +109,33 @@ export function breadcrumbSchema(
     })),
   };
 }
+
+export function articleSchema(input: {
+  title: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: input.title,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    inLanguage: "nl-BE",
+    author: {
+      "@type": "Organization",
+      name: "VanRobi",
+      url: absoluteUrl("/"),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "VanRobi",
+      url: absoluteUrl("/"),
+      logo: {
+        "@type": "ImageObject",
+        url: absoluteUrl("/assets/logo.svg"),
+      },
+    },
+    mainEntityOfPage: absoluteUrl(input.path),
+  };
+}

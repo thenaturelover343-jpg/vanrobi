@@ -68,6 +68,9 @@ export function Header({ lang = "nl" }: { lang?: "nl" | "fr" }) {
   const frNav = [
     { href: "/fr/", label: "Accueil" },
     { href: "/fr/produits/", label: "Produits" },
+    { href: "/fr/services/", label: "Services" },
+    { href: "/fr/a-propos/", label: "À propos" },
+    { href: "/fr/faq/", label: "FAQ" },
     { href: "/fr/contact/", label: "Contact" },
     { href: "/producten/", label: "Catalogue NL" },
   ];

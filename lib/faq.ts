@@ -37,6 +37,36 @@ export const generalFaqs: FaqItem[] = [
     answer:
       "We focussen op verkoop van Golderos-koelers (o.a. Goldy, V100 portable, V200 portable). Voor events helpen we met de juiste mobiele unit en opbouwadvies. Huurvragen bekijken we case by case — mail info@vanrobi.be.",
   },
+  {
+    question: "Wat is het verschil tussen een ijsbankkoeler en een doorstroomkoeler?",
+    answer:
+      "Een ijsbankkoeler houdt een ijsreserve in een waterbad (cuba) aan — dat geeft buffer bij pieken. Een doorstroomkoeler koelt vooral terwijl er getapt wordt en is vaak compacter, maar heeft minder reserve. Welke beter is, hangt af van piekvolume, leidingen en ruimte. Lees onze gids “Wat is een ijsbankkoeler?” of vraag advies via info@vanrobi.be.",
+  },
+  {
+    question: "Installeren jullie bierkoelers in België?",
+    answer:
+      "VanRobi levert en adviseert. Plaatsing, demontage en technische opvolging van koelingen verlopen via Taponderhoud (koelgecertificeerd, Kempen). Samen dekken we Antwerpen, Limburg, Vlaams-Brabant, Brussel, Oost-Vlaanderen — en levering in NL. Contact: info@vanrobi.be of +32 14 71 80 80.",
+  },
+  {
+    question: "Welke bierkoeler voor een festival of outdoor event?",
+    answer:
+      "Voor de meeste festivals: V100 portable (capaciteit op wielen) of Goldy (compact over-bar). Grote pieken: V200 portable. Voorzie stabiele 220V, plaats uit de zon, en plan levertijd vooruit. Zie de gids “Bierkoeler voor events”.",
+  },
+  {
+    question: "Goldy of V100 — wat past bij mijn bar?",
+    answer:
+      "Goldy is over-bar (zichtbaar, compact, ±44 L/u) — sterk voor events en craft. V100 is onder-bar (±87 L/u, meer ijs) voor vaste horeca. Vergelijking met echte specs staat in onze gids Goldy vs V100.",
+  },
+  {
+    question: "Wat kost een Golderos-bierkoeler?",
+    answer:
+      "Prijs hangt af van model, opties (zuil, spiralen) en leveringsvoorwaarden. We geven geen catalogusprijzen online zonder context — stuur uw toepassing naar info@vanrobi.be voor een gerichte offerte.",
+  },
+  {
+    question: "Kan ik een onder-bar koeler in een bestaand barmeubel plaatsen?",
+    answer:
+      "Vaak wel, mits diepte, ventilatie en leidingwerk kloppen. V100 (717×430×430) en V200 (900×495×495) hebben verschillende footprints; horizontale varianten bestaan voor lage opstellingen. Stuur meubelmaten mee bij de aanvraag.",
+  },
 ];
 
 export const productFaqs: Record<string, FaqItem[]> = {

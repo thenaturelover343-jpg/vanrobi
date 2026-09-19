@@ -15,9 +15,9 @@ import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 
 export const metadata: Metadata = pageMeta({
-  title: "VanRobi — Officiële Golderos-distributeur België & Nederland",
+  title: "Bierkoeler & ijsbankkoeler — Golderos via VanRobi BE/NL",
   description:
-    "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers: Goldy, V100, V100 portable en V200 voor horeca, events en installateurs.",
+    "Officiële Golderos-distributeur België & Nederland. Ijsbankkoelers en bierkoelers: Goldy, V100, V200, portable. Advies vanuit Kasterlee (Kempen).",
   path: "/",
 });
 

@@ -12,9 +12,9 @@ import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 
 export const metadata: Metadata = pageMeta({
-  title: "Veelgestelde vragen — VanRobi",
+  title: "FAQ bierkoeler & ijsbankkoeler — VanRobi",
   description:
-    "FAQ over VanRobi als Golderos-verdeler BE/NL, onderhoud via taponderhoud.be, offertes, levertijden en het verschil tussen V100 en V200.",
+    "Veelgestelde vragen: ijsbank vs doorstroom, installatie België, festivals, Goldy vs V100, Golderos-verdeler BE/NL, onderhoud via taponderhoud.be.",
   path: "/faq/",
 });
 
@@ -38,15 +38,23 @@ export default function FaqPage() {
                 Vergelijk machines in onze gidsen, of ga meteen naar de catalogus.
               </p>
               <p>
-                <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200 →</a>
-                <br />
-                <a href={withBase("/gids/bierkoeler-voor-events/")}>
-                  Bierkoeler voor events →
+                <a href={withBase("/gids/wat-is-een-ijsbankkoeler/")}>
+                  Wat is een ijsbankkoeler? →
                 </a>
                 <br />
-                <a href={withBase("/gids/golderos-vs-gamko/")}>
-                  Golderos vs Gamko →
+                <a href={withBase("/gids/bierkoeler-kopen-belgie-nederland/")}>
+                  Bierkoeler kopen BE/NL →
                 </a>
+                <br />
+                <a href={withBase("/gids/onder-bar-bierkoeler/")}>
+                  Onder-bar bierkoeler →
+                </a>
+                <br />
+                <a href={withBase("/gids/golderos-distributeur-belgie-nederland/")}>
+                  Golderos distributeur →
+                </a>
+                <br />
+                <a href={withBase("/regio/")}>Regio&apos;s →</a>
                 <br />
                 <a href={withBase("/producten/")}>Alle producten →</a>
               </p>

@@ -9,9 +9,9 @@ import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 
 export const metadata: Metadata = pageMeta({
-  title: "Gidsen & vergelijkingen — VanRobi",
+  title: "Gidsen: ijsbankkoeler, bierkoeler kopen & Golderos — VanRobi",
   description:
-    "Praktische gidsen over Golderos-koelers: V100 vs V200, bierkoeler voor events, Golderos vs Gamko. Advies via VanRobi BE/NL.",
+    "SEO-gidsen over ijsbankkoelers en bierkoelers: kopen in België/Nederland, onder-bar, Goldy vs V100, Golderos-distributeur. Via VanRobi.",
   path: "/gids/",
 });
 
@@ -23,7 +23,7 @@ export default function GidsIndexPage() {
         <PageHero
           eyebrow="Gidsen"
           title={["Kennis die", <em key="e">beslist</em>]}
-          lede="Vergelijkingen en eventgidsen — zodat u de juiste Golderos-koeler kiest zonder verkooppraatjes."
+          lede="Uitleg, koopgidsen en vergelijkingen — ijsbankkoeler, onder-bar, events en Golderos via VanRobi in België & Nederland."
         />
         <section className="page-section">
           <div className="wrap guide-index-grid">
