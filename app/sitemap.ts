@@ -2,17 +2,9 @@ import type { MetadataRoute } from "next";
 import { products } from "@/lib/products";
 import { guides } from "@/lib/guides";
 import { absoluteUrl } from "@/lib/site";
+import { FR_PRODUCT_IDS, languagePathsFor } from "@/lib/hreflang";
 
 export const dynamic = "force-static";
-
-const FR_PRODUCT_IDS = [
-  "goldy",
-  "picky",
-  "v100",
-  "v200",
-  "v100-portable",
-  "v200-portable",
-] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -58,11 +50,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [...staticPages, ...productPages, ...guidePages, ...frProducts].map(
-    (p) => ({
-      url: absoluteUrl(p.path),
-      lastModified: now,
-      changeFrequency: p.changeFrequency,
-      priority: p.priority,
-    })
+    (p) => {
+      const pathLangs = languagePathsFor(p.path);
+      const langs = pathLangs
+        ? Object.fromEntries(
+            Object.entries(pathLangs).map(([k, v]) => [k, absoluteUrl(v)])
+          )
+        : undefined;
+      return {
+        url: absoluteUrl(p.path),
+        lastModified: now,
+        changeFrequency: p.changeFrequency,
+        priority: p.priority,
+        ...(langs ? { alternates: { languages: langs } } : {}),
+      };
+    }
   );
 }

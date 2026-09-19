@@ -37,7 +37,7 @@ export const products: Product[] = [
     longDescription:
       "De Goldy is de compacte over-bar ijsbankkoeler van Golderos: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Via VanRobi geleverd met advies over spiralen, debiet en opstelling.",
     image: withBase("/assets/products-official/goldy.jpg"),
-    alt: "Golderos Goldy — via VanRobi",
+    alt: "Golderos Goldy over-bar ijsbankkoeler met kranen — via VanRobi",
     cropClass: "crop-goldy",
     uses: ["events", "mobiel", "horeca"],
     featured: true,
@@ -60,7 +60,7 @@ export const products: Product[] = [
     longDescription:
       "De Picky is de kleinste over-bar ijsbankkoeler van Golderos — gemaakt voor krappe ruimtes zonder in te boeten op professionele koeling. Ideaal voor foodtrucks, pop-ups en compacte craftbars.",
     image: withBase("/assets/products-catalog/picky.jpg"),
-    alt: "Golderos Picky — via VanRobi",
+    alt: "Golderos Picky compacte over-bar ijsbankkoeler — via VanRobi",
     cropClass: "crop-picky",
     uses: ["events", "mobiel", "horeca"],
     featured: true,
@@ -103,7 +103,7 @@ export const products: Product[] = [
     longDescription:
       "De V100 is het werkpaard voor restaurants en bars. Medium formaat, stabiel debiet en voldoende ijsreserve voor dagelijks horecagebruik. Ook als horizontale variant — VanRobi helpt bij de juiste keuze.",
     image: withBase("/assets/products-official/v100.jpg"),
-    alt: "Golderos V100 — via VanRobi",
+    alt: "Golderos V100 onder-bar ijsbankkoeler — via VanRobi",
     cropClass: "crop-v100",
     uses: ["horeca", "onder-bar"],
     featured: true,
@@ -126,7 +126,7 @@ export const products: Product[] = [
     longDescription:
       "De V100 portable brengt V100-capaciteit naar het festivalterrein. Op wielen, snel opgebouwd, optioneel met tapzuil. Ideaal voor cateraars en tijdelijke bars.",
     image: withBase("/assets/products-official/v100-portable.jpg"),
-    alt: "Golderos V100 portable — via VanRobi",
+    alt: "Golderos V100 portable mobiele ijsbankkoeler op wielen — via VanRobi",
     cropClass: "crop-v100-portable",
     uses: ["events", "mobiel"],
     featured: true,
@@ -149,7 +149,7 @@ export const products: Product[] = [
     longDescription:
       "De V200 is gebouwd voor drukke bars. Maximale ijsreserve en hoog debiet. Ook horizontaal leverbaar — VanRobi matcht volume, ruimte en openingsuren.",
     image: withBase("/assets/products-official/v200.jpg"),
-    alt: "Golderos V200 — via VanRobi",
+    alt: "Golderos V200 high-volume onder-bar ijsbankkoeler — via VanRobi",
     cropClass: "crop-v200",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,
@@ -172,7 +172,7 @@ export const products: Product[] = [
     longDescription:
       "De V200 portable combineert high-volume capaciteit met mobiliteit. Voor festivals, stadions en grote tijdelijke bars die geen vaste installatie kunnen plaatsen.",
     image: withBase("/assets/products-catalog/v200-portable.jpg"),
-    alt: "Golderos V200 portable — via VanRobi",
+    alt: "Golderos V200 portable high-volume eventkoeler — via VanRobi",
     cropClass: "crop-v200-portable",
     uses: ["events", "mobiel"],
     featured: true,
@@ -195,7 +195,7 @@ export const products: Product[] = [
     longDescription:
       "De V300 levert hogere capaciteit voor drukke horeca. Meer spiralen, meer debiet — wanneer de V200 net niet genoeg is.",
     image: withBase("/assets/products-catalog/v300.jpg"),
-    alt: "Golderos V300 — via VanRobi",
+    alt: "Golderos V300 onder-bar ijsbankkoeler — via VanRobi",
     cropClass: "crop-v300",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,
@@ -218,7 +218,7 @@ export const products: Product[] = [
     longDescription:
       "De V90 is ontworpen voor bars waar diepte beperkt is. Professionele ijsbankkoeling in een compacter footprint.",
     image: withBase("/assets/products-catalog/v90.jpg"),
-    alt: "Golderos V90 — via VanRobi",
+    alt: "Golderos V90 compacte onder-bar ijsbankkoeler — via VanRobi",
     cropClass: "crop-v90",
     uses: ["horeca", "onder-bar"],
     featured: false,
@@ -241,7 +241,7 @@ export const products: Product[] = [
     longDescription:
       "De H50 is de horizontale variant voor lage onder-bar opstellingen. Zelfde Golderos-kwaliteit, aangepast aan barhoogte en meubelontwerp.",
     image: withBase("/assets/products-catalog/h50.jpg"),
-    alt: "Golderos H50 — via VanRobi",
+    alt: "Golderos H50 horizontale ijsbankkoeler — via VanRobi",
     cropClass: "crop-h50",
     uses: ["horeca", "onder-bar"],
     featured: false,
@@ -264,7 +264,7 @@ export const products: Product[] = [
     longDescription:
       "De V500 is het topmodel van Golderos voor extreme volumes: 100 L cuba, 60 kg ijs, tot 282 L/u. Ook als speciale tankkoelvariant. VanRobi adviseert bij dimensionering.",
     image: withBase("/assets/products-catalog/v500.jpg"),
-    alt: "Golderos V500 — via VanRobi",
+    alt: "Golderos V500 high-volume ijsbankkoeler — via VanRobi",
     cropClass: "crop-v500",
     uses: ["horeca", "onder-bar", "events"],
     featured: true,

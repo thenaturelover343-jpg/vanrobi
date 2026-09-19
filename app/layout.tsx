@@ -30,7 +30,15 @@ export const metadata: Metadata = {
     languages: {
       "nl-BE": absoluteUrl("/"),
       "fr-BE": absoluteUrl("/fr/"),
+      "x-default": absoluteUrl("/"),
     },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VanRobi — Officiële Golderos-distributeur België & Nederland",
+    description:
+      "VanRobi is de officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers voor horeca, events en installateurs.",
+    images: [absoluteUrl("/assets/hero-official.jpg")],
   },
 };
 

@@ -13,6 +13,8 @@ import { Reveal } from "@/components/Reveal";
 import { guides } from "@/lib/guides";
 import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
+import { JsonLd } from "@/components/JsonLd";
+import { websiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = pageMeta({
   title: "Bierkoeler & ijsbankkoeler — Golderos via VanRobi BE/NL",
@@ -24,6 +26,7 @@ export const metadata: Metadata = pageMeta({
 export default function Home() {
   return (
     <>
+      <JsonLd data={websiteSchema()} />
       <Intro />
       <Header />
       <main id="main">

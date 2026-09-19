@@ -142,9 +142,11 @@ export const frAbout = {
   lede:
     "Canal de distribution officiel pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas — avec expertise locale en tirage et froid.",
   partnership:
-    "Golderos est le fabricant espagnol de refroidisseurs à banc de glace professionnels — plus de 50 ans de leadership en froid, ISO 9001. VanRobi est le canal officiel pour la Belgique et les Pays-Bas : sélection, conseil et livraison depuis un seul interlocuteur.",
+    "Golderos est le fabricant espagnol de refroidisseurs à banc de glace professionnels — plus de 50 ans d'expérience en froid professionnel. VanRobi est le canal officiel pour la Belgique et les Pays-Bas : sélection, conseil et livraison depuis un seul interlocuteur. Pas d'import gris : specs correctes et suivi local.",
   local:
-    "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine.",
+    "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine (Kasterlee / Tielen). Ainsi, machines industrielles Golderos et service belge restent alignés après l'achat.",
+  coverage:
+    "Nous conseillons et livrons en Flandre, à Bruxelles et aux Pays-Bas. Pour le détail régional (Anvers, Limbourg, Brabant flamand, Flandre orientale), voir aussi la page régions en néerlandais.",
 };
 
 export const frFaq = {
@@ -157,7 +159,7 @@ export const frFaq = {
       question:
         "VanRobi est-il le distributeur officiel Golderos pour la BE et les NL ?",
       answer:
-        "Oui. VanRobi est le distributeur officiel Golderos pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu — pas d'import gris — avec specs correctes, suivi de garantie et support local.",
+        "Oui. VanRobi est le distributeur officiel Golderos pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu — pas d'import gris — avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
     },
     {
       question: "Qui assure la maintenance de mon installation de tirage ?",
@@ -167,17 +169,27 @@ export const frFaq = {
     {
       question: "Comment demander un devis ?",
       answer:
-        "Écrivez à info@vanrobi.be, appelez le +32 14 71 80 80, ou utilisez le formulaire. Indiquez le modèle, l'usage (Horeca/events) et éventuellement le nombre de robinets.",
+        "Écrivez à info@vanrobi.be, appelez le +32 (0)14 71 80 80, ou utilisez le formulaire. Indiquez le modèle, l'usage (Horeca/events), le nombre de robinets et si possible une photo du bar.",
     },
     {
       question: "Livrez-vous aussi aux Pays-Bas ?",
       answer:
-        "Oui. VanRobi dessert la Belgique et les Pays-Bas comme canal officiel Golderos.",
+        "Oui. VanRobi dessert la Belgique et les Pays-Bas comme canal officiel Golderos. La livraison et le conseil sont planifiés avec vous — sans promesse de délai inventée : tout dépend du stock.",
     },
     {
       question: "Quelle machine pour un festival ?",
       answer:
-        "Souvent V100 portable ou Goldy ; pour les gros pics, V200 portable. Prévoir 220V stable et anticiper les délais.",
+        "Souvent V100 portable ou Goldy ; pour les gros pics, V200 portable. Prévoir 220V stable, anticiper les délais et préciser la date de l'événement dans votre demande.",
+    },
+    {
+      question: "Quelle différence entre Goldy et V100 ?",
+      answer:
+        "Goldy est un refroidisseur compact sur bar (events, craft, pop-ups). V100 est le cheval de bataille sous bar pour Horeca fixe — plus de débit et de réserve de glace. Le catalogue complet et les guides détaillés sont disponibles en néerlandais.",
+    },
+    {
+      question: "Où êtes-vous situés ?",
+      answer:
+        "Kemelbeekstraat 16, 2460 Kasterlee (Tielen), Belgique — Campine. E-mail info@vanrobi.be · tél. +32 (0)14 71 80 80.",
     },
   ],
 };

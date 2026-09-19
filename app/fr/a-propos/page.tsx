@@ -13,6 +13,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "VanRobi, distributeur officiel Golderos BE/NL, avec partenaire maintenance Taponderhoud depuis Kasterlee.",
   path: "/fr/a-propos/",
+  locale: "fr_BE",
 });
 
 export default function FrAboutPage() {
@@ -43,9 +44,16 @@ export default function FrAboutPage() {
                 Adresse : {contact.address.line}. Tél.{" "}
                 <a href={`tel:${contact.phoneTel}`}>{contact.phone}</a>.
               </p>
-              <a className="text-link" href={withBase("/fr/services/")}>
-                Voir les services <span aria-hidden="true">→</span>
-              </a>
+              <p>{frAbout.coverage}</p>
+              <p>
+                <a className="text-link" href={withBase("/fr/services/")}>
+                  Voir les services <span aria-hidden="true">→</span>
+                </a>
+                {" · "}
+                <a className="text-link" href={withBase("/regio/")}>
+                  Régions (NL)
+                </a>
+              </p>
             </Reveal>
           </div>
         </section>

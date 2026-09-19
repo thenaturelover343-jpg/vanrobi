@@ -1,0 +1,37 @@
+# VanRobi
+
+> Officiële Golderos-distributeur voor België en Nederland. Professionele ijsbankkoelers (bierkoelers) voor horeca, events en installateurs. Basis: Kasterlee (Tielen), Kempen.
+
+## Key hubs
+
+- Home (NL): https://thenaturelover343-jpg.github.io/vanrobi/
+- Home (FR): https://thenaturelover343-jpg.github.io/vanrobi/fr/
+- Producten / catalogue: https://thenaturelover343-jpg.github.io/vanrobi/producten/
+- Gidsen (NL guides): https://thenaturelover343-jpg.github.io/vanrobi/gids/
+- Regio BE/NL: https://thenaturelover343-jpg.github.io/vanrobi/regio/
+- FAQ (NL): https://thenaturelover343-jpg.github.io/vanrobi/faq/
+- FAQ (FR): https://thenaturelover343-jpg.github.io/vanrobi/fr/faq/
+- Diensten: https://thenaturelover343-jpg.github.io/vanrobi/diensten/
+- Contact: https://thenaturelover343-jpg.github.io/vanrobi/contact/
+
+## Featured products
+
+- Goldy (over-bar): https://thenaturelover343-jpg.github.io/vanrobi/producten/goldy/
+- V100 (onder-bar): https://thenaturelover343-jpg.github.io/vanrobi/producten/v100/
+- V200 (high volume): https://thenaturelover343-jpg.github.io/vanrobi/producten/v200/
+- V100 portable / V200 portable (events)
+
+## Full document
+
+- llms-full.txt: https://thenaturelover343-jpg.github.io/vanrobi/llms-full.txt
+
+## Update cadence
+
+Content and product specs are reviewed when the Golderos catalogue or VanRobi service coverage changes. Last site SEO pass: 2026-09-19.
+
+## Contact
+
+- Email: info@vanrobi.be
+- Phone: +32 (0)14 71 80 80
+- Address: Kemelbeekstraat 16, 2460 Kasterlee (Tielen), België
+- Maintenance partner: Taponderhoud — https://www.taponderhoud.be

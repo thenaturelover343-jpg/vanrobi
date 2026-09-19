@@ -4,10 +4,9 @@ import { absoluteUrl, SITE_ORIGIN } from "./site";
 
 export type FaqItem = { question: string; answer: string };
 
-export function organizationSchema() {
+function orgCore() {
   return {
-    "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness"],
+    "@type": ["Organization", "LocalBusiness"] as string[],
     "@id": absoluteUrl("/#organization"),
     name: "VanRobi",
     legalName: "VanRobi",
@@ -28,7 +27,6 @@ export function organizationSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      // Approximate Kasterlee/Tielen — refine if needed
       latitude: 51.2405,
       longitude: 4.8345,
     },
@@ -47,15 +45,69 @@ export function organizationSchema() {
   };
 }
 
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    ...orgCore(),
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": absoluteUrl("/#website"),
+    name: "VanRobi",
+    url: absoluteUrl("/"),
+    inLanguage: ["nl-BE", "fr-BE"],
+    description:
+      "Officiële Golderos-distributeur België & Nederland — ijsbankkoelers en bierkoelers voor horeca en events.",
+    publisher: { "@id": absoluteUrl("/#organization") },
+  };
+}
+
+/** Home @graph: WebSite + Organization/LocalBusiness (use instead of separate org on home) */
+export function homeGraphSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": absoluteUrl("/#website"),
+        name: "VanRobi",
+        url: absoluteUrl("/"),
+        inLanguage: ["nl-BE", "fr-BE"],
+        description:
+          "Officiële Golderos-distributeur België & Nederland — ijsbankkoelers en bierkoelers voor horeca en events.",
+        publisher: { "@id": absoluteUrl("/#organization") },
+      },
+      orgCore(),
+    ],
+  };
+}
+
+/**
+ * Product JSON-LD matching visible specs only.
+ * No fabricated price, aggregate rating, or InStock claim (prices not shown).
+ */
 export function productSchema(product: Product) {
+  // product.image is already withBase()'d (/vanrobi/assets/...)
+  const resolvedImage = product.image.startsWith("http")
+    ? product.image
+    : `${SITE_ORIGIN}${product.image.startsWith("/") ? product.image : `/${product.image}`}`;
+
+  const additionalProperty = product.specs.map((s) => ({
+    "@type": "PropertyValue",
+    name: s.label,
+    value: s.value,
+  }));
+
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: `Golderos ${product.name}`,
     description: product.longDescription || product.description,
-    image: product.image.startsWith("http")
-      ? product.image
-      : `${SITE_ORIGIN}${product.image.startsWith("/") ? product.image : `/${product.image}`}`,
+    image: resolvedImage,
     brand: {
       "@type": "Brand",
       name: "Golderos",
@@ -66,11 +118,11 @@ export function productSchema(product: Product) {
     },
     sku: product.id,
     url: absoluteUrl(`/producten/${product.id}/`),
+    ...(additionalProperty.length ? { additionalProperty } : {}),
     offers: {
       "@type": "Offer",
       url: absoluteUrl(`/producten/${product.id}/`),
       priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",
         name: "VanRobi",
@@ -114,6 +166,8 @@ export function articleSchema(input: {
   title: string;
   description: string;
   path: string;
+  dateModified?: string;
+  datePublished?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -122,6 +176,8 @@ export function articleSchema(input: {
     description: input.description,
     url: absoluteUrl(input.path),
     inLanguage: "nl-BE",
+    ...(input.datePublished ? { datePublished: input.datePublished } : {}),
+    ...(input.dateModified ? { dateModified: input.dateModified } : {}),
     author: {
       "@type": "Organization",
       name: "VanRobi",
@@ -137,5 +193,28 @@ export function articleSchema(input: {
       },
     },
     mainEntityOfPage: absoluteUrl(input.path),
+  };
+}
+
+/** HowTo only when the page has visible numbered steps matching these. */
+export function howToSchema(input: {
+  name: string;
+  description: string;
+  path: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    inLanguage: "nl-BE",
+    step: input.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+    })),
   };
 }

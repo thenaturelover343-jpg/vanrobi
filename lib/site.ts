@@ -1,6 +1,7 @@
 /** Site constants for SEO, canonicals, OG */
 import type { Metadata } from "next";
 import { BASE_PATH } from "./base";
+import { languagePathsFor } from "./hreflang";
 
 /** GitHub Pages origin (no trailing slash, no basePath). */
 export const SITE_ORIGIN = "https://thenaturelover343-jpg.github.io";
@@ -22,6 +23,11 @@ export type PageMetaInput = {
   path: string;
   ogImage?: string;
   noIndex?: boolean;
+  /** Open Graph locale, default nl_BE */
+  locale?: "nl_BE" | "fr_BE";
+  /** Override or supplement auto hreflang from path pairs */
+  languages?: Record<string, string>;
+  ogType?: "website" | "article";
 };
 
 export function pageMeta({
@@ -30,24 +36,45 @@ export function pageMeta({
   path,
   ogImage,
   noIndex,
+  locale = "nl_BE",
+  languages,
+  ogType = "website",
 }: PageMetaInput): Metadata {
   const url = absoluteUrl(path);
   const image = ogImage
     ? absoluteUrl(ogImage)
     : absoluteUrl("/assets/hero-official.jpg");
+  const pathLangs = languagePathsFor(path);
+  const langs =
+    languages ??
+    (pathLangs
+      ? Object.fromEntries(
+          Object.entries(pathLangs).map(([k, v]) => [k, absoluteUrl(v)])
+        )
+      : undefined);
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      ...(langs ? { languages: langs } : {}),
+    },
     openGraph: {
       title,
       description,
       url,
       siteName: "VanRobi",
-      locale: "nl_BE",
-      type: "website",
-      images: [{ url: image, alt: "VanRobi — Golderos distributeur" }],
+      locale,
+      type: ogType,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: "VanRobi — officiële Golderos-distributeur België & Nederland",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",

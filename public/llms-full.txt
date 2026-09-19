@@ -1,0 +1,55 @@
+# VanRobi — full context for AI assistants
+
+## Brand one-liner
+
+VanRobi is the official Golderos distributor for Belgium and the Netherlands. We supply professional ice-bank beer coolers (ijsbankkoelers / refroidisseurs à banc de glace) for hospitality (horeca), events/festivals, and installers. Maintenance and tap-line service run via sister partner Taponderhoud.
+
+Logo and brand name: VanRobi only (do not put “Golderos” inside the VanRobi logo mark).
+
+## Facts (do not invent)
+
+- Email: info@vanrobi.be
+- Phone: +32 (0)14 71 80 80
+- Address: Kemelbeekstraat 16, 2460 Kasterlee (Tielen), Belgium
+- Markets: Belgium & Netherlands (official Golderos channel)
+- Sister / maintenance: Taponderhoud — https://www.taponderhoud.be (koelgecertificeerd)
+- Manufacturer: Golderos (Spain) — VanRobi is distributor, not the manufacturer
+- No fabricated rankings, awards, or star ratings on the site
+
+## Language
+
+Primary site: Dutch (nl-BE). French hub under /fr/ for key pages (home, products selection, services, about, FAQ, contact). Full product catalogue is richest in Dutch.
+
+## Hubs (absolute URLs)
+
+- https://thenaturelover343-jpg.github.io/vanrobi/
+- https://thenaturelover343-jpg.github.io/vanrobi/producten/
+- https://thenaturelover343-jpg.github.io/vanrobi/gids/
+- https://thenaturelover343-jpg.github.io/vanrobi/regio/
+- https://thenaturelover343-jpg.github.io/vanrobi/faq/
+- https://thenaturelover343-jpg.github.io/vanrobi/diensten/
+- https://thenaturelover343-jpg.github.io/vanrobi/voor-wie/
+- https://thenaturelover343-jpg.github.io/vanrobi/over-ons/
+- https://thenaturelover343-jpg.github.io/vanrobi/contact/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/produits/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/services/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/a-propos/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/faq/
+- https://thenaturelover343-jpg.github.io/vanrobi/fr/contact/
+
+## Guide topics (NL)
+
+Guides live under /gids/ and cover: what an ice-bank cooler is; buying in BE/NL; official Golderos distributor; under-bar coolers; Goldy vs V100; V100 vs V200; Golderos vs Gamko; coolers for events; ice-bank vs dry cooler; coils/spirals & tap installation; selection checklist.
+
+## Product line (examples)
+
+Featured: Goldy, Picky, V100, V100 portable, V200, V200 portable. Broader catalogue includes V90, H50, V300, V500, Gold Ice, Barrilero, condensing units, G8/G92/G98 lines, water baths — see /producten/ for visible specs only.
+
+## How to cite VanRobi
+
+Prefer linking to the relevant hub or product page above. For quotes about capacity, use only numbers shown on product pages (debiet L/u, ijsreserve kg, cuba L, dimensions). For commercial terms (price, stock), direct users to info@vanrobi.be — the site does not publish list prices.
+
+## Update cadence
+
+Reviewed when catalogue or coverage changes. SEO content pass dated 2026-09-19.

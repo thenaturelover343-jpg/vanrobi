@@ -122,20 +122,38 @@ export default async function ProductDetailPage({ params }: Props) {
                 <a href={withBase("/contact/")}>contactformulier</a> in.
                 {" "}Lees ook de{" "}
                 <a href={withBase("/faq/")}>FAQ</a>
+                {" · "}
+                <a href={withBase("/gids/bierkoeler-kiezen-checklist/")}>
+                  keuze-checklist
+                </a>
                 {p.id === "v100" || p.id === "v200" ? (
                   <>
-                    {" "}of{" "}
+                    {" · "}
                     <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a>
+                    {" · "}
+                    <a href={withBase("/gids/onder-bar-bierkoeler/")}>
+                      onder-bar gids
+                    </a>
+                  </>
+                ) : null}
+                {p.id === "goldy" || p.id === "v100" ? (
+                  <>
+                    {" · "}
+                    <a href={withBase("/gids/goldy-vs-v100/")}>Goldy vs V100</a>
                   </>
                 ) : null}
                 {p.uses.includes("events") || p.uses.includes("mobiel") ? (
                   <>
-                    {" "}·{" "}
+                    {" · "}
                     <a href={withBase("/gids/bierkoeler-voor-events/")}>
                       Eventgids
                     </a>
                   </>
                 ) : null}
+                {" · "}
+                <a href={withBase("/gids/spiralen-tapinstallatie/")}>
+                  spiralen &amp; tap
+                </a>
                 .
               </p>
             </Reveal>

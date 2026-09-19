@@ -15,6 +15,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "FAQ VanRobi : distributeur officiel Golderos BE/NL, maintenance Taponderhoud, devis et livraison Pays-Bas.",
   path: "/fr/faq/",
+  locale: "fr_BE",
 });
 
 export default function FrFaqPage() {

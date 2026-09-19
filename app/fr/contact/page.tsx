@@ -13,6 +13,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "Contactez VanRobi pour un devis Golderos. Kemelbeekstraat 16, Kasterlee. info@vanrobi.be · +32 14 71 80 80.",
   path: "/fr/contact/",
+  locale: "fr_BE",
 });
 
 export default function FrContactPage() {

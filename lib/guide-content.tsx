@@ -69,9 +69,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             eyebrow="Gerelateerd"
             links={[
               { href: "/gids/v100-vs-v200/", label: "V100 vs V200" },
+              { href: "/gids/ijsbankkoeler-vs-dry-cooler/", label: "IJsbank vs dry cooler" },
+              { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
               { href: "/gids/golderos-distributeur-belgie-nederland/", label: "Golderos distributeur BE/NL" },
-              { href: "/gids/bierkoeler-voor-events/", label: "Bierkoeler voor events" },
-              { href: "/faq/", label: "Veelgestelde vragen" },
               { href: "/contact/", label: "Offerte aanvragen" },
             ]}
           />
@@ -286,10 +286,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             eyebrow="Verder"
             links={[
               { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Bierkoeler kopen BE/NL" },
-              { href: "/gids/onder-bar-bierkoeler/", label: "Onder-bar bierkoeler" },
-              { href: "/gids/golderos-distributeur-belgie-nederland/", label: "Officiële distributeur" },
+              { href: "/gids/ijsbankkoeler-vs-dry-cooler/", label: "IJsbank vs dry cooler" },
+              { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
+              { href: "/gids/spiralen-tapinstallatie/", label: "Spiralen & tap" },
               { href: "/producten/", label: "Assortiment" },
-              { href: "/faq/", label: "FAQ" },
             ]}
           />
         </div>
@@ -372,10 +372,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
             eyebrow="Hulp"
             links={[
               { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
-              { href: "/gids/golderos-distributeur-belgie-nederland/", label: "Golderos distributeur" },
+              { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
+              { href: "/gids/spiralen-tapinstallatie/", label: "Spiralen & tap" },
               { href: "/regio/", label: "Regio's BE/NL" },
               { href: "/producten/", label: "Catalogus" },
-              { href: "/faq/", label: "FAQ" },
             ]}
           />
         </div>
@@ -664,6 +664,214 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
               { href: "/gids/bierkoeler-voor-events/", label: "Events & festivals" },
               { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
               { href: "/producten/", label: "Catalogus" },
+              { href: "/contact/", label: "Offerte" },
+            ]}
+          />
+        </div>
+      </section>
+    );
+  }
+
+
+  if (slug === "ijsbankkoeler-vs-dry-cooler") {
+    return (
+      <section className="page-section">
+        <div className="wrap guide-body">
+          <Reveal className="prose guide-prose">
+            <h2>Wat is het verschil tussen ijsbankkoeler en dry cooler?</h2>
+            <p>
+              Een <strong>ijsbankkoeler</strong> koelt drank via spiralen in een
+              waterbad met ijsreserve (buffer). Een <strong>dry cooler</strong>{" "}
+              (vaak een luchtgekoelde doorstroom- of platenkoeler) koelt vooral
+              terwijl er getapt wordt, zonder die ijsbank als thermische buffer.
+              Beide kunnen uitstekend werken — het hangt af van pieken, ruimte en
+              leidinglengte.
+            </p>
+            <h2>Wanneer past een ijsbankkoeler beter?</h2>
+            <p>
+              Kies ijsbank wanneer u stabiele koude wilt bij wisselende drukte,
+              meerdere kranen/spiralen op één unit, of events waar de piek kort
+              maar hard is. De ijsreserve (kg) en cuba (L) geven buffer wanneer
+              iedereen tegelijk bestelt — typisch voor Golderos Goldy, V100,
+              V200 en portable-varianten via VanRobi.
+            </p>
+            <h2>Wanneer speelt een dry cooler vaker?</h2>
+            <p>
+              Dry coolers / doorstroomkoelers zijn vaak compacter in footprint en
+              kunnen volstaan bij lage tot middelmatige, voorspelbare belasting
+              en korte leidingen. Ze hebben minder &quot;koude voorraad&quot; in
+              het bad — bij harde pieken voelt u dat sneller in het glas.
+            </p>
+            <h2>Geen #1-claim — wel een match</h2>
+            <p>
+              Wij claimen geen universele winnaar. VanRobi verkoopt
+              Golderos-ijsbankkoelers als officieel BE/NL-kanaal. Past een ander
+              principe beter bij uw bestaande installatie, dan zeggen we dat
+              eerlijk. Mail volume, aantal kranen en een barfoto naar{" "}
+              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
+            </p>
+            <h2>Verder lezen</h2>
+            <p>
+              Basisprincipe:{" "}
+              <a href={withBase("/gids/wat-is-een-ijsbankkoeler/")}>
+                wat is een ijsbankkoeler?
+              </a>{" "}
+              · Selectie:{" "}
+              <a href={withBase("/gids/bierkoeler-kiezen-checklist/")}>
+                checklist in 7 stappen
+              </a>{" "}
+              · Machines:{" "}
+              <a href={withBase("/producten/")}>catalogus</a>.
+            </p>
+          </Reveal>
+          <GuideAside
+            eyebrow="Gerelateerd"
+            links={[
+              { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
+              { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
+              { href: "/gids/spiralen-tapinstallatie/", label: "Spiralen & tap" },
+              { href: "/producten/", label: "Assortiment" },
+              { href: "/contact/", label: "Advies aanvragen" },
+            ]}
+          />
+        </div>
+      </section>
+    );
+  }
+
+  if (slug === "spiralen-tapinstallatie") {
+    return (
+      <section className="page-section">
+        <div className="wrap guide-body">
+          <Reveal className="prose guide-prose">
+            <h2>Wat doen spiralen in een ijsbankkoeler?</h2>
+            <p>
+              In een Golderos-ijsbankkoeler stroomt bier (of andere drank) door{" "}
+              <strong>spiralen</strong> in het koude water-/ijsbad. Hoe meer
+              contact met het bad en hoe korter de warme trajecten daarna, hoe
+              stabieler de taptermperatuur. Het aantal spiralen en de
+              leidinglengte naar de kraan zijn even belangrijk als het
+              machineformaat.
+            </p>
+            <h2>Tapinstallatie: de keten</h2>
+            <p>
+              Vat of tank → koeler (ijsbank) → leidingen → kraan/zuil. Elke
+              schakel telt: isolatie, hoogteverschillen, spoeling en reiniging.
+              VanRobi adviseert de machine; plaatsing, reiniging en onderhoud van
+              de taplijn lopen via{" "}
+              <a
+                href="https://www.taponderhoud.be"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Taponderhoud
+              </a>
+              .
+            </p>
+            <h2>Waarop letten bij dimensionering?</h2>
+            <ul className="guide-list">
+              <li>Aantal kranen / productlijnen die gelijktijdig tappen</li>
+              <li>Afstand koeler → kraan (korte, geïsoleerde leidingen)</li>
+              <li>Piekglazen per uur — niet alleen &quot;gemiddeld&quot;</li>
+              <li>Of de unit over-bar (Goldy) of onder-bar (V100/V200) staat</li>
+            </ul>
+            <h2>Praktisch advies via VanRobi</h2>
+            <p>
+              Stuur een schets of foto van de bar, aantal kranen en gewenst
+              volume naar{" "}
+              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>. We matchen
+              machine + spiralen-logica; Taponderhoud helpt bij plaatsing en
+              periodieke reiniging. Zie ook{" "}
+              <a href={withBase("/diensten/")}>diensten</a> en{" "}
+              <a href={withBase("/gids/onder-bar-bierkoeler/")}>onder-bar gids</a>.
+            </p>
+          </Reveal>
+          <GuideAside
+            eyebrow="Volgende stap"
+            links={[
+              { href: "/gids/bierkoeler-kiezen-checklist/", label: "Keuze-checklist" },
+              { href: "/gids/onder-bar-bierkoeler/", label: "Onder-bar" },
+              { href: "/gids/ijsbankkoeler-vs-dry-cooler/", label: "IJsbank vs dry cooler" },
+              { href: "/diensten/", label: "Diensten" },
+              { href: "/contact/", label: "Contact" },
+            ]}
+          />
+        </div>
+      </section>
+    );
+  }
+
+  if (slug === "bierkoeler-kiezen-checklist") {
+    return (
+      <section className="page-section">
+        <div className="wrap guide-body">
+          <Reveal className="prose guide-prose">
+            <h2>Hoe kiest u een bierkoeler in 7 stappen?</h2>
+            <p>
+              Volg deze checklist — van piekvolume tot onderhoud — vóór u een
+              Golderos-ijsbankkoeler via VanRobi bestelt. Geen rankingclaims:
+              wel een volgorde die misdimensionering voorkomt.
+            </p>
+
+            <h2>Stap 1 — Vast of mobiel?</h2>
+            <p>
+              Vaste horeca → onder-bar (V100, V200, …). Events/festivals → Goldy
+              of portable (V100/V200 portable). Craft/pop-up met zichtbare bar →
+              vaak Goldy of Picky.
+            </p>
+
+            <h2>Stap 2 — Schat piekvolume</h2>
+            <p>
+              Tel glazen in het drukste uur, niet het daggemiddelde. Debiet (L/u)
+              en ijsreserve (kg) moeten die piek aankunnen. Vergelijk{" "}
+              <a href={withBase("/gids/v100-vs-v200/")}>V100 vs V200</a>.
+            </p>
+
+            <h2>Stap 3 — Meet het meubel</h2>
+            <p>
+              Diepte, hoogte, ventilatie. Onder-bar verdwijnt uit het zicht maar
+              heeft ruimte en warmteafvoer nodig. Over-bar vraagt bladruimte.
+            </p>
+
+            <h2>Stap 4 — Tel kranen en spiralen</h2>
+            <p>
+              Meerdere productlijnen of lange leidingen vragen meer buffer. Lees{" "}
+              <a href={withBase("/gids/spiralen-tapinstallatie/")}>
+                spiralen &amp; tapinstallatie
+              </a>
+              .
+            </p>
+
+            <h2>Stap 5 — Check stroom</h2>
+            <p>
+              Golderos-units op de site: typisch 220V / 50 Hz. Op events: stabiele
+              voeding, geen gedeelde zwakke groepen.
+            </p>
+
+            <h2>Stap 6 — Kies het koelprincipe</h2>
+            <p>
+              IJsbank vs dry cooler / doorstroom: zie{" "}
+              <a href={withBase("/gids/ijsbankkoeler-vs-dry-cooler/")}>
+                ijsbankkoeler vs dry cooler
+              </a>
+              . Twijfel? Mail ons — we forceren geen ijsbank als die niet past.
+            </p>
+
+            <h2>Stap 7 — Officieel kanaal + onderhoud</h2>
+            <p>
+              Koop via VanRobi (officieel Golderos BE/NL) voor correcte specs en
+              opvolging. Onderhoud en reiniging via Taponderhoud. Start met{" "}
+              <a href={withBase("/contact/")}>contact</a> of{" "}
+              <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
+            </p>
+          </Reveal>
+          <GuideAside
+            eyebrow="Hulp"
+            links={[
+              { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Koopgids BE/NL" },
+              { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
+              { href: "/producten/", label: "Catalogus" },
+              { href: "/faq/", label: "FAQ" },
               { href: "/contact/", label: "Offerte" },
             ]}
           />

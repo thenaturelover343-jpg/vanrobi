@@ -13,6 +13,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "Goldy, V100, V200 et V100 portable — refroidisseurs Golderos via VanRobi, distributeur officiel Belgique & Pays-Bas.",
   path: "/fr/produits/",
+  locale: "fr_BE",
 });
 
 export default function FrProduitsPage() {

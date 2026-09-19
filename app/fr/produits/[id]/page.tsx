@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${p.name} — Golderos via VanRobi`,
     description: copy.description,
     path: `/fr/produits/${id}/`,
+    locale: "fr_BE",
   });
 }
 

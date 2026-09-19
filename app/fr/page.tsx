@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { pageMeta } from "@/lib/site";
 import { withBase } from "@/lib/base";
 import { getProduct } from "@/lib/products";
-import { organizationSchema } from "@/lib/schema";
+import { websiteSchema } from "@/lib/schema";
 import { contact } from "@/lib/contact";
 import { frHome, frFeaturedIds, frProductCopy } from "@/lib/fr";
 
@@ -16,6 +16,7 @@ export const metadata: Metadata = pageMeta({
   description:
     "VanRobi, distributeur officiel Golderos pour la Belgique et les Pays-Bas. Refroidisseurs Goldy, V100, V200 pour Horeca et events.",
   path: "/fr/",
+  locale: "fr_BE",
 });
 
 export default function FrHomePage() {
@@ -30,7 +31,7 @@ export default function FrHomePage() {
 
   return (
     <>
-      <JsonLd data={organizationSchema()} />
+      <JsonLd data={websiteSchema()} />
       <Header lang="fr" />
       <main id="main" lang="fr">
         <section className="page-hero page-hero-light">
