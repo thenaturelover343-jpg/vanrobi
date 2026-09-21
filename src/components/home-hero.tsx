@@ -253,8 +253,8 @@ export function HomeHero() {
           className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
         />
         <div className="hero-frost" aria-hidden />
-        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/40 via-transparent to-transparent" />
-        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/30 via-transparent to-bg/10" />
+        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
+        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-20 pt-28 md:flex-row md:items-end md:justify-between md:px-8 md:pb-24">
           <div className="hero-copy max-w-xl">
@@ -262,10 +262,10 @@ export function HomeHero() {
             <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
               {fr ? frHero.slogan : tagline()}
             </p>
-            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-fg md:text-5xl">
+            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-white md:text-5xl">
               {fr ? frHero.title : "Professionele ijsbankkoelers voor horeca"}
             </h1>
-            <p className="hero-lede mt-6 max-w-md text-[1.02rem]">
+            <p className="hero-lede mt-6 max-w-md text-[1.05rem] font-medium leading-relaxed">
               {fr
                 ? frHero.lede
                 : "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben."}
@@ -283,7 +283,7 @@ export function HomeHero() {
                 {fr ? frHero.ctaSecondary : "Bekijk machines"}
               </Link>
             </div>
-            <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-fg/70 uppercase">
+            <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-white/80 uppercase">
               <span>Bars</span>
               <span>Events</span>
               <span>Installateurs</span>
