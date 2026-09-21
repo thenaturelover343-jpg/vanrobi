@@ -6,7 +6,7 @@
  */
 export const experience = {
   newSlogan: true,
-  nativeForm: true,
+  nativeForm: import.meta.env.BASE_URL !== "/vanrobi/",
   visualRefresh: false,
   compare: true,
   socialProof: false,

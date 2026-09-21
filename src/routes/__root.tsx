@@ -2,9 +2,11 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { experience } from "@/lib/experience";
+import { withBase } from "@/lib/base";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "VanRobi";
+const icePhoto = `url("${withBase("/worlds/ice-bank.jpg")}")`;
 
 export const Route = createRootRoute({
   head: () => ({
@@ -20,10 +22,10 @@ export const Route = createRootRoute({
       { name: "theme-color", content: experience.visualRefresh ? "#F7F9FA" : "#05080C" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: withBase("/favicon.svg") },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "manifest", href: withBase("/__grok/manifest.webmanifest") },
+      { rel: "apple-touch-icon", href: withBase("/__grok/icon-180.png") },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -36,6 +38,7 @@ export const Route = createRootRoute({
     <html
       lang="nl"
       className={experience.visualRefresh ? "antialiased exp-v2" : "antialiased"}
+      style={{ ["--ice-photo" as string]: icePhoto }}
       suppressHydrationWarning
     >
       <head>

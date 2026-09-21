@@ -3,14 +3,15 @@ import { PageShell } from "@/components/page-shell";
 import { Reveal } from "@/components/reveal";
 import { frHome, frProductCopy, frCta } from "@/lib/fr";
 import { site, offerteMailto } from "@/lib/site";
+import { withBase } from "@/lib/base";
 
 const FR_MACHINES: { id: string; name: string; image: string }[] = [
-  { id: "goldy", name: "Goldy", image: "/products/goldy.jpg" },
-  { id: "picky", name: "Picky", image: "/products/picky.jpg" },
-  { id: "v100", name: "V100", image: "/products/v100.jpg" },
-  { id: "v200", name: "V200", image: "/products/v200.jpg" },
-  { id: "v100-portable", name: "V100 portable", image: "/products/v100-portable.jpg" },
-  { id: "v200-portable", name: "V200 portable", image: "/products/v200-portable.jpg" },
+  { id: "goldy", name: "Goldy", image: withBase("/products/goldy.jpg") },
+  { id: "picky", name: "Picky", image: withBase("/products/picky.jpg") },
+  { id: "v100", name: "V100", image: withBase("/products/v100.jpg") },
+  { id: "v200", name: "V200", image: withBase("/products/v200.jpg") },
+  { id: "v100-portable", name: "V100 portable", image: withBase("/products/v100-portable.jpg") },
+  { id: "v200-portable", name: "V200 portable", image: withBase("/products/v200-portable.jpg") },
 ];
 
 export const Route = createFileRoute("/fr/")({
@@ -53,7 +54,7 @@ function FrHome() {
       <section className="border-t border-line bg-bg-2">
         <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
           <div className="photo-well bright min-h-[42vh] lg:min-h-[70vh]">
-            <img src="/worlds/statement-tap.jpg" alt="" width={1600} height={1067} />
+            <img src={withBase("/worlds/statement-tap.jpg")} alt="" width={1600} height={1067} />
           </div>
           <div className="flex flex-col justify-center px-5 py-16 md:px-12">
             <Reveal>

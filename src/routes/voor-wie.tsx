@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
+import { withBase } from "@/lib/base";
 
 export const Route = createFileRoute("/voor-wie")({
   head: () => ({
@@ -21,19 +22,19 @@ const audiences = [
     n: "01",
     title: "Horeca",
     text: "Restaurants, bars en hotels die stabiele tapkoude willen, onder-bar of over-bar, afgestemd op openingsuren en volume.",
-    image: "/worlds/world-bar.jpg",
+    image: withBase("/worlds/world-bar.jpg"),
   },
   {
     n: "02",
     title: "Events & festivals",
     text: "Mobiele units (Goldy, V100 portable, V200 portable) voor snelle opbouw, high volume en zichtbare tapbeleving.",
-    image: "/worlds/world-event.jpg",
+    image: withBase("/worlds/world-event.jpg"),
   },
   {
     n: "03",
     title: "Installateurs & brouwerijen",
     text: "Heldere specs, officiële kanalen en service op maat voor vakmensen die VanRobi in projecten integreren.",
-    image: "/worlds/world-install.jpg",
+    image: withBase("/worlds/world-install.jpg"),
   },
 ];
 

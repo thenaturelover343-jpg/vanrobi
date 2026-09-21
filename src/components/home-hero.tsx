@@ -4,6 +4,7 @@ import { IceBankCanvas } from "./ice-bank-canvas";
 import { useCold } from "@/lib/cold";
 import { growFromIce } from "@/lib/products";
 import { experience, tagline } from "@/lib/experience";
+import { withBase } from "@/lib/base";
 
 export function HomeHero() {
   const setGrow = useCold((s) => s.setGrow);
@@ -63,7 +64,7 @@ export function HomeHero() {
         <aside className="mt-10 w-full max-w-sm md:mt-0">
           <div className="hero-card photo-well aspect-[4/5] max-h-[58vh]">
             <img
-              src="/products/goldy.jpg"
+              src={withBase("/products/goldy.jpg")}
               alt="Goldy over-bar ijsbankkoeler"
               width={900}
               height={1100}

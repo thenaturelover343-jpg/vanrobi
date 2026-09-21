@@ -1,4 +1,5 @@
 import { contact } from "@/lib/contact";
+import { withBase } from "@/lib/base";
 import { Reveal } from "./reveal";
 
 export function PartnerBand() {
@@ -6,7 +7,7 @@ export function PartnerBand() {
     <section className="grid border-t border-line lg:grid-cols-2">
       <div className="photo-well bright min-h-[46vh]">
         <img
-          src="/assets/products-stage/cooler-extra-2.jpg"
+          src={withBase("/assets/products-stage/cooler-extra-2.jpg")}
           alt="Professionele ijsbankkoeler in RVS, bierkoeler voor horeca via VanRobi"
         />
       </div>

@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { withBase } from "@/lib/base";
 import { Reveal } from "./reveal";
 
 const worlds = [
@@ -6,14 +7,14 @@ const worlds = [
     title: "Bars",
     kicker: "Vaste horeca",
     body: "Restaurants, bars en hotels die stabiele tapkoude willen, onder-bar of over-bar, afgestemd op openingsuren en volume.",
-    image: "/worlds/world-bar.jpg",
+    image: withBase("/worlds/world-bar.jpg"),
     href: "/voor-wie" as const,
   },
   {
     title: "Events",
     kicker: "Terrein",
     body: "Mobiele units (Goldy, V100 portable, V200 portable) voor snelle opbouw, high volume en zichtbare tapbeleving.",
-    image: "/worlds/world-event.jpg",
+    image: withBase("/worlds/world-event.jpg"),
     href: "/gids/$slug" as const,
     slug: "bierkoeler-voor-events",
   },
@@ -21,7 +22,7 @@ const worlds = [
     title: "Installateurs",
     kicker: "Techniek",
     body: "Heldere specs, officiële kanalen en service op maat voor vakmensen die VanRobi in projecten integreren.",
-    image: "/worlds/world-install.jpg",
+    image: withBase("/worlds/world-install.jpg"),
     href: "/diensten" as const,
   },
 ];

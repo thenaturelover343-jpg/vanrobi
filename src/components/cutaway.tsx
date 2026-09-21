@@ -1,4 +1,5 @@
 import { Reveal } from "./reveal";
+import { withBase } from "@/lib/base";
 
 export function Cutaway() {
   return (
@@ -6,7 +7,7 @@ export function Cutaway() {
       <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
         <div className="photo-well bright min-h-[42vh] lg:min-h-[70vh]">
           <img
-            src="/worlds/statement-tap.jpg"
+            src={withBase("/worlds/statement-tap.jpg")}
             alt="Bier tappen uit een chroomkraan"
             width={1600}
             height={1067}
