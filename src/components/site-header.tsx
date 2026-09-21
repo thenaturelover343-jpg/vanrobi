@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useRouterState } from "@tanstack/react-router";
+import { useRouterState } from "@tanstack/react-router";
 import { nav } from "@/lib/site";
 import { frNav } from "@/lib/fr";
 import { useLang } from "@/lib/i18n";
 import { LangSwitch } from "./lang-switch";
 import { cn } from "@/lib/cn";
 import { withBase } from "@/lib/base";
+import { MagneticCta } from "./magnetic-cta";
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -58,7 +59,10 @@ export function SiteHeader() {
         <span className="font-display text-[1.35rem] tracking-wide">VanRobi</span>
       </a>
 
-      <nav className="hidden items-center gap-5 xl:flex" aria-label={lang === "fr" ? "Navigation" : "Hoofdnavigatie"}>
+      <nav
+        className="hidden items-center gap-5 xl:flex"
+        aria-label={lang === "fr" ? "Navigation" : "Hoofdnavigatie"}
+      >
         {links.map((item) => (
           <a
             key={item.href}
@@ -77,25 +81,49 @@ export function SiteHeader() {
 
       <div className="flex items-center gap-3">
         <LangSwitch className="hidden sm:flex" />
-        <a href={withBase(ctaHref)} className="btn btn-ice hidden sm:inline-flex">
-          {ctaLabel}
-        </a>
+        <MagneticCta className="hidden sm:inline-flex">
+          <a href={withBase(ctaHref)} className="btn btn-ice">
+            {ctaLabel}
+          </a>
+        </MagneticCta>
         <button
           type="button"
           className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 xl:hidden"
           aria-expanded={open}
-          aria-label={open ? (lang === "fr" ? "Fermer le menu" : "Menu sluiten") : lang === "fr" ? "Ouvrir le menu" : "Menu openen"}
+          aria-label={
+            open
+              ? lang === "fr"
+                ? "Fermer le menu"
+                : "Menu sluiten"
+              : lang === "fr"
+                ? "Ouvrir le menu"
+                : "Menu openen"
+          }
           onClick={() => setOpen((v) => !v)}
         >
-          <span className={cn("block h-px w-5 bg-fg transition-transform", open && "translate-y-[4px] rotate-45")} />
-          <span className={cn("block h-px w-5 bg-fg transition-transform", open && "-translate-y-[4px] -rotate-45")} />
+          <span
+            className={cn(
+              "block h-px w-5 bg-fg transition-transform",
+              open && "translate-y-[4px] rotate-45",
+            )}
+          />
+          <span
+            className={cn(
+              "block h-px w-5 bg-fg transition-transform",
+              open && "-translate-y-[4px] -rotate-45",
+            )}
+          />
         </button>
       </div>
 
       {open ? (
         <div className="absolute inset-x-0 top-[3.75rem] flex h-[calc(100dvh-3.75rem)] flex-col gap-1 overflow-y-auto bg-bg px-6 py-8 xl:hidden">
           {links.map((item) => (
-            <a key={item.href} href={withBase(item.href)} className="font-display border-b border-line py-4 text-4xl">
+            <a
+              key={item.href}
+              href={withBase(item.href)}
+              className="font-display border-b border-line py-4 text-4xl"
+            >
               {item.label}
             </a>
           ))}

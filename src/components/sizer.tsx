@@ -4,6 +4,7 @@ import { experience } from "@/lib/experience";
 import { useCold } from "@/lib/cold";
 import { flowOf, getProduct, growFromIce, iceKgOf, type Product } from "@/lib/products";
 import { withBase } from "@/lib/base";
+import { MagneticCta } from "./magnetic-cta";
 
 type Place = "onderbar" | "overbar" | "mobiel";
 
@@ -182,9 +183,11 @@ export function Sizer() {
           </dl>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href={withBase(`/contact?${query.toString()}`)} className="btn btn-ice">
-              Offerte voor {result.name}
-            </a>
+            <MagneticCta>
+              <a href={withBase(`/contact?${query.toString()}`)} className="btn btn-ice">
+                Offerte voor {result.name}
+              </a>
+            </MagneticCta>
             <Link to="/producten/$id" params={{ id: result.id }} className="btn btn-ghost">
               Bekijk specs
             </Link>

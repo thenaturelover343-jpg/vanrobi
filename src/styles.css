@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: page-out 160ms cubic-bezier(0.4, 0, 1, 1) both;
+}
+
+::view-transition-new(root) {
+  animation: page-in 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 @theme {
   --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
@@ -292,6 +304,13 @@
 }
 .btn:active {
   transform: scale(0.96);
+}
+.magnetic-cta {
+  --magnetic-x: 0px;
+  --magnetic-y: 0px;
+  transform: translate3d(var(--magnetic-x), var(--magnetic-y), 0);
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 .btn-ice {
   background: var(--color-ice);
@@ -769,6 +788,48 @@ html.exp-v2 .product-card:hover {
   box-shadow: var(--shadow-card);
   border-color: #b7d3dc;
 }
+html.exp-v2 .product-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--color-ice);
+}
+html.exp-v2 .product-card .product-visual {
+  transition:
+    background 260ms ease,
+    filter 260ms ease;
+}
+html.exp-v2 .product-card:hover .product-visual,
+html.exp-v2 .product-card:focus-within .product-visual {
+  filter: saturate(1.08) brightness(1.04);
+}
+html.exp-v2 .product-card h2,
+html.exp-v2 .product-card h3 {
+  transition:
+    color 180ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+html.exp-v2 .product-card:hover h2,
+html.exp-v2 .product-card:hover h3,
+html.exp-v2 .product-card:focus-within h2,
+html.exp-v2 .product-card:focus-within h3 {
+  color: var(--color-ice-deep);
+  transform: translateX(3px);
+}
+
+.product-sticky-quote {
+  position: fixed;
+  z-index: 35;
+  right: 1rem;
+  bottom: 1rem;
+  filter: drop-shadow(0 0.8rem 1.4rem rgba(3, 10, 14, 0.22));
+}
+.product-sticky-quote-link {
+  min-height: 3.25rem;
+  padding-inline: 1.4rem;
+}
+body:has(.compare-bar) .product-sticky-quote {
+  bottom: 6.5rem;
+}
 html.exp-v2 .metric-box {
   background: #fff;
   border: 1px solid var(--color-line);
@@ -824,13 +885,49 @@ html.exp-v2 .skip-link {
   }
 }
 
+@keyframes page-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  .magnetic-cta {
+    transform: none;
+    transition: none;
+  }
   html.exp-v2 .metric-num,
   html.exp-v2 .product-card,
   html.exp-v2 .product-card:hover,
+  html.exp-v2 .product-card:focus-within,
+  html.exp-v2 .product-card h2,
+  html.exp-v2 .product-card h3,
   html.exp-v2 .scroll-cue i,
   html.exp-v2 .btn-ice:hover {
     animation: none;
     transform: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .product-sticky-quote {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+  .product-sticky-quote-link {
+    width: 100%;
   }
 }

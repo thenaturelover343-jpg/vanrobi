@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useCold } from "@/lib/cold";
 import { tagline } from "@/lib/experience";
 import { withBase } from "@/lib/base";
+import { MagneticCta } from "./magnetic-cta";
 
 type StoryState = {
   progress: number;
@@ -252,9 +253,11 @@ export function HomeHero() {
               hebben.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn btn-ice">
-                Vraag een offerte
-              </Link>
+              <MagneticCta>
+                <Link to="/contact" className="btn btn-ice">
+                  Vraag een offerte
+                </Link>
+              </MagneticCta>
               <Link to="/producten" className="btn btn-ghost">
                 Bekijk machines
               </Link>

@@ -12,6 +12,7 @@ import { faqsForProduct } from "@/lib/faq";
 import { ContactForm } from "@/components/contact-form";
 import { SocialProof } from "@/components/social-proof";
 import { offerteHref, site } from "@/lib/site";
+import { MagneticCta } from "@/components/magnetic-cta";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -128,9 +129,11 @@ function ProductPage() {
             ))}
           </ul>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={offerteHref(product.name)} className="btn btn-ice">
-              Offerte voor {product.name}
-            </a>
+            <MagneticCta>
+              <a href={offerteHref(product.name)} className="btn btn-ice">
+                Offerte voor {product.name}
+              </a>
+            </MagneticCta>
             <a href={`tel:${site.phoneTel}`} className="btn btn-ghost">
               Bel {site.phone}
             </a>
@@ -262,6 +265,17 @@ function ProductPage() {
           </p>
         </div>
       </section>
+
+      <MagneticCta className="product-sticky-quote">
+        <a
+          href={offerteHref(product.name)}
+          className="btn btn-ice product-sticky-quote-link"
+          aria-label={`Vraag een offerte aan voor ${product.name}`}
+        >
+          Vraag offerte
+          <span aria-hidden>→</span>
+        </a>
+      </MagneticCta>
     </PageShell>
   );
 }
