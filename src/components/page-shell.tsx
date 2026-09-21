@@ -12,6 +12,7 @@ export function PageShell({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.classList.toggle("exp-v2", experience.visualRefresh);
+    document.documentElement.classList.toggle("hero-read-fade", experience.heroReadFade);
   }, [lang]);
 
   return (
@@ -42,8 +43,9 @@ export function PageHero({ kicker, title, lede }: { kicker: string; title: strin
         priority
         className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
+      <div className="hero-read-veil" aria-hidden />
+      <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
+      <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
       <div className="relative mx-auto max-w-[1220px]">
         <div className="hero-copy max-w-3xl">
           <p className="kicker">{kicker}</p>

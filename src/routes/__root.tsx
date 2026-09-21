@@ -55,7 +55,7 @@ function RootDocument() {
   return (
     <html
       lang={lang}
-      className={experience.visualRefresh ? "antialiased exp-v2" : "antialiased"}
+      className={`antialiased${experience.visualRefresh ? " exp-v2" : ""}${experience.heroReadFade ? " hero-read-fade" : ""}`}
       style={{ ["--ice-photo" as string]: icePhoto }}
       suppressHydrationWarning
     >

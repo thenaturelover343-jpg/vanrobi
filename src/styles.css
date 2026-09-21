@@ -411,6 +411,31 @@
   text-shadow: 0 1px 16px rgba(5, 8, 12, 0.8);
 }
 
+.hero-read-veil {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 95% 85% at 10% 58%, rgba(5, 8, 12, 0.7) 0%, rgba(5, 8, 12, 0.32) 40%, rgba(5, 8, 12, 0) 68%),
+    linear-gradient(
+      90deg,
+      rgba(5, 8, 12, 0.72) 0%,
+      rgba(5, 8, 12, 0.4) 30%,
+      rgba(5, 8, 12, 0.14) 52%,
+      rgba(5, 8, 12, 0.04) 68%,
+      rgba(5, 8, 12, 0) 82%
+    ),
+    linear-gradient(180deg, rgba(5, 8, 12, 0.36) 0%, rgba(5, 8, 12, 0) 28%, rgba(5, 8, 12, 0) 78%, rgba(5, 8, 12, 0.3) 100%);
+}
+html.hero-read-fade .hero-read-veil {
+  display: block;
+}
+html.hero-read-fade .hero-copy::before,
+html.hero-read-fade .hero-veil {
+  display: none;
+}
+
 img[data-vr-img="hidden"] {
   visibility: hidden !important;
 }

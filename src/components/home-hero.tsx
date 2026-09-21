@@ -253,6 +253,7 @@ export function HomeHero() {
           className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
         />
         <div className="hero-frost" aria-hidden />
+        <div className="hero-read-veil" aria-hidden />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 

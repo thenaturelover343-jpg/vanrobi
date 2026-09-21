@@ -11,6 +11,8 @@ export const experience = {
   compare: true,
   socialProof: false,
   sizer: true,
+  /** Zachte fade over het ijs i.p.v. donker vierkant achter de copy. false = vorige leeszone. */
+  heroReadFade: true,
 };
 
 export const slogans = {
