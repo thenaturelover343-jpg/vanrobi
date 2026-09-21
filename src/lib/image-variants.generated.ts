@@ -1,4 +1,4 @@
-/** Generated list of modern image variants that actually exist in /public. */
+/** Auto-generated from public/. Do not edit. */
 export const avifFiles = new Set<string>([
   "/assets/cats/bars.avif",
   "/assets/cats/dispensing.avif",

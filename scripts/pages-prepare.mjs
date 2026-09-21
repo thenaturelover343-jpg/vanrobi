@@ -70,6 +70,25 @@ function collectHtml(start, acc = []) {
   return acc;
 }
 
+function siteFileExists(urlPath) {
+  const clean = String(urlPath || "")
+    .replace(/^https?:\/\/[^/]+/i, "")
+    .split("?")[0]
+    .replace(/^\/vanrobi(?=\/|$)/, "");
+  const rel = clean.replace(/^\//, "");
+  if (!rel) return false;
+  return existsSync(join(dir, rel)) || existsSync(join(root, "public", rel));
+}
+
+/** Drop <source> tags whose file 404s — Safari/iOS otherwise shows a "?". */
+function stripMissingSources(html) {
+  return html.replace(/<source\b[^>]*\/?>/gi, (tag) => {
+    const src = /srcSet=["']([^"']+)["']/i.exec(tag)?.[1] || /srcset=["']([^"']+)["']/i.exec(tag)?.[1];
+    if (!src) return "";
+    return siteFileExists(src) ? tag : "";
+  });
+}
+
 const htmlFiles = collectHtml(dir);
 const home = htmlFiles.find((f) => relative(dir, f) === "index.html");
 const sample = home ? readFileSync(home, "utf8") : "";
@@ -90,7 +109,7 @@ function findHtmlFor(rel) {
 
 function write(path, html) {
   mkdirSync(dirname(path), { recursive: true });
-  writeFileSync(path, html);
+  writeFileSync(path, stripMissingSources(html));
 }
 
 let filled = 0;
@@ -118,6 +137,11 @@ ${urls
 </urlset>
 `;
 write(join(dir, "sitemap.xml"), sitemap);
+
+for (const file of collectHtml(dir)) {
+  const next = stripMissingSources(readFileSync(file, "utf8"));
+  writeFileSync(file, next);
+}
 
 console.log(
   `pages-prepare: ${routes.length} routes, ${filled} with own prerender HTML, home H1=${/<h1/i.test(sample)}`,

@@ -4,6 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { experience } from "@/lib/experience";
 import { withBase } from "@/lib/base";
 import { isFrPath } from "@/lib/i18n";
+import { ImageGuard } from "@/components/image-guard";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "VanRobi";
@@ -63,6 +64,7 @@ function RootDocument() {
       </head>
       <body className="bg-bg text-fg">
         <PreviewHostBridge />
+        <ImageGuard />
         <AuthProvider>
           <Outlet />
         </AuthProvider>

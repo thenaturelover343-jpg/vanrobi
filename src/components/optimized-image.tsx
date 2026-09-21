@@ -50,6 +50,7 @@ export function OptimizedImage({
       loading={priority ? "eager" : (loading ?? "lazy")}
       fetchPriority={priority ? "high" : fetchPriority}
       decoding="async"
+      data-vr-src={src}
       className={avif || webp ? imgOnlyClass(className) : className}
       {...props}
     />

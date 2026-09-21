@@ -385,6 +385,10 @@
   object-position: 62% 45%;
 }
 
+img[data-vr-img="hidden"] {
+  visibility: hidden !important;
+}
+
 .photo-well {
   background: #070b10;
   overflow: hidden;

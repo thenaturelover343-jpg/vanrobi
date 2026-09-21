@@ -11,6 +11,10 @@ import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
 // @ts-expect-error JS plugin alongside the TS vite config
 import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
+// @ts-expect-error JS helper
+import { writeImageVariants } from "./scripts/write-image-variants.mjs";
+
+writeImageVariants();
 
 const githubPages = process.env.GITHUB_PAGES === "1";
 const pagesBase = "/vanrobi/";
