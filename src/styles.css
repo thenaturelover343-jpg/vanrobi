@@ -328,11 +328,11 @@
     var(--ice-photo) 62% 45% / cover no-repeat;
 }
 
-.page-hero-ice {
-  background:
-    radial-gradient(ellipse at 72% 38%, rgba(122, 212, 240, 0.22), transparent 48%),
-    linear-gradient(90deg, rgba(5, 8, 12, 0.42) 0%, rgba(5, 8, 12, 0.12) 46%, transparent 72%),
-    var(--ice-photo) 62% 40% / cover no-repeat;
+.hero-ice-photo {
+  object-fit: cover;
+  object-position: 62% 45%;
+  filter: saturate(0.72) contrast(1.1) brightness(0.76);
+  transform: scale(1.02);
 }
 
 .photo-well {

@@ -225,6 +225,14 @@ export function HomeHero() {
   return (
     <section ref={heroRef} className="relative h-[145svh]">
       <div className="sticky top-0 min-h-[100svh] overflow-hidden">
+        <img
+          src={withBase("/worlds/ice-bank.jpg")}
+          alt=""
+          width={1792}
+          height={907}
+          aria-hidden="true"
+          className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
+        />
         <div className="hero-frost" aria-hidden />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-bg/35" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg/50" />
