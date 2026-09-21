@@ -351,7 +351,6 @@ const productsCore: Product[] = [
  uses: ["horeca"],
  featured: false,
  specs: [
- { label: "Specificaties", value: ":" },
  { label: "Uitgangen", value: "1–3 uitgangen voor irrigatie" },
  { label: "Draaibescherming", value: "Kunststof behuizing" },
  ],

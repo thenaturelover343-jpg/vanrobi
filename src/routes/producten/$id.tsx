@@ -1,18 +1,14 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import {
-  featuredProducts,
-  getProduct,
-  iceKgOf,
-  flowOf,
-  reservoirOf,
-  useLabels,
-} from "@/lib/products";
+import { products, getProduct, iceKgOf, flowOf, reservoirOf, useLabels } from "@/lib/products";
 import { faqsForProduct } from "@/lib/faq";
 import { ContactForm } from "@/components/contact-form";
 import { SocialProof } from "@/components/social-proof";
 import { offerteHref, site } from "@/lib/site";
 import { MagneticCta } from "@/components/magnetic-cta";
+import { ProductGallery } from "@/components/product-gallery";
+import { ProductCompareButton } from "@/components/product-compare-button";
+import { withBase } from "@/lib/base";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -35,7 +31,15 @@ export const Route = createFileRoute("/producten/$id")({
 function ProductPage() {
   const { product } = Route.useLoaderData();
   const faqs = faqsForProduct(product.id);
-  const others = featuredProducts.filter((p) => p.id !== product.id).slice(0, 4);
+  const others = products
+    .filter((candidate) => candidate.id !== product.id)
+    .sort((a, b) => {
+      const score = (candidate: typeof product) =>
+        (candidate.group === product.group ? 4 : 0) +
+        candidate.uses.filter((use) => product.uses.includes(use)).length;
+      return score(b) - score(a) || a.index.localeCompare(b.index);
+    })
+    .slice(0, 4);
   const ice = iceKgOf(product);
   const flow = flowOf(product);
   const cuba = reservoirOf(product);
@@ -43,26 +47,7 @@ function ProductPage() {
   return (
     <PageShell>
       <section className="grid min-h-[100svh] border-b border-line lg:grid-cols-2">
-        <div
-          className={`product-visual relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r ${
-            product.imageKind === "diagram" ? "is-diagram" : ""
-          }`}
-        >
-          <img
-            src={product.image}
-            alt={product.alt}
-            width={1400}
-            height={1400}
-            className={`max-h-[88%] max-w-[88%] object-contain ${
-              product.imageKind === "diagram" ? "mix-blend-multiply" : ""
-            }`}
-          />
-          {product.imageKind === "diagram" ? (
-            <span className="absolute top-5 left-5 bg-bg/80 px-2 py-1 text-[0.58rem] tracking-[0.14em] text-ice uppercase">
-              Technische tekening
-            </span>
-          ) : null}
-        </div>
+        <ProductGallery product={product} />
         <div className="flex flex-col justify-end px-5 py-24 md:px-12">
           <p className="kicker">{product.index} · Via VanRobi · BE & NL</p>
           <h1 className="mt-4 text-5xl md:text-7xl">{product.name}</h1>
@@ -117,17 +102,6 @@ function ProductPage() {
               </div>
             </dl>
           ) : null}
-          <ul className="mt-8 space-y-3">
-            {product.specs.map((s) => (
-              <li
-                key={s.label}
-                className="flex justify-between gap-4 border-b border-line pb-3 text-sm"
-              >
-                <span className="text-muted">{s.label}</span>
-                <strong className="spec-num font-medium">{s.value}</strong>
-              </li>
-            ))}
-          </ul>
           <div className="mt-8 flex flex-wrap gap-3">
             <MagneticCta>
               <a href={offerteHref(product.name)} className="btn btn-ice">
@@ -136,6 +110,10 @@ function ProductPage() {
             </MagneticCta>
             <a href={`tel:${site.phoneTel}`} className="btn btn-ghost">
               Bel {site.phone}
+            </a>
+            <ProductCompareButton id={product.id} name={product.name} />
+            <a href={withBase(`/spec-sheets/${product.id}.pdf`)} className="btn btn-ghost" download>
+              Spec-sheet PDF ↓
             </a>
           </div>
           <p className="mt-6 text-sm text-muted">
@@ -204,6 +182,49 @@ function ProductPage() {
         </div>
       </section>
 
+      <section id="specificaties" className="border-b border-line px-5 py-16 md:px-8 md:py-20">
+        <div className="mx-auto grid max-w-[1220px] gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+          <div>
+            <p className="kicker">Technische gegevens</p>
+            <h2 className="mt-3 text-4xl">Specificaties van {product.name}</h2>
+            <p className="mt-5 max-w-md text-muted">
+              Een helder overzicht van de beschikbare productgegevens. We stemmen de definitieve
+              uitvoering af op uw installatie en piekvolume.
+            </p>
+            <a
+              href={withBase(`/spec-sheets/${product.id}.pdf`)}
+              className="text-link mt-6 inline-flex"
+              download
+            >
+              Download productsheet PDF ↓
+            </a>
+          </div>
+          <div className="product-spec-table-wrap">
+            <table className="product-spec-table">
+              <caption className="sr-only">Technische specificaties van {product.name}</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Kenmerk</th>
+                  <th scope="col">Waarde</th>
+                </tr>
+              </thead>
+              <tbody>
+                {product.specs.map((spec, index) => (
+                  <tr key={`${spec.label}-${index}`}>
+                    <th scope="row">{spec.label}</th>
+                    <td className="spec-num">{spec.value}</td>
+                  </tr>
+                ))}
+                <tr>
+                  <th scope="row">Toepassing</th>
+                  <td>{product.uses.map((use) => useLabels[use]).join(" · ")}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       {faqs.length ? (
         <section className="mx-auto max-w-[800px] px-5 py-20 md:px-8">
           <p className="kicker">Vragen</p>
@@ -237,7 +258,7 @@ function ProductPage() {
 
       <section className="border-t border-line px-5 py-16 md:px-8">
         <div className="mx-auto max-w-[1220px]">
-          <p className="kicker">Ook in het assortiment</p>
+          <p className="kicker">Gerelateerde modellen</p>
           <div className="mt-8 grid gap-8 md:grid-cols-4">
             {others.map((p) => (
               <Link
