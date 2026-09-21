@@ -1,26 +1,47 @@
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import js from "@eslint/js";
+import prettier from "eslint-config-prettier";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-/** @type {import("eslint").Linter.Config[]} */
-const eslintConfig = [
-  ...nextVitals,
-  ...nextTs,
+/** Flat ESLint config for the TanStack Start app-builder template. */
+export default tseslint.config(
   {
     ignores: [
+      "dist/**",
+      ".output/**",
+      ".vercel/**",
+      ".nitro/**",
       "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "preview/**",
-      "next-env.d.ts",
+      "src/routeTree.gen.ts",
     ],
   },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    // App Router loads fonts in root layout; this rule targets pages/_document.
+    files: ["**/*.{ts,tsx,js,jsx,mjs,cjs}"],
+    languageOptions: {
+      ecmaVersion: 2022,
+      globals: { ...globals.browser, ...globals.node },
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
     rules: {
-      "@next/next/no-page-custom-font": "off",
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
-];
-
-export default eslintConfig;
+  // Disable rules that conflict with Prettier formatting.
+  prettier,
+);
