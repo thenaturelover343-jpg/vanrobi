@@ -105,6 +105,108 @@
   letter-spacing: -0.04em;
 }
 
+.sizer-range {
+  height: 1.5rem;
+  appearance: none;
+  background: transparent;
+}
+.sizer-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--color-line);
+}
+.sizer-range::-webkit-slider-thumb {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: -0.5rem;
+  appearance: none;
+  border: 2px solid var(--color-bg);
+  border-radius: 999px;
+  background: var(--color-ice);
+  box-shadow:
+    0 0 0 1px var(--color-ice),
+    0 0 1.25rem rgba(122, 212, 240, 0.45);
+}
+.sizer-range::-moz-range-track {
+  height: 2px;
+  background: var(--color-line);
+}
+.sizer-range::-moz-range-thumb {
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 2px solid var(--color-bg);
+  border-radius: 999px;
+  background: var(--color-ice);
+  box-shadow:
+    0 0 0 1px var(--color-ice),
+    0 0 1.25rem rgba(122, 212, 240, 0.45);
+}
+
+.ice-tank {
+  background: linear-gradient(180deg, rgba(122, 212, 240, 0.03), rgba(122, 212, 240, 0.08));
+  box-shadow:
+    inset 0 0 2rem rgba(122, 212, 240, 0.08),
+    0 0 2rem rgba(42, 155, 184, 0.08);
+}
+.ice-fill {
+  height: var(--ice-fill);
+  transition: height 650ms cubic-bezier(0.22, 1, 0.36, 1);
+  background:
+    linear-gradient(145deg, rgba(232, 249, 255, 0.78), rgba(122, 212, 240, 0.28)),
+    repeating-linear-gradient(35deg, transparent 0 18px, rgba(255, 255, 255, 0.24) 19px 20px);
+  box-shadow: 0 -0.4rem 1.4rem rgba(122, 212, 240, 0.35);
+}
+.ice-fill::before {
+  content: "";
+  position: absolute;
+  inset: -0.25rem 0 auto;
+  height: 0.5rem;
+  background: rgba(232, 249, 255, 0.72);
+  filter: blur(3px);
+}
+.ice-bubble {
+  position: absolute;
+  bottom: 8%;
+  width: 0.32rem;
+  height: 0.32rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  animation: ice-rise 3.2s ease-in infinite;
+}
+.ice-bubble-one {
+  left: 24%;
+}
+.ice-bubble-two {
+  left: 58%;
+  animation-delay: -1.1s;
+}
+.ice-bubble-three {
+  left: 78%;
+  animation-delay: -2.2s;
+}
+
+@keyframes ice-rise {
+  0% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-5rem) scale(1.25);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ice-fill {
+    transition: none;
+  }
+  .ice-bubble {
+    animation: none;
+  }
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -152,7 +254,12 @@
 .ice-fallback {
   background:
     radial-gradient(ellipse at 68% 48%, rgba(122, 212, 240, 0.28), transparent 52%),
-    linear-gradient(90deg, rgba(5, 8, 12, 0.88) 0%, rgba(5, 8, 12, 0.35) 42%, rgba(5, 8, 12, 0.5) 100%),
+    linear-gradient(
+      90deg,
+      rgba(5, 8, 12, 0.88) 0%,
+      rgba(5, 8, 12, 0.35) 42%,
+      rgba(5, 8, 12, 0.5) 100%
+    ),
     var(--ice-photo) 62% 45% / cover no-repeat;
 }
 
@@ -611,6 +718,3 @@ html.exp-v2 .skip-link {
     transform: none;
   }
 }
-
-
-
