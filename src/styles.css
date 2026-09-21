@@ -375,7 +375,7 @@
 .hero-ice-photo {
   object-fit: cover;
   object-position: 62% 45%;
-  filter: saturate(0.72) contrast(1.1) brightness(0.76);
+  filter: saturate(0.92) contrast(1.04) brightness(1.22);
   transform: scale(1.02);
 }
 

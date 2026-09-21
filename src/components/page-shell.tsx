@@ -42,7 +42,7 @@ export function PageHero({ kicker, title, lede }: { kicker: string; title: strin
         priority
         className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/45 to-bg/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/55 via-bg/18 to-transparent" />
       <div className="relative mx-auto max-w-[1220px]">
         <div className="pointer-events-none absolute -inset-y-8 -left-8 w-[min(100%,36rem)] bg-gradient-to-r from-bg/80 via-bg/45 to-transparent" />
         <div className="relative">
