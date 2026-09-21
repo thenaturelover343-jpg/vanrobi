@@ -3,6 +3,7 @@ import {
   featuredProducts,
   growFromIce,
   iceKgOf,
+  products,
   type Product,
 } from "@/lib/products";
 import { useCold } from "@/lib/cold";
@@ -34,12 +35,12 @@ export function MachineStage() {
             <em className="italic text-ice"> Eén standaard.</em>
           </h2>
           <p className="mt-5 max-w-lg text-muted">
-            Industriële ijsbankkoelers, helder getoond met de specs die installateurs nodig hebben.
+            Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt {products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en onderdelen.
           </p>
         </Reveal>
 
         <div className="mt-10 flex flex-wrap gap-2">
-          {featuredProducts.map((p) => (
+          {featuredProducts.map((p, position) => (
             <button
               key={p.id}
               type="button"
@@ -51,7 +52,7 @@ export function MachineStage() {
                   : "border-line text-muted hover:border-ice hover:text-ice",
               )}
             >
-              {p.index} {p.name}
+              {String(position + 1).padStart(2, "0")} {p.name}
             </button>
           ))}
         </div>
