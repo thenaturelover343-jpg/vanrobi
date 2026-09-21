@@ -2,18 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { ContactForm } from "@/components/contact-form";
 import { contact } from "@/lib/contact";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — VanRobi offerte" },
-      {
-        name: "description",
-        content:
-          "Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Contact — VanRobi offerte",
+      description: "Stuur uw aanvraag. We antwoorden binnen één werkdag. Onderhoud via Taponderhoud.",
+      path: "/contact",
+      frPath: "/fr/contact",
+    }),
   component: ContactPage,
 });
 
@@ -23,7 +21,7 @@ function ContactPage() {
       <PageHero
         kicker="Contact"
         title="Offerte of vraag?"
-        lede="Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud."
+        lede="Stuur uw aanvraag. We antwoorden binnen één werkdag. Onderhoud via Taponderhoud."
       />
       <section className="mx-auto grid max-w-[1220px] gap-16 px-5 py-20 lg:grid-cols-[0.9fr_1.1fr] md:px-8">
         <div>

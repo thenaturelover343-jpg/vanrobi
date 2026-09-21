@@ -3,14 +3,18 @@ import { PageHero, PageShell } from "@/components/page-shell";
 import { Reveal } from "@/components/reveal";
 import { contact } from "@/lib/contact";
 import { frServices } from "@/lib/fr";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/services")({
-  head: () => ({
-    meta: [
-      { title: "Services — VanRobi" },
-      { name: "description", content: frServices.lede },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Services — VanRobi",
+      description: frServices.lede,
+      path: "/fr/services",
+      lang: "fr",
+      nlPath: "/diensten",
+      frPath: "/fr/services",
+    }),
   component: FrServices,
 });
 

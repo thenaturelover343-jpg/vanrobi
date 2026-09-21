@@ -1,4 +1,4 @@
-import { readdirSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Plugin } from "vite";
 import { defineConfig } from "vite";
@@ -14,6 +14,52 @@ import { isMigrationFile } from "./scripts/migration-plan.mjs";
 
 const githubPages = process.env.GITHUB_PAGES === "1";
 const pagesBase = "/vanrobi/";
+
+function idsFrom(file: string, key: string): string[] {
+  try {
+    const text = readFileSync(join(process.cwd(), file), "utf8");
+    return [...text.matchAll(new RegExp(`${key}:\\s*"([^"]+)"`, "g"))]
+      .map((m) => m[1])
+      .filter((id) => id !== "string");
+  } catch {
+    return [];
+  }
+}
+
+function prerenderPages() {
+  const products = [
+    ...new Set([
+      ...idsFrom("src/lib/products.ts", "id"),
+      ...idsFrom("src/lib/products-extra.generated.ts", "id"),
+    ]),
+  ];
+  const guides = idsFrom("src/lib/guides.ts", "slug");
+  const statics = [
+    "/",
+    "/producten",
+    "/contact",
+    "/diensten",
+    "/faq",
+    "/gids",
+    "/over-ons",
+    "/voor-wie",
+    "/regio",
+    "/vergelijk",
+    "/fr",
+    "/fr/produits",
+    "/fr/contact",
+    "/fr/services",
+    "/fr/faq",
+    "/fr/a-propos",
+  ];
+  return [
+    ...statics,
+    ...products.map((id) => `/producten/${id}`),
+    ...products.map((id) => `/fr/produits/${id}`),
+    ...guides.map((s) => `/gids/${s}`),
+    "/gids/ijsbankkoeler-vs-gamko",
+  ].map((path) => ({ path }));
+}
 
 /** The files `src/lib/db.ts` globs — same directory, same non-recursive scope. */
 function hasGlobbedMigrations(root: string): boolean {
@@ -142,8 +188,14 @@ export default defineConfig(({ command, isPreview }) => ({
     tanstackStart(
       githubPages
         ? {
-            spa: { enabled: true },
             router: { basepath: "/vanrobi" },
+            prerender: {
+              enabled: true,
+              crawlLinks: true,
+              autoSubfolderIndex: true,
+              failOnError: false,
+            },
+            pages: prerenderPages(),
           }
         : undefined,
     ),

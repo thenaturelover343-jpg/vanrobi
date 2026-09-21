@@ -2,18 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { contact } from "@/lib/contact";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/over-ons")({
-  head: () => ({
-    meta: [
-      { title: "Over ons — VanRobi ijsbankkoelers" },
-      {
-        name: "description",
-        content:
-          "Het merk VanRobi voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Over ons — VanRobi ijsbankkoelers",
+      description:
+        "Het merk VanRobi voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek.",
+      path: "/over-ons",
+      frPath: "/fr/a-propos",
+    }),
   component: OverOns,
 });
 
@@ -39,7 +38,7 @@ function OverOns() {
             VanRobi staat voor professionele ijsbankkoelers met industriële kwaliteit en heldere specs. Wij zijn het aanspreekpunt voor België en Nederland: selectie, advies en levering vanuit één loket, met lokale opvolging en onderhoud via Taponderhoud.
           </p>
           <p>
-            Geen grijze import. Wel heldere specs, betrouwbare levering en een lokale partner die de bar begrijpt, van vaste horeca tot festivalterrein.
+            Heldere specs, betrouwbare levering en een lokale partner die de bar begrijpt, van vaste horeca tot festivalterrein.
           </p>
         </div>
         <div className="prose">
@@ -83,7 +82,7 @@ function OverOns() {
         <div className="prose mx-auto max-w-[46rem]">
           <h2>Waarom VanRobi als merk?</h2>
           <p>
-            Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent — geen grijze import. VanRobi levert ijsbankkoelers en bierkoelers vanuit {contact.address.line}. Regio's: {contact.regions}, plus Nederland.
+            Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent. VanRobi levert ijsbankkoelers en bierkoelers vanuit {contact.address.line}. Regio's: {contact.regions}, plus Nederland.
           </p>
           <h3>Assortiment & kennis</h3>
           <p>

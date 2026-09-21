@@ -2,18 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { generalFaqs } from "@/lib/faq";
 import { CtaBand } from "@/components/cta-band";
+import { faqJsonLd, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/faq")({
-  head: () => ({
-    meta: [
-      { title: "FAQ — VanRobi" },
-      {
-        name: "description",
-        content:
-          "Veelgestelde vragen over ijsbankkoelers, levering, onderhoud, V100 vs V200, events en offertes via VanRobi.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "FAQ — VanRobi",
+      description:
+        "Veelgestelde vragen over ijsbankkoelers, levering, onderhoud, V100 vs V200, events en offertes.",
+      path: "/faq",
+      frPath: "/fr/faq",
+      jsonLd: [faqJsonLd(generalFaqs)],
+    }),
   component: FaqPage,
 });
 
@@ -23,7 +23,7 @@ function FaqPage() {
       <PageHero
         kicker="FAQ"
         title="Veelgestelde vragen."
-        lede="Als het niet in deze lijst staat, mailen is sneller dan raden. Machines via VanRobi, onderhoud via Taponderhoud."
+        lede="Als het niet in deze lijst staat, mailen is sneller dan raden. Onderhoud via Taponderhoud."
       />
       <section className="mx-auto max-w-[800px] px-5 py-16 md:px-8">
         <dl className="space-y-10">

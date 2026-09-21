@@ -1,15 +1,18 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell } from "@/components/page-shell";
-import { products, getProduct, iceKgOf, flowOf, reservoirOf, useLabels } from "@/lib/products";
+import {
+  featuredProducts,
+  getProduct,
+  iceKgOf,
+  flowOf,
+  reservoirOf,
+  useLabels,
+} from "@/lib/products";
 import { faqsForProduct } from "@/lib/faq";
 import { ContactForm } from "@/components/contact-form";
 import { SocialProof } from "@/components/social-proof";
 import { offerteHref, site } from "@/lib/site";
-import { MagneticCta } from "@/components/magnetic-cta";
-import { ProductGallery } from "@/components/product-gallery";
-import { ProductCompareButton } from "@/components/product-compare-button";
-import { withBase } from "@/lib/base";
-import { OptimizedImage } from "@/components/optimized-image";
+import { breadcrumbJsonLd, productJsonLd, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -17,30 +20,36 @@ export const Route = createFileRoute("/producten/$id")({
     if (!product) throw notFound();
     return { product };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData?.product.name ?? "Product"} — VanRobi` },
-      {
-        name: "description",
-        content: loaderData?.product.longDescription ?? loaderData?.product.description ?? "",
-      },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const product = loaderData?.product;
+    if (!product) return seoHead({ title: "Product — VanRobi", description: "", path: "/producten" });
+    return seoHead({
+      title: `${product.name} — ijsbankkoeler | VanRobi`,
+      description: product.longDescription || product.description,
+      path: `/producten/${product.id}`,
+      frPath: `/fr/produits/${product.id}`,
+      jsonLd: [
+        productJsonLd({
+          name: product.name,
+          description: product.longDescription || product.description,
+          image: product.image,
+          path: `/producten/${product.id}`,
+        }),
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Producten", path: "/producten" },
+          { name: product.name, path: `/producten/${product.id}` },
+        ]),
+      ],
+    });
+  },
   component: ProductPage,
 });
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
   const faqs = faqsForProduct(product.id);
-  const others = products
-    .filter((candidate) => candidate.id !== product.id)
-    .sort((a, b) => {
-      const score = (candidate: typeof product) =>
-        (candidate.group === product.group ? 4 : 0) +
-        candidate.uses.filter((use) => product.uses.includes(use)).length;
-      return score(b) - score(a) || a.index.localeCompare(b.index);
-    })
-    .slice(0, 4);
+  const others = featuredProducts.filter((p) => p.id !== product.id).slice(0, 4);
   const ice = iceKgOf(product);
   const flow = flowOf(product);
   const cuba = reservoirOf(product);
@@ -48,9 +57,30 @@ function ProductPage() {
   return (
     <PageShell>
       <section className="grid min-h-[100svh] border-b border-line lg:grid-cols-2">
-        <ProductGallery product={product} />
+        <div
+          className={`relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r ${
+            product.imageKind === "diagram" ? "bg-diagram" : "bg-well"
+          }`}
+        >
+          <img
+            src={product.image}
+            alt={product.alt}
+            width={1400}
+            height={1400}
+            className={`max-h-[88%] max-w-[88%] object-contain ${
+              product.imageKind === "diagram" ? "mix-blend-multiply" : ""
+            }`}
+          />
+          {product.imageKind === "diagram" ? (
+            <span className="absolute top-5 left-5 bg-bg/80 px-2 py-1 text-[0.58rem] tracking-[0.14em] text-ice uppercase">
+              Technische tekening
+            </span>
+          ) : null}
+        </div>
         <div className="flex flex-col justify-end px-5 py-24 md:px-12">
-          <p className="kicker">{product.index} · Via VanRobi · BE & NL</p>
+          <p className="kicker">
+            {product.index} · België & Nederland
+          </p>
           <h1 className="mt-4 text-5xl md:text-7xl">{product.name}</h1>
           <p className="mt-2 text-[0.68rem] tracking-[0.16em] text-ice uppercase">
             {product.badge}
@@ -74,9 +104,7 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {ice ? `${ice}` : "—"}
-                  {ice ? (
-                    <span className="ml-1 text-base font-medium text-muted md:text-lg">kg</span>
-                  ) : null}
+                  {ice ? <span className="ml-1 text-base font-medium text-muted md:text-lg">kg</span> : null}
                 </dd>
               </div>
               <div className="metric-box">
@@ -85,9 +113,7 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {flow ? `${flow}` : "—"}
-                  {flow ? (
-                    <span className="ml-1 text-base font-medium text-muted md:text-lg">L/u</span>
-                  ) : null}
+                  {flow ? <span className="ml-1 text-base font-medium text-muted md:text-lg">L/u</span> : null}
                 </dd>
               </div>
               <div className="metric-box">
@@ -96,42 +122,32 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {cuba ? `${cuba}` : "—"}
-                  {cuba ? (
-                    <span className="ml-1 text-base font-medium text-muted md:text-lg">L</span>
-                  ) : null}
+                  {cuba ? <span className="ml-1 text-base font-medium text-muted md:text-lg">L</span> : null}
                 </dd>
               </div>
             </dl>
           ) : null}
+          <ul className="mt-8 space-y-3">
+            {product.specs.map((s) => (
+              <li key={s.label} className="flex justify-between gap-4 border-b border-line pb-3 text-sm">
+                <span className="text-muted">{s.label}</span>
+                <strong className="spec-num font-medium">{s.value}</strong>
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap gap-3">
-            <MagneticCta>
-              <a href={offerteHref(product.name)} className="btn btn-ice">
-                Offerte voor {product.name}
-              </a>
-            </MagneticCta>
+            <a href={offerteHref(product.name)} className="btn btn-ice">
+              Offerte voor {product.name}
+            </a>
             <a href={`tel:${site.phoneTel}`} className="btn btn-ghost">
               Bel {site.phone}
             </a>
-            <ProductCompareButton id={product.id} name={product.name} />
-            <a href={withBase(`/spec-sheets/${product.id}.pdf`)} className="btn btn-ghost" download>
-              Spec-sheet PDF ↓
-            </a>
           </div>
           <p className="mt-6 text-sm text-muted">
-            Of vul het{" "}
-            <Link to="/contact" className="text-ice">
-              contactformulier
-            </Link>{" "}
-            in. Lees ook de{" "}
-            <Link to="/faq" className="text-ice">
-              FAQ
-            </Link>
+            Of vul het <Link to="/contact" className="text-ice">contactformulier</Link> in.
+            {" "}Lees ook de <Link to="/faq" className="text-ice">FAQ</Link>
             {" · "}
-            <Link
-              to="/gids/$slug"
-              params={{ slug: "bierkoeler-kiezen-checklist" }}
-              className="text-ice"
-            >
+            <Link to="/gids/$slug" params={{ slug: "bierkoeler-kiezen-checklist" }} className="text-ice">
               keuze-checklist
             </Link>
             {product.id === "v100" || product.id === "v200" ? (
@@ -141,11 +157,7 @@ function ProductPage() {
                   V100 vs V200
                 </Link>
                 {" · "}
-                <Link
-                  to="/gids/$slug"
-                  params={{ slug: "onder-bar-bierkoeler" }}
-                  className="text-ice"
-                >
+                <Link to="/gids/$slug" params={{ slug: "onder-bar-bierkoeler" }} className="text-ice">
                   onder-bar gids
                 </Link>
               </>
@@ -161,68 +173,17 @@ function ProductPage() {
             {product.uses.includes("events") || product.uses.includes("mobiel") ? (
               <>
                 {" · "}
-                <Link
-                  to="/gids/$slug"
-                  params={{ slug: "bierkoeler-voor-events" }}
-                  className="text-ice"
-                >
+                <Link to="/gids/$slug" params={{ slug: "bierkoeler-voor-events" }} className="text-ice">
                   Eventgids
                 </Link>
               </>
             ) : null}
             {" · "}
-            <Link
-              to="/gids/$slug"
-              params={{ slug: "spiralen-tapinstallatie" }}
-              className="text-ice"
-            >
+            <Link to="/gids/$slug" params={{ slug: "spiralen-tapinstallatie" }} className="text-ice">
               spiralen & tap
             </Link>
             .
           </p>
-        </div>
-      </section>
-
-      <section id="specificaties" className="border-b border-line px-5 py-16 md:px-8 md:py-20">
-        <div className="mx-auto grid max-w-[1220px] gap-10 lg:grid-cols-[0.7fr_1.3fr]">
-          <div>
-            <p className="kicker">Technische gegevens</p>
-            <h2 className="mt-3 text-4xl">Specificaties van {product.name}</h2>
-            <p className="mt-5 max-w-md text-muted">
-              Een helder overzicht van de beschikbare productgegevens. We stemmen de definitieve
-              uitvoering af op uw installatie en piekvolume.
-            </p>
-            <a
-              href={withBase(`/spec-sheets/${product.id}.pdf`)}
-              className="text-link mt-6 inline-flex"
-              download
-            >
-              Download productsheet PDF ↓
-            </a>
-          </div>
-          <div className="product-spec-table-wrap">
-            <table className="product-spec-table">
-              <caption className="sr-only">Technische specificaties van {product.name}</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Kenmerk</th>
-                  <th scope="col">Waarde</th>
-                </tr>
-              </thead>
-              <tbody>
-                {product.specs.map((spec, index) => (
-                  <tr key={`${spec.label}-${index}`}>
-                    <th scope="row">{spec.label}</th>
-                    <td className="spec-num">{spec.value}</td>
-                  </tr>
-                ))}
-                <tr>
-                  <th scope="row">Toepassing</th>
-                  <td>{product.uses.map((use) => useLabels[use]).join(" · ")}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 
@@ -249,8 +210,8 @@ function ProductPage() {
             <p className="kicker">Offerte</p>
             <h2 className="mt-3 text-4xl">Vraag {product.name} aan</h2>
             <p className="mt-4 text-muted">
-              Vermeld model (of piekvolume), vast versus mobiel, aantal kranen en eventueel
-              barfoto's. Zo adviseren we gericht.
+              Vermeld model (of piekvolume), vast versus mobiel, aantal kranen en
+              eventueel barfoto's. Zo adviseren we gericht.
             </p>
           </div>
           <ContactForm preset={product.name} />
@@ -259,22 +220,12 @@ function ProductPage() {
 
       <section className="border-t border-line px-5 py-16 md:px-8">
         <div className="mx-auto max-w-[1220px]">
-          <p className="kicker">Gerelateerde modellen</p>
+          <p className="kicker">Ook in het assortiment</p>
           <div className="mt-8 grid gap-8 md:grid-cols-4">
             {others.map((p) => (
-              <Link
-                key={p.id}
-                to="/producten/$id"
-                params={{ id: p.id }}
-                className="product-card group block p-0"
-              >
-                <div className="product-visual flex aspect-square items-center justify-center overflow-hidden">
-                  <OptimizedImage
-                    src={p.image}
-                    alt={p.alt}
-                    loading="lazy"
-                    className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
+              <Link key={p.id} to="/producten/$id" params={{ id: p.id }} className="product-card group block p-0">
+                <div className="bg-well flex aspect-square items-center justify-center overflow-hidden">
+                  <img src={p.image} alt={p.alt} className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]" />
                 </div>
                 <h3 className="px-4 pt-3 text-2xl group-hover:text-ice">{p.name}</h3>
                 <p className="px-4 pb-4 text-sm text-muted">{p.badge}</p>
@@ -288,17 +239,6 @@ function ProductPage() {
           </p>
         </div>
       </section>
-
-      <MagneticCta className="product-sticky-quote">
-        <a
-          href={offerteHref(product.name)}
-          className="btn btn-ice product-sticky-quote-link"
-          aria-label={`Vraag een offerte aan voor ${product.name}`}
-        >
-          Vraag offerte
-          <span aria-hidden>→</span>
-        </a>
-      </MagneticCta>
     </PageShell>
   );
 }
@@ -315,25 +255,14 @@ function MetricIcon({ kind }: { kind: "ice" | "flow" | "tank" }) {
   if (kind === "ice") {
     return (
       <svg {...common}>
-        <path
-          d="M8 1.5 L8 14.5 M3.5 4.2 L12.5 11.8 M12.5 4.2 L3.5 11.8"
-          stroke="currentColor"
-          strokeWidth="1.3"
-          strokeLinecap="round"
-        />
+        <path d="M8 1.5 L8 14.5 M3.5 4.2 L12.5 11.8 M12.5 4.2 L3.5 11.8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
       </svg>
     );
   }
   if (kind === "flow") {
     return (
       <svg {...common}>
-        <path
-          d="M2 8h9M8.5 4.5 12.5 8 8.5 11.5"
-          stroke="currentColor"
-          strokeWidth="1.3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <path d="M2 8h9M8.5 4.5 12.5 8 8.5 11.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     );
   }
@@ -344,3 +273,4 @@ function MetricIcon({ kind }: { kind: "ice" | "flow" | "tank" }) {
     </svg>
   );
 }
+

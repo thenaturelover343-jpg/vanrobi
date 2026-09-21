@@ -4,12 +4,18 @@ import { Reveal } from "@/components/reveal";
 import { getProduct } from "@/lib/products";
 import { frFeaturedIds, frProductCopy, frProductsIntro } from "@/lib/fr";
 import { withBase } from "@/lib/base";
-import { OptimizedImage } from "@/components/optimized-image";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/produits/")({
-  head: () => ({
-    meta: [{ title: "Produits — VanRobi" }, { name: "description", content: frProductsIntro.lede }],
-  }),
+  head: () =>
+    seoHead({
+      title: "Produits — VanRobi",
+      description: frProductsIntro.lede,
+      path: "/fr/produits",
+      lang: "fr",
+      nlPath: "/producten",
+      frPath: "/fr/produits",
+    }),
   component: FrProduits,
 });
 
@@ -22,33 +28,19 @@ function FrProduits() {
 
   return (
     <PageShell>
-      <PageHero
-        kicker={frProductsIntro.eyebrow}
-        title={frProductsIntro.title}
-        lede={frProductsIntro.lede}
-      />
+      <PageHero kicker={frProductsIntro.eyebrow} title={frProductsIntro.title} lede={frProductsIntro.lede} />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">
         <div className="grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
             <Reveal key={p.id}>
-              <a
-                href={withBase(`/fr/produits/${p.id}`)}
-                className="block bg-bg p-6 transition-colors hover:bg-surface"
-              >
-                <div className="product-visual aspect-[5/4]">
-                  <OptimizedImage
-                    src={p.image}
-                    alt={p.alt}
-                    loading="lazy"
-                    className="h-full w-full p-5"
-                  />
+              <a href={withBase(`/fr/produits/${p.id}`)} className="block bg-bg p-6 transition-colors hover:bg-surface">
+                <div className="photo-well bright aspect-[5/4] bg-fg">
+                  <img src={p.image} alt={p.alt} />
                 </div>
                 <p className="kicker mt-5">{p.badge}</p>
                 <h2 className="mt-2 text-3xl">{p.name}</h2>
                 <p className="mt-2 text-sm text-muted">{p.description}</p>
-                <span className="mt-4 inline-block text-sm tracking-[0.12em] text-ice uppercase">
-                  Détails →
-                </span>
+                <span className="mt-4 inline-block text-sm tracking-[0.12em] text-ice uppercase">Détails →</span>
               </a>
             </Reveal>
           ))}

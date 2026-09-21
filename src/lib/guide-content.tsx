@@ -24,7 +24,7 @@ function GuideAside({
 }
 
 export function GuideBody({ slug }: { slug: string }): ReactNode {
- if (slug === "ijsbankkoeler-vs-gamko") {
+ if (slug === "ijsbankkoeler-of-tapinstallatie" || slug === "ijsbankkoeler-vs-gamko") {
  return (
  <section className="page-section">
  <div className="wrap guide-body">
@@ -37,7 +37,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h2>Wanneer kiezen voor VanRobi?</h2>
  <ul className="guide-list">
  <li>U zoekt een dedicated ijsbankkoeler met heldere debiet- en ijsspecs.</li>
- <li>U wilt het merk VanRobi met lokale opvolging in BE/NL (geen grijze import).</li>
+ <li>U wilt het merk VanRobi met lokale opvolging in BE/NL (met correcte specs en lokale opvolging).</li>
  <li>Events/festivals: portable-modellen (V100/V200 portable, Goldy).</li>
  <li>Onderhoud en reiniging dichtbij via Taponderhoud.</li>
  </ul>
@@ -64,8 +64,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -158,8 +158,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -226,8 +226,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -332,8 +332,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -401,7 +401,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h3>3. Lokaal kanaal telt</h3>
  <p>
  Officiële distributie betekent correcte specs, garantieopvolging en
- iemand die BE/NL-praktijk kent, geen grijze import. Service en
+ iemand die BE/NL-praktijk kent, met correcte specs en lokale opvolging. Service en
  reiniging lopen via Taponderhoud (taponderhoud.be), vanuit dezelfde
  regio.
  </p>
@@ -435,8 +435,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -471,7 +471,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <Reveal className="prose guide-prose">
  <h2>Specialist in ijsbankkoelers BE &amp; NL</h2>
  <p>
- <strong>VanRobi</strong> is de specialist in professionele ijsbankkoelers voor <strong>België en Nederland</strong>. U koopt via een erkend kanaal: juiste machine-specs, levering, advies en lokale opvolging, zonder grijze import of onduidelijke documentatie.
+ <strong>VanRobi</strong> is de specialist in professionele ijsbankkoelers voor <strong>België en Nederland</strong>. U koopt via een erkend kanaal: juiste machine-specs, levering, advies en lokale opvolging, met correcte documentatie.
  </p>
  <h2>Wat betekent het merk VanRobi?</h2>
  <ul className="guide-list">
@@ -480,7 +480,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <li>Eén aanspreekpunt in de Benelux: info@vanrobi.be</li>
  <li>Onderhoudspartner: Taponderhoud · taponderhoud.be</li>
  </ul>
- <h2>Assortiment via VanRobi</h2>
+ <h2>Assortiment</h2>
  <p>
  Van compacte over-bar tot high-volume onder-bar en portable
  festivalunits:
@@ -541,8 +541,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -561,7 +561,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  { href: "/over-ons/", label: "Over VanRobi" },
  { href: "/diensten/", label: "Diensten" },
  { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Koopgids BE/NL" },
- { href: "/gids/ijsbankkoeler-vs-gamko/", label: "Ijsbankkoeler of complete tapinstallatie" },
+ { href: "/gids/ijsbankkoeler-of-tapinstallatie/", label: "Ijsbankkoeler of complete tapinstallatie" },
  { href: "/producten/", label: "Catalogus" },
  ]}
  />
@@ -638,8 +638,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -771,8 +771,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -855,8 +855,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -920,7 +920,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <li>Piekglazen per uur, niet alleen &quot;gemiddeld&quot;</li>
  <li>Of de unit over-bar (Goldy) of onder-bar (V100/V200) staat</li>
  </ul>
- <h2>Praktisch advies via VanRobi</h2>
+ <h2>Praktisch advies</h2>
  <p>
  Stuur een schets of foto van de bar, aantal kranen en gewenst
  volume naar{" "}
@@ -934,8 +934,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>
@@ -1030,8 +1030,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
 
  <h2>Conclusie &amp; volgende stap</h2>
  <p>
- Dimensioneer op piekvolume, meubel en vast versus mobiel, afgestemd op
- uw praktijksituatie. VanRobi adviseert als specialist in ijsbankkoelers
+ Dimensioneer op piekvolume, meubel en vast versus mobiel — niet op
+ folderclaims alleen. VanRobi adviseert als specialist in ijsbankkoelers
  voor België en Nederland; onderhoud via Taponderhoud.
  </p>
  <p>

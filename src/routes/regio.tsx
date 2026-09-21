@@ -2,18 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { contact } from "@/lib/contact";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/regio")({
-  head: () => ({
-    meta: [
-      { title: "Regio's — VanRobi België & Nederland" },
-      {
-        name: "description",
-        content:
-          "Basis in de Kempen (Kasterlee). Levering en advies in Vlaanderen én Nederland als leverancier van ijsbankkoelers.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Regio's — VanRobi België & Nederland",
+      description:
+        "Basis in de Kempen (Kasterlee). Levering en advies in Vlaanderen én Nederland als leverancier van ijsbankkoelers.",
+      path: "/regio",
+    }),
   component: RegioPage,
 });
 
@@ -32,7 +30,7 @@ const regions = [
   },
   {
     name: "Brussel",
-    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal, geen grijze import.",
+    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal met lokale opvolging.",
   },
   {
     name: "Oost-Vlaanderen",

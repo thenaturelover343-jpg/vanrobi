@@ -1,14 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { frFaq } from "@/lib/fr";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/faq")({
-  head: () => ({
-    meta: [
-      { title: "FAQ — VanRobi" },
-      { name: "description", content: frFaq.lede },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "FAQ — VanRobi",
+      description: frFaq.lede,
+      path: "/fr/faq",
+      lang: "fr",
+      nlPath: "/faq",
+      frPath: "/fr/faq",
+    }),
   component: FrFaq,
 });
 

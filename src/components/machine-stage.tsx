@@ -1,17 +1,22 @@
 import { Link } from "@tanstack/react-router";
-import { featuredProducts, growFromIce, iceKgOf, products, type Product } from "@/lib/products";
+import {
+  featuredProducts,
+  growFromIce,
+  iceKgOf,
+  type Product,
+} from "@/lib/products";
 import { useCold } from "@/lib/cold";
 import { Reveal } from "./reveal";
 import { cn } from "@/lib/cn";
 import { offerteHref } from "@/lib/site";
-import { OptimizedImage } from "./optimized-image";
 
 export function MachineStage() {
   const machineId = useCold((s) => s.machineId);
   const setMachine = useCold((s) => s.setMachine);
   const setGrow = useCold((s) => s.setGrow);
   const setTemp = useCold((s) => s.setTemp);
-  const active = featuredProducts.find((p) => p.id === machineId) ?? featuredProducts[0];
+  const active =
+    featuredProducts.find((p) => p.id === machineId) ?? featuredProducts[0];
 
   const select = (p: Product) => {
     setMachine(p.id);
@@ -29,14 +34,12 @@ export function MachineStage() {
             <em className="italic text-ice"> Eén standaard.</em>
           </h2>
           <p className="mt-5 max-w-lg text-muted">
-            Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt{" "}
-            {products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en
-            onderdelen.
+            Industriële ijsbankkoelers, helder getoond met de specs die installateurs nodig hebben.
           </p>
         </Reveal>
 
         <div className="mt-10 flex flex-wrap gap-2">
-          {featuredProducts.map((p, position) => (
+          {featuredProducts.map((p) => (
             <button
               key={p.id}
               type="button"
@@ -48,24 +51,14 @@ export function MachineStage() {
                   : "border-line text-muted hover:border-ice hover:text-ice",
               )}
             >
-              {String(position + 1).padStart(2, "0")} {p.name}
+              {p.index} {p.name}
             </button>
           ))}
         </div>
 
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <div
-            className={`product-visual flex aspect-[5/4] items-center justify-center ${active.imageKind === "diagram" ? "is-diagram" : ""}`}
-          >
-            <OptimizedImage
-              key={active.id}
-              src={active.image}
-              alt={active.alt}
-              loading="lazy"
-              width={1200}
-              height={960}
-              className="h-full w-full p-6"
-            />
+          <div className="photo-well aspect-[5/4]">
+            <img key={active.id} src={active.image} alt={active.alt} width={1200} height={960} />
           </div>
           <div>
             <p className="kicker">{active.badge}</p>

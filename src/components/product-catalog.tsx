@@ -12,11 +12,16 @@ import {
 import { cn } from "@/lib/cn";
 import { experience } from "@/lib/experience";
 import { useCompare, COMPARE_MAX } from "@/lib/compare";
-import { OptimizedImage } from "./optimized-image";
 
 type FilterKey = "all" | ProductUse | ProductGroup;
 
-const useFilters: Array<ProductUse | "all"> = ["all", "horeca", "events", "onder-bar", "mobiel"];
+const useFilters: Array<ProductUse | "all"> = [
+  "all",
+  "horeca",
+  "events",
+  "onder-bar",
+  "mobiel",
+];
 
 const groupFilters: ProductGroup[] = [
   "koelers",
@@ -84,11 +89,7 @@ export function ProductCatalog() {
         <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter op gebruik">
           {useFilters.map((f) => chip(f))}
         </div>
-        <div
-          className="mt-2 flex flex-wrap gap-2"
-          role="tablist"
-          aria-label="Filter op productgroep"
-        >
+        <div className="mt-2 flex flex-wrap gap-2" role="tablist" aria-label="Filter op productgroep">
           {groupFilters.map((f) => chip(f))}
         </div>
       </div>
@@ -107,11 +108,11 @@ export function ProductCatalog() {
               <Link to="/producten/$id" params={{ id: p.id }} className="block">
                 <div
                   className={cn(
-                    "product-visual relative aspect-[5/4] overflow-hidden",
-                    p.imageKind === "diagram" ? "is-diagram" : "",
+                    "bg-well relative aspect-[5/4] overflow-hidden",
+                    p.imageKind === "diagram" ? "bg-diagram" : "",
                   )}
                 >
-                  <OptimizedImage
+                  <img
                     src={p.image}
                     alt={p.alt}
                     width={800}
@@ -138,9 +139,7 @@ export function ProductCatalog() {
                   </h2>
                   <span className="spec-num text-xs text-muted">{p.index}</span>
                 </div>
-                <p className="mt-1 text-[0.68rem] tracking-[0.14em] text-ice uppercase">
-                  {p.badge}
-                </p>
+                <p className="mt-1 text-[0.68rem] tracking-[0.14em] text-ice uppercase">{p.badge}</p>
                 {ice || flow ? (
                   <p className="spec-num mt-3 text-sm text-fg">
                     {ice ? `${ice} kg ijs` : null}
@@ -160,17 +159,16 @@ export function ProductCatalog() {
                   ))}
                 </ul>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  <Link
-                    to="/producten/$id"
-                    params={{ id: p.id }}
-                    className="btn btn-ghost !min-h-9 !px-3"
-                  >
+                  <Link to="/producten/$id" params={{ id: p.id }} className="btn btn-ghost !min-h-9 !px-3">
                     Details
                   </Link>
                   {experience.compare ? (
                     <button
                       type="button"
-                      className={cn("btn !min-h-9 !px-3", on ? "btn-ice" : "btn-ghost")}
+                      className={cn(
+                        "btn !min-h-9 !px-3",
+                        on ? "btn-ice" : "btn-ghost",
+                      )}
                       disabled={!on && ids.length >= COMPARE_MAX}
                       onClick={() => toggle(p.id)}
                     >

@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { withBase } from "@/lib/base";
 import { Reveal } from "./reveal";
-import { OptimizedImage } from "./optimized-image";
 
 const worlds = [
   {
@@ -45,11 +44,10 @@ export function Worlds() {
             params={w.slug ? { slug: w.slug } : undefined}
             className="group relative min-h-[58vh] overflow-hidden border-t border-line md:border-l md:first:border-l-0"
           >
-            <OptimizedImage
+            <img
               src={w.image}
               alt=""
-              loading="lazy"
-              className="image-grade absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+              className="absolute inset-0 h-full w-full object-cover brightness-[1.12] contrast-[1.04] transition-transform duration-700 group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/25 to-transparent" />
             <div className="relative flex h-full flex-col justify-end p-7">

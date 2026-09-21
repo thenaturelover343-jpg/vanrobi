@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { frHome, frProductCopy, frCta } from "@/lib/fr";
 import { site, offerteMailto } from "@/lib/site";
 import { withBase } from "@/lib/base";
-import { OptimizedImage } from "@/components/optimized-image";
+import { seoHead } from "@/lib/seo";
 
 const FR_MACHINES: { id: string; name: string; image: string }[] = [
   { id: "goldy", name: "Goldy", image: withBase("/products/goldy.jpg") },
@@ -16,12 +16,15 @@ const FR_MACHINES: { id: string; name: string; image: string }[] = [
 ];
 
 export const Route = createFileRoute("/fr/")({
-  head: () => ({
-    meta: [
-      { title: "VanRobi — Refroidisseurs à banquise BE & NL" },
-      { name: "description", content: frHome.lede },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "VanRobi — Refroidisseurs à banquise BE & NL",
+      description: frHome.lede,
+      path: "/fr",
+      lang: "fr",
+      nlPath: "/",
+      frPath: "/fr",
+    }),
   component: FrHome,
 });
 
@@ -36,7 +39,7 @@ function FrHome() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg via-transparent to-bg/40" />
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
           <p className="kicker">{frHome.eyebrow}</p>
-          <h1 className="mt-5 max-w-3xl font-display text-5xl leading-[0.95] text-fg md:text-6xl">
+          <h1 className="mt-5 max-w-3xl font-display text-[2.35rem] leading-[0.95] text-fg md:text-[4rem]">
             {frHome.title}
           </h1>
           <p className="mt-4 font-display text-2xl italic text-ice md:text-3xl">{frHome.slogan}</p>
@@ -55,13 +58,7 @@ function FrHome() {
       <section className="border-t border-line bg-bg-2">
         <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
           <div className="photo-well bright min-h-[42vh] lg:min-h-[70vh]">
-            <OptimizedImage
-              src={withBase("/worlds/statement-tap.jpg")}
-              alt=""
-              width={1600}
-              height={1067}
-              loading="lazy"
-            />
+            <img src={withBase("/worlds/statement-tap.jpg")} alt="" width={1600} height={1067} />
           </div>
           <div className="flex flex-col justify-center px-5 py-16 md:px-12">
             <Reveal>
@@ -84,10 +81,7 @@ function FrHome() {
           </Reveal>
           <ol className="mt-12 space-y-8">
             {frHome.why.map((item) => (
-              <li
-                key={item.n}
-                className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line pt-6"
-              >
+              <li key={item.n} className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line pt-6">
                 <span className="spec-num text-ice">{item.n}</span>
                 <div>
                   <h3 className="font-sans text-base tracking-[0.04em]">{item.title}</h3>
@@ -108,18 +102,9 @@ function FrHome() {
           </Reveal>
           <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
-              <a
-                key={p.id}
-                href={withBase(`/fr/produits/${p.id}`)}
-                className="bg-bg p-6 transition-colors hover:bg-surface"
-              >
-                <div className="product-visual aspect-[5/4]">
-                  <OptimizedImage
-                    src={p.image}
-                    alt={p.name}
-                    loading="lazy"
-                    className="h-full w-full p-5"
-                  />
+              <a key={p.id} href={withBase(`/fr/produits/${p.id}`)} className="bg-bg p-6 transition-colors hover:bg-surface">
+                <div className="photo-well bright aspect-[5/4]">
+                  <img src={p.image} alt={p.name} loading="lazy" />
                 </div>
                 <p className="kicker mt-5">{p.badge}</p>
                 <h3 className="mt-2 text-3xl">{p.name}</h3>

@@ -1,44 +1,40 @@
 #!/usr/bin/env node
 /**
- * GitHub Pages has no server router. Nested URLs 404 unless a real file exists.
- * Copy the SPA shell to every route as both `path.html` and `path/index.html`.
+ * After TanStack prerender: keep real HTML per route, add GH Pages fallbacks
+ * (`path.html` + `path/index.html`), 404.html, .nojekyll, sitemap.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+  copyFileSync,
+  statSync,
+} from "node:fs";
+import { dirname, join, relative } from "node:path";
 
 const root = process.cwd();
 const dir = join(root, "dist", "client");
-const shellPath = join(dir, "_shell.html");
-if (!existsSync(shellPath)) {
-  console.error("pages-prepare: missing dist/client/_shell.html");
+if (!existsSync(dir)) {
+  console.error("pages-prepare: missing dist/client");
   process.exit(1);
-}
-
-let html = readFileSync(shellPath, "utf8");
-const assets = join(dir, "assets");
-const cssFiles = existsSync(assets)
-  ? readdirSync(assets).filter((f) => f.startsWith("styles-") && f.endsWith(".css"))
-  : [];
-for (const match of html.matchAll(/\/vanrobi\/assets\/(styles-[^"]+\.css)/g)) {
-  const name = match[1];
-  if (!existsSync(join(assets, name)) && cssFiles[0]) {
-    html = html.replaceAll(`/vanrobi/assets/${name}`, `/vanrobi/assets/${cssFiles[0]}`);
-  }
 }
 
 function idsFrom(file, key) {
   const text = readFileSync(join(root, file), "utf8");
-  const re = new RegExp(`${key}:\\s*"([^"]+)"`, "g");
-  return [...text.matchAll(re)].map((m) => m[1]);
+  return [...text.matchAll(new RegExp(`${key}:\\s*"([^"]+)"`, "g"))]
+    .map((m) => m[1])
+    .filter((id) => id !== "string");
 }
 
-const productIds = [
-  ...idsFrom("src/lib/products.ts", "id"),
-  ...idsFrom("src/lib/products-extra.generated.ts", "id"),
-].filter((id) => id !== "string");
-const uniqueProducts = [...new Set(productIds)];
-const guideSlugs = idsFrom("src/lib/guides.ts", "slug");
-
+const products = [
+  ...new Set([
+    ...idsFrom("src/lib/products.ts", "id"),
+    ...idsFrom("src/lib/products-extra.generated.ts", "id"),
+  ]),
+];
+const guides = idsFrom("src/lib/guides.ts", "slug");
 const staticPaths = [
   "producten",
   "contact",
@@ -56,29 +52,73 @@ const staticPaths = [
   "fr/faq",
   "fr/a-propos",
 ];
-
-const paths = [
+const routes = [
   ...staticPaths,
-  ...uniqueProducts.map((id) => `producten/${id}`),
-  ...uniqueProducts.map((id) => `fr/produits/${id}`),
-  ...guideSlugs.map((slug) => `gids/${slug}`),
+  ...products.map((id) => `producten/${id}`),
+  ...products.map((id) => `fr/produits/${id}`),
+  ...guides.map((s) => `gids/${s}`),
+  "gids/ijsbankkoeler-vs-gamko",
 ];
 
-function writeRoute(rel) {
-  const htmlFile = join(dir, `${rel}.html`);
-  mkdirSync(dirname(htmlFile), { recursive: true });
-  writeFileSync(htmlFile, html);
-  const indexFile = join(dir, rel, "index.html");
-  mkdirSync(dirname(indexFile), { recursive: true });
-  writeFileSync(indexFile, html);
+function collectHtml(start, acc = []) {
+  for (const name of readdirSync(start)) {
+    if (name === "assets" || name === "__grok") continue;
+    const full = join(start, name);
+    if (statSync(full).isDirectory()) collectHtml(full, acc);
+    else if (name.endsWith(".html")) acc.push(full);
+  }
+  return acc;
 }
 
-writeFileSync(join(dir, "index.html"), html);
-writeFileSync(join(dir, "404.html"), html);
-writeFileSync(join(dir, ".nojekyll"), "");
+const htmlFiles = collectHtml(dir);
+const home = htmlFiles.find((f) => relative(dir, f) === "index.html");
+const sample = home ? readFileSync(home, "utf8") : "";
+if (!home || !/h1/i.test(sample)) {
+  console.error("pages-prepare: prerender did not emit a real index.html with H1");
+  process.exit(1);
+}
 
-for (const rel of paths) writeRoute(rel);
+function findHtmlFor(rel) {
+  const candidates = [
+    join(dir, rel, "index.html"),
+    join(dir, `${rel}.html`),
+    join(dir, "vanrobi", rel, "index.html"),
+    join(dir, "vanrobi", `${rel}.html`),
+  ];
+  return candidates.find((p) => existsSync(p));
+}
+
+function write(path, html) {
+  mkdirSync(dirname(path), { recursive: true });
+  writeFileSync(path, html);
+}
+
+let filled = 0;
+for (const rel of routes) {
+  const src = findHtmlFor(rel);
+  const html = src ? readFileSync(src, "utf8") : sample;
+  if (/<h1/i.test(html) && src) filled += 1;
+  write(join(dir, rel, "index.html"), html);
+  write(join(dir, `${rel}.html`), html);
+}
+
+const notFound = `<!DOCTYPE html><html lang="nl"><head><meta charset="utf-8"/><meta name="robots" content="noindex"/><title>Pagina niet gevonden — VanRobi</title></head><body><h1>Pagina niet gevonden</h1><p>Deze pagina bestaat niet.</p><p><a href="/vanrobi/">Terug naar VanRobi</a></p></body></html>`;
+write(join(dir, "404.html"), existsSync(join(dir, "404.html")) ? readFileSync(join(dir, "404.html"), "utf8") : notFound);
+write(join(dir, ".nojekyll"), "");
+
+const origin = "https://www.vanrobi.be";
+const urls = ["/", ...routes.map((r) => `/${r}`)];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (u) => `  <url><loc>${origin}${u === "/" ? "/" : u}</loc><changefreq>weekly</changefreq></url>`,
+  )
+  .join("\n")}
+</urlset>
+`;
+write(join(dir, "sitemap.xml"), sitemap);
 
 console.log(
-  `pages-prepare: ${paths.length} routes + 404.html (${uniqueProducts.length} producten, ${guideSlugs.length} gidsen)`,
+  `pages-prepare: ${routes.length} routes, ${filled} with own prerender HTML, home H1=${/<h1/i.test(sample)}`,
 );

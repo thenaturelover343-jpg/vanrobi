@@ -1,18 +1,16 @@
 import { Reveal } from "./reveal";
 import { withBase } from "@/lib/base";
-import { OptimizedImage } from "./optimized-image";
 
 export function Cutaway() {
   return (
     <section id="statement" className="border-t border-line bg-bg-2">
       <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
         <div className="photo-well bright min-h-[42vh] lg:min-h-[70vh]">
-          <OptimizedImage
+          <img
             src={withBase("/worlds/statement-tap.jpg")}
             alt="Bier tappen uit een chroomkraan"
             width={1600}
             height={1067}
-            loading="lazy"
           />
         </div>
         <div className="flex flex-col justify-center px-5 py-16 md:px-12">

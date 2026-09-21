@@ -15,18 +15,17 @@ import { Sizer } from "@/components/sizer";
 import { guides } from "@/lib/guides";
 import { products } from "@/lib/products";
 import { site } from "@/lib/site";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "VanRobi — Professionele ijsbankkoelers voor horeca in België & Nederland" },
-      {
-        name: "description",
-        content:
-          "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "VanRobi — Professionele ijsbankkoelers voor horeca in België & Nederland",
+      description:
+        "Professionele ijsbankkoelers voor bars, restaurants, events en installateurs in België en Nederland. Stabiele tapkoude, heldere specs, lokale opvolging.",
+      path: "/",
+      frPath: "/fr",
+    }),
   component: Home,
 });
 
@@ -49,7 +48,7 @@ function Home() {
               <p className="kicker">Gidsen</p>
               <h2 className="mt-4 text-4xl md:text-6xl">Kiezen met kennis.</h2>
               <p className="mt-5 max-w-xl text-muted">
-                Uitleg, checklists en vergelijkingen — ijsbankkoeler, dry cooler, spiralen, onder-bar, events en ijsbankkoelers via VanRobi.
+                Uitleg, checklists en vergelijkingen — ijsbankkoeler, dry cooler, spiralen, onder-bar en events.
               </p>
             </Reveal>
             <div className="mt-12 grid gap-px bg-line md:grid-cols-2">

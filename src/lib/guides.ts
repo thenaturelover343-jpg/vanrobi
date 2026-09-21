@@ -12,11 +12,11 @@ export type Guide = {
 
 export const guides: Guide[] = [
  {
- slug: "ijsbankkoeler-vs-gamko",
+ slug: "ijsbankkoeler-of-tapinstallatie",
  title: "Ijsbankkoeler of complete tapinstallatie: wat past bij uw bar?",
  eyebrow: "Vergelijking",
  description:
- "Wanneer een dedicated ijsbankkoeler via VanRobi de betere match is dan een complete tapmeubellijn: buffer, onderhoud en horeca in België & Nederland.",
+ "Wanneer een dedicated ijsbankkoeler de betere match is dan een complete tapmeubellijn: buffer, onderhoud en horeca in België & Nederland.",
  lede: "Niet elke bar heeft dezelfde koeling nodig. We zetten ijsbankkoelers af tegen complete tapinstallaties, vanuit het perspectief van een specialist voor BE/NL.",
  updated: "2026-09-21",
  published: "2026-09-18",
@@ -124,7 +124,8 @@ export const guides: Guide[] = [
 ];
 
 export function getGuide(slug: string): Guide | undefined {
- return guides.find((g) => g.slug === slug);
+ const resolved = slug === "ijsbankkoeler-vs-gamko" ? "ijsbankkoeler-of-tapinstallatie" : slug;
+ return guides.find((g) => g.slug === resolved);
 }
 
 /** Format YYYY-MM-DD for visible NL date */

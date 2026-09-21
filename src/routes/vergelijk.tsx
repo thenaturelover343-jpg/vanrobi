@@ -5,18 +5,16 @@ import { experience } from "@/lib/experience";
 import { useCompare } from "@/lib/compare";
 import { featuredProducts, getProduct, iceKgOf, flowOf, reservoirOf } from "@/lib/products";
 import { offerteHref } from "@/lib/site";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/vergelijk")({
-  head: () => ({
-    meta: [
-      { title: "Machines vergelijken — VanRobi" },
-      {
-        name: "description",
-        content:
-          "Vergelijk ijsbankkoelers side-by-side: ijsreserve, debiet en waterbad. Kies 2 of 3 machines in de catalogus.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Machines vergelijken — VanRobi",
+      description:
+        "Vergelijk ijsbankkoelers side-by-side: ijsreserve, debiet en waterbad. Kies 2 of 3 machines in de catalogus.",
+      path: "/vergelijk",
+    }),
   component: ComparePage,
 });
 

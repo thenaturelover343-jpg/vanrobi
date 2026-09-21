@@ -1,0 +1,4 @@
+# GitHub Pages-preview: niet indexeren.
+# Definitief domein: https://www.vanrobi.be
+User-agent: *
+Disallow: /

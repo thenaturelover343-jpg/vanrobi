@@ -2,18 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { contact } from "@/lib/contact";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/diensten")({
-  head: () => ({
-    meta: [
-      { title: "Diensten — VanRobi" },
-      {
-        name: "description",
-        content:
-          "VanRobi levert en adviseert professionele ijsbankkoelers. Onderhoud, reiniging en herstellingen via Taponderhoud, met één lokaal team.",
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Diensten — VanRobi",
+      description:
+        "VanRobi levert en adviseert professionele ijsbankkoelers. Onderhoud, reiniging en herstellingen via Taponderhoud, met één lokaal team.",
+      path: "/diensten",
+      frPath: "/fr/services",
+    }),
   component: Diensten,
 });
 
@@ -26,7 +25,7 @@ const services = [
   {
     n: "02",
     title: "Levering BE & NL",
-    text: "Officiële VanRobi-distributie van ijsbankkoelers voor België en Nederland. Geen grijze import: juiste specs, garantie en opvolging.",
+    text: "Officiële VanRobi-distributie van ijsbankkoelers voor België en Nederland. Juiste specs, garantie en opvolging.",
   },
   {
     n: "03",

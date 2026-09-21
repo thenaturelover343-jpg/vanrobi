@@ -2,14 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
 import { contact, offerteMailto } from "@/lib/contact";
 import { frContact } from "@/lib/fr";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — VanRobi" },
-      { name: "description", content: frContact.lede },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: "Contact — VanRobi",
+      description: frContact.lede,
+      path: "/fr/contact",
+      lang: "fr",
+      nlPath: "/contact",
+      frPath: "/fr/contact",
+    }),
   component: FrContact,
 });
 

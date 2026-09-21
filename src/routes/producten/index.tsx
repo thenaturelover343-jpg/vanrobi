@@ -3,19 +3,16 @@ import { PageHero, PageShell } from "@/components/page-shell";
 import { ProductCatalog } from "@/components/product-catalog";
 import { CtaBand } from "@/components/cta-band";
 import { products } from "@/lib/products";
+import { seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/producten/")({
-  head: () => ({
-    meta: [
-      {
-        title: `Ijsbankkoeler-catalogus — ${products.length} producten | VanRobi`,
-      },
-      {
-        name: "description",
-        content: `${products.length} producten in de VanRobi-catalogus: koelers, serpentijnen, dispensing en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`,
-      },
-    ],
-  }),
+  head: () =>
+    seoHead({
+      title: `Ijsbankkoeler-catalogus — ${products.length} producten | VanRobi`,
+      description: `${products.length} producten: koelers, serpentijnen, tap & uitschenken en onderdelen. Voor installateurs, horeca en events in België & Nederland.`,
+      path: "/producten",
+      frPath: "/fr/produits",
+    }),
   component: Catalog,
 });
 
@@ -24,7 +21,7 @@ function Catalog() {
     <PageShell>
       <PageHero
         kicker="Assortiment"
-        title="Ijsbankkoeler-catalogus. Via VanRobi."
+        title="Ijsbankkoeler-catalogus."
         lede={`${products.length} producten: koelers, serpentijnen, tap & uitschenken en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`}
       />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">

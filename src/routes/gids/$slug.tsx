@@ -4,6 +4,7 @@ import { getGuide, guides, formatGuideDate } from "@/lib/guides";
 import { GuideBody } from "@/lib/guide-content";
 import { CtaBand } from "@/components/cta-band";
 import { Sizer } from "@/components/sizer";
+import { breadcrumbJsonLd, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/gids/$slug")({
   loader: ({ params }) => {
@@ -11,12 +12,22 @@ export const Route = createFileRoute("/gids/$slug")({
     if (!guide) throw notFound();
     return { guide };
   },
-  head: ({ loaderData }) => ({
-    meta: [
-      { title: `${loaderData?.guide.title ?? "Gids"} — VanRobi` },
-      { name: "description", content: loaderData?.guide.description ?? "" },
-    ],
-  }),
+  head: ({ loaderData }) => {
+    const guide = loaderData?.guide;
+    if (!guide) return seoHead({ title: "Gids — VanRobi", description: "", path: "/gids" });
+    return seoHead({
+      title: `${guide.title} — VanRobi`,
+      description: guide.description,
+      path: `/gids/${guide.slug}`,
+      jsonLd: [
+        breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Gidsen", path: "/gids" },
+          { name: guide.title, path: `/gids/${guide.slug}` },
+        ]),
+      ],
+    });
+  },
   component: GuidePage,
 });
 

@@ -4,46 +4,45 @@ import { productsExtra } from "./products-extra.generated";
 export type ProductUse = "horeca" | "events" | "onder-bar" | "mobiel";
 
 export type ProductGroup =
-  | "koelers"
-  | "serpentijnen"
-  | "dispensing"
-  | "onderdelen"
-  | "service"
-  | "overig";
+ | "koelers"
+ | "serpentijnen"
+ | "dispensing"
+ | "onderdelen"
+ | "service"
+ | "overig";
 
 export type Product = {
-  id: string;
-  index: string;
-  name: string;
-  badge: string;
-  description: string;
-  longDescription: string;
-  image: string;
-  alt: string;
-  cropClass: string;
-  uses: ProductUse[];
-  /** Catalog group for browse filters (koelers, serpentijnen, …) */
-  group?: ProductGroup;
-  specs: { label: string; value: string }[];
-  featured?: boolean;
-  /** photo = lifestyle/product shot; diagram = technical line drawing (not a photo) */
-  imageKind?: "photo" | "diagram";
+ id: string;
+ index: string;
+ name: string;
+ badge: string;
+ description: string;
+ longDescription: string;
+ image: string;
+ alt: string;
+ cropClass: string;
+ uses: ProductUse[];
+ /** Catalog group for browse filters (koelers, serpentijnen, …) */
+ group?: ProductGroup;
+ specs: { label: string; value: string }[];
+ featured?: boolean;
+ /** photo = lifestyle/product shot; diagram = technical line drawing (not a photo) */
+ imageKind?: "photo" | "diagram";
 };
 
 export const useLabels: Record<ProductUse, string> = {
-  horeca: "Horeca",
-  events: "Events",
-  "onder-bar": "Onder-bar",
-  mobiel: "Mobiel",
+ horeca: "Horeca",
+ events: "Events", "onder-bar": "Onder-bar",
+ mobiel: "Mobiel",
 };
 
 export const groupLabels: Record<ProductGroup, string> = {
-  koelers: "Koelers",
-  serpentijnen: "Serpentijnen",
-  dispensing: "Tap & uitschenken",
-  onderdelen: "Onderdelen",
-  service: "Service",
-  overig: "Overig",
+ koelers: "Koelers",
+ serpentijnen: "Serpentijnen",
+ dispensing: "Tap & uitschenken",
+ onderdelen: "Onderdelen",
+ service: "Service",
+ overig: "Overig",
 };
 
 const productsCore: Product[] = [
@@ -53,11 +52,11 @@ const productsCore: Product[] = [
  name: "Goldy",
  badge: "Events · Over-bar",
  description:
- "Compacte over-bar ijsbankkoeler voor events, beurzen en craftbars, met gepatenteerde opbouw via VanRobi.",
+ "Compacte over-bar ijsbankkoeler voor events, beurzen en craftbars.",
  longDescription:
- "De Goldy is de compacte over-bar ijsbankkoeler in het VanRobi-assortiment: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Via VanRobi geleverd met advies over spiralen, debiet en opstelling.",
+ "De Goldy is de compacte over-bar ijsbankkoeler in het VanRobi-assortiment: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Advies over spiralen, debiet en opstelling.",
  image: withBase("/assets/products-official/goldy.jpg"),
- alt: "Goldy over-bar ijsbankkoeler met kranen, bierkoeler via VanRobi België",
+ alt: "Goldy over-bar ijsbankkoeler met kranen, bierkoeler België",
  cropClass: "crop-goldy",
  uses: ["events", "mobiel", "horeca"],
  featured: true,
@@ -80,7 +79,7 @@ const productsCore: Product[] = [
  longDescription:
  "De Picky is de kleinste over-bar ijsbankkoeler in ons assortiment, gemaakt voor krappe ruimtes zonder in te boeten op professionele koeling. Ideaal voor foodtrucks, pop-ups en compacte craftbars.",
  image: withBase("/assets/products-catalog/picky.jpg"),
- alt: "Picky compacte over-bar ijsbankkoeler voor events, via VanRobi",
+ alt: "Picky compacte over-bar ijsbankkoeler voor events",
  cropClass: "crop-picky",
  uses: ["events", "mobiel", "horeca"],
  featured: true,
@@ -96,7 +95,7 @@ const productsCore: Product[] = [
  },
  {
  id: "gold-ice",
- index: "03",
+ index: "09",
  name: "Gold Ice",
  badge: "IJs · Horeca",
  description:
@@ -104,7 +103,7 @@ const productsCore: Product[] = [
  longDescription:
  "Gold Ice in het VanRobi-assortiment combineert ijsreserve met eenvoudig onderhoud. Via VanRobi beschikbaar voor Belgische en Nederlandse horeca die betrouwbare koude nodig heeft zonder complexe installatie.",
  image: withBase("/assets/products-catalog/gold-ice.jpg"),
- alt: "Gold Ice, technische tekening via VanRobi",
+ alt: "Gold Ice, technische tekening ",
  cropClass: "crop-gold-ice",
  uses: ["horeca", "events"],
  featured: false,
@@ -116,7 +115,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v100",
- index: "04",
+ index: "03",
  name: "V100",
  badge: "Horeca · Onder-bar",
  description:
@@ -124,7 +123,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V100 is het werkpaard voor restaurants en bars. Medium formaat, stabiel debiet en voldoende ijsreserve voor dagelijks horecagebruik. Ook als horizontale variant, VanRobi helpt bij de juiste keuze.",
  image: withBase("/assets/products-official/v100.jpg"),
- alt: "V100 onder-bar ijsbankkoeler / bierkoeler voor horeca, via VanRobi",
+ alt: "V100 onder-bar ijsbankkoeler / bierkoeler voor horeca",
  cropClass: "crop-v100",
  uses: ["horeca", "onder-bar"],
  featured: true,
@@ -139,7 +138,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v100-portable",
- index: "05",
+ index: "04",
  name: "V100 portable",
  badge: "Events · Mobiel",
  description:
@@ -147,7 +146,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V100 portable brengt V100-capaciteit naar het festivalterrein. Op wielen, snel opgebouwd, optioneel met tapzuil. Ideaal voor cateraars en tijdelijke bars.",
  image: withBase("/assets/products-official/v100-portable.jpg"),
- alt: "V100 portable mobiele bierkoeler op wielen voor festivals, via VanRobi",
+ alt: "V100 portable mobiele bierkoeler op wielen voor festivals",
  cropClass: "crop-v100-portable",
  uses: ["events", "mobiel"],
  featured: true,
@@ -162,7 +161,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v200",
- index: "06",
+ index: "05",
  name: "V200",
  badge: "High volume · Onder-bar",
  description:
@@ -170,7 +169,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V200 is gebouwd voor drukke bars. Maximale ijsreserve en hoog debiet. Ook horizontaal leverbaar, VanRobi matcht volume, ruimte en openingsuren.",
  image: withBase("/assets/products-official/v200.jpg"),
- alt: "V200 high-volume onder-bar bierkoeler, via VanRobi België & Nederland",
+ alt: "V200 high-volume onder-bar bierkoeler, België & Nederland",
  cropClass: "crop-v200",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -185,7 +184,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v200-portable",
- index: "07",
+ index: "06",
  name: "V200 portable",
  badge: "Events · Mobiel",
  description:
@@ -193,7 +192,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V200 portable combineert high-volume capaciteit met mobiliteit. Voor festivals, stadions en grote tijdelijke bars die geen vaste installatie kunnen plaatsen.",
  image: withBase("/assets/products-catalog/v200-portable.jpg"),
- alt: "V200 portable high-volume event bierkoeler, via VanRobi",
+ alt: "V200 portable high-volume event bierkoeler",
  cropClass: "crop-v200-portable",
  uses: ["events", "mobiel"],
  featured: true,
@@ -208,7 +207,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v300",
- index: "08",
+ index: "07",
  name: "V300",
  badge: "High volume · Onder-bar",
  description:
@@ -216,7 +215,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V300 levert hogere capaciteit voor drukke horeca. Meer spiralen, meer debiet, wanneer de V200 net niet genoeg is.",
  image: withBase("/assets/products-catalog/v300.jpg"),
- alt: "V300 onder-bar ijsbankkoeler, via VanRobi",
+ alt: "V300 onder-bar ijsbankkoeler",
  cropClass: "crop-v300",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -231,7 +230,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v90",
- index: "09",
+ index: "10",
  name: "V90",
  badge: "Horeca · Onder-bar",
  description:
@@ -239,7 +238,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V90 is ontworpen voor bars waar diepte beperkt is. Professionele ijsbankkoeling in een compacter footprint.",
  image: withBase("/assets/products-catalog/v90.jpg"),
- alt: "V90 compacte onder-bar ijsbankkoeler, via VanRobi",
+ alt: "V90 compacte onder-bar ijsbankkoeler",
  cropClass: "crop-v90",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -254,7 +253,7 @@ const productsCore: Product[] = [
  },
  {
  id: "h50",
- index: "10",
+ index: "11",
  name: "H50",
  badge: "Horeca · Onder-bar",
  description:
@@ -262,7 +261,7 @@ const productsCore: Product[] = [
  longDescription:
  "De H50 is de horizontale variant voor lage onder-bar opstellingen. Zelfde industriële kwaliteit als de rest van de lijn, aangepast aan barhoogte en meubelontwerp.",
  image: withBase("/assets/products-catalog/h50.jpg"),
- alt: "H50 horizontale ijsbankkoeler, via VanRobi",
+ alt: "H50 horizontale ijsbankkoeler",
  cropClass: "crop-h50",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -277,7 +276,7 @@ const productsCore: Product[] = [
  },
  {
  id: "v500",
- index: "11",
+ index: "08",
  name: "V500",
  badge: "High volume · Industrie",
  description:
@@ -285,7 +284,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V500 is het topmodel in ons assortiment voor extreme volumes: 100 L ijsreservoir, 60 kg ijs, tot 282 L/u. Ook als speciale tankkoelvariant. VanRobi adviseert bij dimensionering.",
  image: withBase("/assets/products-catalog/v500.jpg"),
- alt: "V500 high-volume ijsbankkoeler, via VanRobi",
+ alt: "V500 high-volume ijsbankkoeler",
  cropClass: "crop-v500",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -308,7 +307,7 @@ const productsCore: Product[] = [
  longDescription:
  "De dubbele vatkoeler houdt twee vaten op temperatuur, dicht bij de taplijn. Voor bars die korte leidingen en stabiele vatkoeling willen.",
  image: withBase("/assets/products-catalog/barrilero-doble.jpg"),
- alt: "Dubbele vatkoeler, via VanRobi",
+ alt: "Dubbele vatkoeler",
  cropClass: "crop-barrilero-doble",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -327,7 +326,7 @@ const productsCore: Product[] = [
  longDescription:
  "Condensorunit in ons assortiment voor installaties waarbij de warmteafvoer gescheiden moet, technische ruimtes, lange leidingen, split-systemen.",
  image: withBase("/assets/products-catalog/unidad-condensadora.jpg"),
- alt: "Condensorunit, via VanRobi",
+ alt: "Condensorunit",
  cropClass: "crop-unidad-condensadora",
  uses: ["horeca"],
  featured: false,
@@ -346,11 +345,12 @@ const productsCore: Product[] = [
  longDescription:
  "G8-serie roermotoren in ons assortiment voor betrouwbare ijsbankcirculatie. Water/lucht-variant met condensor.",
  image: withBase("/assets/products-catalog/g8-agua-aire.jpg"),
- alt: "G8 water/lucht met condensor, via VanRobi",
+ alt: "G8 water/lucht met condensor",
  cropClass: "crop-g8-agua-aire",
  uses: ["horeca"],
  featured: false,
  specs: [
+ { label: "Specificaties", value: ":" },
  { label: "Uitgangen", value: "1–3 uitgangen voor irrigatie" },
  { label: "Draaibescherming", value: "Kunststof behuizing" },
  ],
@@ -365,7 +365,7 @@ const productsCore: Product[] = [
  longDescription:
  "G8 luchtgekoelde roermotor met condensor, onderdeel van het VanRobi-ecosysteem voor ijsbankkoelers.",
  image: withBase("/assets/products-catalog/g8-aire.jpg"),
- alt: "G8 lucht met condensor, via VanRobi",
+ alt: "G8 lucht met condensor",
  cropClass: "crop-g8-aire",
  uses: ["horeca"],
  featured: false,
@@ -385,7 +385,7 @@ const productsCore: Product[] = [
  longDescription:
  "G8 watergekoelde roermotor met condensor voor stabiele ijsbankcirculatie in professionele installaties.",
  image: withBase("/assets/products-catalog/g8-agua.jpg"),
- alt: "G8 water met condensor, via VanRobi",
+ alt: "G8 water met condensor",
  cropClass: "crop-g8-agua",
  uses: ["horeca"],
  featured: false,
@@ -403,9 +403,9 @@ const productsCore: Product[] = [
  description:
  "G98 roermotor met condensor, 220/115V.",
  longDescription:
- "G98 met condensor: flexibele spanning (220/115V), ontworpen voor professionele ijsbanksystemen via VanRobi.",
+ "G98 met condensor: flexibele spanning (220/115V), ontworpen voor professionele ijsbanksystemen .",
  image: withBase("/assets/products-catalog/g98-con.jpg"),
- alt: "G98 met condensor, via VanRobi",
+ alt: "G98 met condensor",
  cropClass: "crop-g98-con",
  uses: ["horeca"],
  featured: false,
@@ -425,7 +425,7 @@ const productsCore: Product[] = [
  longDescription:
  "G98 zonder ingebouwde condensor, wanneer de condensor elders geplaatst wordt.",
  image: withBase("/assets/products-catalog/g98-sin.jpg"),
- alt: "G98 zonder condensor, via VanRobi",
+ alt: "G98 zonder condensor",
  cropClass: "crop-g98-sin",
  uses: ["horeca"],
  featured: false,
@@ -443,9 +443,9 @@ const productsCore: Product[] = [
  description:
  "G92 roermotor zonder condensor.",
  longDescription:
- "G92-serie zonder condensor voor specifieke ijsbankconfiguraties en vervangingsprojecten via VanRobi.",
+ "G92-serie zonder condensor voor specifieke ijsbankconfiguraties en vervangingsprojecten .",
  image: withBase("/assets/products-catalog/g92-sin.jpg"),
- alt: "G92 zonder condensor, via VanRobi",
+ alt: "G92 zonder condensor",
  cropClass: "crop-g92-sin",
  uses: ["horeca"],
  featured: false,
@@ -465,7 +465,7 @@ const productsCore: Product[] = [
  longDescription:
  "Koudwaterbad in ons assortiment voor industriële en speciale toepassingen, van deeg tot chemische processen. Via VanRobi op aanvraag.",
  image: withBase("/assets/products-catalog/cuba-frio.jpg"),
- alt: "Koudwaterbad, via VanRobi",
+ alt: "Koudwaterbad",
  cropClass: "crop-cuba-frio",
  uses: ["horeca"],
  featured: false,
@@ -482,9 +482,9 @@ const productsCore: Product[] = [
  description:
  "Warmwaterbad voor industriële procesverwarming.",
  longDescription:
- "Warmwaterbad in ons assortiment voor industriële procesverwarming en speciale toepassingen. Op aanvraag via VanRobi in België en Nederland.",
+ "Warmwaterbad in ons assortiment voor industriële procesverwarming en speciale toepassingen. Op aanvraag in België en Nederland.",
  image: withBase("/assets/products-catalog/cuba-caliente.jpg"),
- alt: "Warmwaterbad, via VanRobi",
+ alt: "Warmwaterbad",
  cropClass: "crop-cuba-caliente",
  uses: ["horeca"],
  featured: false,
@@ -497,35 +497,22 @@ const productsCore: Product[] = [
 
 /** Existing core machines get group koelers (or onderdelen for motors/components). */
 const coreGroupById: Record<string, ProductGroup> = {
-  goldy: "koelers",
-  picky: "koelers",
-  "gold-ice": "koelers",
-  v100: "koelers",
-  "v100-portable": "koelers",
-  v200: "koelers",
-  "v200-portable": "koelers",
-  v300: "koelers",
-  v90: "koelers",
-  h50: "koelers",
-  v500: "koelers",
-  "barrilero-doble": "koelers",
-  "unidad-condensadora": "onderdelen",
-  "g8-agua-aire": "onderdelen",
-  "g8-aire": "onderdelen",
-  "g8-agua": "onderdelen",
-  "g98-con": "onderdelen",
-  "g98-sin": "onderdelen",
-  "g92-sin": "onderdelen",
-  "cuba-frio": "overig",
-  "cuba-caliente": "overig",
+ goldy: "koelers",
+ picky: "koelers", "gold-ice": "koelers",
+ v100: "koelers", "v100-portable": "koelers",
+ v200: "koelers", "v200-portable": "koelers",
+ v300: "koelers",
+ v90: "koelers",
+ h50: "koelers",
+ v500: "koelers", "barrilero-doble": "koelers", "unidad-condensadora": "onderdelen", "g8-agua-aire": "onderdelen", "g8-aire": "onderdelen", "g8-agua": "onderdelen", "g98-con": "onderdelen", "g98-sin": "onderdelen", "g92-sin": "onderdelen", "cuba-frio": "overig", "cuba-caliente": "overig",
 };
 
 export const products: Product[] = [
-  ...productsCore.map((p) => ({
-    ...p,
-    group: p.group ?? coreGroupById[p.id] ?? "koelers",
-  })),
-  ...productsExtra,
+ ...productsCore.map((p) => ({
+ ...p,
+ group: p.group ?? coreGroupById[p.id] ?? "koelers",
+ })),
+ ...productsExtra,
 ];
 
 export const featuredProducts = products.filter((p) => p.featured);
@@ -542,12 +529,12 @@ export const categories = [
  alt: "Ijsbankkoelers en bierkoelers in het VanRobi-assortiment",
  index: "01",
  label: "Ijsbankkoelers",
- delay: "",
+ delay: ", ",
  },
  {
  href: withBase("/producten#serpentijnen"),
  image: withBase("/assets/cats/serpentijnen.jpg"),
- alt: "RVS-serpentijnen voor bier en drank via VanRobi",
+ alt: "RVS-serpentijnen voor bier en drank ",
  index: "02",
  label: "Serpentijnen",
  delay: "reveal-delay-1",
@@ -566,7 +553,7 @@ export const categories = [
  alt: "Roermotoren en technische onderdelen",
  index: "04",
  label: "Roermotoren & onderdelen",
- delay: "",
+ delay: ", ",
  },
  {
  href: withBase("/voor-wie"),
@@ -591,8 +578,8 @@ export const whyItems = [
  {
  n: "01",
  title: "Merk VanRobi",
- text: "VanRobi is het merk voor ijsbankkoelers in België en Nederland. Heldere specs, geen grijze import.",
- delay: "",
+ text: "VanRobi is het merk voor ijsbankkoelers in België en Nederland. Heldere specs, garantieopvolging en lokale support.",
+ delay: ", ",
  },
  {
  n: "02",
@@ -616,31 +603,31 @@ export const whyItems = [
 
 
 export function specNumber(product: Product, labels: string[]): number | null {
-  const spec = product.specs.find((s) =>
-    labels.some((label) => s.label.toLowerCase().includes(label.toLowerCase())),
-  );
-  if (!spec) return null;
-  const match = spec.value.replace(",", ".").match(/(\d+(?:\.\d+)?)/);
-  return match ? Number(match[1]) : null;
+ const spec = product.specs.find((s) =>
+ labels.some((label) => s.label.toLowerCase().includes(label.toLowerCase())),
+ );
+ if (!spec) return null;
+ const match = spec.value.replace(",", ".").match(/(\d+(?:\.\d+)?)/);
+ return match ? Number(match[1]) : null;
 }
 
 export function iceKgOf(product: Product) {
-  return specNumber(product, ["ijsreserve"]);
+ return specNumber(product, ["ijsreserve"]);
 }
 
 export function flowOf(product: Product) {
-  return specNumber(product, ["debiet"]);
+ return specNumber(product, ["debiet"]);
 }
 
 export function reservoirOf(product: Product) {
-  return specNumber(product, ["ijsreservoir", "reservoir", "cuba"]);
+ return specNumber(product, ["ijsreservoir", "reservoir", "cuba"]);
 }
 
 export function growFromIce(kg: number | null) {
-  if (!kg) return 0.28;
-  return Math.min(1, Math.max(0.18, kg / 60));
+ if (!kg) return 0.28;
+ return Math.min(1, Math.max(0.18, kg / 60));
 }
 
 export const stageMachines = products.filter((p) =>
-  ["goldy", "v100", "v200", "v500"].includes(p.id),
+ ["goldy", "v100", "v200", "v500"].includes(p.id),
 );

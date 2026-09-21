@@ -61,7 +61,7 @@ export const frProductCopy: Record<
   goldy: {
     badge: "Events · Sur bar",
     description:
-      "Refroidisseur compact sur bar pour events, salons et craft, conception brevetée, livré via VanRobi.",
+      "Refroidisseur compact sur bar pour events, salons et craft bars.",
     longDescription:
       "La Goldy est le refroidisseur à banc de glace compact sur bar de notre assortiment : idéal quand l'espace manque et que le bar doit rester visible. Parfait pour events, craft bars et pop-ups. Livré via VanRobi avec conseil sur spirales, débit et implantation.",
   },
