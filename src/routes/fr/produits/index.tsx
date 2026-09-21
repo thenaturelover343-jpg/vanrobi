@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { getProduct } from "@/lib/products";
 import { frFeaturedIds, frProductCopy, frProductsIntro } from "@/lib/fr";
 import { withBase } from "@/lib/base";
+import { OptimizedImage } from "@/components/optimized-image";
 
 export const Route = createFileRoute("/fr/produits/")({
   head: () => ({
@@ -35,7 +36,12 @@ function FrProduits() {
                 className="block bg-bg p-6 transition-colors hover:bg-surface"
               >
                 <div className="product-visual aspect-[5/4]">
-                  <img src={p.image} alt={p.alt} className="h-full w-full p-5" />
+                  <OptimizedImage
+                    src={p.image}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="h-full w-full p-5"
+                  />
                 </div>
                 <p className="kicker mt-5">{p.badge}</p>
                 <h2 className="mt-2 text-3xl">{p.name}</h2>

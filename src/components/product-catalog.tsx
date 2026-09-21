@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/cn";
 import { experience } from "@/lib/experience";
 import { useCompare, COMPARE_MAX } from "@/lib/compare";
+import { OptimizedImage } from "./optimized-image";
 
 type FilterKey = "all" | ProductUse | ProductGroup;
 
@@ -110,7 +111,7 @@ export function ProductCatalog() {
                     p.imageKind === "diagram" ? "is-diagram" : "",
                   )}
                 >
-                  <img
+                  <OptimizedImage
                     src={p.image}
                     alt={p.alt}
                     width={800}

@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { withBase } from "@/lib/base";
 import type { Product } from "@/lib/products";
 import { cn } from "@/lib/cn";
+import { OptimizedImage } from "./optimized-image";
 
 type GalleryImage = {
   src: string;
@@ -64,12 +65,13 @@ export function ProductGallery({ product }: { product: Product }) {
           selected.productImage && product.imageKind === "diagram" ? "is-diagram" : "",
         )}
       >
-        <img
+        <OptimizedImage
           key={selected.src}
           src={selected.src}
           alt={selected.alt}
           width={1400}
           height={1400}
+          priority={active === 0}
           className={cn(
             "product-gallery-main",
             selected.productImage ? "object-contain" : "image-grade object-cover",
@@ -92,7 +94,7 @@ export function ProductGallery({ product }: { product: Product }) {
             aria-pressed={active === index}
             onClick={() => setActive(index)}
           >
-            <img
+            <OptimizedImage
               src={image.src}
               alt=""
               loading={index === 0 ? "eager" : "lazy"}

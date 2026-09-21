@@ -1,14 +1,16 @@
 import { contact } from "@/lib/contact";
 import { withBase } from "@/lib/base";
 import { Reveal } from "./reveal";
+import { OptimizedImage } from "./optimized-image";
 
 export function PartnerBand() {
   return (
     <section className="grid border-t border-line lg:grid-cols-2">
       <div className="photo-well bright min-h-[46vh]">
-        <img
+        <OptimizedImage
           src={withBase("/assets/products-stage/cooler-extra-2.jpg")}
           alt="Professionele ijsbankkoeler in RVS, bierkoeler voor horeca via VanRobi"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col justify-center px-5 py-16 md:px-12">
@@ -20,7 +22,10 @@ export function PartnerBand() {
             <em className="italic text-ice">Het merk VanRobi.</em>
           </h2>
           <p className="mt-5 max-w-xl text-muted">
-            VanRobi staat voor professionele ijsbankkoelers voor de Benelux-horeca: industriële kwaliteit, heldere specs en machines die elke shift meegaan. Wij zijn het aanspreekpunt voor België en Nederland — selectie, advies en levering vanuit één loket, met lokale opvolging en onderhoud via {contact.company}.
+            VanRobi staat voor professionele ijsbankkoelers voor de Benelux-horeca: industriële
+            kwaliteit, heldere specs en machines die elke shift meegaan. Wij zijn het aanspreekpunt
+            voor België en Nederland — selectie, advies en levering vanuit één loket, met lokale
+            opvolging en onderhoud via {contact.company}.
           </p>
           <dl className="mt-10 grid grid-cols-2 gap-6">
             <div>
@@ -37,9 +42,7 @@ export function PartnerBand() {
             </div>
             <div>
               <dt className="kicker">Service</dt>
-              <dd className="mt-2">
-                {contact.company} · koelgecertificeerd
-              </dd>
+              <dd className="mt-2">{contact.company} · koelgecertificeerd</dd>
             </div>
           </dl>
         </Reveal>

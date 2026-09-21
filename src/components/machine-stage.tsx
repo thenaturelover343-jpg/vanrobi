@@ -4,6 +4,7 @@ import { useCold } from "@/lib/cold";
 import { Reveal } from "./reveal";
 import { cn } from "@/lib/cn";
 import { offerteHref } from "@/lib/site";
+import { OptimizedImage } from "./optimized-image";
 
 export function MachineStage() {
   const machineId = useCold((s) => s.machineId);
@@ -56,10 +57,11 @@ export function MachineStage() {
           <div
             className={`product-visual flex aspect-[5/4] items-center justify-center ${active.imageKind === "diagram" ? "is-diagram" : ""}`}
           >
-            <img
+            <OptimizedImage
               key={active.id}
               src={active.image}
               alt={active.alt}
+              loading="lazy"
               width={1200}
               height={960}
               className="h-full w-full p-6"

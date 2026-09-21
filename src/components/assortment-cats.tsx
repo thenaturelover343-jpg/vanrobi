@@ -1,5 +1,6 @@
 import { categories } from "@/lib/products";
 import { Reveal } from "./reveal";
+import { OptimizedImage } from "./optimized-image";
 
 export function AssortmentCats() {
   return (
@@ -22,9 +23,10 @@ export function AssortmentCats() {
               href={c.href}
               className="group relative min-h-[280px] overflow-hidden bg-bg"
             >
-              <img
+              <OptimizedImage
                 src={c.image}
                 alt={c.alt}
+                loading="lazy"
                 className="image-grade absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />

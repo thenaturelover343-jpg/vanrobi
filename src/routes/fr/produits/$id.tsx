@@ -4,6 +4,7 @@ import { getProduct, iceKgOf, flowOf, reservoirOf } from "@/lib/products";
 import { frFeaturedIds, frProductCopy } from "@/lib/fr";
 import { offerteMailto, site } from "@/lib/site";
 import { withBase } from "@/lib/base";
+import { OptimizedImage } from "@/components/optimized-image";
 
 export const Route = createFileRoute("/fr/produits/$id")({
   loader: ({ params }) => {
@@ -38,11 +39,12 @@ function FrProduct() {
     <PageShell>
       <section className="grid min-h-[100svh] border-b border-line lg:grid-cols-2">
         <div className="product-visual relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r">
-          <img
+          <OptimizedImage
             src={product.image}
             alt={copy ? product.name : product.alt}
             width={1400}
             height={1400}
+            priority
             className="max-h-[88%] max-w-[88%] object-contain"
           />
         </div>

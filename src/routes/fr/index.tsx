@@ -4,6 +4,7 @@ import { Reveal } from "@/components/reveal";
 import { frHome, frProductCopy, frCta } from "@/lib/fr";
 import { site, offerteMailto } from "@/lib/site";
 import { withBase } from "@/lib/base";
+import { OptimizedImage } from "@/components/optimized-image";
 
 const FR_MACHINES: { id: string; name: string; image: string }[] = [
   { id: "goldy", name: "Goldy", image: withBase("/products/goldy.jpg") },
@@ -54,7 +55,13 @@ function FrHome() {
       <section className="border-t border-line bg-bg-2">
         <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
           <div className="photo-well bright min-h-[42vh] lg:min-h-[70vh]">
-            <img src={withBase("/worlds/statement-tap.jpg")} alt="" width={1600} height={1067} />
+            <OptimizedImage
+              src={withBase("/worlds/statement-tap.jpg")}
+              alt=""
+              width={1600}
+              height={1067}
+              loading="lazy"
+            />
           </div>
           <div className="flex flex-col justify-center px-5 py-16 md:px-12">
             <Reveal>
@@ -107,7 +114,12 @@ function FrHome() {
                 className="bg-bg p-6 transition-colors hover:bg-surface"
               >
                 <div className="product-visual aspect-[5/4]">
-                  <img src={p.image} alt={p.name} loading="lazy" className="h-full w-full p-5" />
+                  <OptimizedImage
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="h-full w-full p-5"
+                  />
                 </div>
                 <p className="kicker mt-5">{p.badge}</p>
                 <h3 className="mt-2 text-3xl">{p.name}</h3>

@@ -9,6 +9,7 @@ import { MagneticCta } from "@/components/magnetic-cta";
 import { ProductGallery } from "@/components/product-gallery";
 import { ProductCompareButton } from "@/components/product-compare-button";
 import { withBase } from "@/lib/base";
+import { OptimizedImage } from "@/components/optimized-image";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -268,9 +269,10 @@ function ProductPage() {
                 className="product-card group block p-0"
               >
                 <div className="product-visual flex aspect-square items-center justify-center overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={p.image}
                     alt={p.alt}
+                    loading="lazy"
                     className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>

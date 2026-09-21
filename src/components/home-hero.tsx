@@ -4,6 +4,7 @@ import { useCold } from "@/lib/cold";
 import { tagline } from "@/lib/experience";
 import { withBase } from "@/lib/base";
 import { MagneticCta } from "./magnetic-cta";
+import { OptimizedImage } from "./optimized-image";
 
 type StoryState = {
   progress: number;
@@ -71,11 +72,12 @@ function HeroMachine({ story }: { story: StoryState }) {
   return (
     <aside className="mt-10 w-full max-w-md md:mt-0">
       <div className="hero-story-card relative h-[19rem] max-h-[62vh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto">
-        <img
+        <OptimizedImage
           src={withBase("/products/goldy.jpg")}
           alt="Goldy over-bar ijsbankkoeler"
           width={900}
           height={1100}
+          priority
           className="image-grade absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/70 to-bg" />
@@ -226,12 +228,13 @@ export function HomeHero() {
   return (
     <section ref={heroRef} className="relative h-[145svh]">
       <div className="sticky top-0 min-h-[100svh] overflow-hidden">
-        <img
+        <OptimizedImage
           src={withBase("/worlds/ice-bank.jpg")}
           alt=""
           width={1792}
           height={907}
           aria-hidden="true"
+          priority
           className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
         />
         <div className="hero-frost" aria-hidden />

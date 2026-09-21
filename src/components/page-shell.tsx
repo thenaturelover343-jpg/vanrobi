@@ -5,6 +5,7 @@ import { CompareBar } from "./compare-bar";
 import { useLang } from "@/lib/i18n";
 import { experience } from "@/lib/experience";
 import { withBase } from "@/lib/base";
+import { OptimizedImage } from "./optimized-image";
 
 export function PageShell({ children }: { children: ReactNode }) {
   const lang = useLang();
@@ -32,12 +33,13 @@ export function PageShell({ children }: { children: ReactNode }) {
 export function PageHero({ kicker, title, lede }: { kicker: string; title: string; lede: string }) {
   return (
     <section className="relative overflow-hidden border-b border-line px-5 pb-16 pt-32 md:px-8 md:pt-40">
-      <img
+      <OptimizedImage
         src={withBase("/worlds/ice-bank.jpg")}
         alt=""
         width={1792}
         height={907}
         aria-hidden="true"
+        priority
         className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/45 to-bg/20" />
