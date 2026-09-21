@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { experience } from "@/lib/experience";
+import { withBase } from "@/lib/base";
 
 type Place = "vast" | "overbar" | "mobiel" | "";
 type Volume = "klein" | "midden" | "groot" | "";
@@ -73,7 +74,7 @@ export function Sizer() {
             <Link to="/producten/$id" params={{ id: result.id }} className="btn btn-ghost">
               Bekijk {result.name}
             </Link>
-            <a href={`/contact?model=${encodeURIComponent(result.name)}`} className="btn btn-ice">
+            <a href={withBase(`/contact?model=${encodeURIComponent(result.name)}`)} className="btn btn-ice">
               Offerte {result.name}
             </a>
           </div>

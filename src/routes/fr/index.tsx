@@ -98,7 +98,7 @@ function FrHome() {
           </Reveal>
           <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
-              <a key={p.id} href={`/fr/produits/${p.id}`} className="bg-bg p-6 transition-colors hover:bg-surface">
+              <a key={p.id} href={withBase(`/fr/produits/${p.id}`)} className="bg-bg p-6 transition-colors hover:bg-surface">
                 <div className="photo-well bright aspect-[5/4]">
                   <img src={p.image} alt={p.name} loading="lazy" />
                 </div>

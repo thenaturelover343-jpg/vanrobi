@@ -3,6 +3,7 @@ import { PageShell } from "@/components/page-shell";
 import { getProduct, iceKgOf, flowOf, reservoirOf } from "@/lib/products";
 import { frFeaturedIds, frProductCopy } from "@/lib/fr";
 import { offerteMailto, site } from "@/lib/site";
+import { withBase } from "@/lib/base";
 
 export const Route = createFileRoute("/fr/produits/$id")({
   loader: ({ params }) => {
@@ -83,7 +84,7 @@ function FrProduct() {
               const p = getProduct(id);
               if (!p) return null;
               return (
-                <a key={id} href={`/fr/produits/${id}`} className="text-sm tracking-[0.12em] text-ice uppercase">
+                <a key={id} href={withBase(`/fr/produits/${id}`)} className="text-sm tracking-[0.12em] text-ice uppercase">
                   {p.name} →
                 </a>
               );

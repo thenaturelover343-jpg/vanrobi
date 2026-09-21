@@ -1,5 +1,6 @@
 import { useRouterState } from "@tanstack/react-router";
 import { counterpartPath, useLang } from "@/lib/i18n";
+import { withBase } from "@/lib/base";
 import { cn } from "@/lib/cn";
 
 export function LangSwitch({ className }: { className?: string }) {
@@ -17,13 +18,13 @@ export function LangSwitch({ className }: { className?: string }) {
       )}
       aria-label="Language"
     >
-      <a href={nlHref} className={lang === "nl" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="nl" lang="nl">
+      <a href={withBase(nlHref)} className={lang === "nl" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="nl" lang="nl">
         NL
       </a>
       <span className="text-muted" aria-hidden>
         /
       </span>
-      <a href={frHref} className={lang === "fr" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="fr" lang="fr">
+      <a href={withBase(frHref)} className={lang === "fr" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="fr" lang="fr">
         FR
       </a>
     </div>

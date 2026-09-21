@@ -1,4 +1,5 @@
 import { tagline } from "./experience";
+import { withBase } from "./base";
 
 export const site = {
   name: "VanRobi",
@@ -45,5 +46,5 @@ export function offerteMailto(product?: string) {
 
 export function offerteHref(product?: string) {
   const q = product ? `?model=${encodeURIComponent(product)}` : "";
-  return `/contact${q}`;
+  return withBase(`/contact${q}`);
 }

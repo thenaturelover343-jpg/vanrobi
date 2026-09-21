@@ -5,6 +5,7 @@ import { frNav } from "@/lib/fr";
 import { useLang } from "@/lib/i18n";
 import { LangSwitch } from "./lang-switch";
 import { cn } from "@/lib/cn";
+import { withBase } from "@/lib/base";
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -43,7 +44,7 @@ export function SiteHeader() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <a href={home} className="flex items-center gap-3" aria-label="VanRobi home">
+      <a href={withBase(home)} className="flex items-center gap-3" aria-label="VanRobi home">
         <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden>
           <path
             d="M4 6 L14 24 L24 6"
@@ -61,7 +62,7 @@ export function SiteHeader() {
         {links.map((item) => (
           <a
             key={item.href}
-            href={item.href}
+            href={withBase(item.href)}
             className={cn(
               "text-[0.68rem] font-medium tracking-[0.1em] uppercase transition-colors",
               pathname === item.href || pathname.startsWith(item.href + "/")
@@ -76,7 +77,7 @@ export function SiteHeader() {
 
       <div className="flex items-center gap-3">
         <LangSwitch className="hidden sm:flex" />
-        <a href={ctaHref} className="btn btn-ice hidden sm:inline-flex">
+        <a href={withBase(ctaHref)} className="btn btn-ice hidden sm:inline-flex">
           {ctaLabel}
         </a>
         <button
@@ -94,12 +95,12 @@ export function SiteHeader() {
       {open ? (
         <div className="absolute inset-x-0 top-[3.75rem] flex h-[calc(100dvh-3.75rem)] flex-col gap-1 overflow-y-auto bg-bg px-6 py-8 xl:hidden">
           {links.map((item) => (
-            <a key={item.href} href={item.href} className="font-display border-b border-line py-4 text-4xl">
+            <a key={item.href} href={withBase(item.href)} className="font-display border-b border-line py-4 text-4xl">
               {item.label}
             </a>
           ))}
           <LangSwitch className="mt-6" />
-          <a href={ctaHref} className="btn btn-ice mt-8 self-start">
+          <a href={withBase(ctaHref)} className="btn btn-ice mt-8 self-start">
             {lang === "fr" ? "Demander un devis" : "Offerte aanvragen"}
           </a>
         </div>

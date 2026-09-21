@@ -3,6 +3,7 @@ import { PageHero, PageShell } from "@/components/page-shell";
 import { Reveal } from "@/components/reveal";
 import { getProduct } from "@/lib/products";
 import { frFeaturedIds, frProductCopy, frProductsIntro } from "@/lib/fr";
+import { withBase } from "@/lib/base";
 
 export const Route = createFileRoute("/fr/produits/")({
   head: () => ({
@@ -28,7 +29,7 @@ function FrProduits() {
         <div className="grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
             <Reveal key={p.id}>
-              <a href={`/fr/produits/${p.id}`} className="block bg-bg p-6 transition-colors hover:bg-surface">
+              <a href={withBase(`/fr/produits/${p.id}`)} className="block bg-bg p-6 transition-colors hover:bg-surface">
                 <div className="photo-well bright aspect-[5/4] bg-fg">
                   <img src={p.image} alt={p.alt} />
                 </div>

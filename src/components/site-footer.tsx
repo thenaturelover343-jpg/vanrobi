@@ -5,6 +5,7 @@ import { guides } from "@/lib/guides";
 import { frFooter, frNav, frFeaturedIds } from "@/lib/fr";
 import { useLang } from "@/lib/i18n";
 import { LangSwitch } from "./lang-switch";
+import { withBase } from "@/lib/base";
 
 const machineIds = ["goldy", "picky", "v100", "v200", "v100-portable", "v200-portable"];
 
@@ -31,7 +32,7 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm">
             {links.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="text-muted hover:text-ice">
+                <a href={withBase(item.href)} className="text-muted hover:text-ice">
                   {item.label}
                 </a>
               </li>
@@ -60,7 +61,7 @@ export function SiteFooter() {
               return (
                 <li key={id}>
                   <a
-                    href={isFr ? `/fr/produits/${id}` : `/producten/${id}`}
+                    href={withBase(isFr ? `/fr/produits/${id}` : `/producten/${id}`)}
                     className="text-muted hover:text-ice"
                   >
                     {product.name}
@@ -69,7 +70,7 @@ export function SiteFooter() {
               );
             })}
             <li>
-              <a href={isFr ? "/producten" : "/producten"} className="text-muted hover:text-ice">
+              <a href={withBase("/producten")} className="text-muted hover:text-ice">
                 {isFr ? frFooter.catalog : "Volledige catalogus"}
               </a>
             </li>
