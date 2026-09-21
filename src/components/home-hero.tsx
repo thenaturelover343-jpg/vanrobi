@@ -248,7 +248,7 @@ export function HomeHero() {
               {tagline()}
             </p>
             <h1 className="mt-5 font-display text-4xl leading-[1.08] text-fg md:text-5xl">
-              Professionele ijsbankkoelers voor horeca in België & Nederland
+              Professionele ijsbankkoelers voor horeca
             </h1>
             <p className="mt-6 max-w-md text-[1.02rem] text-muted">
               Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele

@@ -15,7 +15,7 @@ export const experience = {
 
 export const slogans = {
   original: "Koude die de bar draagt.",
-  current: "Stabiele koude. Elke shift.",
+  current: "Stabiele koude. Elk glas, elke shift.",
 } as const;
 
 export function tagline() {
