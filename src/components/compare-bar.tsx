@@ -15,7 +15,7 @@ export function CompareBar() {
   if (!ready || !experience.compare || ids.length === 0) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-5 py-3 backdrop-blur-md md:px-8">
+    <div className="compare-bar fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/95 px-5 py-3 backdrop-blur-md md:px-8">
       <div className="mx-auto flex max-w-[1220px] flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-[0.68rem] tracking-[0.16em] text-muted uppercase">Vergelijk</span>

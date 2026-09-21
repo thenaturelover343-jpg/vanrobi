@@ -9,7 +9,7 @@ export const Route = createFileRoute("/producten/")({
   head: () =>
     seoHead({
       title: `Ijsbankkoeler-catalogus — ${products.length} producten | VanRobi`,
-      description: `${products.length} producten: koelers, serpentijnen, tap & uitschenken en onderdelen. Voor installateurs, horeca en events in België & Nederland.`,
+      description: `${products.length} producten in de VanRobi-catalogus: koelers, serpentijnen, dispensing en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`,
       path: "/producten",
       frPath: "/fr/produits",
     }),
@@ -21,7 +21,7 @@ function Catalog() {
     <PageShell>
       <PageHero
         kicker="Assortiment"
-        title="Ijsbankkoeler-catalogus."
+        title="Ijsbankkoeler-catalogus. Via VanRobi."
         lede={`${products.length} producten: koelers, serpentijnen, tap & uitschenken en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`}
       />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">

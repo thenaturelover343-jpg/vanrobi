@@ -4,6 +4,8 @@ import { SiteFooter } from "./site-footer";
 import { CompareBar } from "./compare-bar";
 import { useLang } from "@/lib/i18n";
 import { experience } from "@/lib/experience";
+import { withBase } from "@/lib/base";
+import { OptimizedImage } from "./optimized-image";
 
 export function PageShell({ children }: { children: ReactNode }) {
   const lang = useLang();
@@ -28,18 +30,19 @@ export function PageShell({ children }: { children: ReactNode }) {
   );
 }
 
-export function PageHero({
-  kicker,
-  title,
-  lede,
-}: {
-  kicker: string;
-  title: string;
-  lede: string;
-}) {
+export function PageHero({ kicker, title, lede }: { kicker: string; title: string; lede: string }) {
   return (
     <section className="relative overflow-hidden border-b border-line px-5 pb-16 pt-32 md:px-8 md:pt-40">
-      <div className="page-hero-ice pointer-events-none absolute inset-0" />
+      <OptimizedImage
+        src={withBase("/worlds/ice-bank.jpg")}
+        alt=""
+        width={1792}
+        height={907}
+        aria-hidden="true"
+        priority
+        className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/45 to-bg/20" />
       <div className="relative mx-auto max-w-[1220px]">
         <div className="pointer-events-none absolute -inset-y-8 -left-8 w-[min(100%,36rem)] bg-gradient-to-r from-bg/80 via-bg/45 to-transparent" />
         <div className="relative">

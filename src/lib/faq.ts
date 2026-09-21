@@ -5,7 +5,7 @@ export const generalFaqs: FaqItem[] = [
  {
  question: "Is VanRobi specialist in ijsbankkoelers voor België en Nederland?",
  answer:
- "Ja. VanRobi is de specialist in professionele ijsbankkoelers voor België en Nederland. U koopt via een erkend kanaal, met correcte specs, garantieopvolging en lokale support.",
+ "Ja. VanRobi is de specialist in professionele ijsbankkoelers voor België en Nederland. U koopt via een erkend kanaal, geen grijze import, met correcte specs, garantieopvolging en lokale support.",
  },
  {
  question: "Wie doet het onderhoud van mijn tapinstallatie?",
@@ -58,7 +58,7 @@ export const generalFaqs: FaqItem[] = [
  "Goldy is over-bar (zichtbaar, compact, ±44 L/u), sterk voor events en craft. V100 is onder-bar (±87 L/u, meer ijs) voor vaste horeca. Vergelijking met echte specs staat in onze gids Goldy vs V100.",
  },
  {
- question: "Wat kost een professionele bierkoeler?",
+ question: "Wat kost een professionele bierkoeler via VanRobi?",
  answer:
  "Prijs hangt af van model, opties (zuil, spiralen) en leveringsvoorwaarden. We geven geen catalogusprijzen online zonder context, stuur uw toepassing naar info@vanrobi.be voor een gerichte offerte.",
  },

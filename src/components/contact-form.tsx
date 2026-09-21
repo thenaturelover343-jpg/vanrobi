@@ -31,10 +31,14 @@ export function ContactForm({ preset }: { preset?: string }) {
   const [error, setError] = useState("");
   const [emailOut, setEmailOut] = useState("");
 
-  const defaultProduct = useMemo(() => {
-    if (typeof window === "undefined") return preset ?? "";
-    const q = new URLSearchParams(window.location.search).get("model");
-    return preset || q || "";
+  const defaults = useMemo(() => {
+    if (typeof window === "undefined") return { product: preset ?? "", peak: "", install: "" };
+    const query = new URLSearchParams(window.location.search);
+    return {
+      product: preset || query.get("model") || "",
+      peak: query.get("peak") || "",
+      install: query.get("install") || "",
+    };
   }, [preset]);
 
   const field =
@@ -81,7 +85,9 @@ export function ContactForm({ preset }: { preset?: string }) {
       setSent(true);
       form.reset();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Verzenden mislukt. Probeer opnieuw of mail ons.");
+      setError(
+        err instanceof Error ? err.message : "Verzenden mislukt. Probeer opnieuw of mail ons.",
+      );
     } finally {
       setBusy(false);
     }
@@ -93,8 +99,8 @@ export function ContactForm({ preset }: { preset?: string }) {
         <p className="kicker">Aanvraag ontvangen</p>
         <h3 className="mt-3 text-3xl">We antwoorden binnen één werkdag.</h3>
         <p className="mt-4 text-sm text-muted">
-          Bevestiging staat hier. We nemen contact op via {emailOut || "uw e-mailadres"}.
-          Dringend? Bel {site.phone}.
+          Bevestiging staat hier. We nemen contact op via {emailOut || "uw e-mailadres"}. Dringend?
+          Bel {site.phone}.
         </p>
       </div>
     );
@@ -119,7 +125,7 @@ export function ContactForm({ preset }: { preset?: string }) {
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
           Model
-          <select name="product" defaultValue={defaultProduct} className={field}>
+          <select name="product" defaultValue={defaults.product} className={field}>
             <option value="">Kies model</option>
             {GROUPS.map((g) => {
               const items = products.filter((p) => (p.group ?? "koelers") === g);
@@ -142,11 +148,16 @@ export function ContactForm({ preset }: { preset?: string }) {
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
           Piekvolume (L/u of glazen/uur)
-          <input name="peak" className={field} placeholder="bv. 80 L/u of 200 glazen" />
+          <input
+            name="peak"
+            defaultValue={defaults.peak}
+            className={field}
+            placeholder="bv. 80 L/u of 200 glazen"
+          />
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
           Vast of mobiel
-          <select name="install" className={field} defaultValue="">
+          <select name="install" className={field} defaultValue={defaults.install}>
             <option value="">Kies</option>
             <option value="Vast / onder-bar">Vast / onder-bar</option>
             <option value="Over-bar">Over-bar</option>

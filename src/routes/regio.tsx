@@ -8,8 +8,7 @@ export const Route = createFileRoute("/regio")({
   head: () =>
     seoHead({
       title: "Regio's — VanRobi België & Nederland",
-      description:
-        "Basis in de Kempen (Kasterlee). Levering en advies in Vlaanderen én Nederland als leverancier van ijsbankkoelers.",
+      description: "Basis in de Kempen (Kasterlee). Levering en advies in Vlaanderen én Nederland als leverancier van ijsbankkoelers.",
       path: "/regio",
     }),
   component: RegioPage,
@@ -30,7 +29,7 @@ const regions = [
   },
   {
     name: "Brussel",
-    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal met lokale opvolging.",
+    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal, geen grijze import.",
   },
   {
     name: "Oost-Vlaanderen",

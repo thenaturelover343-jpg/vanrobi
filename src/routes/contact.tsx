@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     seoHead({
       title: "Contact — VanRobi offerte",
-      description: "Stuur uw aanvraag. We antwoorden binnen één werkdag. Onderhoud via Taponderhoud.",
+      description: "Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud.",
       path: "/contact",
       frPath: "/fr/contact",
     }),
@@ -21,7 +21,7 @@ function ContactPage() {
       <PageHero
         kicker="Contact"
         title="Offerte of vraag?"
-        lede="Stuur uw aanvraag. We antwoorden binnen één werkdag. Onderhoud via Taponderhoud."
+        lede="Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud."
       />
       <section className="mx-auto grid max-w-[1220px] gap-16 px-5 py-20 lg:grid-cols-[0.9fr_1.1fr] md:px-8">
         <div>

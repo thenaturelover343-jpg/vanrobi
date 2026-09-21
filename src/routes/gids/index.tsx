@@ -8,8 +8,7 @@ export const Route = createFileRoute("/gids/")({
   head: () =>
     seoHead({
       title: "Gidsen — VanRobi",
-      description:
-        "Uitleg, checklists en vergelijkingen: ijsbankkoeler, dry cooler, spiralen, onder-bar en events in België & Nederland.",
+      description: "Uitleg, checklists en vergelijkingen: ijsbankkoeler, dry cooler, spiralen, onder-bar, events en ijsbankkoelers via VanRobi in België & Nederland.",
       path: "/gids",
     }),
   component: GidsIndex,
@@ -21,7 +20,7 @@ function GidsIndex() {
       <PageHero
         kicker="Gidsen"
         title="Kiezen met kennis."
-        lede="Uitleg, checklists en vergelijkingen — ijsbankkoeler, dry cooler, spiralen, onder-bar en events in België & Nederland."
+        lede="Uitleg, checklists en vergelijkingen — ijsbankkoeler, dry cooler, spiralen, onder-bar, events en ijsbankkoelers via VanRobi in België & Nederland."
       />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">
         <div className="grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
