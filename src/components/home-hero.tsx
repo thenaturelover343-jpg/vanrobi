@@ -242,7 +242,7 @@ export function HomeHero() {
 
   return (
     <section ref={heroRef} className="relative h-[145svh]">
-      <div className="sticky top-0 min-h-[100svh] overflow-hidden">
+      <div className="sticky top-0 min-h-[100svh] overflow-hidden ice-fallback">
         <OptimizedImage
           src={withBase("/worlds/ice-bank.jpg")}
           alt=""

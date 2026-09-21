@@ -32,7 +32,7 @@ export function PageShell({ children }: { children: ReactNode }) {
 
 export function PageHero({ kicker, title, lede }: { kicker: string; title: string; lede: string }) {
   return (
-    <section className="relative overflow-hidden border-b border-line px-5 pb-16 pt-32 md:px-8 md:pt-40">
+    <section className="ice-fallback relative overflow-hidden border-b border-line px-5 pb-16 pt-32 md:px-8 md:pt-40">
       <OptimizedImage
         src={withBase("/worlds/ice-bank.jpg")}
         alt=""
