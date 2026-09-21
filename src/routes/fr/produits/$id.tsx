@@ -16,7 +16,10 @@ export const Route = createFileRoute("/fr/produits/$id")({
     return {
       meta: [
         { title: `${loaderData?.product.name ?? "Produit"} — VanRobi` },
-        { name: "description", content: copy?.longDescription ?? loaderData?.product.description ?? "" },
+        {
+          name: "description",
+          content: copy?.longDescription ?? loaderData?.product.description ?? "",
+        },
       ],
     };
   },
@@ -34,19 +37,31 @@ function FrProduct() {
   return (
     <PageShell>
       <section className="grid min-h-[100svh] border-b border-line lg:grid-cols-2">
-        <div className="bg-well relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r">
-          <img src={product.image} alt={copy ? product.name : product.alt} width={1400} height={1400} className="max-h-[88%] max-w-[88%] object-contain" />
+        <div className="product-visual relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r">
+          <img
+            src={product.image}
+            alt={copy ? product.name : product.alt}
+            width={1400}
+            height={1400}
+            className="max-h-[88%] max-w-[88%] object-contain"
+          />
         </div>
         <div className="flex flex-col justify-end px-5 py-24 md:px-12">
           <p className="kicker">{product.index} · Via VanRobi · BE & NL</p>
           <h1 className="mt-4 text-5xl md:text-7xl">{product.name}</h1>
-          <p className="mt-2 text-[0.68rem] tracking-[0.16em] text-ice uppercase">{copy?.badge ?? product.badge}</p>
-          <p className="mt-6 max-w-xl text-muted">{copy?.longDescription ?? product.longDescription}</p>
+          <p className="mt-2 text-[0.68rem] tracking-[0.16em] text-ice uppercase">
+            {copy?.badge ?? product.badge}
+          </p>
+          <p className="mt-6 max-w-xl text-muted">
+            {copy?.longDescription ?? product.longDescription}
+          </p>
           {ice || flow || bath ? (
             <dl className="mt-10 grid grid-cols-3 gap-4 border-y border-line py-6">
               <div>
                 <dt className="text-[0.62rem] tracking-[0.16em] text-muted uppercase">Glace</dt>
-                <dd className="spec-num font-display text-4xl text-ice">{ice ? `${ice} kg` : "—"}</dd>
+                <dd className="spec-num font-display text-4xl text-ice">
+                  {ice ? `${ice} kg` : "—"}
+                </dd>
               </div>
               <div>
                 <dt className="text-[0.62rem] tracking-[0.16em] text-muted uppercase">Débit</dt>
@@ -60,7 +75,10 @@ function FrProduct() {
           ) : null}
           <ul className="mt-8 space-y-3">
             {product.specs.map((s) => (
-              <li key={s.label} className="flex justify-between gap-4 border-b border-line pb-3 text-sm">
+              <li
+                key={s.label}
+                className="flex justify-between gap-4 border-b border-line pb-3 text-sm"
+              >
                 <span className="text-muted">{s.label}</span>
                 <strong className="spec-num font-medium">{s.value}</strong>
               </li>
@@ -84,7 +102,11 @@ function FrProduct() {
               const p = getProduct(id);
               if (!p) return null;
               return (
-                <a key={id} href={withBase(`/fr/produits/${id}`)} className="text-sm tracking-[0.12em] text-ice uppercase">
+                <a
+                  key={id}
+                  href={withBase(`/fr/produits/${id}`)}
+                  className="text-sm tracking-[0.12em] text-ice uppercase"
+                >
                   {p.name} →
                 </a>
               );

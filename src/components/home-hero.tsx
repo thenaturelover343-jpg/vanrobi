@@ -75,7 +75,7 @@ function HeroMachine({ story }: { story: StoryState }) {
           alt="Goldy over-bar ijsbankkoeler"
           width={900}
           height={1100}
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          className="image-grade absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/70 to-bg" />
 
@@ -235,7 +235,7 @@ export function HomeHero() {
             <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
               {tagline()}
             </p>
-            <h1 className="mt-5 font-display text-[1.85rem] leading-[1.08] text-fg md:text-[2.75rem]">
+            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-fg md:text-5xl">
               Professionele ijsbankkoelers voor horeca in België & Nederland
             </h1>
             <p className="mt-6 max-w-md text-[1.02rem] text-muted">

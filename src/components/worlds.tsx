@@ -47,7 +47,7 @@ export function Worlds() {
             <img
               src={w.image}
               alt=""
-              className="absolute inset-0 h-full w-full object-cover brightness-[1.12] contrast-[1.04] transition-transform duration-700 group-hover:scale-[1.04]"
+              className="image-grade absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/25 to-transparent" />
             <div className="relative flex h-full flex-col justify-end p-7">

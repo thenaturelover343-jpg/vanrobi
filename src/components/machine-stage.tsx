@@ -1,11 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import {
-  featuredProducts,
-  growFromIce,
-  iceKgOf,
-  products,
-  type Product,
-} from "@/lib/products";
+import { featuredProducts, growFromIce, iceKgOf, products, type Product } from "@/lib/products";
 import { useCold } from "@/lib/cold";
 import { Reveal } from "./reveal";
 import { cn } from "@/lib/cn";
@@ -16,8 +10,7 @@ export function MachineStage() {
   const setMachine = useCold((s) => s.setMachine);
   const setGrow = useCold((s) => s.setGrow);
   const setTemp = useCold((s) => s.setTemp);
-  const active =
-    featuredProducts.find((p) => p.id === machineId) ?? featuredProducts[0];
+  const active = featuredProducts.find((p) => p.id === machineId) ?? featuredProducts[0];
 
   const select = (p: Product) => {
     setMachine(p.id);
@@ -35,7 +28,9 @@ export function MachineStage() {
             <em className="italic text-ice"> Eén standaard.</em>
           </h2>
           <p className="mt-5 max-w-lg text-muted">
-            Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt {products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en onderdelen.
+            Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt{" "}
+            {products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en
+            onderdelen.
           </p>
         </Reveal>
 
@@ -58,8 +53,17 @@ export function MachineStage() {
         </div>
 
         <div className="mt-10 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="photo-well aspect-[5/4]">
-            <img key={active.id} src={active.image} alt={active.alt} width={1200} height={960} />
+          <div
+            className={`product-visual flex aspect-[5/4] items-center justify-center ${active.imageKind === "diagram" ? "is-diagram" : ""}`}
+          >
+            <img
+              key={active.id}
+              src={active.image}
+              alt={active.alt}
+              width={1200}
+              height={960}
+              className="h-full w-full p-6"
+            />
           </div>
           <div>
             <p className="kicker">{active.badge}</p>

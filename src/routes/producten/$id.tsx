@@ -43,8 +43,8 @@ function ProductPage() {
     <PageShell>
       <section className="grid min-h-[100svh] border-b border-line lg:grid-cols-2">
         <div
-          className={`relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r ${
-            product.imageKind === "diagram" ? "bg-diagram" : "bg-well"
+          className={`product-visual relative flex min-h-[52vh] items-center justify-center overflow-hidden border-b border-line lg:min-h-full lg:border-b-0 lg:border-r ${
+            product.imageKind === "diagram" ? "is-diagram" : ""
           }`}
         >
           <img
@@ -63,9 +63,7 @@ function ProductPage() {
           ) : null}
         </div>
         <div className="flex flex-col justify-end px-5 py-24 md:px-12">
-          <p className="kicker">
-            {product.index} · Via VanRobi · BE & NL
-          </p>
+          <p className="kicker">{product.index} · Via VanRobi · BE & NL</p>
           <h1 className="mt-4 text-5xl md:text-7xl">{product.name}</h1>
           <p className="mt-2 text-[0.68rem] tracking-[0.16em] text-ice uppercase">
             {product.badge}
@@ -89,7 +87,9 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {ice ? `${ice}` : "—"}
-                  {ice ? <span className="ml-1 text-base font-medium text-muted md:text-lg">kg</span> : null}
+                  {ice ? (
+                    <span className="ml-1 text-base font-medium text-muted md:text-lg">kg</span>
+                  ) : null}
                 </dd>
               </div>
               <div className="metric-box">
@@ -98,7 +98,9 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {flow ? `${flow}` : "—"}
-                  {flow ? <span className="ml-1 text-base font-medium text-muted md:text-lg">L/u</span> : null}
+                  {flow ? (
+                    <span className="ml-1 text-base font-medium text-muted md:text-lg">L/u</span>
+                  ) : null}
                 </dd>
               </div>
               <div className="metric-box">
@@ -107,14 +109,19 @@ function ProductPage() {
                 </dt>
                 <dd className="spec-num metric-num mt-2 font-display text-4xl md:text-6xl">
                   {cuba ? `${cuba}` : "—"}
-                  {cuba ? <span className="ml-1 text-base font-medium text-muted md:text-lg">L</span> : null}
+                  {cuba ? (
+                    <span className="ml-1 text-base font-medium text-muted md:text-lg">L</span>
+                  ) : null}
                 </dd>
               </div>
             </dl>
           ) : null}
           <ul className="mt-8 space-y-3">
             {product.specs.map((s) => (
-              <li key={s.label} className="flex justify-between gap-4 border-b border-line pb-3 text-sm">
+              <li
+                key={s.label}
+                className="flex justify-between gap-4 border-b border-line pb-3 text-sm"
+              >
                 <span className="text-muted">{s.label}</span>
                 <strong className="spec-num font-medium">{s.value}</strong>
               </li>
@@ -129,10 +136,20 @@ function ProductPage() {
             </a>
           </div>
           <p className="mt-6 text-sm text-muted">
-            Of vul het <Link to="/contact" className="text-ice">contactformulier</Link> in.
-            {" "}Lees ook de <Link to="/faq" className="text-ice">FAQ</Link>
+            Of vul het{" "}
+            <Link to="/contact" className="text-ice">
+              contactformulier
+            </Link>{" "}
+            in. Lees ook de{" "}
+            <Link to="/faq" className="text-ice">
+              FAQ
+            </Link>
             {" · "}
-            <Link to="/gids/$slug" params={{ slug: "bierkoeler-kiezen-checklist" }} className="text-ice">
+            <Link
+              to="/gids/$slug"
+              params={{ slug: "bierkoeler-kiezen-checklist" }}
+              className="text-ice"
+            >
               keuze-checklist
             </Link>
             {product.id === "v100" || product.id === "v200" ? (
@@ -142,7 +159,11 @@ function ProductPage() {
                   V100 vs V200
                 </Link>
                 {" · "}
-                <Link to="/gids/$slug" params={{ slug: "onder-bar-bierkoeler" }} className="text-ice">
+                <Link
+                  to="/gids/$slug"
+                  params={{ slug: "onder-bar-bierkoeler" }}
+                  className="text-ice"
+                >
                   onder-bar gids
                 </Link>
               </>
@@ -158,13 +179,21 @@ function ProductPage() {
             {product.uses.includes("events") || product.uses.includes("mobiel") ? (
               <>
                 {" · "}
-                <Link to="/gids/$slug" params={{ slug: "bierkoeler-voor-events" }} className="text-ice">
+                <Link
+                  to="/gids/$slug"
+                  params={{ slug: "bierkoeler-voor-events" }}
+                  className="text-ice"
+                >
                   Eventgids
                 </Link>
               </>
             ) : null}
             {" · "}
-            <Link to="/gids/$slug" params={{ slug: "spiralen-tapinstallatie" }} className="text-ice">
+            <Link
+              to="/gids/$slug"
+              params={{ slug: "spiralen-tapinstallatie" }}
+              className="text-ice"
+            >
               spiralen & tap
             </Link>
             .
@@ -195,8 +224,8 @@ function ProductPage() {
             <p className="kicker">Offerte</p>
             <h2 className="mt-3 text-4xl">Vraag {product.name} aan</h2>
             <p className="mt-4 text-muted">
-              Vermeld model (of piekvolume), vast versus mobiel, aantal kranen en
-              eventueel barfoto's. Zo adviseren we gericht.
+              Vermeld model (of piekvolume), vast versus mobiel, aantal kranen en eventueel
+              barfoto's. Zo adviseren we gericht.
             </p>
           </div>
           <ContactForm preset={product.name} />
@@ -208,9 +237,18 @@ function ProductPage() {
           <p className="kicker">Ook in het assortiment</p>
           <div className="mt-8 grid gap-8 md:grid-cols-4">
             {others.map((p) => (
-              <Link key={p.id} to="/producten/$id" params={{ id: p.id }} className="product-card group block p-0">
-                <div className="bg-well flex aspect-square items-center justify-center overflow-hidden">
-                  <img src={p.image} alt={p.alt} className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]" />
+              <Link
+                key={p.id}
+                to="/producten/$id"
+                params={{ id: p.id }}
+                className="product-card group block p-0"
+              >
+                <div className="product-visual flex aspect-square items-center justify-center overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.alt}
+                    className="h-full w-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
                 </div>
                 <h3 className="px-4 pt-3 text-2xl group-hover:text-ice">{p.name}</h3>
                 <p className="px-4 pb-4 text-sm text-muted">{p.badge}</p>
@@ -240,14 +278,25 @@ function MetricIcon({ kind }: { kind: "ice" | "flow" | "tank" }) {
   if (kind === "ice") {
     return (
       <svg {...common}>
-        <path d="M8 1.5 L8 14.5 M3.5 4.2 L12.5 11.8 M12.5 4.2 L3.5 11.8" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+        <path
+          d="M8 1.5 L8 14.5 M3.5 4.2 L12.5 11.8 M12.5 4.2 L3.5 11.8"
+          stroke="currentColor"
+          strokeWidth="1.3"
+          strokeLinecap="round"
+        />
       </svg>
     );
   }
   if (kind === "flow") {
     return (
       <svg {...common}>
-        <path d="M2 8h9M8.5 4.5 12.5 8 8.5 11.5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+        <path
+          d="M2 8h9M8.5 4.5 12.5 8 8.5 11.5"
+          stroke="currentColor"
+          strokeWidth="1.3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
     );
   }
@@ -258,4 +307,3 @@ function MetricIcon({ kind }: { kind: "ice" | "flow" | "tank" }) {
     </svg>
   );
 }
-
