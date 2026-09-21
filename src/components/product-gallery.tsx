@@ -3,6 +3,8 @@ import { withBase } from "@/lib/base";
 import type { Product } from "@/lib/products";
 import { cn } from "@/lib/cn";
 import { OptimizedImage } from "./optimized-image";
+import { useLang } from "@/lib/i18n";
+import { frGallery } from "@/lib/fr";
 
 type GalleryImage = {
   src: string;
@@ -11,46 +13,60 @@ type GalleryImage = {
   productImage?: boolean;
 };
 
-function contextImage(product: Product) {
+function contextImage(product: Product, fr: boolean) {
   if (product.uses.includes("events") || product.uses.includes("mobiel")) {
     return {
       src: withBase("/worlds/world-event.jpg"),
-      alt: `${product.name} in een mobiele eventopstelling`,
-      label: "Events",
+      alt: fr
+        ? `${product.name} ${frGallery.eventAlt}`
+        : `${product.name} in een mobiele eventopstelling`,
+      label: fr ? frGallery.events : "Events",
     };
   }
   if (product.uses.includes("onder-bar")) {
     return {
       src: withBase("/worlds/world-install.jpg"),
-      alt: `${product.name} in een professionele installatie`,
-      label: "Installatie",
+      alt: fr
+        ? `${product.name} ${frGallery.installAlt}`
+        : `${product.name} in een professionele installatie`,
+      label: fr ? frGallery.install : "Installatie",
     };
   }
   return {
     src: withBase("/worlds/world-bar.jpg"),
-    alt: `${product.name} voor gebruik in de horeca`,
-    label: "Horeca",
+    alt: fr ? `${product.name} ${frGallery.horecaAlt}` : `${product.name} voor gebruik in de horeca`,
+    label: fr ? frGallery.horeca : "Horeca",
   };
 }
 
 export function ProductGallery({ product }: { product: Product }) {
+  const fr = useLang() === "fr";
   const [active, setActive] = useState(0);
   const images = useMemo<GalleryImage[]>(
     () => [
       {
         src: product.image,
         alt: product.alt,
-        label: product.imageKind === "diagram" ? "Producttekening" : "Product",
+        label:
+          product.imageKind === "diagram"
+            ? fr
+              ? frGallery.drawing
+              : "Producttekening"
+            : fr
+              ? frGallery.product
+              : "Product",
         productImage: true,
       },
-      contextImage(product),
+      contextImage(product, fr),
       {
         src: withBase("/worlds/statement-tap.jpg"),
-        alt: `Professionele tapopstelling passend bij ${product.name}`,
-        label: "Tapopstelling",
+        alt: fr
+          ? `${frGallery.tapAlt} ${product.name}`
+          : `Professionele tapopstelling passend bij ${product.name}`,
+        label: fr ? frGallery.tap : "Tapopstelling",
       },
     ],
-    [product],
+    [product, fr],
   );
 
   useEffect(() => setActive(0), [product.id]);
@@ -84,13 +100,20 @@ export function ProductGallery({ product }: { product: Product }) {
         </span>
       </div>
 
-      <div className="product-gallery-thumbs" aria-label={`Beeldgalerij van ${product.name}`}>
+      <div
+        className="product-gallery-thumbs"
+        aria-label={fr ? `${frGallery.aria} ${product.name}` : `Beeldgalerij van ${product.name}`}
+      >
         {images.map((image, index) => (
           <button
             key={`${image.src}-${image.label}`}
             type="button"
             className={cn("product-gallery-thumb", active === index && "is-active")}
-            aria-label={`Toon beeld ${index + 1}: ${image.label}`}
+            aria-label={
+              fr
+                ? `${frGallery.show} ${index + 1}: ${image.label}`
+                : `Toon beeld ${index + 1}: ${image.label}`
+            }
             aria-pressed={active === index}
             onClick={() => setActive(index)}
           >

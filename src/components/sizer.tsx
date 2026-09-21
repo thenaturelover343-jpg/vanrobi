@@ -5,6 +5,8 @@ import { useCold } from "@/lib/cold";
 import { flowOf, getProduct, growFromIce, iceKgOf, type Product } from "@/lib/products";
 import { withBase } from "@/lib/base";
 import { MagneticCta } from "./magnetic-cta";
+import { useLang } from "@/lib/i18n";
+import { frSizerCopy } from "@/lib/fr";
 
 type Place = "onderbar" | "overbar" | "mobiel";
 
@@ -39,6 +41,7 @@ function spec(product: Product, label: string) {
 }
 
 export function Sizer() {
+  const fr = useLang() === "fr";
   const [place, setPlace] = useState<Place>("onderbar");
   const [peak, setPeak] = useState(80);
   const setMachine = useCold((state) => state.setMachine);
@@ -76,15 +79,17 @@ export function Sizer() {
 
   return (
     <aside className="border border-line bg-surface p-6 md:p-8">
-      <p className="kicker">Dimensioneerhulp</p>
-      <h3 className="mt-3 text-3xl">Vind uw machine.</h3>
+      <p className="kicker">{fr ? frSizerCopy.kicker : "Dimensioneerhulp"}</p>
+      <h3 className="mt-3 text-3xl">{fr ? frSizerCopy.title : "Vind uw machine."}</h3>
       <p className="mt-3 text-sm text-muted">
-        Kies de opstelling en schuif naar uw piekvolume. Het advies en de ijsbank reageren meteen.
+        {fr
+          ? frSizerCopy.lede
+          : "Kies de opstelling en schuif naar uw piekvolume. Het advies en de ijsbank reageren meteen."}
       </p>
 
       <fieldset className="mt-7">
         <legend className="text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          1 · Opstelling
+          {fr ? frSizerCopy.place : "1 · Opstelling"}
         </legend>
         <div className="mt-3 grid grid-cols-3 gap-2">
           {PLACE_OPTIONS.map((option) => (
@@ -99,7 +104,7 @@ export function Sizer() {
                   : "border-line text-muted hover:border-ice hover:text-ice"
               }`}
             >
-              {option.label}
+              {fr ? frSizerCopy.places[option.id] : option.label}
             </button>
           ))}
         </div>
@@ -111,7 +116,7 @@ export function Sizer() {
             htmlFor="peak-volume"
             className="text-[0.68rem] tracking-[0.16em] text-muted uppercase"
           >
-            2 · Piekvolume
+            {fr ? frSizerCopy.peak : "2 · Piekvolume"}
           </label>
           <output htmlFor="peak-volume" className="spec-num font-display text-3xl text-ice">
             {peak} <span className="text-base">L/u</span>
@@ -160,7 +165,7 @@ export function Sizer() {
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-[0.62rem] tracking-[0.16em] text-muted uppercase">
-                Advies voor {peak} L/u
+                {fr ? `${frSizerCopy.advice} ${peak} L/u` : `Advies voor ${peak} L/u`}
               </p>
               <p className="mt-1 font-display text-4xl text-ice">{result.name}</p>
             </div>
@@ -171,9 +176,9 @@ export function Sizer() {
 
           <dl className="mt-5 grid grid-cols-3 gap-px bg-line">
             {[
-              ["IJsreserve", `${iceKg} kg`],
-              ["Debiet", `${flow} L/u`],
-              ["Afmetingen", spec(result, "afmetingen")],
+              [fr ? "Réserve de glace" : "IJsreserve", `${iceKg} kg`],
+              [fr ? "Débit" : "Debiet", `${flow} L/u`],
+              [fr ? "Dimensions" : "Afmetingen", spec(result, "afmetingen")],
             ].map(([label, value]) => (
               <div key={label} className="min-w-0 bg-surface p-3">
                 <dt className="text-[0.55rem] tracking-[0.12em] text-muted uppercase">{label}</dt>
@@ -184,12 +189,19 @@ export function Sizer() {
 
           <div className="mt-5 flex flex-wrap gap-3">
             <MagneticCta>
-              <a href={withBase(`/contact?${query.toString()}`)} className="btn btn-ice">
-                Offerte voor {result.name}
+              <a
+                href={withBase(`${fr ? "/fr/contact" : "/contact"}?${query.toString()}`)}
+                className="btn btn-ice"
+              >
+                {fr ? `${frSizerCopy.cta} ${result.name}` : `Offerte voor ${result.name}`}
               </a>
             </MagneticCta>
-            <Link to="/producten/$id" params={{ id: result.id }} className="btn btn-ghost">
-              Bekijk specs
+            <Link
+              to={fr ? "/fr/produits/$id" : "/producten/$id"}
+              params={{ id: result.id }}
+              className="btn btn-ghost"
+            >
+              {fr ? "Voir les specs" : "Bekijk specs"}
             </Link>
           </div>
         </div>

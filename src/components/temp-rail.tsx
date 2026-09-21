@@ -1,8 +1,10 @@
 import { useCold } from "@/lib/cold";
+import { useLang } from "@/lib/i18n";
 
 export function TempRail() {
   const temp = useCold((s) => s.temp);
   const grow = useCold((s) => s.grow);
+  const fr = useLang() === "fr";
 
   return (
     <aside
@@ -12,7 +14,7 @@ export function TempRail() {
       <strong className="spec-num font-display text-2xl font-normal text-fg">
         {temp.toFixed(1)}°
       </strong>
-      <span className="h-20 w-px bg-line relative">
+      <span className="relative h-20 w-px bg-line">
         <i
           className="absolute right-0 bottom-0 left-0 bg-ice"
           style={{ height: `${Math.round(grow * 100)}%` }}
@@ -22,7 +24,7 @@ export function TempRail() {
         className="text-[0.58rem] tracking-[0.22em] uppercase opacity-70"
         style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
       >
-        Ijsbank
+        {fr ? "Banquise" : "Ijsbank"}
       </span>
     </aside>
   );

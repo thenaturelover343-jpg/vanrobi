@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
+import { CtaBand } from "@/components/cta-band";
 import { contact } from "@/lib/contact";
 import { frAbout } from "@/lib/fr";
 import { seoHead } from "@/lib/seo";
+import { ProductLink } from "@/components/product-link";
 
 export const Route = createFileRoute("/fr/a-propos")({
   head: () =>
@@ -21,51 +23,66 @@ function FrAbout() {
   return (
     <PageShell>
       <PageHero kicker={frAbout.eyebrow} title={frAbout.title} lede={frAbout.lede} />
-      <section className="mx-auto grid max-w-[1220px] gap-12 px-5 py-16 md:grid-cols-2 md:px-8">
-        <div>
-          <h2 className="text-3xl">{frAbout.partnershipTitle}</h2>
-          <p className="mt-4 text-muted">{frAbout.partnership}</p>
+      <section className="mx-auto grid max-w-[1220px] gap-12 px-5 py-20 md:grid-cols-2 md:px-8">
+        <div className="prose">
+          <h2>{frAbout.partnershipTitle}</h2>
+          <p>{frAbout.partnership}</p>
         </div>
-        <div>
-          <h2 className="text-3xl">{frAbout.localTitle}</h2>
-          <p className="mt-4 text-muted">{frAbout.local}</p>
-          <p className="mt-4 text-muted">
-            Adresse : {contact.address.line}. Tél.{" "}
-            <a href={`tel:${contact.phoneTel}`} className="text-ice">
-              {contact.phone}
-            </a>
-            .
+        <div className="prose">
+          <h2>{frAbout.localTitle}</h2>
+          <p>
+            VanRobi collabore avec{" "}
+            <a href={contact.companyUrl} target="_blank" rel="noreferrer">
+              {contact.company}
+            </a>{" "}
+            pour la maintenance, le nettoyage, les réparations et le placement des
+            refroidissements. Certifié froid, avec base en Campine et couverture en{" "}
+            {contact.regions}.
           </p>
-          <p className="mt-4 text-muted">{frAbout.coverage}</p>
-          <p className="mt-6 flex flex-wrap gap-4">
-            <Link to="/fr/services" className="text-sm tracking-[0.12em] text-ice uppercase">
+          <p>{frAbout.coverage}</p>
+          <p>
+            <Link to="/fr/services" className="text-ice">
               Voir les services →
             </Link>
-            <Link to="/regio" className="text-sm tracking-[0.12em] text-muted uppercase">
-              Régions (NL)
-            </Link>
           </p>
         </div>
       </section>
-      <section className="border-t border-line px-5 py-16 md:px-8">
+
+      <section className="border-y border-line bg-bg-2 px-5 py-20 md:px-8">
         <div className="mx-auto max-w-[1220px]">
-          <p className="kicker">Faits</p>
-          <h2 className="mt-4 text-4xl">{frAbout.factsTitle}</h2>
-          <dl className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["Marque", "VanRobi · refroidisseurs à banquise"],
-              ["Région", "Belgique & Pays-Bas"],
-              ["Focus", "Froid bière & boissons Horeca"],
-              ["Service", `${contact.company} · certifié froid`],
-            ].map(([t, d]) => (
-              <div key={t}>
-                <dt className="kicker">{t}</dt>
-                <dd className="mt-2">{d}</dd>
+          <p className="kicker">{frAbout.factsKicker}</p>
+          <h2 className="mt-4 text-4xl md:text-5xl">
+            {frAbout.factsBefore} <em className="italic text-ice">{frAbout.factsEm}</em>
+          </h2>
+          <div className="mt-12 grid gap-8 md:grid-cols-4">
+            {frAbout.facts.map((f) => (
+              <div key={f.t}>
+                <h3 className="font-sans text-sm tracking-[0.14em] text-ice uppercase">{f.t}</h3>
+                <p className="mt-3 text-muted">{f.d}</p>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
+
+      <section className="px-5 py-20 md:px-8">
+        <div className="prose mx-auto max-w-[46rem]">
+          <h2>{frAbout.whyTitle}</h2>
+          <p>
+            {frAbout.whyBody} Régions : {contact.regions}, plus les Pays-Bas.
+          </p>
+          <h3>{frAbout.assortTitle}</h3>
+          <p>
+            Du sur bar (<ProductLink id="goldy">Goldy</ProductLink>) au sous bar high volume (
+            <ProductLink id="v200">V200</ProductLink>). {frAbout.assortBody}{" "}
+            <Link to="/fr/faq">FAQ</Link>.
+          </p>
+          <p>
+            <Link to="/fr/contact">{frAbout.contactCta}</Link>
+          </p>
+        </div>
+      </section>
+      <CtaBand />
     </PageShell>
   );
 }

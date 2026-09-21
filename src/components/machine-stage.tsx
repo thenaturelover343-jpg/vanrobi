@@ -4,9 +4,12 @@ import { useCold } from "@/lib/cold";
 import { Reveal } from "./reveal";
 import { cn } from "@/lib/cn";
 import { offerteHref } from "@/lib/site";
+import { useLang } from "@/lib/i18n";
+import { frMachinesCopy, frProductCopy } from "@/lib/fr";
 import { OptimizedImage } from "./optimized-image";
 
 export function MachineStage() {
+  const fr = useLang() === "fr";
   const machineId = useCold((s) => s.machineId);
   const setMachine = useCold((s) => s.setMachine);
   const setGrow = useCold((s) => s.setGrow);
@@ -23,15 +26,15 @@ export function MachineStage() {
     <section id="producten" className="border-t border-line px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-[1220px]">
         <Reveal>
-          <p className="kicker">Assortiment</p>
+          <p className="kicker">{fr ? frMachinesCopy.kicker : "Assortiment"}</p>
           <h2 className="mt-4 max-w-3xl text-4xl md:text-6xl">
-            Acht machines.
-            <em className="italic text-ice"> Eén standaard.</em>
+            {fr ? frMachinesCopy.title : "Acht machines."}
+            <em className="italic text-ice"> {fr ? frMachinesCopy.em : "Eén standaard."}</em>
           </h2>
           <p className="mt-5 max-w-lg text-muted">
-            Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt{" "}
-            {products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en
-            onderdelen.
+            {fr
+              ? frMachinesCopy.lede
+              : `Ontdek hier acht geselecteerde ijsbankkoelers. De volledige catalogus telt ${products.length} producten, inclusief koelers, serpentijnen, tapmateriaal en onderdelen.`}
           </p>
         </Reveal>
 
@@ -68,9 +71,11 @@ export function MachineStage() {
             />
           </div>
           <div>
-            <p className="kicker">{active.badge}</p>
+            <p className="kicker">{fr ? (frProductCopy[active.id]?.badge ?? active.badge) : active.badge}</p>
             <h3 className="mt-3 text-5xl">{active.name}</h3>
-            <p className="mt-4 text-muted">{active.description}</p>
+            <p className="mt-4 text-muted">
+              {fr ? (frProductCopy[active.id]?.description ?? active.description) : active.description}
+            </p>
             <ul className="mt-8 space-y-3">
               {active.specs.map((s) => (
                 <li
@@ -83,16 +88,23 @@ export function MachineStage() {
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/producten/$id" params={{ id: active.id }} className="btn btn-ghost">
-                Bekijk {active.name}
+              <Link
+                to={fr ? "/fr/produits/$id" : "/producten/$id"}
+                params={{ id: active.id }}
+                className="btn btn-ghost"
+              >
+                {fr ? `${frMachinesCopy.view} ${active.name}` : `Bekijk ${active.name}`}
               </Link>
-              <a href={offerteHref(active.name)} className="btn btn-ice">
-                Offerte voor {active.name}
+              <a href={offerteHref(active.name, fr ? "fr" : "nl")} className="btn btn-ice">
+                {fr ? `${frMachinesCopy.quote} ${active.name}` : `Offerte voor ${active.name}`}
               </a>
             </div>
             <p className="mt-6">
-              <Link to="/producten" className="text-sm tracking-[0.12em] text-ice uppercase">
-                Volledige catalogus →
+              <Link
+                to={fr ? "/fr/produits" : "/producten"}
+                className="text-sm tracking-[0.12em] text-ice uppercase"
+              >
+                {fr ? frMachinesCopy.catalog : "Volledige catalogus →"}
               </Link>
             </p>
           </div>

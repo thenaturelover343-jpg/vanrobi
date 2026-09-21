@@ -1,8 +1,11 @@
 import { Reveal } from "./reveal";
 import { withBase } from "@/lib/base";
 import { OptimizedImage } from "./optimized-image";
+import { useLang } from "@/lib/i18n";
+import { frCutawayCopy } from "@/lib/fr";
 
 export function Cutaway() {
+  const fr = useLang() === "fr";
   return (
     <section id="statement" className="border-t border-line bg-bg-2">
       <div className="mx-auto grid max-w-[1220px] gap-0 lg:grid-cols-2">
@@ -17,13 +20,15 @@ export function Cutaway() {
         </div>
         <div className="flex flex-col justify-center px-5 py-16 md:px-12">
           <Reveal>
-            <p className="kicker">Koude onder controle</p>
+            <p className="kicker">{fr ? frCutawayCopy.kicker : "Koude onder controle"}</p>
             <h2 className="mt-4 text-4xl md:text-6xl">
-              Niet sneller tappen.
-              <em className="italic text-ice"> Juister koelen.</em>
+              {fr ? frCutawayCopy.line1 : "Niet sneller tappen."}
+              <em className="italic text-ice"> {fr ? frCutawayCopy.em : "Juister koelen."}</em>
             </h2>
             <p className="mt-6 max-w-md text-lg text-muted">
-              Maatwerk. Benelux-nabijheid. Koude die blijft presteren tijdens elke shift.
+              {fr
+                ? frCutawayCopy.sub
+                : "Maatwerk. Benelux-nabijheid. Koude die blijft presteren tijdens elke shift."}
             </p>
           </Reveal>
         </div>

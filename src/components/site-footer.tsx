@@ -39,7 +39,7 @@ export function SiteFooter() {
             ))}
             {isFr ? (
               <li>
-                <Link to="/producten" className="text-muted hover:text-ice">
+                <Link to="/fr/produits" className="text-muted hover:text-ice">
                   {frFooter.catalog}
                 </Link>
               </li>
@@ -70,7 +70,7 @@ export function SiteFooter() {
               );
             })}
             <li>
-              <a href={withBase("/producten")} className="text-muted hover:text-ice">
+              <a href={withBase(isFr ? "/fr/produits" : "/producten")} className="text-muted hover:text-ice">
                 {isFr ? frFooter.catalog : "Volledige catalogus"}
               </a>
             </li>

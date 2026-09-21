@@ -5,6 +5,8 @@ import { tagline } from "@/lib/experience";
 import { withBase } from "@/lib/base";
 import { MagneticCta } from "./magnetic-cta";
 import { OptimizedImage } from "./optimized-image";
+import { useLang } from "@/lib/i18n";
+import { frHero } from "@/lib/fr";
 
 type StoryState = {
   progress: number;
@@ -42,12 +44,19 @@ function CountUp({ value, suffix, active }: { value: number; suffix: string; act
 }
 
 function HeroMachine({ story }: { story: StoryState }) {
+  const lang = useLang();
+  const fr = lang === "fr";
   const specsRef = useRef<HTMLDivElement>(null);
   const [specsVisible, setSpecsVisible] = useState(false);
   const fillHeight = 32 + story.progress * 126;
   const fillY = 183 - fillHeight;
-  const phase =
-    story.progress < 0.34
+  const phase = fr
+    ? story.progress < 0.34
+      ? frHero.phases[0]
+      : story.progress < 0.76
+        ? frHero.phases[1]
+        : frHero.phases[2]
+    : story.progress < 0.34
       ? "IJsbank bouwt op"
       : story.progress < 0.76
         ? "Piekbelasting"
@@ -154,7 +163,7 @@ function HeroMachine({ story }: { story: StoryState }) {
           <circle className="hero-pulse" cx="74" cy="199" r="4" fill="#7ad4f0" />
           <circle className="hero-pulse hero-pulse-late" cx="206" cy="199" r="4" fill="#7ad4f0" />
           <text x="140" y="214" fill="#8aa0ad" textAnchor="middle" fontSize="8" letterSpacing="2">
-            STABIELE TAPKOUDE
+            {fr ? frHero.tap : "STABIELE TAPKOUDE"}
           </text>
         </svg>
 
@@ -167,15 +176,19 @@ function HeroMachine({ story }: { story: StoryState }) {
             <p className="mt-2 font-display text-3xl text-fg">Goldy</p>
           </div>
           <div className="p-4">
-            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">IJsreserve</p>
+            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
+              {fr ? frHero.iceReserve : "IJsreserve"}
+            </p>
             <p className="spec-num mt-2 font-display text-3xl text-fg">
               <CountUp value={9} suffix="kg" active={specsVisible} />
             </p>
           </div>
           <div className="p-4">
-            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">Debiet</p>
+            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
+              {fr ? frHero.flow : "Debiet"}
+            </p>
             <p className="spec-num mt-2 font-display text-3xl text-fg">
-              <CountUp value={44} suffix="L/u" active={specsVisible} />
+              <CountUp value={44} suffix={fr ? "L/h" : "L/u"} active={specsVisible} />
             </p>
           </div>
         </div>
@@ -185,6 +198,8 @@ function HeroMachine({ story }: { story: StoryState }) {
 }
 
 export function HomeHero() {
+  const lang = useLang();
+  const fr = lang === "fr";
   const heroRef = useRef<HTMLElement>(null);
   const [story, setStory] = useState<StoryState>({ progress: 0, temperature: 4.8 });
   const setGrow = useCold((state) => state.setGrow);
@@ -243,26 +258,26 @@ export function HomeHero() {
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-20 pt-28 md:flex-row md:items-end md:justify-between md:px-8 md:pb-24">
           <div className="max-w-xl">
-            <p className="kicker">Ijsbankkoelers · België & Nederland</p>
+            <p className="kicker">{fr ? frHero.kicker : "Ijsbankkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
-              {tagline()}
+              {fr ? frHero.slogan : tagline()}
             </p>
             <h1 className="mt-5 font-display text-4xl leading-[1.08] text-fg md:text-5xl">
-              Professionele ijsbankkoelers voor horeca
+              {fr ? frHero.title : "Professionele ijsbankkoelers voor horeca"}
             </h1>
             <p className="mt-6 max-w-md text-[1.02rem] text-muted">
-              Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele
-              koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig
-              hebben.
+              {fr
+                ? frHero.lede
+                : "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben."}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <MagneticCta>
-                <Link to="/contact" className="btn btn-ice">
-                  Vraag een offerte
+                <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
+                  {fr ? frHero.cta : "Vraag een offerte"}
                 </Link>
               </MagneticCta>
-              <Link to="/producten" className="btn btn-ghost">
-                Bekijk machines
+              <Link to={fr ? "/fr/produits" : "/producten"} className="btn btn-ghost">
+                {fr ? frHero.ctaSecondary : "Bekijk machines"}
               </Link>
             </div>
             <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
@@ -285,7 +300,7 @@ export function HomeHero() {
               ?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
           }}
         >
-          Scroll om de ijsbank op te bouwen
+          {fr ? frHero.scroll : "Scroll om de ijsbank op te bouwen"}
           <i aria-hidden />
         </button>
       </div>

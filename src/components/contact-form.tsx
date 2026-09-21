@@ -3,6 +3,8 @@ import { products, groupLabels, type ProductGroup } from "@/lib/products";
 import { experience } from "@/lib/experience";
 import { submitOfferte } from "@/lib/offerte";
 import { site, offerteMailto } from "@/lib/site";
+import { useLang } from "@/lib/i18n";
+import { frForm, frGroupLabels } from "@/lib/fr";
 
 const GROUPS: ProductGroup[] = [
   "koelers",
@@ -13,7 +15,7 @@ const GROUPS: ProductGroup[] = [
   "overig",
 ];
 
-const REGIONS = [
+const REGIONS_NL = [
   "Antwerpen",
   "Limburg",
   "Vlaams-Brabant",
@@ -26,6 +28,8 @@ const REGIONS = [
 ];
 
 export function ContactForm({ preset }: { preset?: string }) {
+  const fr = useLang() === "fr";
+  const t = fr ? frForm : null;
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -47,11 +51,16 @@ export function ContactForm({ preset }: { preset?: string }) {
   const onSubmitMailto = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const body = bodyFrom(data);
+    const body = bodyFrom(data, fr);
     const product = String(data.get("product") || "");
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
-      product ? `Offerteaanvraag VanRobi: ${product}` : "Offerteaanvraag VanRobi",
-    )}&body=${encodeURIComponent(body)}`;
+    const subject = product
+      ? fr
+        ? `${frForm.subject}: ${product}`
+        : `Offerteaanvraag VanRobi: ${product}`
+      : fr
+        ? frForm.subject
+        : "Offerteaanvraag VanRobi";
+    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
   };
 
@@ -86,7 +95,11 @@ export function ContactForm({ preset }: { preset?: string }) {
       form.reset();
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Verzenden mislukt. Probeer opnieuw of mail ons.",
+        err instanceof Error
+          ? err.message
+          : fr
+            ? frForm.sendFail
+            : "Verzenden mislukt. Probeer opnieuw of mail ons.",
       );
     } finally {
       setBusy(false);
@@ -96,42 +109,55 @@ export function ContactForm({ preset }: { preset?: string }) {
   if (sent && experience.nativeForm) {
     return (
       <div className="border border-ice/40 bg-surface p-6">
-        <p className="kicker">Aanvraag ontvangen</p>
-        <h3 className="mt-3 text-3xl">We antwoorden binnen één werkdag.</h3>
+        <p className="kicker">{fr ? t!.received : "Aanvraag ontvangen"}</p>
+        <h3 className="mt-3 text-3xl">
+          {fr ? t!.reply : "We antwoorden binnen één werkdag."}
+        </h3>
         <p className="mt-4 text-sm text-muted">
-          Bevestiging staat hier. We nemen contact op via {emailOut || "uw e-mailadres"}. Dringend?
-          Bel {site.phone}.
+          {fr ? (
+            <>
+              {t!.confirm} {emailOut || "votre e-mail"}. {t!.urgent} {t!.call} {site.phone}.
+            </>
+          ) : (
+            <>
+              Bevestiging staat hier. We nemen contact op via {emailOut || "uw e-mailadres"}. Dringend?
+              Bel {site.phone}.
+            </>
+          )}
         </p>
       </div>
     );
   }
 
+  const regions = fr ? frForm.regions : REGIONS_NL;
+  const groups = fr ? frGroupLabels : groupLabels;
+
   return (
     <form onSubmit={experience.nativeForm ? onSubmitNative : onSubmitMailto} className="grid gap-4">
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Naam
+          {fr ? t!.name : "Naam"}
           <input name="name" required className={field} autoComplete="name" />
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          E-mail
+          {fr ? t!.email : "E-mail"}
           <input name="email" type="email" required className={field} autoComplete="email" />
         </label>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Telefoon
+          {fr ? t!.phone : "Telefoon"}
           <input name="phone" className={field} autoComplete="tel" />
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Model
+          {fr ? t!.model : "Model"}
           <select name="product" defaultValue={defaults.product} className={field}>
-            <option value="">Kies model</option>
+            <option value="">{fr ? t!.chooseModel : "Kies model"}</option>
             {GROUPS.map((g) => {
               const items = products.filter((p) => (p.group ?? "koelers") === g);
               if (!items.length) return null;
               return (
-                <optgroup key={g} label={groupLabels[g]}>
+                <optgroup key={g} label={groups[g]}>
                   {items.map((p) => (
                     <option key={p.id} value={p.name}>
                       {p.name}
@@ -140,42 +166,42 @@ export function ContactForm({ preset }: { preset?: string }) {
                 </optgroup>
               );
             })}
-            <option value="Onderhoud / service">Onderhoud / service</option>
-            <option value="Anders">Anders</option>
+            <option value="Onderhoud / service">{fr ? t!.service : "Onderhoud / service"}</option>
+            <option value="Anders">{fr ? t!.other : "Anders"}</option>
           </select>
         </label>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Piekvolume (L/u of glazen/uur)
+          {fr ? t!.peak : "Piekvolume (L/u of glazen/uur)"}
           <input
             name="peak"
             defaultValue={defaults.peak}
             className={field}
-            placeholder="bv. 80 L/u of 200 glazen"
+            placeholder={fr ? t!.peakPh : "bv. 80 L/u of 200 glazen"}
           />
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Vast of mobiel
+          {fr ? t!.install : "Vast of mobiel"}
           <select name="install" className={field} defaultValue={defaults.install}>
-            <option value="">Kies</option>
-            <option value="Vast / onder-bar">Vast / onder-bar</option>
-            <option value="Over-bar">Over-bar</option>
-            <option value="Mobiel / events">Mobiel / events</option>
-            <option value="Nog niet zeker">Nog niet zeker</option>
+            <option value="">{fr ? t!.choose : "Kies"}</option>
+            <option value="Vast / onder-bar">{fr ? t!.vast : "Vast / onder-bar"}</option>
+            <option value="Over-bar">{fr ? t!.overbar : "Over-bar"}</option>
+            <option value="Mobiel / events">{fr ? t!.mobiel : "Mobiel / events"}</option>
+            <option value="Nog niet zeker">{fr ? t!.unsure : "Nog niet zeker"}</option>
           </select>
         </label>
       </div>
       <div className="grid gap-4 md:grid-cols-2">
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Aantal kranen
-          <input name="taps" className={field} inputMode="numeric" placeholder="bv. 2" />
+          {fr ? t!.taps : "Aantal kranen"}
+          <input name="taps" className={field} inputMode="numeric" placeholder={fr ? t!.tapsPh : "bv. 2"} />
         </label>
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Regio
+          {fr ? t!.region : "Regio"}
           <select name="region" className={field} defaultValue="">
-            <option value="">Kies regio</option>
-            {REGIONS.map((r) => (
+            <option value="">{fr ? t!.chooseRegion : "Kies regio"}</option>
+            {regions.map((r) => (
               <option key={r} value={r}>
                 {r}
               </option>
@@ -184,17 +210,17 @@ export function ContactForm({ preset }: { preset?: string }) {
         </label>
       </div>
       <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-        Bericht
+        {fr ? t!.message : "Bericht"}
         <textarea
           name="message"
           rows={5}
           className={`${field} py-3`}
-          placeholder="Bar, event of installatie — meubelmaten mag hier ook."
+          placeholder={fr ? t!.messagePh : "Bar, event of installatie — meubelmaten mag hier ook."}
         />
       </label>
       {experience.nativeForm ? (
         <label className="grid gap-2 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
-          Barfoto’s / meubelmaten (optioneel)
+          {fr ? t!.photos : "Barfoto’s / meubelmaten (optioneel)"}
           <input
             name="photos"
             type="file"
@@ -206,11 +232,21 @@ export function ContactForm({ preset }: { preset?: string }) {
       ) : null}
       {error ? <p className="text-sm text-ice">{error}</p> : null}
       <button type="submit" className="btn btn-ice justify-self-start" disabled={busy}>
-        {busy ? "Verzenden…" : experience.nativeForm ? "Verstuur aanvraag" : "Verstuur via e-mail"}
+        {busy
+          ? fr
+            ? t!.sending
+            : "Verzenden…"
+          : experience.nativeForm
+            ? fr
+              ? t!.send
+              : "Verstuur aanvraag"
+            : fr
+              ? t!.sendMail
+              : "Verstuur via e-mail"}
       </button>
       {experience.nativeForm ? (
         <p className="text-sm text-muted">
-          Antwoord binnen één werkdag. Of bel{" "}
+          {fr ? t!.replyDay : "Antwoord binnen één werkdag. Of bel"}{" "}
           <a href={`tel:${site.phoneTel}`} className="text-ice">
             {site.phone}
           </a>
@@ -218,22 +254,56 @@ export function ContactForm({ preset }: { preset?: string }) {
         </p>
       ) : sent ? (
         <p className="text-sm text-ice">
-          Uw e-mailprogramma opent. Lukt dat niet? Mail naar {site.email}.
+          {fr ? (
+            <>
+              {t!.mailOpened} {site.email}.
+            </>
+          ) : (
+            <>Uw e-mailprogramma opent. Lukt dat niet? Mail naar {site.email}.</>
+          )}
         </p>
       ) : (
         <p className="text-sm text-muted">
-          Opent uw e-mailprogramma met de aanvraag naar {site.email}.{" "}
-          <a href={offerteMailto()} className="text-ice">
-            Mail direct
-          </a>
-          .
+          {fr ? (
+            <>
+              {t!.mailOpens} {site.email}.{" "}
+              <a href={offerteMailto()} className="text-ice">
+                {t!.mailDirect}
+              </a>
+              .
+            </>
+          ) : (
+            <>
+              Opent uw e-mailprogramma met de aanvraag naar {site.email}.{" "}
+              <a href={offerteMailto()} className="text-ice">
+                Mail direct
+              </a>
+              .
+            </>
+          )}
         </p>
       )}
     </form>
   );
 }
 
-function bodyFrom(data: FormData) {
+function bodyFrom(data: FormData, fr: boolean) {
+  if (fr) {
+    return [
+      `Nom: ${data.get("name") || ""}`,
+      `E-mail: ${data.get("email") || ""}`,
+      data.get("phone") ? `Téléphone: ${data.get("phone")}` : "",
+      data.get("product") ? `Modèle: ${data.get("product")}` : "",
+      data.get("peak") ? `Volume de pointe: ${data.get("peak")}` : "",
+      data.get("install") ? `Installation: ${data.get("install")}` : "",
+      data.get("taps") ? `Robinets: ${data.get("taps")}` : "",
+      data.get("region") ? `Région: ${data.get("region")}` : "",
+      "",
+      String(data.get("message") || "(pas de message)"),
+    ]
+      .filter((line, i, arr) => line !== "" || arr[i - 1] !== "")
+      .join("\n");
+  }
   return [
     `Naam: ${data.get("name") || ""}`,
     `E-mail: ${data.get("email") || ""}`,

@@ -48,10 +48,259 @@ export const frHome = {
   catalogNl: "Catalogue complet (NL)",
 };
 
+export const frHero = {
+  kicker: "Refroidisseurs à banquise · Belgique & Pays-Bas",
+  slogan: "Froid stable. Chaque verre, chaque service.",
+  title: "Refroidisseurs à banquise professionnels pour l'horeca",
+  lede: "VanRobi, spécialiste des refroidisseurs à banquise pour la Belgique et les Pays-Bas. Froid professionnel pour bars, restaurants, events et installateurs.",
+  cta: "Demander un devis",
+  ctaSecondary: "Voir les machines",
+  scroll: "Faites défiler pour former la banquise",
+  phases: ["La banquise se forme", "Pic de service", "Le froid reste stable"] as const,
+  tap: "FROID DE TIRAGE STABLE",
+  iceReserve: "Réserve de glace",
+  flow: "Débit",
+};
+
+export const frCutawayCopy = {
+  kicker: "Froid sous contrôle",
+  line1: "Pas plus vite.",
+  em: "Plus juste.",
+  sub: "Sur mesure. Proximité Benelux. Un froid qui tient pendant chaque service.",
+};
+
+export const frWhyHead = {
+  kicker: "VanRobi",
+  before: "Pourquoi",
+  em: "nous",
+};
+
+export const frMachinesCopy = {
+  kicker: "Assortiment",
+  title: "Huit machines.",
+  em: "Une norme.",
+  lede: "Refroidisseurs industriels, avec les specs dont les installateurs ont besoin.",
+  view: "Voir",
+  quote: "Devis pour",
+  catalog: "Catalogue complet →",
+};
+
+export const frAssortmentCopy = {
+  kicker: "Assortiment",
+  title: "L'assortiment",
+  em: "complet",
+  lede: "Refroidisseurs, serpentins, tirage et pièces — tout l'assortiment.",
+  labels: [
+    "Refroidisseurs",
+    "Serpentins",
+    "Tirage",
+    "Pièces",
+    "Bars & restaurants",
+    "Service sur mesure",
+  ],
+};
+
+export const frWorldsCopy = {
+  kicker: "Pour qui",
+  title: "Là où le froid compte.",
+  items: [
+    {
+      title: "Bars",
+      kicker: "Horeca fixe",
+      body: "Restaurants, bars et hôtels qui veulent un froid de tirage stable, sous bar ou sur bar.",
+    },
+    {
+      title: "Events",
+      kicker: "Terrain",
+      body: "Unités mobiles (Goldy, V100 portable, V200 portable) pour montage rapide et gros volume.",
+    },
+    {
+      title: "Installateurs",
+      kicker: "Technique",
+      body: "Specs claires, canal officiel et service pour les professionnels qui intègrent VanRobi.",
+    },
+  ],
+};
+
+export const frPartnerCopy = {
+  kicker: "Partenariat",
+  title: "Refroidisseurs à banquise professionnels.",
+  em: "La marque VanRobi.",
+  body: "VanRobi, c'est le froid professionnel pour l'horeca Benelux : qualité industrielle, specs claires, machines qui tiennent chaque service. Un interlocuteur pour la Belgique et les Pays-Bas, avec suivi local et maintenance via Taponderhoud.",
+  merk: "Marque",
+  regio: "Région",
+  focus: "Focus",
+  service: "Service",
+  merkVal: "VanRobi · refroidisseurs",
+  regioVal: "Belgique & Pays-Bas",
+  focusVal: "Froid bière & boissons",
+};
+
+export const frCtaCopy = {
+  kicker: "Contact",
+  title: "Prêt pour un",
+  em: "froid stable ?",
+  lede: "Parlez-nous de votre bar, event ou installation. Nous envoyons un devis.",
+  form: "Formulaire de contact",
+  reply: "réponse sous un jour ouvrable",
+  cta: "Demander un devis",
+  mail: "Envoyer votre demande",
+  call: "Appeler",
+};
+
+export const frSizerCopy = {
+  kicker: "Aide au dimensionnement",
+  title: "Trouvez votre machine.",
+  lede: "Choisissez l'implantation et glissez vers votre volume de pointe. Le conseil et la banquise réagissent tout de suite.",
+  place: "1 · Implantation",
+  peak: "2 · Volume de pointe",
+  places: { onderbar: "Sous bar", overbar: "Sur bar", mobiel: "Mobile" },
+  advice: "Conseil pour",
+  cta: "Demander un devis",
+};
+
+export const frUseLabels = {
+  horeca: "Horeca",
+  events: "Events",
+  "onder-bar": "Sous bar",
+  mobiel: "Mobile",
+} as const;
+
+export const frGroupLabels = {
+  koelers: "Refroidisseurs",
+  serpentijnen: "Serpentins",
+  dispensing: "Tirage",
+  onderdelen: "Pièces",
+  service: "Service",
+  overig: "Autre",
+} as const;
+
+export const frCatalogUi = {
+  all: "Tout",
+  useAria: "Filtrer par usage",
+  groupAria: "Filtrer par famille",
+  product: "produit",
+  products: "produits",
+  inCatalog: " dans le catalogue",
+  compareMax: " · max. 3 à comparer",
+  drawing: "Schéma technique",
+  details: "Détails",
+  chosen: "Choisi",
+  compare: "Comparer",
+  none: "Aucun produit dans cette catégorie.",
+  ice: "kg glace",
+  flow: "L/h",
+  assortment: "Assortiment",
+};
+
+export const frProductUi = {
+  ice: "Glace",
+  flow: "Débit",
+  bath: "Bain d'eau",
+  quote: "Devis pour",
+  call: "Appeler",
+  specSheet: "Fiche technique PDF ↓",
+  contactForm: "formulaire de contact",
+  faq: "FAQ",
+  specsKicker: "Données techniques",
+  specsTitle: "Spécifications de",
+  specsLede:
+    "Aperçu clair des données produit. Nous alignons l'exécution sur votre installation et votre volume de pointe.",
+  downloadSheet: "Télécharger la fiche PDF ↓",
+  feature: "Caractéristique",
+  value: "Valeur",
+  application: "Application",
+  quoteKicker: "Devis",
+  quoteTitle: "Demander",
+  quoteLede:
+    "Indiquez le modèle (ou le volume de pointe), fixe ou mobile, le nombre de robinets et éventuellement des photos du bar.",
+  related: "Modèles liés",
+  catalog: "Catalogue complet →",
+  sticky: "Demander un devis",
+  orFill: "Ou remplissez le",
+  alsoRead: "Lisez aussi la",
+};
+
+export const frForm = {
+  received: "Demande reçue",
+  reply: "Nous répondons sous un jour ouvrable.",
+  confirm: "Confirmation ici. Nous vous contactons via",
+  urgent: "Urgent ?",
+  call: "Appelez",
+  name: "Nom",
+  email: "E-mail",
+  phone: "Téléphone",
+  model: "Modèle",
+  chooseModel: "Choisir un modèle",
+  service: "Maintenance / service",
+  other: "Autre",
+  peak: "Volume de pointe (L/h ou verres/heure)",
+  peakPh: "ex. 80 L/h ou 200 verres",
+  install: "Fixe ou mobile",
+  choose: "Choisir",
+  vast: "Fixe / sous bar",
+  overbar: "Sur bar",
+  mobiel: "Mobile / events",
+  unsure: "Pas encore sûr",
+  taps: "Nombre de robinets",
+  tapsPh: "ex. 2",
+  region: "Région",
+  chooseRegion: "Choisir une région",
+  message: "Message",
+  messagePh: "Bar, event ou installation — dimensions du meuble bienvenues.",
+  photos: "Photos du bar / dimensions (optionnel)",
+  sendFail: "Envoi impossible. Réessayez ou écrivez-nous.",
+  sending: "Envoi…",
+  send: "Envoyer la demande",
+  sendMail: "Envoyer par e-mail",
+  replyDay: "Réponse sous un jour ouvrable. Ou appelez",
+  mailOpened: "Votre programme e-mail s'ouvre. Sinon, écrivez à",
+  mailOpens: "Ouvre votre programme e-mail vers",
+  mailDirect: "Écrire directement",
+  subject: "Demande de devis VanRobi",
+  regions: [
+    "Anvers",
+    "Limbourg",
+    "Brabant flamand",
+    "Bruxelles",
+    "Flandre orientale",
+    "Flandre occidentale",
+    "Campine",
+    "Pays-Bas",
+    "Autre",
+  ],
+};
+
+export const frCompareUi = {
+  compare: "Comparer",
+  selected: "Sélectionné",
+  clear: "Vider",
+  table: "Tableau",
+  remove: "Retirer",
+  add: "Comparer",
+  full: "Vous pouvez comparer au maximum",
+};
+
+export const frGallery = {
+  product: "Produit",
+  drawing: "Schéma",
+  events: "Events",
+  install: "Installation",
+  horeca: "Horeca",
+  tap: "Tirage",
+  eventAlt: "en installation mobile event",
+  installAlt: "en installation professionnelle",
+  horecaAlt: "pour usage horeca",
+  tapAlt: "Installation de tirage professionnelle pour",
+  aria: "Galerie de",
+  show: "Afficher l'image",
+};
+
 export const frProductsIntro = {
   eyebrow: "Catalogue",
-  title: "Machines VanRobi.",
-  lede: "Sélection phare via VanRobi. Catalogue complet disponible en néerlandais.",
+  title: "Catalogue de refroidisseurs.",
+  lede: "Refroidisseurs, serpentins, tirage et pièces. Filtrez par usage ou famille — pour installateurs, horeca et events.",
+  helpTitle: "Besoin d'aide pour choisir ?",
 };
 
 export const frProductCopy: Record<
@@ -60,10 +309,9 @@ export const frProductCopy: Record<
 > = {
   goldy: {
     badge: "Events · Sur bar",
-    description:
-      "Refroidisseur compact sur bar pour events, salons et craft, conception brevetée, livré via VanRobi.",
+    description: "Refroidisseur compact sur bar pour events, salons et craft bars.",
     longDescription:
-      "La Goldy est le refroidisseur à banc de glace compact sur bar de notre assortiment : idéal quand l'espace manque et que le bar doit rester visible. Parfait pour events, craft bars et pop-ups. Livré via VanRobi avec conseil sur spirales, débit et implantation.",
+      "La Goldy est le refroidisseur à banc de glace compact sur bar de notre assortiment : idéal quand l'espace manque et que le bar doit rester visible. Parfait pour events, craft bars et pop-ups. Conseil sur spirales, débit et implantation.",
   },
   picky: {
     badge: "Compact · Sur bar",
@@ -102,16 +350,21 @@ export const frContact = {
   title: "Devis ou question ?",
   lede: "Envoyez votre demande, réponse sous un jour ouvrable. Machines via VanRobi, maintenance via Taponderhoud.",
   formNote:
-    "Le formulaire complet est disponible en néerlandais ; vous pouvez aussi écrire directement à info@vanrobi.be (FR bienvenu).",
+    "Indiquez le modèle (ou le volume de pointe), fixe ou mobile, le nombre de robinets et éventuellement des photos du bar.",
   details: "Coordonnées",
+  formTitle: "Formulaire de devis",
   write: "Écrire à",
-  formNl: "Formulaire complet (NL)",
+  region: "Région",
+  maintenance: "Maintenance",
+  helpTitle: "Devis refroidisseur : ce dont nous avons besoin",
+  helpBody:
+    "Indiquez le modèle (ou le volume de pointe), fixe ou mobile, le nombre de robinets et éventuellement des photos du bar. Nous conseillons alors entre par exemple",
 };
 
 export const frServices = {
   eyebrow: "Services",
   title: "De la machine à la maintenance.",
-  lede: "VanRobi livre et conseille les refroidisseurs VanRobi. Maintenance, nettoyage et réparations via Taponderhoud, une équipe locale.",
+  lede: "VanRobi livre et conseille les refroidisseurs professionnels. Maintenance, nettoyage et réparations via Taponderhoud, une équipe locale.",
   items: [
     {
       n: "01",
@@ -121,7 +374,7 @@ export const frServices = {
     {
       n: "02",
       title: "Livraison BE & NL",
-      text: "Livraison VanRobi de refroidisseurs pour la Belgique et les Pays-Bas. Pas d'import gris : bonnes specs, garantie et suivi.",
+      text: "Distribution VanRobi de refroidisseurs pour la Belgique et les Pays-Bas. Specs correctes, garantie et suivi.",
     },
     {
       n: "03",
@@ -146,10 +399,12 @@ export const frServices = {
   ],
   partnerTitle: "Partenaire maintenance",
   partnerBody:
-    "Pour l'entretien des installations de tirage, VanRobi collabore avec Taponderhoud. Refroidisseurs professionnels VanRobi + service belge certifié froid depuis la Campine.",
-  howTitle: "Comment se déroule un projet ?",
+    "Pour l'entretien des installations de tirage, le nettoyage, les réparations et le placement/démontage, VanRobi collabore avec Taponderhoud. Ainsi vous combinez des refroidisseurs professionnels avec un service belge.",
+  howTitle: "Devis jusqu'à la maintenance",
   howBody:
-    "Vous décrivez le volume, le nombre de robinets et le meuble (ou l'event). Nous proposons une machine adaptée, Goldy, V100, V200 ou portable, avec des specs visibles (débit, réserve de glace, bain d'eau). La livraison BE/NL est planifiée avec vous ; le placement et l'entretien peuvent suivre via Taponderhoud.",
+    "Machines et sélection chez VanRobi. Placement, nettoyage et réparations via Taponderhoud.",
+  adviceTitle: "Conseil refroidisseur pour horeca & events",
+  regionsTitle: "Régions que nous couvrons",
 };
 
 export const frAbout = {
@@ -158,24 +413,38 @@ export const frAbout = {
   lede: "La marque VanRobi pour les refroidisseurs à banc de glace professionnels en Belgique et aux Pays-Bas, avec expertise locale en tirage et froid.",
   partnershipTitle: "Partenariat",
   partnership:
-    "VanRobi regroupe des refroidisseurs à banquise professionnels pour le Horeca Benelux : qualité industrielle, specs claires et machines conçues pour tenir chaque service. Nous sommes l'interlocuteur pour la Belgique et les Pays-Bas — sélection, conseil et livraison depuis un seul point de contact, avec suivi local. Pas d'import gris.",
+    "VanRobi regroupe des refroidisseurs à banquise professionnels pour le Horeca Benelux : qualité industrielle, specs claires et machines conçues pour tenir chaque service. Nous sommes l'interlocuteur pour la Belgique et les Pays-Bas — sélection, conseil et livraison depuis un seul point de contact, avec suivi local.",
   localTitle: "Expertise locale",
   local:
-    "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine (Kasterlee / Tielen). Ainsi, refroidisseurs professionnels VanRobi et service belge restent alignés après l'achat.",
+    "VanRobi collabore avec Taponderhoud pour la maintenance, le nettoyage, les réparations et le placement des refroidissements. Certifié froid, basé en Campine (Kasterlee / Tielen). Ainsi, refroidisseurs professionnels et service belge restent alignés après l'achat.",
   coverage:
-    "Nous conseillons et livrons en Flandre, à Bruxelles et aux Pays-Bas. Pour le détail régional (Anvers, Limbourg, Brabant flamand, Flandre orientale), voir aussi la page régions en néerlandais.",
-  factsTitle: "Ce que vous pouvez attendre",
+    "Nous conseillons et livrons en Flandre, à Bruxelles et aux Pays-Bas.",
+  factsKicker: "Faits",
+  factsBefore: "Ce que vous pouvez",
+  factsEm: "attendre",
+  whyTitle: "Pourquoi VanRobi comme marque ?",
+  whyBody:
+    "Specs correctes, suivi de garantie et quelqu'un qui connaît la pratique BE/NL. VanRobi livre des refroidisseurs à banquise depuis Kasterlee (Tielen).",
+  assortTitle: "Assortiment & connaissances",
+  assortBody: "Approfondissez via la",
+  contactCta: "Prendre contact →",
+  facts: [
+    { t: "Marque", d: "VanRobi · refroidisseurs à banquise BE & NL" },
+    { t: "Région", d: "Belgique & Pays-Bas" },
+    { t: "Focus", d: "Froid bière & boissons pour l'horeca" },
+    { t: "Service", d: "Taponderhoud · certifié froid" },
+  ],
 };
 
 export const frFaq = {
   eyebrow: "FAQ",
   title: "Réponses, sans détour.",
-  lede: "VanRobi pour les refroidisseurs, maintenance via Taponderhoud, délais honnêtes. Votre question n'y figure pas, écrivez à info@vanrobi.be.",
+  lede: "Si ce n'est pas dans cette liste, un e-mail va plus vite que de deviner. Machines via VanRobi, maintenance via Taponderhoud.",
   items: [
     {
       question: "VanRobi est-il le spécialiste des refroidisseurs à banquise pour la BE et les NL ?",
       answer:
-        "Oui. VanRobi est le spécialiste des refroidisseurs à banquise pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu, pas d'import gris, avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
+        "Oui. VanRobi est le spécialiste des refroidisseurs à banquise pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu, avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
     },
     {
       question: "Qui assure la maintenance de mon installation de tirage ?",
@@ -200,7 +469,7 @@ export const frFaq = {
     {
       question: "Quelle différence entre Goldy et V100 ?",
       answer:
-        "Goldy est un refroidisseur compact sur bar (events, craft, pop-ups). V100 est le cheval de bataille sous bar pour Horeca fixe, plus de débit et de réserve de glace. Le catalogue complet et les guides détaillés sont disponibles en néerlandais.",
+        "Goldy est un refroidisseur compact sur bar (events, craft, pop-ups). V100 est le cheval de bataille sous bar pour Horeca fixe, plus de débit et de réserve de glace.",
     },
     {
       question: "Où êtes-vous situés ?",
@@ -230,6 +499,6 @@ export const frFooter = {
     "Spécialiste des refroidisseurs à banquise professionnels pour la Belgique et les Pays-Bas. Livraison et maintenance via Taponderhoud.",
   nav: "Navigation",
   machines: "Machines",
-  catalog: "Catalogue complet (NL)",
+  catalog: "Catalogue complet",
   maintenance: "Maintenance via",
 };

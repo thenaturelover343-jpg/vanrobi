@@ -44,7 +44,7 @@ export function offerteMailto(product?: string) {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}`;
 }
 
-export function offerteHref(product?: string) {
+export function offerteHref(product?: string, lang: "nl" | "fr" = "nl") {
   const q = product ? `?model=${encodeURIComponent(product)}` : "";
-  return withBase(`/contact${q}`);
+  return withBase(lang === "fr" ? `/fr/contact${q}` : `/contact${q}`);
 }

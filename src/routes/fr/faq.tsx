@@ -1,7 +1,8 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
+import { CtaBand } from "@/components/cta-band";
 import { frFaq } from "@/lib/fr";
-import { seoHead } from "@/lib/seo";
+import { faqJsonLd, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/faq")({
   head: () =>
@@ -12,6 +13,7 @@ export const Route = createFileRoute("/fr/faq")({
       lang: "fr",
       nlPath: "/faq",
       frPath: "/fr/faq",
+      jsonLd: [faqJsonLd(frFaq.items)],
     }),
   component: FrFaq,
 });
@@ -21,23 +23,16 @@ function FrFaq() {
     <PageShell>
       <PageHero kicker={frFaq.eyebrow} title={frFaq.title} lede={frFaq.lede} />
       <section className="mx-auto max-w-[800px] px-5 py-16 md:px-8">
-        <div className="space-y-0">
-          {frFaq.items.map((item) => (
-            <details key={item.question} className="border-t border-line py-5">
-              <summary className="cursor-pointer text-xl">{item.question}</summary>
-              <p className="mt-3 text-muted">{item.answer}</p>
-            </details>
+        <dl className="space-y-10">
+          {frFaq.items.map((f) => (
+            <div key={f.question} className="border-b border-line pb-8">
+              <dt className="font-display text-3xl">{f.question}</dt>
+              <dd className="mt-3 text-muted">{f.answer}</dd>
+            </div>
           ))}
-        </div>
-        <p className="mt-10 flex flex-wrap gap-6">
-          <Link to="/fr/contact" className="text-sm tracking-[0.12em] text-ice uppercase">
-            Demander un devis →
-          </Link>
-          <Link to="/faq" className="text-sm tracking-[0.12em] text-muted uppercase">
-            FAQ complète (NL)
-          </Link>
-        </p>
+        </dl>
       </section>
+      <CtaBand />
     </PageShell>
   );
 }

@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, PageShell } from "@/components/page-shell";
-import { Reveal } from "@/components/reveal";
+import { CtaBand } from "@/components/cta-band";
 import { contact } from "@/lib/contact";
 import { frServices } from "@/lib/fr";
 import { seoHead } from "@/lib/seo";
+import { ProductLink } from "@/components/product-link";
 
 export const Route = createFileRoute("/fr/services")({
   head: () =>
@@ -22,45 +23,62 @@ function FrServices() {
   return (
     <PageShell>
       <PageHero kicker={frServices.eyebrow} title={frServices.title} lede={frServices.lede} />
-      <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">
-        <ol className="space-y-8">
-          {frServices.items.map((item) => (
-            <li key={item.n} className="grid grid-cols-[3.5rem_1fr] gap-4 border-t border-line pt-6">
-              <span className="spec-num text-ice">{item.n}</span>
-              <div>
-                <h3 className="text-2xl">{item.title}</h3>
-                <p className="mt-2 max-w-xl text-muted">{item.text}</p>
-              </div>
-            </li>
+      <section className="mx-auto max-w-[1220px] px-5 py-20 md:px-8">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {frServices.items.map((s) => (
+            <article key={s.n} className="border-t border-line pt-6">
+              <p className="spec-num text-ice">{s.n}</p>
+              <h2 className="mt-4 text-3xl">{s.title}</h2>
+              <p className="mt-4 text-muted">{s.text}</p>
+            </article>
           ))}
-        </ol>
-        <Reveal>
-          <div className="mt-16 max-w-2xl">
-            <h2 className="text-3xl">{frServices.partnerTitle}</h2>
-            <p className="mt-4 text-muted">
-              {frServices.partnerBody.split("Taponderhoud").map((part, i, arr) =>
-                i < arr.length - 1 ? (
-                  <span key={i}>
-                    {part}
-                    <a href={contact.companyUrl} className="text-ice" target="_blank" rel="noreferrer">
-                      {contact.company}
-                    </a>
-                  </span>
-                ) : (
-                  <span key={i}>{part}</span>
-                ),
-              )}
-            </p>
-            <h2 className="mt-10 text-3xl">{frServices.howTitle}</h2>
-            <p className="mt-4 text-muted">{frServices.howBody}</p>
-            <p className="mt-8">
-              <Link to="/fr/contact" className="text-sm tracking-[0.12em] text-ice uppercase">
-                Prendre rendez-vous →
-              </Link>
-            </p>
-          </div>
-        </Reveal>
+        </div>
+        <div className="prose mt-16 max-w-[40rem]">
+          <h2>{frServices.partnerTitle}</h2>
+          <p>
+            {frServices.partnerBody.split("Taponderhoud").map((part, i, arr) =>
+              i < arr.length - 1 ? (
+                <span key={i}>
+                  {part}
+                  <a href={contact.companyUrl} target="_blank" rel="noreferrer">
+                    {contact.company}
+                  </a>
+                </span>
+              ) : (
+                <span key={i}>{part}</span>
+              ),
+            )}
+          </p>
+          <p>
+            <Link to="/fr/contact">Prendre rendez-vous →</Link>
+          </p>
+        </div>
       </section>
+
+      <section className="border-t border-line bg-bg-2 px-5 py-20 md:px-8">
+        <div className="prose mx-auto max-w-[46rem]">
+          <h2>{frServices.adviceTitle}</h2>
+          <p>
+            Que vous cherchiez un <ProductLink id="v100">V100 sous bar</ProductLink> ou une{" "}
+            <ProductLink id="goldy">Goldy sur bar</ProductLink> pour events : nous dimensionnons
+            sur le volume de pointe, le meuble et la tuyauterie. Voir aussi la{" "}
+            <Link to="/fr/faq">FAQ</Link>.
+          </p>
+          <h3>{frServices.regionsTitle}</h3>
+          <p>
+            Depuis Kasterlee (Tielen) nous conseillons et livrons en {contact.regions}, plus les
+            Pays-Bas.
+          </p>
+          <h3>{frServices.howTitle}</h3>
+          <p>
+            {frServices.howBody} (
+            <a href={`mailto:${contact.email}`}>{contact.email}</a>
+            ). Questions ? Voir la <Link to="/fr/faq">FAQ</Link> ou{" "}
+            <Link to="/fr/contact">demander un devis</Link>.
+          </p>
+        </div>
+      </section>
+      <CtaBand />
     </PageShell>
   );
 }
