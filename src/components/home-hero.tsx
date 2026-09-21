@@ -253,11 +253,11 @@ export function HomeHero() {
           className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
         />
         <div className="hero-frost" aria-hidden />
-        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/60 via-bg/20 to-transparent" />
-        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/35 via-transparent to-bg/15" />
+        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/40 via-transparent to-transparent" />
+        <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/30 via-transparent to-bg/10" />
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-20 pt-28 md:flex-row md:items-end md:justify-between md:px-8 md:pb-24">
-          <div className="max-w-xl">
+          <div className="hero-copy max-w-xl">
             <p className="kicker">{fr ? frHero.kicker : "Ijsbankkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
               {fr ? frHero.slogan : tagline()}
@@ -265,7 +265,7 @@ export function HomeHero() {
             <h1 className="mt-5 font-display text-4xl leading-[1.08] text-fg md:text-5xl">
               {fr ? frHero.title : "Professionele ijsbankkoelers voor horeca"}
             </h1>
-            <p className="mt-6 max-w-md text-[1.02rem] text-muted">
+            <p className="hero-lede mt-6 max-w-md text-[1.02rem]">
               {fr
                 ? frHero.lede
                 : "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben."}
@@ -276,11 +276,14 @@ export function HomeHero() {
                   {fr ? frHero.cta : "Vraag een offerte"}
                 </Link>
               </MagneticCta>
-              <Link to={fr ? "/fr/produits" : "/producten"} className="btn btn-ghost">
+              <Link
+                to={fr ? "/fr/produits" : "/producten"}
+                className="btn btn-ghost bg-bg/60 backdrop-blur-sm"
+              >
                 {fr ? frHero.ctaSecondary : "Bekijk machines"}
               </Link>
             </div>
-            <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-muted uppercase">
+            <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-fg/70 uppercase">
               <span>Bars</span>
               <span>Events</span>
               <span>Installateurs</span>

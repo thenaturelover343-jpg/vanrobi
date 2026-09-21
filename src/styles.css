@@ -385,6 +385,31 @@
   object-position: 62% 45%;
 }
 
+.hero-copy {
+  position: relative;
+}
+.hero-copy::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  inset: -2.2rem -2.4rem -2rem -1.6rem;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 8, 12, 0.82) 0%,
+    rgba(5, 8, 12, 0.58) 58%,
+    rgba(5, 8, 12, 0) 100%
+  );
+}
+.hero-copy h1,
+.hero-copy .hero-slogan {
+  text-shadow: 0 2px 22px rgba(5, 8, 12, 0.72);
+}
+.hero-copy .hero-lede {
+  color: #d7e6ec;
+  text-shadow: 0 1px 14px rgba(5, 8, 12, 0.55);
+}
+
 img[data-vr-img="hidden"] {
   visibility: hidden !important;
 }
