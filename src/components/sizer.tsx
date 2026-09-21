@@ -33,7 +33,9 @@ export function Sizer() {
     <aside className="border border-line bg-surface p-6 md:p-8">
       <p className="kicker">Dimensioneerhulp</p>
       <h3 className="mt-3 text-2xl">Welke machine past?</h3>
-      <p className="mt-2 text-sm text-muted">Twee keuzes. Daarna een gericht startpunt — geen catalogusromantiek.</p>
+      <p className="mt-2 text-sm text-muted">
+        Kies uw opstelling en piekvolume. Daarna tonen we een passend startpunt.
+      </p>
 
       <p className="mt-6 text-[0.68rem] tracking-[0.16em] text-muted uppercase">Opstelling</p>
       <div className="mt-2 flex flex-wrap gap-2">
