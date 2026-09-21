@@ -18,13 +18,13 @@ export function LangSwitch({ className }: { className?: string }) {
       )}
       aria-label="Language"
     >
-      <a href={withBase(nlHref)} className={lang === "nl" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="nl" lang="nl">
+      <a href={withBase(nlHref)} className={lang === "nl" ? "text-ice" : "text-white/80 hover:text-white"} hrefLang="nl" lang="nl">
         NL
       </a>
-      <span className="text-muted" aria-hidden>
+      <span className="text-white/50" aria-hidden>
         /
       </span>
-      <a href={withBase(frHref)} className={lang === "fr" ? "text-ice" : "text-muted hover:text-fg"} hrefLang="fr" lang="fr">
+      <a href={withBase(frHref)} className={lang === "fr" ? "text-ice" : "text-white/80 hover:text-white"} hrefLang="fr" lang="fr">
         FR
       </a>
     </div>

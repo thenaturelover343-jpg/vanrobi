@@ -39,13 +39,13 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-40 flex h-[3.75rem] items-center justify-between px-5 transition-[background,border-color] duration-300 md:px-8",
+        "site-header fixed inset-x-0 top-0 z-40 flex h-[3.75rem] items-center justify-between px-5 transition-[background,border-color,box-shadow] duration-300 md:px-8",
         scrolled || open
-          ? "border-b border-line bg-bg/90 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
+          ? "border-b border-line bg-bg/92 backdrop-blur-md"
+          : "border-b border-transparent bg-gradient-to-b from-bg/90 via-bg/70 to-bg/25",
       )}
     >
-      <a href={withBase(home)} className="flex items-center gap-3" aria-label="VanRobi home">
+      <a href={withBase(home)} className="flex items-center gap-3 text-white" aria-label="VanRobi home">
         <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden>
           <path
             d="M4 6 L14 24 L24 6"
@@ -56,7 +56,7 @@ export function SiteHeader() {
           />
           <path d="M9 14h10" stroke="#7AD4F0" strokeWidth="1.3" strokeLinecap="round" />
         </svg>
-        <span className="font-display text-[1.35rem] tracking-wide">VanRobi</span>
+        <span className="font-display text-[1.35rem] tracking-wide text-white">VanRobi</span>
       </a>
 
       <nav
@@ -71,7 +71,7 @@ export function SiteHeader() {
               "text-[0.68rem] font-medium tracking-[0.1em] uppercase transition-colors",
               pathname === item.href || pathname.startsWith(item.href + "/")
                 ? "text-ice"
-                : "text-muted hover:text-fg",
+                : "text-white/90 hover:text-ice",
             )}
           >
             {item.label}

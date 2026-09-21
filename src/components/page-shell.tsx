@@ -42,13 +42,15 @@ export function PageHero({ kicker, title, lede }: { kicker: string; title: strin
         priority
         className="hero-ice-photo pointer-events-none absolute inset-0 h-full w-full"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/55 via-bg/18 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
       <div className="relative mx-auto max-w-[1220px]">
-        <div className="pointer-events-none absolute -inset-y-8 -left-8 w-[min(100%,36rem)] bg-gradient-to-r from-bg/80 via-bg/45 to-transparent" />
-        <div className="relative">
+        <div className="hero-copy max-w-3xl">
           <p className="kicker">{kicker}</p>
-          <h1 className="mt-4 max-w-4xl text-5xl text-fg md:text-7xl">{title}</h1>
-          <p className="mt-6 max-w-xl text-base text-fg md:text-lg">{lede}</p>
+          <h1 className="mt-4 max-w-4xl text-5xl text-white md:text-7xl">{title}</h1>
+          <p className="hero-lede mt-6 max-w-xl text-base font-medium leading-relaxed md:text-lg">
+            {lede}
+          </p>
         </div>
       </div>
     </section>
