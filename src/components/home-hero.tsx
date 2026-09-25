@@ -281,7 +281,7 @@ export function HomeHero() {
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
         {/* Mobile: compact top-aligned stack so H1 + machine fit in sticky 100svh. md+: end-aligned row. */}
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-14 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
+        <div className="hero-stage relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-14 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
           <div className="hero-copy max-w-xl">
             <p className="kicker hidden md:block">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-2 font-display text-xl italic text-ice md:mt-5 md:text-3xl">
@@ -362,16 +362,31 @@ export function HomeHero() {
       </div>
     </section>
     {experience.heroQuiet ? (
-      <section className="hero-cat-band border-b border-line px-5 py-8 md:px-8" aria-label={fr ? "Assortiment" : "Assortiment"}>
-        <ul className="hero-tiles mx-auto flex max-w-[1220px] flex-wrap gap-3">
-          {tiles.map((tile) => (
-            <li key={tile.to}>
-              <Link to={tile.to} className="hero-tile">
-                {tile.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <section className="hero-cat-band" aria-label="Assortiment">
+        <OptimizedImage
+          src={withBase("/worlds/ice-bank.jpg")}
+          alt=""
+          width={1792}
+          height={907}
+          aria-hidden="true"
+          className="hero-cat-photo"
+        />
+        <div className="hero-cat-scrim" aria-hidden />
+        <div className="relative z-10 mx-auto max-w-[1220px] px-5 py-8 md:px-8 md:py-10">
+          <div className="hero-cat-head">
+            <p className="kicker">{fr ? "Assortiment" : "Assortiment"}</p>
+            <p>{fr ? "La ligne, le fût, le robinet ou la pièce." : "De leiding, het vat, de kraan of het onderdeel."}</p>
+          </div>
+          <ul className="hero-cat-grid">
+            {tiles.map((tile) => (
+              <li key={tile.to}>
+                <Link to={tile.to} className="hero-tile">
+                  {tile.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     ) : null}
     </>
