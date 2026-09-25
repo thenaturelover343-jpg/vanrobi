@@ -591,8 +591,8 @@ export const categories = [
 export const whyItems = [
  {
  n: "01",
- title: "Merk VanRobi",
- text: "VanRobi is het merk voor bierkoelers en kegkoelers in België en Nederland. Heldere specs, lokale opvolging.",
+ title: "VanRobi",
+ text: "Bier- en kegkoelers voor België en Nederland, met specs die een installateur kan gebruiken en opvolging dichtbij.",
  delay: "",
  },
  {
