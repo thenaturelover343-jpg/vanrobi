@@ -282,7 +282,7 @@ export function HomeHero() {
         {/* Mobile: compact top-aligned stack so H1 + machine fit in sticky 100svh. md+: end-aligned row. */}
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-14 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
           <div className="hero-copy max-w-xl">
-            <p className="kicker">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
+            <p className="kicker hidden md:block">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-2 font-display text-xl italic text-ice md:mt-5 md:text-3xl">
               {fr ? frHero.slogan : tagline()}
             </p>
