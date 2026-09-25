@@ -33,7 +33,7 @@ export const Route = createFileRoute("/gids/$slug")({
 
 function GuidePage() {
   const { guide } = Route.useLoaderData();
-  const more = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
+  const more = guides.filter((g) => g.slug !== guide.slug && g.slug !== "ijsbankkoeler-vs-gamko").slice(0, 3);
 
   return (
     <PageShell>

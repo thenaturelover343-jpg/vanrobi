@@ -56,7 +56,7 @@ function Home() {
               </p>
             </Reveal>
             <div className="mt-12 grid gap-px bg-line md:grid-cols-2">
-              {guides.slice(0, 6).map((g) => (
+              {guides.filter((g) => g.slug !== "ijsbankkoeler-vs-gamko").slice(0, 6).map((g) => (
                 <Link
                   key={g.slug}
                   to="/gids/$slug"
