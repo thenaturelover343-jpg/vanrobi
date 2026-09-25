@@ -109,7 +109,7 @@ export const frAssortmentCopy = {
 
 export const frWorldsCopy = {
   kicker: "Pour qui",
-  title: "Là où le froid compte.",
+  title: "Pour les bars, les events et les installateurs",
   items: [
     {
       title: "Bars",
@@ -145,9 +145,9 @@ export const frPartnerCopy = {
 
 export const frCtaCopy = {
   kicker: "Contact",
-  title: "Prêt pour un",
-  em: "froid stable ?",
-  lede: "Parlez-nous de votre bar, event ou installation. Nous envoyons un devis.",
+  title: "Devis pour votre",
+  em: "bar, event ou installation",
+  lede: "Écrivez ou appelez — réponse sous un jour ouvrable. Ou utilisez le formulaire de contact.",
   form: "Formulaire de contact",
   reply: "réponse sous un jour ouvrable",
   cta: "Demander un devis",
