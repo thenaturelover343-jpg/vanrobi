@@ -561,7 +561,6 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  { href: "/over-ons/", label: "Over VanRobi" },
  { href: "/diensten/", label: "Diensten" },
  { href: "/gids/bierkoeler-kopen-belgie-nederland/", label: "Koopgids BE/NL" },
- { href: "/gids/ijsbankkoeler-vs-gamko/", label: "Ijsbankkoeler of complete tapinstallatie" },
  { href: "/producten/", label: "Catalogus" },
  ]}
  />

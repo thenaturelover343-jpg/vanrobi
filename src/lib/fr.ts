@@ -176,6 +176,7 @@ export const frUseLabels = {
 export const frGroupLabels = {
   koelers: "Refroidisseurs de bière",
   kegkoelers: "Refroidisseurs de fût",
+  glycolkoelers: "Refroidisseurs glycol",
   serpentijnen: "Serpentins",
   dispensing: "Robinets et colonnes",
   onderdelen: "Pièces",
@@ -350,6 +351,13 @@ export const frProductCopy: Record<
     description: "Refroidisseur mobile high volume pour festivals et grands events.",
     longDescription:
       "La V200 portable combine capacité high volume et mobilité. Pour festivals, stades et grands bars temporaires sans installation fixe.",
+  },
+  v90: {
+    badge: "Glycol · Horeca",
+    description:
+      "Refroidisseur glycol pour circuits professionnels — ce n'est ni une banquise ni un refroidisseur de ligne.",
+    longDescription:
+      "La V90 est un refroidisseur glycol : ce n'est ni une banquise ni un refroidisseur de ligne. Elle appartient aux versions glycol/congélation, pas aux refroidisseurs de bière ou de tirage. Pour l'horeca qui a besoin d'un circuit glycol. Dimensions, tension et compresseur figurent dans les specs ; pas de chiffres de glace ou de débit inventés.",
   },
   "barrilero-doble": {
     badge: "Refroidisseur de fût · Keg",

@@ -74,6 +74,7 @@ export function SiteFooter() {
               ? [
                   ["/fr/refroidisseurs-biere", "Refroidisseurs de bière"],
                   ["/fr/refroidisseurs-fut", "Refroidisseurs de fût"],
+                  ["/fr/refroidisseurs-glycol", "Refroidisseurs glycol"],
                   ["/fr/serpentins", "Serpentins"],
                   ["/fr/colonnes-robinets", "Colonnes et robinets"],
                   ["/fr/pieces", "Pièces"],
@@ -81,6 +82,7 @@ export function SiteFooter() {
               : [
                   ["/bierkoelers", "Bierkoelers"],
                   ["/kegkoelers", "Kegkoelers"],
+                  ["/glycolkoelers", "Glycolkoelers"],
                   ["/serpentijnen", "Serpentijnen"],
                   ["/tap-zuilen", "Tap & zuilen"],
                   ["/onderdelen", "Onderdelen"],
@@ -125,7 +127,7 @@ export function SiteFooter() {
             <>
               <p className="kicker mt-8 mb-3">Gidsen</p>
               <ul className="space-y-2 text-sm">
-                {guides.slice(0, 4).map((g) => (
+                {guides.filter((g) => g.slug !== "ijsbankkoeler-vs-gamko").slice(0, 4).map((g) => (
                   <li key={g.slug}>
                     <Link to="/gids/$slug" params={{ slug: g.slug }} className="text-muted hover:text-ice">
                       {g.title}

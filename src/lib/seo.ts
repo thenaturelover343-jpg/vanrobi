@@ -84,6 +84,23 @@ export function faqJsonLd(items: { question: string; answer: string }[]) {
   };
 }
 
+export function itemListJsonLd(
+  items: { name: string; path: string }[],
+  listName: string,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: canonicalUrl(item.path),
+    })),
+  };
+}
+
 type SeoInput = {
   title: string;
   description: string;

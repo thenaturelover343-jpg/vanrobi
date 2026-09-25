@@ -60,11 +60,13 @@ function prerenderPages() {
     "/serpentijnen",
     "/tap-zuilen",
     "/onderdelen",
+    "/glycolkoelers",
     "/fr/refroidisseurs-biere",
     "/fr/refroidisseurs-fut",
     "/fr/serpentins",
     "/fr/colonnes-robinets",
     "/fr/pieces",
+    "/fr/refroidisseurs-glycol",
   ];
   return [
     ...statics,

@@ -25,6 +25,7 @@ const useFilters: Array<ProductUse | "all"> = ["all", "horeca", "events", "onder
 const groupFilters: ProductGroup[] = [
   "koelers",
   "kegkoelers",
+  "glycolkoelers",
   "serpentijnen",
   "dispensing",
   "onderdelen",
@@ -38,6 +39,8 @@ const hashAliases: Record<string, FilterKey> = {
   kegkoelers: "kegkoelers",
   fustenkoelers: "kegkoelers",
   barrileros: "kegkoelers",
+  glycolkoelers: "glycolkoelers",
+  glycol: "glycolkoelers",
   "tap-zuilen": "dispensing",
   tap: "dispensing",
 };

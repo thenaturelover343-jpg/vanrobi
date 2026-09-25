@@ -24,7 +24,7 @@ function GidsIndex() {
       />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">
         <div className="grid gap-px bg-line md:grid-cols-2 lg:grid-cols-3">
-          {guides.map((g) => (
+          {guides.filter((g) => g.slug !== "ijsbankkoeler-vs-gamko").map((g) => (
             <Link
               key={g.slug}
               to="/gids/$slug"

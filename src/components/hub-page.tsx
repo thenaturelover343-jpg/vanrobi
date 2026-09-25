@@ -3,7 +3,7 @@ import { PageHero, PageShell } from "@/components/page-shell";
 import { CtaBand } from "@/components/cta-band";
 import { OptimizedImage } from "@/components/optimized-image";
 import { ProductLink } from "@/components/product-link";
-import { breadcrumbJsonLd, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, faqJsonLd, itemListJsonLd, seoHead } from "@/lib/seo";
 import {
   products,
   iceKgOf,
@@ -18,9 +18,18 @@ import { cn } from "@/lib/cn";
 import { withBase } from "@/lib/base";
 import { experience } from "@/lib/experience";
 
+function hubProducts(hub: HubDef) {
+  return products.filter((p) => p.group === hub.group);
+}
+
+function productPath(id: string, lang: "nl" | "fr") {
+  return lang === "fr" ? `/fr/produits/${id}` : `/producten/${id}`;
+}
+
 export function hubSeo(hub: HubDef, lang: "nl" | "fr") {
   const copy = lang === "fr" ? hub.fr : hub.nl;
   const path = lang === "fr" ? hub.frPath : hub.nlPath;
+  const list = hubProducts(hub);
   return seoHead({
     title: copy.title,
     description: copy.description,
@@ -40,17 +49,34 @@ export function hubSeo(hub: HubDef, lang: "nl" | "fr") {
         },
         { name: copy.breadcrumb, path },
       ]),
+      itemListJsonLd(
+        list.map((p) => ({
+          name: `${p.name} ${copy.productKeyword}`,
+          path: productPath(p.id, lang),
+        })),
+        copy.h1,
+      ),
+      faqJsonLd(copy.faqs),
     ],
   });
 }
 
-function HubProductCard({ product, fr }: { product: Product; fr: boolean }) {
+function HubProductCard({
+  product,
+  fr,
+  productKeyword,
+}: {
+  product: Product;
+  fr: boolean;
+  productKeyword: string;
+}) {
   const ice = iceKgOf(product);
   const flow = flowOf(product);
   const badge = fr ? (frProductCopy[product.id]?.badge ?? product.badge) : product.badge;
   const groups = fr ? frGroupLabels : groupLabels;
   const uses = fr ? frUseLabels : useLabels;
   const ui = frCatalogUi;
+  const linkLabel = `${product.name} ${productKeyword}`;
 
   return (
     <article className="product-card group">
@@ -83,7 +109,7 @@ function HubProductCard({ product, fr }: { product: Product; fr: boolean }) {
         <div className="flex items-baseline justify-between gap-3">
           <h2 className="text-xl">
             <ProductLink id={product.id} className="hover:text-ice">
-              {product.name}
+              {linkLabel}
             </ProductLink>
           </h2>
           <span className="spec-num text-xs text-muted">{product.index}</span>
@@ -124,7 +150,7 @@ export function HubPage({ hubKey, lang }: { hubKey: HubKey; lang: "nl" | "fr" })
   const hub = hubs[hubKey];
   const copy = lang === "fr" ? hub.fr : hub.nl;
   const fr = lang === "fr";
-  const list = products.filter((p) => p.group === hub.group);
+  const list = hubProducts(hub);
   const homePath = fr ? "/fr" : "/";
   const catalogPath = fr ? "/fr/produits" : "/producten";
   const contactPath = fr ? "/fr/contact" : "/contact";
@@ -171,12 +197,33 @@ export function HubPage({ hubKey, lang }: { hubKey: HubKey; lang: "nl" | "fr" })
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {list.map((p) => (
-            <HubProductCard key={p.id} product={p} fr={fr} />
+            <HubProductCard
+              key={p.id}
+              product={p}
+              fr={fr}
+              productKeyword={copy.productKeyword}
+            />
           ))}
         </div>
         {list.length === 0 ? (
           <p className="mt-10 text-muted">{fr ? frCatalogUi.none : "Geen producten in deze categorie."}</p>
         ) : null}
+      </section>
+
+      <section className="border-t border-line px-5 py-16 md:px-8" aria-labelledby="hub-faq">
+        <div className="mx-auto max-w-[1220px]">
+          <h2 id="hub-faq" className="text-2xl md:text-3xl">
+            {fr ? "Questions fréquentes" : "Veelgestelde vragen"}
+          </h2>
+          <dl className="mt-8 space-y-6">
+            {copy.faqs.map((f) => (
+              <div key={f.question}>
+                <dt className="text-lg font-medium text-fg">{f.question}</dt>
+                <dd className="mt-2 max-w-[46rem] text-muted">{f.answer}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       <section className="border-t border-line px-5 py-16 md:px-8">

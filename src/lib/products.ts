@@ -6,6 +6,7 @@ export type ProductUse = "horeca" | "events" | "onder-bar" | "mobiel";
 export type ProductGroup =
   | "koelers"
   | "kegkoelers"
+  | "glycolkoelers"
   | "serpentijnen"
   | "dispensing"
   | "onderdelen"
@@ -41,6 +42,7 @@ export const useLabels: Record<ProductUse, string> = {
 export const groupLabels: Record<ProductGroup, string> = {
   koelers: "Bierkoelers",
   kegkoelers: "Kegkoelers",
+  glycolkoelers: "Glycolkoelers",
   serpentijnen: "Serpentijnen",
   dispensing: "Tap & zuilen",
   onderdelen: "Onderdelen",
@@ -235,23 +237,20 @@ const productsCore: Product[] = [
  id: "v90",
  index: "09",
  name: "V90",
- badge: "Horeca · Onder-bar",
+ badge: "Glycol · Horeca",
  description:
- "Compacte onder-bar koeler voor bars met beperkte diepte.",
+ "Glycolkoeler voor professionele koelcircuits — dit is geen ijsbank en geen leidingkoeler.",
  longDescription:
- "De V90 is ontworpen voor bars waar diepte beperkt is. Professionele ijsbankkoeling in een compacter footprint.",
+ "De V90 is een glycolkoeler: dit is geen ijsbank en geen leidingkoeler. Hij hoort bij glycol-/vriesversies, niet bij bierkoelers of tapkoelers. Geschikt voor horeca waar een glycolcircuit nodig is. Afmetingen, spanning en compressor staan in de specs; ijs- en debietcijfers gelden hier niet.",
  image: withBase("/assets/products-catalog/v90.jpg"),
- alt: "V90 compacte onder-bar ijsbankkoeler",
+ alt: "V90 glycolkoeler",
  cropClass: "crop-v90",
- uses: ["horeca", "onder-bar"],
+ uses: ["horeca"],
  featured: false,
  specs: [
  { label: "Afmetingen", value: "720 x 430 x 290" },
  { label: "Spanning", value: "220V / 50 Hz" },
  { label: "Compressor", value: "(pk): 3/8" },
- { label: "IJsreservoir (L)", value: "–" },
- { label: "IJsreserve (kg)", value: "–" },
- { label: "Debiet (L/u)", value: "–" },
  ],
  },
  {
@@ -507,7 +506,7 @@ const coreGroupById: Record<string, ProductGroup> = {
   v200: "koelers",
   "v200-portable": "koelers",
   v300: "koelers",
-  v90: "koelers",
+  v90: "glycolkoelers",
   h50: "koelers",
   v500: "koelers",
   "barrilero-doble": "kegkoelers",

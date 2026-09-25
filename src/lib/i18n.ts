@@ -26,6 +26,7 @@ export function counterpartPath(pathname: string): string {
     if (pathname.startsWith("/fr/serpentins")) return "/serpentijnen";
     if (pathname.startsWith("/fr/colonnes-robinets")) return "/tap-zuilen";
     if (pathname.startsWith("/fr/pieces")) return "/onderdelen";
+    if (pathname.startsWith("/fr/refroidisseurs-glycol")) return "/glycolkoelers";
     return "/";
   }
   if (pathname === "/" || pathname === "") return "/fr";
@@ -43,5 +44,6 @@ export function counterpartPath(pathname: string): string {
   if (pathname.startsWith("/serpentijnen")) return "/fr/serpentins";
   if (pathname.startsWith("/tap-zuilen")) return "/fr/colonnes-robinets";
   if (pathname.startsWith("/onderdelen")) return "/fr/pieces";
+  if (pathname.startsWith("/glycolkoelers")) return "/fr/refroidisseurs-glycol";
   return "/fr";
 }

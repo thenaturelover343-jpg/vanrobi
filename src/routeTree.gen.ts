@@ -14,6 +14,7 @@ import { Route as BierkoelersRouteImport } from './routes/bierkoelers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DienstenRouteImport } from './routes/diensten'
 import { Route as FaqRouteImport } from './routes/faq'
+import { Route as GlycolkoelersRouteImport } from './routes/glycolkoelers'
 import { Route as KegkoelersRouteImport } from './routes/kegkoelers'
 import { Route as OnderdelenRouteImport } from './routes/onderdelen'
 import { Route as OverOnsRouteImport } from './routes/over-ons'
@@ -30,6 +31,7 @@ import { Route as FrFaqRouteImport } from './routes/fr/faq'
 import { Route as FrPiecesRouteImport } from './routes/fr/pieces'
 import { Route as FrRefroidisseursBiereRouteImport } from './routes/fr/refroidisseurs-biere'
 import { Route as FrRefroidisseursFutRouteImport } from './routes/fr/refroidisseurs-fut'
+import { Route as FrRefroidisseursGlycolRouteImport } from './routes/fr/refroidisseurs-glycol'
 import { Route as FrSerpentinsRouteImport } from './routes/fr/serpentins'
 import { Route as FrServicesRouteImport } from './routes/fr/services'
 import { Route as GidsIndexRouteImport } from './routes/gids/index'
@@ -62,6 +64,11 @@ const DienstenRoute = DienstenRouteImport.update({
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlycolkoelersRoute = GlycolkoelersRouteImport.update({
+  id: '/glycolkoelers',
+  path: '/glycolkoelers',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KegkoelersRoute = KegkoelersRouteImport.update({
@@ -144,6 +151,11 @@ const FrRefroidisseursFutRoute = FrRefroidisseursFutRouteImport.update({
   path: '/fr/refroidisseurs-fut',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrRefroidisseursGlycolRoute = FrRefroidisseursGlycolRouteImport.update({
+  id: '/fr/refroidisseurs-glycol',
+  path: '/fr/refroidisseurs-glycol',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FrSerpentinsRoute = FrSerpentinsRouteImport.update({
   id: '/fr/serpentins',
   path: '/fr/serpentins',
@@ -191,6 +203,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/faq': typeof FaqRoute
+  '/glycolkoelers': typeof GlycolkoelersRoute
   '/kegkoelers': typeof KegkoelersRoute
   '/onderdelen': typeof OnderdelenRoute
   '/over-ons': typeof OverOnsRoute
@@ -206,6 +219,7 @@ export interface FileRoutesByFullPath {
   '/fr/pieces': typeof FrPiecesRoute
   '/fr/refroidisseurs-biere': typeof FrRefroidisseursBiereRoute
   '/fr/refroidisseurs-fut': typeof FrRefroidisseursFutRoute
+  '/fr/refroidisseurs-glycol': typeof FrRefroidisseursGlycolRoute
   '/fr/serpentins': typeof FrSerpentinsRoute
   '/fr/services': typeof FrServicesRoute
   '/gids/$slug': typeof GidsSlugRoute
@@ -222,6 +236,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/faq': typeof FaqRoute
+  '/glycolkoelers': typeof GlycolkoelersRoute
   '/kegkoelers': typeof KegkoelersRoute
   '/onderdelen': typeof OnderdelenRoute
   '/over-ons': typeof OverOnsRoute
@@ -237,6 +252,7 @@ export interface FileRoutesByTo {
   '/fr/pieces': typeof FrPiecesRoute
   '/fr/refroidisseurs-biere': typeof FrRefroidisseursBiereRoute
   '/fr/refroidisseurs-fut': typeof FrRefroidisseursFutRoute
+  '/fr/refroidisseurs-glycol': typeof FrRefroidisseursGlycolRoute
   '/fr/serpentins': typeof FrSerpentinsRoute
   '/fr/services': typeof FrServicesRoute
   '/gids/$slug': typeof GidsSlugRoute
@@ -254,6 +270,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/diensten': typeof DienstenRoute
   '/faq': typeof FaqRoute
+  '/glycolkoelers': typeof GlycolkoelersRoute
   '/kegkoelers': typeof KegkoelersRoute
   '/onderdelen': typeof OnderdelenRoute
   '/over-ons': typeof OverOnsRoute
@@ -269,6 +286,7 @@ export interface FileRoutesById {
   '/fr/pieces': typeof FrPiecesRoute
   '/fr/refroidisseurs-biere': typeof FrRefroidisseursBiereRoute
   '/fr/refroidisseurs-fut': typeof FrRefroidisseursFutRoute
+  '/fr/refroidisseurs-glycol': typeof FrRefroidisseursGlycolRoute
   '/fr/serpentins': typeof FrSerpentinsRoute
   '/fr/services': typeof FrServicesRoute
   '/gids/$slug': typeof GidsSlugRoute
@@ -287,6 +305,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diensten'
     | '/faq'
+    | '/glycolkoelers'
     | '/kegkoelers'
     | '/onderdelen'
     | '/over-ons'
@@ -302,6 +321,7 @@ export interface FileRouteTypes {
     | '/fr/pieces'
     | '/fr/refroidisseurs-biere'
     | '/fr/refroidisseurs-fut'
+    | '/fr/refroidisseurs-glycol'
     | '/fr/serpentins'
     | '/fr/services'
     | '/gids/$slug'
@@ -318,6 +338,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diensten'
     | '/faq'
+    | '/glycolkoelers'
     | '/kegkoelers'
     | '/onderdelen'
     | '/over-ons'
@@ -333,6 +354,7 @@ export interface FileRouteTypes {
     | '/fr/pieces'
     | '/fr/refroidisseurs-biere'
     | '/fr/refroidisseurs-fut'
+    | '/fr/refroidisseurs-glycol'
     | '/fr/serpentins'
     | '/fr/services'
     | '/gids/$slug'
@@ -349,6 +371,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/diensten'
     | '/faq'
+    | '/glycolkoelers'
     | '/kegkoelers'
     | '/onderdelen'
     | '/over-ons'
@@ -364,6 +387,7 @@ export interface FileRouteTypes {
     | '/fr/pieces'
     | '/fr/refroidisseurs-biere'
     | '/fr/refroidisseurs-fut'
+    | '/fr/refroidisseurs-glycol'
     | '/fr/serpentins'
     | '/fr/services'
     | '/gids/$slug'
@@ -381,6 +405,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DienstenRoute: typeof DienstenRoute
   FaqRoute: typeof FaqRoute
+  GlycolkoelersRoute: typeof GlycolkoelersRoute
   KegkoelersRoute: typeof KegkoelersRoute
   OnderdelenRoute: typeof OnderdelenRoute
   OverOnsRoute: typeof OverOnsRoute
@@ -396,6 +421,7 @@ export interface RootRouteChildren {
   FrPiecesRoute: typeof FrPiecesRoute
   FrRefroidisseursBiereRoute: typeof FrRefroidisseursBiereRoute
   FrRefroidisseursFutRoute: typeof FrRefroidisseursFutRoute
+  FrRefroidisseursGlycolRoute: typeof FrRefroidisseursGlycolRoute
   FrSerpentinsRoute: typeof FrSerpentinsRoute
   FrServicesRoute: typeof FrServicesRoute
   GidsSlugRoute: typeof GidsSlugRoute
@@ -442,6 +468,13 @@ declare module '@tanstack/react-router' {
       path: '/faq'
       fullPath: '/faq'
       preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glycolkoelers': {
+      id: '/glycolkoelers'
+      path: '/glycolkoelers'
+      fullPath: '/glycolkoelers'
+      preLoaderRoute: typeof GlycolkoelersRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/kegkoelers': {
@@ -556,6 +589,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrRefroidisseursFutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/fr/refroidisseurs-glycol': {
+      id: '/fr/refroidisseurs-glycol'
+      path: '/fr/refroidisseurs-glycol'
+      fullPath: '/fr/refroidisseurs-glycol'
+      preLoaderRoute: typeof FrRefroidisseursGlycolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/fr/serpentins': {
       id: '/fr/serpentins'
       path: '/fr/serpentins'
@@ -621,6 +661,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DienstenRoute: DienstenRoute,
   FaqRoute: FaqRoute,
+  GlycolkoelersRoute: GlycolkoelersRoute,
   KegkoelersRoute: KegkoelersRoute,
   OnderdelenRoute: OnderdelenRoute,
   OverOnsRoute: OverOnsRoute,
@@ -636,6 +677,7 @@ const rootRouteChildren: RootRouteChildren = {
   FrPiecesRoute: FrPiecesRoute,
   FrRefroidisseursBiereRoute: FrRefroidisseursBiereRoute,
   FrRefroidisseursFutRoute: FrRefroidisseursFutRoute,
+  FrRefroidisseursGlycolRoute: FrRefroidisseursGlycolRoute,
   FrSerpentinsRoute: FrSerpentinsRoute,
   FrServicesRoute: FrServicesRoute,
   GidsSlugRoute: GidsSlugRoute,
