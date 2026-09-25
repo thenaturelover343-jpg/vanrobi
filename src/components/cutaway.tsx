@@ -28,7 +28,7 @@ export function Cutaway() {
             <p className="mt-6 max-w-md text-lg text-muted">
               {fr
                 ? frCutawayCopy.sub
-                : "Maatwerk. Benelux-nabijheid. Koude die blijft presteren tijdens elke shift."}
+                : "We matchen unit aan volume en ruimte. Levering en opvolging vanuit de Kempen. Koude die bij piekvolume blijft."}
             </p>
           </Reveal>
         </div>
