@@ -14,6 +14,7 @@ export function PageShell({ children }: { children: ReactNode }) {
     document.documentElement.classList.toggle("exp-v2", experience.visualRefresh);
     document.documentElement.classList.toggle("hero-read-fade", experience.heroReadFade);
     document.documentElement.classList.toggle("hero-glass", experience.heroGlass);
+    document.documentElement.classList.toggle("hero-quiet", experience.heroQuiet);
   }, [lang]);
 
   return (

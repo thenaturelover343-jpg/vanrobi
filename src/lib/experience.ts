@@ -15,6 +15,8 @@ export const experience = {
   heroReadFade: true,
   /** Glas op de hero-knoppen en categorieën. false = dichte vlakken van daarvoor. */
   heroGlass: true,
+  /** Eén knop in de hero, categorieën eronder. false = beide knoppen en tegels terug in de hero. */
+  heroQuiet: true,
 };
 
 export const slogans = {

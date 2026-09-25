@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { useCold } from "@/lib/cold";
-import { tagline } from "@/lib/experience";
+import { tagline, experience } from "@/lib/experience";
 import { withBase } from "@/lib/base";
 import { MagneticCta } from "./magnetic-cta";
 import { OptimizedImage } from "./optimized-image";
@@ -263,6 +263,7 @@ export function HomeHero() {
       ];
 
   return (
+    <>
     <section ref={heroRef} className="relative h-[145svh]">
       <div className="sticky top-0 min-h-[100svh] overflow-hidden ice-fallback">
         <OptimizedImage
@@ -294,19 +295,33 @@ export function HomeHero() {
                 ? frHero.lede
                 : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
             </p>
-            <div className="hero-actions mt-3 flex gap-2 md:mt-8 md:gap-3">
-              <MagneticCta>
-                <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
-                  {fr ? frHero.cta : "Vraag een offerte"}
+            {experience.heroQuiet ? (
+              <div className="hero-actions mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 md:mt-8">
+                <MagneticCta>
+                  <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
+                    {fr ? frHero.cta : "Vraag een offerte"}
+                  </Link>
+                </MagneticCta>
+                <Link to={fr ? "/fr/produits" : "/producten"} className="hero-text-link">
+                  {fr ? frHero.ctaSecondary : "Bekijk machines"}
                 </Link>
-              </MagneticCta>
-              <Link
-                to={fr ? "/fr/produits" : "/producten"}
-                className="btn btn-ghost bg-bg/60 backdrop-blur-sm"
-              >
-                {fr ? frHero.ctaSecondary : "Bekijk machines"}
-              </Link>
-            </div>
+              </div>
+            ) : (
+              <div className="hero-actions mt-3 flex gap-2 md:mt-8 md:gap-3">
+                <MagneticCta>
+                  <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
+                    {fr ? frHero.cta : "Vraag een offerte"}
+                  </Link>
+                </MagneticCta>
+                <Link
+                  to={fr ? "/fr/produits" : "/producten"}
+                  className="btn btn-ghost bg-bg/60 backdrop-blur-sm"
+                >
+                  {fr ? frHero.ctaSecondary : "Bekijk machines"}
+                </Link>
+              </div>
+            )}
+            {experience.heroQuiet ? null : (
             <ul
               className="hero-tiles mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:mt-12 md:grid-cols-5 md:gap-2"
               aria-label="Assortiment"
@@ -325,6 +340,7 @@ export function HomeHero() {
                 </li>
               ))}
             </ul>
+            )}
           </div>
 
           <HeroMachine story={story} />
@@ -345,5 +361,19 @@ export function HomeHero() {
         </button>
       </div>
     </section>
+    {experience.heroQuiet ? (
+      <section className="hero-cat-band border-b border-line px-5 py-8 md:px-8" aria-label={fr ? "Assortiment" : "Assortiment"}>
+        <ul className="hero-tiles mx-auto flex max-w-[1220px] flex-wrap gap-3">
+          {tiles.map((tile) => (
+            <li key={tile.to}>
+              <Link to={tile.to} className="hero-tile">
+                {tile.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ) : null}
+    </>
   );
 }
