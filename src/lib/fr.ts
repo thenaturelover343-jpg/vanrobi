@@ -52,7 +52,7 @@ export const frHero = {
   kicker: "Refroidisseurs de bière · Refroidisseurs de fût · Belgique & Pays-Bas",
   slogan: "Froid stable. Chaque verre, chaque service.",
   title: "Refroidisseurs de bière et de fût pour l'horeca",
-  lede: "Refroidisseurs à banquise pour la ligne, refroidisseurs de fût pour le fût, plus robinets, colonnes et serpentins. Belgique et Pays-Bas.",
+  lede: "Que vous construisiez un bar fixe, un bar d’event ou une installation de tirage temporaire : VanRobi choisit avec vous le froid, les robinets et les serpentins qui tiennent votre débit.",
   cta: "Demander un devis",
   ctaSecondary: "Voir les machines",
   scroll: "Faites défiler pour former la banquise",

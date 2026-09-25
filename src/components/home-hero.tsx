@@ -292,7 +292,7 @@ export function HomeHero() {
             <p className="hero-lede mt-2.5 max-w-md text-base font-medium leading-snug md:mt-6 md:text-[1.05rem] md:leading-relaxed">
               {fr
                 ? frHero.lede
-                : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
+                : "Of u nu een vaste bar, eventbar of tijdelijke tapinstallatie bouwt: VanRobi kiest mee de koeling, kranen en serpentijnen die uw debiet aankunnen."}
             </p>
             {experience.heroQuiet ? (
               <div className="hero-actions mt-3.5 flex flex-wrap items-center gap-x-5 gap-y-2 md:mt-8">
