@@ -26,8 +26,8 @@ export const frHome = {
   why: [
     {
       n: "01",
-      title: "Marque VanRobi",
-      text: "VanRobi, marque de refroidisseurs à banquise pour la Belgique et les Pays-Bas. Specs correctes, suivi local.",
+      title: "VanRobi",
+      text: "Refroidisseurs bière et fût pour la Belgique et les Pays-Bas, avec des specs qu'un installateur peut utiliser et un suivi à proximité.",
     },
     {
       n: "02",
