@@ -16,8 +16,16 @@ export const Route = createFileRoute("/fr/produits/$id")({
     if (!product)
       return seoHead({ title: "Produit — VanRobi", description: "", path: "/fr/produits", lang: "fr" });
     const description = copy?.longDescription ?? product.longDescription ?? product.description;
+    const kind =
+      product.group === "kegkoelers"
+        ? "refroidisseur de fût"
+        : product.group === "koelers"
+          ? "refroidisseur de bière"
+          : product.group === "serpentijnen"
+            ? "serpentin"
+            : "assortiment";
     return seoHead({
-      title: `${product.name} — VanRobi`,
+      title: `${product.name} — ${kind} | VanRobi`,
       description,
       path: `/fr/produits/${product.id}`,
       lang: "fr",
