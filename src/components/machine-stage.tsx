@@ -28,8 +28,15 @@ export function MachineStage() {
         <Reveal>
           <p className="kicker">{fr ? frMachinesCopy.kicker : "Assortiment"}</p>
           <h2 className="mt-4 max-w-3xl text-4xl md:text-6xl">
-            {fr ? frMachinesCopy.title : "Acht machines."}
-            <em className="italic text-ice"> {fr ? frMachinesCopy.em : "Eén standaard."}</em>
+            {fr
+              ? "Huit refroidisseurs à banquise en avant —"
+              : "Acht ijsbankkoelers uitgelicht —"}
+            <em className="italic text-ice">
+              {" "}
+              {fr
+                ? `${products.length} produits au total.`
+                : `${products.length} producten in totaal.`}
+            </em>
           </h2>
           <p className="mt-5 max-w-lg text-muted">
             {fr
