@@ -263,7 +263,6 @@ export function HomeHero() {
       ];
 
   return (
-    <>
     <section ref={heroRef} className="relative h-[145svh]">
       <div className="hero-sticky sticky top-0 min-h-[100svh] overflow-hidden ice-fallback">
         <OptimizedImage
@@ -361,33 +360,5 @@ export function HomeHero() {
         </button>
       </div>
     </section>
-    {experience.heroQuiet ? (
-      <section className="hero-cat-band" aria-label="Assortiment">
-        <div className="hero-cat-well" aria-hidden />
-        <div className="relative z-10 mx-auto max-w-[1220px] px-5 py-10 md:px-8 md:py-14">
-          <div className="hero-cat-head">
-            <p className="kicker">Assortiment</p>
-            <p className="hero-cat-line">
-              {fr
-                ? "La ligne, le fût, le robinet ou la pièce."
-                : "De leiding, het vat, de kraan of het onderdeel."}
-            </p>
-          </div>
-          <ul className="hero-cat-grid">
-            {tiles.map((tile, index) => (
-              <li key={tile.to}>
-                <Link to={tile.to} className="hero-cat-link">
-                  <span className="hero-cat-index" aria-hidden="true">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="hero-cat-label">{tile.label}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-    ) : null}
-    </>
   );
 }
