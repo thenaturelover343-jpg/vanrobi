@@ -22,8 +22,8 @@ export function Cutaway() {
           <Reveal>
             <p className="kicker">{fr ? frCutawayCopy.kicker : "Koude onder controle"}</p>
             <h2 className="mt-4 text-4xl md:text-6xl">
-              {fr ? frCutawayCopy.line1 : "Niet sneller tappen."}
-              <em className="italic text-ice"> {fr ? frCutawayCopy.em : "Juister koelen."}</em>
+              {fr ? frCutawayCopy.line1 : "Koeling die de piek aanhoudt,"}
+              <em className="italic text-ice"> {fr ? frCutawayCopy.em : "niet alleen de eerste glazen."}</em>
             </h2>
             <p className="mt-6 max-w-md text-lg text-muted">
               {fr
