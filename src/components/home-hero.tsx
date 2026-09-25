@@ -363,25 +363,24 @@ export function HomeHero() {
     </section>
     {experience.heroQuiet ? (
       <section className="hero-cat-band" aria-label="Assortiment">
-        <OptimizedImage
-          src={withBase("/worlds/ice-bank.jpg")}
-          alt=""
-          width={1792}
-          height={907}
-          aria-hidden="true"
-          className="hero-cat-photo"
-        />
-        <div className="hero-cat-scrim" aria-hidden />
-        <div className="relative z-10 mx-auto max-w-[1220px] px-5 py-8 md:px-8 md:py-10">
+        <div className="hero-cat-well" aria-hidden />
+        <div className="relative z-10 mx-auto max-w-[1220px] px-5 py-10 md:px-8 md:py-14">
           <div className="hero-cat-head">
             <p className="kicker">Assortiment</p>
-            <p>{fr ? "La ligne, le fût, le robinet ou la pièce." : "De leiding, het vat, de kraan of het onderdeel."}</p>
+            <p className="hero-cat-line">
+              {fr
+                ? "La ligne, le fût, le robinet ou la pièce."
+                : "De leiding, het vat, de kraan of het onderdeel."}
+            </p>
           </div>
           <ul className="hero-cat-grid">
-            {tiles.map((tile) => (
+            {tiles.map((tile, index) => (
               <li key={tile.to}>
-                <Link to={tile.to} className="hero-tile">
-                  {tile.label}
+                <Link to={tile.to} className="hero-cat-link">
+                  <span className="hero-cat-index" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="hero-cat-label">{tile.label}</span>
                 </Link>
               </li>
             ))}

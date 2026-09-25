@@ -21,29 +21,33 @@ const STUDIO_CONTAIN = new Set(["01", "02", "03", "04"]);
 export function AssortmentCats() {
   const fr = useLang() === "fr";
   return (
-    <section className="border-t border-line px-5 py-24 md:px-8">
+    <section className="assort-section border-t border-line px-5 py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-[1220px]">
         <Reveal>
-          <p className="kicker">{fr ? frAssortmentCopy.kicker : "Assortiment"}</p>
-          <h2 className="mt-4 text-4xl md:text-6xl">
-            {fr ? (
-              <>
-                L'
-                <em className="italic text-ice">{frAssortmentCopy.em}</em> assortiment
-              </>
-            ) : (
-              <>
-                Het volledige <em className="italic text-ice">assortiment</em>
-              </>
-            )}
-          </h2>
-          <p className="mt-5 max-w-lg text-muted">
-            {fr
-              ? frAssortmentCopy.lede
-              : "Bierkoelers, kegkoelers, serpentijnen, tap & zuilen en onderdelen — het volledige assortiment."}
-          </p>
+          <div className="assort-head">
+            <div>
+              <p className="kicker">{fr ? frAssortmentCopy.kicker : "Assortiment"}</p>
+              <h2 className="mt-4 text-4xl md:text-6xl">
+                {fr ? (
+                  <>
+                    L'
+                    <em className="italic text-ice">{frAssortmentCopy.em}</em> assortiment
+                  </>
+                ) : (
+                  <>
+                    Het volledige <em className="italic text-ice">assortiment</em>
+                  </>
+                )}
+              </h2>
+            </div>
+            <p className="assort-lede">
+              {fr
+                ? frAssortmentCopy.lede
+                : "Bierkoelers, kegkoelers, serpentijnen, tap & zuilen en onderdelen — het volledige assortiment."}
+            </p>
+          </div>
         </Reveal>
-        <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+        <div className="assort-grid">
           {categories.map((c, i) => {
             const studio = STUDIO_CONTAIN.has(c.index);
             return (
@@ -51,26 +55,30 @@ export function AssortmentCats() {
                 key={c.index}
                 href={fr ? (frHubHrefs[i] ?? withBase("/fr/produits")) : c.href}
                 className={cn(
-                  "group relative min-h-[400px] overflow-hidden md:min-h-[320px]",
-                  studio ? "bg-well" : "bg-bg",
+                  "assort-card group",
+                  studio && "assort-card--studio",
+                  i === 0 && "assort-card--feature",
                 )}
               >
-                <OptimizedImage
-                  src={c.image}
-                  alt={c.alt}
-                  loading="lazy"
-                  className={cn(
-                    "absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.04]",
-                    studio
-                      ? "image-grade object-contain object-center"
-                      : "image-grade object-cover object-center",
-                  )}
-                />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-bg/55 via-bg/10 to-transparent" />
-                <span className="relative flex h-full items-end p-6 font-display text-3xl text-fg">
-                  <em className="mr-3 not-italic text-ice">{c.index}</em>{" "}
-                  {fr ? frAssortmentCopy.labels[i] : c.label}
-                </span>
+                <div className="assort-card-well">
+                  <OptimizedImage
+                    src={c.image}
+                    alt={c.alt}
+                    loading="lazy"
+                    className={cn(
+                      "absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.035]",
+                      studio
+                        ? "image-grade object-contain object-center p-5 md:p-8"
+                        : "image-grade object-cover object-center",
+                    )}
+                  />
+                </div>
+                <div className="assort-card-meta">
+                  <em className="assort-card-index">{c.index}</em>
+                  <span className="assort-card-label">
+                    {fr ? frAssortmentCopy.labels[i] : c.label}
+                  </span>
+                </div>
               </a>
             );
           })}
