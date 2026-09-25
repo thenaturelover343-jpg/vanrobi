@@ -26,7 +26,7 @@ export const guides: Guide[] = [
  title: "Ijsbankkoeler of complete tapinstallatie: wat past bij uw bar?",
  eyebrow: "Vergelijking",
  description:
- "Wanneer een dedicated ijsbankkoeler via VanRobi de betere match is dan een complete tapmeubellijn: buffer, onderhoud en horeca in België & Nederland.",
+ "Wanneer een dedicated ijsbankkoeler de betere match is dan een complete tapmeubellijn: buffer, onderhoud en horeca in België & Nederland.",
  lede: "Niet elke bar heeft dezelfde koeling nodig. We zetten ijsbankkoelers af tegen complete tapinstallaties, vanuit het perspectief van een specialist voor BE/NL.",
  updated: "2026-09-21",
  published: "2026-09-18",
@@ -36,7 +36,7 @@ export const guides: Guide[] = [
  title: "V100 vs V200: welke ijsbankkoeler kiest u?",
  eyebrow: "Vergelijking",
  description:
- "Verschil tussen V100 en V200: debiet, ijsreserve, formaat en typische toepassingen. Helder advies via VanRobi.",
+ "Verschil tussen V100 en V200: debiet, ijsreserve, formaat en typische toepassingen. Helder advies",
  lede: 'Beide zijn onder-bar werkpaarden. Het verschil zit in volume en piekbelasting, niet in "goedkoop versus duur".',
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -46,7 +46,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler voor events & festivals",
  eyebrow: "Gids",
  description:
- "Welke ijsbankkoeler voor festivals en events? Goldy, V100 portable en V200 portable, opbouw, stroom en capaciteit via VanRobi.",
+ "Welke ijsbankkoeler voor festivals en events? Goldy, V100 portable en V200 portable, opbouw, stroom en capaciteit",
  lede: "Op het terrein telt mobiliteit, snelle opbouw en genoeg koude wanneer de piek komt. Deze gids helpt u kiezen.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -56,7 +56,7 @@ export const guides: Guide[] = [
  title: "Wat is een ijsbankkoeler?",
  eyebrow: "Uitleg",
  description:
- "Uitleg ijsbankkoeler (bierkoeler): werking, verschil met doorstroomkoeling, wanneer u er één nodig heeft. Advies via VanRobi, ijsbankkoelers BE & NL.",
+ "Uitleg ijsbankkoeler (bierkoeler): werking, verschil met doorstroomkoeling, wanneer u er één nodig heeft. Advies, ijsbankkoelers BE & NL.",
  lede: "Een ijsbankkoeler koelt bier (of andere drank) via een ijsreserve in een waterbad, stabiel, stil en geschikt voor professionele horeca en events.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -66,7 +66,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler kopen in België & Nederland",
  eyebrow: "Koopgids",
  description:
- "Bierkoeler kopen in België of Nederland: checklist, lokale levering vanuit Kasterlee/Kempen, ijsbankkoelers via VanRobi. Specialist BE & NL.",
+ "Bierkoeler kopen in België of Nederland: checklist, lokale levering vanuit Kasterlee/Kempen, ijsbankkoelers Specialist BE & NL.",
  lede: "Van Antwerpen tot Amsterdam: waar u let op bij aankoop, welke capaciteit u nodig heeft, en waarom een professioneel VanRobi-kanaal telt.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -86,7 +86,7 @@ export const guides: Guide[] = [
  title: "Onder-bar bierkoeler: V100 & V200",
  eyebrow: "Onder-bar",
  description:
- "Onder-bar bierkoeler kiezen: V100 en V200 voor vaste horeca. Debiet, ijsreserve en barmeubel, advies via VanRobi.",
+ "Onder-bar bierkoeler kiezen: V100 en V200 voor vaste horeca. Debiet, ijsreserve en barmeubel, advies",
  lede: "Onder de bar verdwijnt de machine uit het zicht, maar capaciteit en voetafdruk blijven cruciaal. Zo kiest u tussen V100 en V200.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -96,7 +96,7 @@ export const guides: Guide[] = [
  title: "Goldy vs V100: over-bar of onder-bar?",
  eyebrow: "Vergelijking",
  description:
- "Vergelijk Goldy en V100: over-bar vs onder-bar, debiet, ijsreserve en typische toepassingen. Specs via VanRobi.",
+ "Vergelijk Goldy en V100: over-bar vs onder-bar, debiet, ijsreserve en typische toepassingen. Specs",
  lede: "Compacte zichtbare Goldy of vast onder-bar werkpaard V100? De keuze hangt af van ruimte, volume en of de bar zichtbaar mag blijven.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -106,7 +106,7 @@ export const guides: Guide[] = [
  title: "IJsbankkoeler vs dry cooler: wat is het verschil?",
  eyebrow: "Uitleg",
  description:
- "Verschil tussen ijsbankkoeler en dry cooler (luchtgekoelde doorstroomkoeler): buffer, pieken, ruimte en wanneer VanRobi ijsbank via VanRobi past.",
+ "Verschil tussen ijsbankkoeler en dry cooler (luchtgekoelde doorstroomkoeler): buffer, pieken, ruimte en wanneer VanRobi ijsbank past.",
  lede: "Beide koelen bier, maar het principe, de buffer en het gedrag bij pieken verschillen. Geen dogma: wel een heldere keuze.",
  updated: "2026-09-19",
  published: "2026-09-19",
@@ -116,7 +116,7 @@ export const guides: Guide[] = [
  title: "Spiralen & tapinstallatie: wat moet u weten?",
  eyebrow: "Techniek",
  description:
- "Spiralen in de ijsbankkoeler, leidinglengte en tapinstallatie: hoe ijsbankkoelers aansluiten op uw bar. Advies via VanRobi & Taponderhoud.",
+ "Spiralen in de ijsbankkoeler, leidinglengte en tapinstallatie: hoe ijsbankkoelers aansluiten op uw bar. Advies & Taponderhoud.",
  lede: "De machine is één schakel. Spiralen, leidingen en de kraan bepalen of het glas koud én stabiel aankomt.",
  updated: "2026-09-19",
  published: "2026-09-19",
@@ -126,7 +126,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler kiezen: checklist in 7 stappen",
  eyebrow: "Checklist",
  description:
- "Checklist bierkoeler kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom, spiralen en merk VanRobi. Praktisch via VanRobi BE/NL.",
+ "Checklist bierkoeler kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom, spiralen en merk VanRobi. Praktisch BE/NL.",
  lede: "Zeven concrete stappen, van piekvolume tot onderhoudspartner, zodat u geen machine koopt die te klein of te groot is.",
  updated: "2026-09-19",
  published: "2026-09-19",

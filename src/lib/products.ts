@@ -57,7 +57,7 @@ const productsCore: Product[] = [
  description:
  "Compacte over-bar ijsbankkoeler voor events, beurzen en craftbars.",
  longDescription:
- "De Goldy is de compacte over-bar ijsbankkoeler in het VanRobi-assortiment: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Via VanRobi geleverd met advies over spiralen, debiet en opstelling.",
+ "De Goldy is de compacte over-bar ijsbankkoeler in het VanRobi-assortiment: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Levering met advies over spiralen, debiet en opstelling.",
  image: withBase("/assets/products-official/goldy.jpg"),
  alt: "Goldy bierkoeler, over-bar ijsbankkoeler",
  cropClass: "crop-goldy",
@@ -104,9 +104,9 @@ const productsCore: Product[] = [
  description:
  "Gold Ice, snelle ijsproductie en stabiele koude voor horeca en events.",
  longDescription:
- "Gold Ice in het VanRobi-assortiment combineert ijsreserve met eenvoudig onderhoud. Via VanRobi beschikbaar voor Belgische en Nederlandse horeca die betrouwbare koude nodig heeft zonder complexe installatie.",
+ "Gold Ice in het VanRobi-assortiment combineert ijsreserve met eenvoudig onderhoud. Beschikbaar voor Belgische en Nederlandse horeca die betrouwbare koude nodig heeft zonder complexe installatie.",
  image: withBase("/assets/products-catalog/gold-ice.jpg"),
- alt: "Gold Ice, technische tekening via VanRobi",
+ alt: "Gold Ice, technische tekening",
  cropClass: "crop-gold-ice",
  uses: ["horeca", "events"],
  featured: false,
@@ -241,7 +241,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V90 is ontworpen voor bars waar diepte beperkt is. Professionele ijsbankkoeling in een compacter footprint.",
  image: withBase("/assets/products-catalog/v90.jpg"),
- alt: "V90 compacte onder-bar ijsbankkoeler, via VanRobi",
+ alt: "V90 compacte onder-bar ijsbankkoeler",
  cropClass: "crop-v90",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -264,7 +264,7 @@ const productsCore: Product[] = [
  longDescription:
  "De H50 is de horizontale variant voor lage onder-bar opstellingen. Zelfde industriële kwaliteit als de rest van de lijn, aangepast aan barhoogte en meubelontwerp.",
  image: withBase("/assets/products-catalog/h50.jpg"),
- alt: "H50 horizontale ijsbankkoeler, via VanRobi",
+ alt: "H50 horizontale ijsbankkoeler",
  cropClass: "crop-h50",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -329,7 +329,7 @@ const productsCore: Product[] = [
  longDescription:
  "Condensorunit in ons assortiment voor installaties waarbij de warmteafvoer gescheiden moet, technische ruimtes, lange leidingen, split-systemen.",
  image: withBase("/assets/products-catalog/unidad-condensadora.jpg"),
- alt: "Condensorunit, via VanRobi",
+ alt: "Condensorunit",
  cropClass: "crop-unidad-condensadora",
  uses: ["horeca"],
  featured: false,
@@ -348,7 +348,7 @@ const productsCore: Product[] = [
  longDescription:
  "G8-serie roermotoren in ons assortiment voor betrouwbare ijsbankcirculatie. Water/lucht-variant met condensor.",
  image: withBase("/assets/products-catalog/g8-agua-aire.jpg"),
- alt: "G8 water/lucht met condensor, via VanRobi",
+ alt: "G8 water/lucht met condensor",
  cropClass: "crop-g8-agua-aire",
  uses: ["horeca"],
  featured: false,
@@ -367,7 +367,7 @@ const productsCore: Product[] = [
  longDescription:
  "G8 luchtgekoelde roermotor met condensor, onderdeel van het VanRobi-ecosysteem voor ijsbankkoelers.",
  image: withBase("/assets/products-catalog/g8-aire.jpg"),
- alt: "G8 lucht met condensor, via VanRobi",
+ alt: "G8 lucht met condensor",
  cropClass: "crop-g8-aire",
  uses: ["horeca"],
  featured: false,
@@ -387,7 +387,7 @@ const productsCore: Product[] = [
  longDescription:
  "G8 watergekoelde roermotor met condensor voor stabiele ijsbankcirculatie in professionele installaties.",
  image: withBase("/assets/products-catalog/g8-agua.jpg"),
- alt: "G8 water met condensor, via VanRobi",
+ alt: "G8 water met condensor",
  cropClass: "crop-g8-agua",
  uses: ["horeca"],
  featured: false,
@@ -405,9 +405,9 @@ const productsCore: Product[] = [
  description:
  "G98 roermotor met condensor, 220/115V.",
  longDescription:
- "G98 met condensor: flexibele spanning (220/115V), ontworpen voor professionele ijsbanksystemen via VanRobi.",
+ "G98 met condensor: flexibele spanning (220/115V), ontworpen voor professionele ijsbanksystemen.",
  image: withBase("/assets/products-catalog/g98-con.jpg"),
- alt: "G98 met condensor, via VanRobi",
+ alt: "G98 met condensor",
  cropClass: "crop-g98-con",
  uses: ["horeca"],
  featured: false,
@@ -427,7 +427,7 @@ const productsCore: Product[] = [
  longDescription:
  "G98 zonder ingebouwde condensor, wanneer de condensor elders geplaatst wordt.",
  image: withBase("/assets/products-catalog/g98-sin.jpg"),
- alt: "G98 zonder condensor, via VanRobi",
+ alt: "G98 zonder condensor",
  cropClass: "crop-g98-sin",
  uses: ["horeca"],
  featured: false,
@@ -445,9 +445,9 @@ const productsCore: Product[] = [
  description:
  "G92 roermotor zonder condensor.",
  longDescription:
- "G92-serie zonder condensor voor specifieke ijsbankconfiguraties en vervangingsprojecten via VanRobi.",
+ "G92-serie zonder condensor voor specifieke ijsbankconfiguraties en vervangingsprojecten.",
  image: withBase("/assets/products-catalog/g92-sin.jpg"),
- alt: "G92 zonder condensor, via VanRobi",
+ alt: "G92 zonder condensor",
  cropClass: "crop-g92-sin",
  uses: ["horeca"],
  featured: false,
@@ -465,9 +465,9 @@ const productsCore: Product[] = [
  description:
  "Koudwaterbad voor proceskoeling en speciale toepassingen.",
  longDescription:
- "Koudwaterbad in ons assortiment voor industriële en speciale toepassingen, van deeg tot chemische processen. Via VanRobi op aanvraag.",
+ "Koudwaterbad in ons assortiment voor industriële en speciale toepassingen, van deeg tot chemische processen. Op aanvraag.",
  image: withBase("/assets/products-catalog/cuba-frio.jpg"),
- alt: "Koudwaterbad, via VanRobi",
+ alt: "Koudwaterbad",
  cropClass: "crop-cuba-frio",
  uses: ["horeca"],
  featured: false,
@@ -484,9 +484,9 @@ const productsCore: Product[] = [
  description:
  "Warmwaterbad voor industriële procesverwarming.",
  longDescription:
- "Warmwaterbad in ons assortiment voor industriële procesverwarming en speciale toepassingen. Op aanvraag via VanRobi in België en Nederland.",
+ "Warmwaterbad in ons assortiment voor industriële procesverwarming en speciale toepassingen. Op aanvraag in België en Nederland.",
  image: withBase("/assets/products-catalog/cuba-caliente.jpg"),
- alt: "Warmwaterbad, via VanRobi",
+ alt: "Warmwaterbad",
  cropClass: "crop-cuba-caliente",
  uses: ["horeca"],
  featured: false,
@@ -549,7 +549,7 @@ export const categories = [
  {
  href: withBase("/producten#serpentijnen"),
  image: withBase("/assets/cats/serpentijnen.jpg"),
- alt: "RVS-serpentijnen voor bier en drank via VanRobi",
+ alt: "RVS-serpentijnen voor bier en drank",
  index: "02",
  label: "Serpentijnen",
  delay: "reveal-delay-1",
