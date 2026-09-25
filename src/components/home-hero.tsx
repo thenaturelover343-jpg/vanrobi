@@ -294,7 +294,7 @@ export function HomeHero() {
                 ? frHero.lede
                 : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
             </p>
-            <div className="mt-3 flex flex-wrap gap-2 md:mt-8 md:gap-3">
+            <div className="hero-actions mt-3 flex gap-2 md:mt-8 md:gap-3">
               <MagneticCta>
                 <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
                   {fr ? frHero.cta : "Vraag een offerte"}
@@ -308,7 +308,7 @@ export function HomeHero() {
               </Link>
             </div>
             <ul
-              className="hero-tiles mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:mt-6 md:grid-cols-5 md:gap-2"
+              className="hero-tiles mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:mt-12 md:grid-cols-5 md:gap-2"
               aria-label="Assortiment"
             >
               {tiles.map((tile, index) => (

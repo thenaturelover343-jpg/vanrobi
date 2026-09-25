@@ -411,6 +411,21 @@
   padding: 0;
   max-width: 36rem;
 }
+@media (max-width: 767px) {
+  .hero-actions .magnetic-cta {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .hero-actions .btn {
+    flex: 1 1 0;
+    width: 100%;
+    min-width: 0;
+    padding-inline: 0.35rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+}
 .hero-tile {
   display: flex;
   align-items: center;
