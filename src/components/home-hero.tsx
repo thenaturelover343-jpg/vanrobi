@@ -359,27 +359,36 @@ export function HomeHero() {
           {fr ? frHero.scroll : "Scroll om de ijsbank op te bouwen"}
           <i aria-hidden />
         </button>
-        {experience.heroQuiet ? (
-          <div className="hero-cat-band">
-            <div className="mx-auto max-w-[1220px] px-5 md:px-8">
-              <div className="hero-cat-head">
-                <p className="kicker">{fr ? "Assortiment" : "Assortiment"}</p>
-                <p>{fr ? "La ligne, le fût, le robinet ou la pièce." : "De leiding, het vat, de kraan of het onderdeel."}</p>
-              </div>
-              <ul className="hero-cat-grid">
-                {tiles.map((tile) => (
-                  <li key={tile.to}>
-                    <Link to={tile.to} className="hero-tile">
-                      {tile.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ) : null}
       </div>
     </section>
+    {experience.heroQuiet ? (
+      <section className="hero-cat-band" aria-label="Assortiment">
+        <OptimizedImage
+          src={withBase("/worlds/ice-bank.jpg")}
+          alt=""
+          width={1792}
+          height={907}
+          aria-hidden="true"
+          className="hero-cat-photo"
+        />
+        <div className="hero-cat-scrim" aria-hidden />
+        <div className="relative z-10 mx-auto max-w-[1220px] px-5 py-8 md:px-8 md:py-10">
+          <div className="hero-cat-head">
+            <p className="kicker">Assortiment</p>
+            <p>{fr ? "La ligne, le fût, le robinet ou la pièce." : "De leiding, het vat, de kraan of het onderdeel."}</p>
+          </div>
+          <ul className="hero-cat-grid">
+            {tiles.map((tile) => (
+              <li key={tile.to}>
+                <Link to={tile.to} className="hero-tile">
+                  {tile.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    ) : null}
     </>
   );
 }
