@@ -79,8 +79,8 @@ function HeroMachine({ story }: { story: StoryState }) {
   }, []);
 
   return (
-    <aside className="mt-10 w-full max-w-md md:mt-0">
-      <div className="hero-story-card relative h-[19rem] max-h-[62vh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto">
+    <aside className="hero-machine mt-6 w-full max-w-md shrink-0 md:mt-0">
+      <div className="hero-story-card relative h-[20rem] max-h-[68vh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto md:max-h-none">
         <OptimizedImage
           src={withBase("/products/goldy.jpg")}
           alt="Goldy over-bar ijsbankkoeler"
@@ -100,7 +100,7 @@ function HeroMachine({ story }: { story: StoryState }) {
 
         <svg
           viewBox="0 0 280 220"
-          className="absolute inset-x-0 top-14 z-10 mx-auto h-[52%] w-auto max-w-[82%]"
+          className="absolute inset-x-0 top-12 z-10 mx-auto h-[48%] w-auto max-w-[78%] md:top-14 md:h-[52%] md:max-w-[82%]"
           role="img"
           aria-label={`IJsbank voor piekbelasting, ${Math.round(story.progress * 100)} procent opgebouwd`}
         >
@@ -171,23 +171,23 @@ function HeroMachine({ story }: { story: StoryState }) {
           ref={specsRef}
           className="absolute inset-x-0 bottom-0 z-20 grid grid-cols-3 gap-px border-t border-line bg-bg/92 backdrop-blur-sm"
         >
-          <div className="p-4">
+          <div className="px-3 py-3 md:p-4">
             <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">Model</p>
-            <p className="mt-2 font-display text-3xl text-fg">Goldy</p>
+            <p className="mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">Goldy</p>
           </div>
-          <div className="p-4">
+          <div className="px-3 py-3 md:p-4">
             <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
               {fr ? frHero.iceReserve : "IJsreserve"}
             </p>
-            <p className="spec-num mt-2 font-display text-3xl text-fg">
+            <p className="spec-num mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">
               <CountUp value={9} suffix="kg" active={specsVisible} />
             </p>
           </div>
-          <div className="p-4">
+          <div className="px-3 py-3 md:p-4">
             <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
               {fr ? frHero.flow : "Debiet"}
             </p>
-            <p className="spec-num mt-2 font-display text-3xl text-fg">
+            <p className="spec-num mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">
               <CountUp value={44} suffix={fr ? "L/h" : "L/u"} active={specsVisible} />
             </p>
           </div>
@@ -278,7 +278,7 @@ export function HomeHero() {
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
-        <div className="relative z-10 mx-auto flex max-w-[1220px] flex-col justify-start px-5 pb-14 pt-24 md:min-h-[100svh] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
+        <div className="relative z-10 mx-auto flex max-w-[1220px] flex-col justify-start px-5 pb-10 pt-24 md:min-h-[100svh] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
           <div className="hero-copy max-w-xl">
             <p className="kicker">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-4 font-display text-2xl italic text-ice md:mt-5 md:text-3xl">
@@ -323,16 +323,14 @@ export function HomeHero() {
                 </li>
               ))}
             </ul>
-            <p className="hero-audience mt-8 flex flex-wrap gap-2 md:mt-8 md:gap-3" aria-label={fr ? "Publics" : "Doelgroepen"}>
+            <p className="hero-audience mt-5 flex flex-wrap gap-2 md:mt-8 md:gap-3" aria-label={fr ? "Publics" : "Doelgroepen"}>
               <span>Bars</span>
               <span>Events</span>
               <span>Installateurs</span>
             </p>
           </div>
 
-          <div className="hidden md:block">
-            <HeroMachine story={story} />
-          </div>
+          <HeroMachine story={story} />
         </div>
 
         <button
