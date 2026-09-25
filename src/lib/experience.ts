@@ -13,6 +13,8 @@ export const experience = {
   sizer: true,
   /** Zachte fade over het ijs i.p.v. donker vierkant achter de copy. false = vorige leeszone. */
   heroReadFade: true,
+  /** Glas op de hero-knoppen en categorieën. false = dichte vlakken van daarvoor. */
+  heroGlass: true,
 };
 
 export const slogans = {
