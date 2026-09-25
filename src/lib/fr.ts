@@ -71,9 +71,9 @@ export const frHero = {
 
 export const frCutawayCopy = {
   kicker: "Froid sous contrôle",
-  line1: "Pas plus vite.",
-  em: "Plus juste.",
-  sub: "Sur mesure. Proximité Benelux. Un froid qui tient pendant chaque service.",
+  line1: "Un froid qui tient le pic,",
+  em: "pas seulement les premiers verres.",
+  sub: "Nous adaptons l'unité au volume et à l'espace. Livraison et suivi depuis la Campine. Un froid qui tient au volume de pointe.",
 };
 
 export const frWhyHead = {
