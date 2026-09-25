@@ -22,18 +22,20 @@ export function CtaBand() {
           <h2 className="mt-4 max-w-2xl text-4xl md:text-6xl">
             {fr ? (
               <>
-                {frCtaCopy.title} <em className="italic text-ice">{frCtaCopy.em}</em>
+                {frCtaCopy.title}{" "}
+                <em className="italic text-ice">{frCtaCopy.em}</em>
               </>
             ) : (
               <>
-                Klaar voor <em className="italic text-ice">stabiele koude?</em>
+                Offerte voor uw{" "}
+                <em className="italic text-ice">bar, event of installatie</em>
               </>
             )}
           </h2>
           <p className="mt-4 max-w-md text-muted">
             {fr
               ? frCtaCopy.lede
-              : "Vertel ons over uw bar, event of installatie. Wij sturen u een offerte."}
+              : "Mail of bel — antwoord binnen één werkdag. Of gebruik het contactformulier."}
           </p>
           <p className="mt-4 text-sm text-muted">
             {site.address.line} ·{" "}
