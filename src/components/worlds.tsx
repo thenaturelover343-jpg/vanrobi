@@ -41,7 +41,7 @@ export function Worlds() {
         <Reveal>
           <p className="kicker">{fr ? frWorldsCopy.kicker : "Voor wie"}</p>
           <h2 className="mt-4 text-4xl md:text-6xl">
-            {fr ? frWorldsCopy.title : "Waar de koude telt."}
+            {fr ? frWorldsCopy.title : "Voor bars, events en installateurs"}
           </h2>
         </Reveal>
       </div>
