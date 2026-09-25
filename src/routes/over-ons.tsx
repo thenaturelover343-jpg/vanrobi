@@ -7,7 +7,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/over-ons")({
   head: () =>
     seoHead({
-      title: "Over ons — VanRobi ijsbankkoelers",
+      title: "Specialist bierkoelers | VanRobi",
       description: "VanRobi levert bierkoelers en kegkoelers voor horeca in België en Nederland. Heldere specs en advies vanuit Kasterlee.",
       path: "/over-ons",
       frPath: "/fr/a-propos",

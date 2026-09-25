@@ -7,7 +7,7 @@ import { faqJsonLd, seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/fr/faq")({
   head: () =>
     seoHead({
-      title: "FAQ — VanRobi",
+      title: "FAQ refroidisseur de bière | VanRobi",
       description:
         "Questions sur les refroidisseurs de bière et de fût : V100 ou V200, events, livraison et entretien. Réponse sous un jour ouvrable.",
       path: "/fr/faq",

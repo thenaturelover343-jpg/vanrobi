@@ -18,7 +18,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/fr/")({
   head: () =>
     seoHead({
-      title: "Refroidisseur de bière et de fût acheter | VanRobi",
+      title: "Refroidisseur de bière et de fût | VanRobi",
       description:
         "Refroidisseur de bière et de fût pour l'horeca : la ligne ou le fût, plus serpentins et robinets. Devis en Belgique et aux Pays-Bas.",
       path: "/fr",

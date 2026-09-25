@@ -4,6 +4,8 @@ export type Guide = {
  eyebrow: string;
  description: string;
  lede: string;
+ /** Document title zonder merk. Alleen zetten als `title` te lang is voor Google. */
+ seoTitle?: string;
  /** Visible last-updated (ISO date YYYY-MM-DD), real editorial date only */
  updated: string;
  /** Optional first published date */
@@ -25,6 +27,7 @@ export const guides: Guide[] = [
  slug: "ijsbankkoeler-vs-gamko",
  title: "Ijsbankkoeler of complete tapinstallatie: wat past bij uw bar?",
  eyebrow: "Vergelijking",
+ seoTitle: "Ijsbankkoeler of tapinstallatie",
  description:
  "Wanneer een dedicated ijsbankkoeler de betere match is dan een complete tapmeubellijn: buffer, onderhoud en horeca in België & Nederland.",
  lede: "Niet elke bar heeft dezelfde koeling nodig. We zetten ijsbankkoelers af tegen complete tapinstallaties, vanuit het perspectief van een specialist voor BE/NL.",
@@ -65,6 +68,7 @@ export const guides: Guide[] = [
  slug: "bierkoeler-kopen-belgie-nederland",
  title: "Bierkoeler kopen in België & Nederland",
  eyebrow: "Koopgids",
+ seoTitle: "Bierkoeler kopen: waar op letten",
  description:
  "Bierkoeler kopen in België of Nederland: capaciteit, levertijd en waar u op let voor u bestelt.",
  lede: "Van Antwerpen tot Amsterdam: waar u let op bij aankoop, welke capaciteit u nodig heeft, en waarom een professioneel VanRobi-kanaal telt.",
@@ -75,6 +79,7 @@ export const guides: Guide[] = [
  slug: "vanrobi-distributeur-belgie-nederland",
  title: "VanRobi: ijsbankkoelers België & Nederland",
  eyebrow: "Specialist",
+ seoTitle: "Specialist in ijsbankkoelers",
  description:
  "VanRobi is de specialist in professionele ijsbankkoelers voor België en Nederland. Assortiment, advies, levering en onderhoudspartner Taponderhoud.",
  lede: "Zoekt u een betrouwbaar kanaal voor professionele ijsbankkoelers in de Benelux? VanRobi levert en adviseert vanuit Kasterlee (Tielen) voor BE en NL.",

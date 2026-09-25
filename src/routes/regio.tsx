@@ -7,7 +7,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/regio")({
   head: () =>
     seoHead({
-      title: "Regio's — VanRobi België & Nederland",
+      title: "Levering bierkoelers | VanRobi",
       description: "Bierkoelers leveren in België en Nederland, vanuit Kasterlee in de Kempen. Advies voor Vlaanderen en Nederland.",
       path: "/regio",
     }),

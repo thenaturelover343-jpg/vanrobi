@@ -8,7 +8,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/producten/")({
   head: () =>
     seoHead({
-      title: "Bierkoeler, kegkoeler en ijsbankkoeler | VanRobi",
+      title: "Catalogus bier- en kegkoelers | VanRobi",
       description:
         "Catalogus bierkoelers, kegkoelers en serpentijnen voor horeca. Filter op capaciteit en vraag een offerte. Levering in België en Nederland.",
       path: "/producten",

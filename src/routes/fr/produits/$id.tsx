@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getProduct } from "@/lib/products";
 import { frProductCopy } from "@/lib/fr";
 import { ProductDetail } from "@/components/product-detail";
-import { breadcrumbJsonLd, productJsonLd, productMetaDescription, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, productJsonLd, productMetaDescription, productTitle, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/produits/$id")({
   loader: ({ params }) => {
@@ -14,21 +14,13 @@ export const Route = createFileRoute("/fr/produits/$id")({
     const product = loaderData?.product;
     const copy = product ? frProductCopy[product.id] : undefined;
     if (!product)
-      return seoHead({ title: "Produit — VanRobi", description: "", path: "/fr/produits", lang: "fr" });
+      return seoHead({ title: "Produit | VanRobi", description: "", path: "/fr/produits", lang: "fr" });
     const description = productMetaDescription(
       { name: product.name, group: product.group, description: copy?.description ?? product.description },
       "fr",
     );
-    const kind =
-      product.group === "kegkoelers"
-        ? "refroidisseur de fût"
-        : product.group === "koelers"
-          ? "refroidisseur de bière"
-          : product.group === "serpentijnen"
-            ? "serpentin"
-            : "assortiment";
     return seoHead({
-      title: `${product.name} — ${kind} | VanRobi`,
+      title: productTitle(product, "fr"),
       description,
       path: `/fr/produits/${product.id}`,
       lang: "fr",

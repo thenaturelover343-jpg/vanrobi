@@ -8,7 +8,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/voor-wie")({
   head: () =>
     seoHead({
-      title: "Voor wie — VanRobi",
+      title: "Bierkoeler voor horeca en events | VanRobi",
       description: "Bierkoelers voor bars, restaurants, festivals en installateurs. Advies op piekvolume, barmeubel en stroom.",
       path: "/voor-wie",
     }),

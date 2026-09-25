@@ -9,7 +9,7 @@ import { ProductLink } from "@/components/product-link";
 export const Route = createFileRoute("/fr/services")({
   head: () =>
     seoHead({
-      title: "Services — VanRobi",
+      title: "Livraison et entretien | VanRobi",
       description:
         "Conseil et livraison de refroidisseurs de bière pour l'horeca. Entretien et réparations par Taponderhoud, depuis la Campine.",
       path: "/fr/services",

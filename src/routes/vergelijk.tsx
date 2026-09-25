@@ -10,7 +10,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/vergelijk")({
   head: () =>
     seoHead({
-      title: "Machines vergelijken — VanRobi",
+      title: "Bierkoelers vergelijken | VanRobi",
       description: "Vergelijk bierkoelers op ijsreserve, debiet en waterbad. Goldy, V100 en V200 naast elkaar, daarna een offerte.",
       path: "/vergelijk",
     }),

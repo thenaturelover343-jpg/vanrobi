@@ -4,7 +4,7 @@ import { getGuide, guides, formatGuideDate } from "@/lib/guides";
 import { GuideBody } from "@/lib/guide-content";
 import { CtaBand } from "@/components/cta-band";
 import { Sizer } from "@/components/sizer";
-import { breadcrumbJsonLd, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, brandTitle, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/gids/$slug")({
   loader: ({ params }) => {
@@ -14,9 +14,9 @@ export const Route = createFileRoute("/gids/$slug")({
   },
   head: ({ loaderData }) => {
     const guide = loaderData?.guide;
-    if (!guide) return seoHead({ title: "Gids — VanRobi", description: "", path: "/gids" });
+    if (!guide) return seoHead({ title: "Gids bierkoeler | VanRobi", description: "", path: "/gids" });
     return seoHead({
-      title: `${guide.title} — VanRobi`,
+      title: brandTitle(guide.seoTitle ?? guide.title),
       description: guide.description,
       path: `/gids/${guide.slug}`,
       jsonLd: [

@@ -77,7 +77,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Refroidisseurs de bière",
       kicker: "Tirage · Ligne · Banquise",
-      title: "Refroidisseurs de bière acheter | VanRobi",
+      title: "Acheter un refroidisseur de bière | VanRobi",
       description:
         "Refroidisseur de bière à acheter pour l'horeca : banquise qui refroidit la ligne vers le robinet. De Goldy à V500. Devis, Belgique et Pays-Bas.",
       intro:
@@ -116,7 +116,7 @@ export const hubs: Record<HubKey, HubDef> = {
     nl: {
       h1: "Kegkoelers",
       kicker: "Fustenkoeler · Vatenkoeler · Barrilero",
-      title: "Kegkoelers kopen voor horeca | VanRobi",
+      title: "Keg- en fustenkoeler kopen voor horeca | VanRobi",
       description:
         "Kegkoeler kopen voor horeca: fustenkoeler die het vat koelt, niet de leiding. Alleen de Barrilero Doble. Offerte in België en Nederland.",
       intro:
@@ -149,7 +149,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Refroidisseurs de fût",
       kicker: "Keg · Barrilero · Fût",
-      title: "Refroidisseurs de fût acheter | VanRobi",
+      title: "Acheter un refroidisseur de fût | VanRobi",
       description:
         "Refroidisseur de fût à acheter pour l'horeca : il refroidit le fût, pas la ligne. Un seul modèle, le Barrilero Doble. Devis, Belgique et Pays-Bas.",
       intro:
@@ -219,7 +219,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Serpentins",
       kicker: "Spirales · Bière & boissons",
-      title: "Serpentins acheter | VanRobi",
+      title: "Acheter des serpentins | VanRobi",
       description:
         "Serpentins à acheter pour l'horeca : spirales inox dans la banquise pour bière, eau et softs. Adaptés à votre refroidisseur. Devis, Belgique et Pays-Bas.",
       intro:
@@ -256,7 +256,7 @@ export const hubs: Record<HubKey, HubDef> = {
     nl: {
       h1: "Tapzuilen",
       kicker: "Tapkraan · Lekbak · Koppeling",
-      title: "Tapzuilen kopen voor horeca | VanRobi",
+      title: "Tapzuilen en tapkranen kopen voor horeca | VanRobi",
       description:
         "Tapzuilen kopen voor horeca, met tapkranen, lekbakken en koppelingen. Afgestemd op bierkoeler of kegkoeler. Offerte in België en Nederland.",
       intro:
@@ -287,7 +287,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Colonnes de tirage",
       kicker: "Robinet · Bac · Raccord",
-      title: "Colonnes de tirage acheter | VanRobi",
+      title: "Colonnes et robinets de tirage | VanRobi",
       description:
         "Colonnes de tirage à acheter pour l'horeca, avec robinets, bacs et raccords. Adaptées au refroidisseur de bière ou de fût. Devis, Belgique et Pays-Bas.",
       intro:
@@ -324,7 +324,7 @@ export const hubs: Record<HubKey, HubDef> = {
     nl: {
       h1: "Onderdelen",
       kicker: "Roermotor · Thermostaat · Sonde",
-      title: "Onderdelen kopen voor horeca | VanRobi",
+      title: "Onderdelen bierkoeler kopen | VanRobi",
       description:
         "Onderdelen kopen voor ijsbankkoelers: roermotoren, thermostaten en sondes voor de taplijn. Voor installateurs. Offerte, België en Nederland.",
       intro:
@@ -355,7 +355,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Pièces",
       kicker: "Moteur · Thermostat · Sonde",
-      title: "Pièces acheter | VanRobi",
+      title: "Pièces pour refroidisseur | VanRobi",
       description:
         "Pièces pour banquise à acheter : moteurs d'agitation, thermostats et sondes pour la ligne de tirage. Pour installateurs. Devis, Belgique et Pays-Bas.",
       intro:
@@ -392,7 +392,7 @@ export const hubs: Record<HubKey, HubDef> = {
     nl: {
       h1: "Glycolkoeler",
       kicker: "Glycolcircuit · Geen ijsbank",
-      title: "Glycolkoeler kopen | VanRobi",
+      title: "Glycolkoeler kopen voor horeca | VanRobi",
       description:
         "Glycolkoeler kopen voor horeca. De V90 koelt via een glycolcircuit: geen ijsbank en geen leidingkoeler. Offerte in België en Nederland.",
       intro:
@@ -425,7 +425,7 @@ export const hubs: Record<HubKey, HubDef> = {
     fr: {
       h1: "Refroidisseur glycol",
       kicker: "Circuit glycol · Pas une banquise",
-      title: "Refroidisseur glycol acheter | VanRobi",
+      title: "Acheter un refroidisseur glycol | VanRobi",
       description:
         "Refroidisseur glycol à acheter pour l'horeca. La V90 refroidit par circuit glycol : ni banquise, ni refroidisseur de ligne. Devis, Belgique et Pays-Bas.",
       intro:

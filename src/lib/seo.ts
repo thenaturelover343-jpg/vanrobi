@@ -92,6 +92,29 @@ const productKind: Record<string, { nl: string; fr: string }> = {
   overig: { nl: "product", fr: "produit" },
 };
 
+export function brandTitle(lead: string, max = 60): string {
+  const brand = " | VanRobi";
+  const clean = lead.replace(/\s+/g, " ").trim().replace(/\s*[|–—-]\s*VanRobi$/i, "");
+  const full = `${clean}${brand}`;
+  if (full.length <= max) return full;
+  const room = Math.max(12, max - brand.length);
+  const cut = clean.slice(0, room);
+  const sp = cut.lastIndexOf(" ");
+  const short = (sp > 18 ? cut.slice(0, sp) : cut).replace(/[|–—:,]+$/, "").trim();
+  return `${short}${brand}`;
+}
+
+export function productTitle(
+  p: { name: string; group?: string },
+  lang: "nl" | "fr" = "nl",
+): string {
+  const kind = productKind[p.group ?? "overig"]?.[lang] ?? productKind.overig[lang];
+  const low = p.name.toLowerCase();
+  const already = kind.split(" ").some((w) => w.length > 4 && low.includes(w.slice(0, 6)));
+  const lead = already || p.name.length > 28 ? p.name : `${p.name} ${kind}`;
+  return brandTitle(lead);
+}
+
 export function productMetaDescription(
   p: { name: string; group?: string; description: string },
   lang: "nl" | "fr" = "nl",

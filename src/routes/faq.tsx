@@ -7,7 +7,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/faq")({
   head: () =>
     seoHead({
-      title: "FAQ — VanRobi",
+      title: "FAQ bierkoeler en kegkoeler | VanRobi",
       description: "Vragen over bierkoelers en kegkoelers: V100 of V200, events, levering en onderhoud. Antwoord binnen één werkdag.",
       path: "/faq",
       frPath: "/fr/faq",

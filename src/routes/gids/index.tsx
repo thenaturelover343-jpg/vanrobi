@@ -7,7 +7,7 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/gids/")({
   head: () =>
     seoHead({
-      title: "Gidsen — VanRobi",
+      title: "Gids bierkoeler kiezen | VanRobi",
       description: "Gidsen over bierkoelers en kegkoelers: het verschil, capaciteit, events en een checklist. Advies voor horeca in België en Nederland.",
       path: "/gids",
     }),

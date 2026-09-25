@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getProduct } from "@/lib/products";
 import { ProductDetail } from "@/components/product-detail";
-import { breadcrumbJsonLd, productJsonLd, productMetaDescription, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, productJsonLd, productMetaDescription, productTitle, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -11,17 +11,9 @@ export const Route = createFileRoute("/producten/$id")({
   },
   head: ({ loaderData }) => {
     const product = loaderData?.product;
-    if (!product) return seoHead({ title: "Product — VanRobi", description: "", path: "/producten" });
-    const kind =
-      product.group === "kegkoelers"
-        ? "kegkoeler"
-        : product.group === "koelers"
-          ? "bierkoeler"
-          : product.group === "serpentijnen"
-            ? "serpentijn"
-            : "assortiment";
+    if (!product) return seoHead({ title: "Product | VanRobi", description: "", path: "/producten" });
     return seoHead({
-      title: `${product.name} — ${kind} | VanRobi`,
+      title: productTitle(product, "nl"),
       description: productMetaDescription(product, "nl"),
       path: `/producten/${product.id}`,
       frPath: `/fr/produits/${product.id}`,
