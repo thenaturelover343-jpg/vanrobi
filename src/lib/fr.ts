@@ -22,7 +22,7 @@ export const frHome = {
   machinesTitle: "Machines essentielles.",
   machinesLede: "Refroidisseurs industriels, avec les specs dont les installateurs ont besoin.",
   whyTitle: "Pourquoi VanRobi",
-  whyIntro: "VanRobi est la marque des refroidisseurs à banquise pour le Horeca Benelux, avec conseil, specs et livraison qui comprennent le bar.",
+  whyIntro: "VanRobi fournit des refroidisseurs à banquise pour le Horeca en Belgique et aux Pays-Bas : specs claires, conseil sur mesure, livraison et entretien via Taponderhoud.",
   why: [
     {
       n: "01",
