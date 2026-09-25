@@ -597,8 +597,8 @@ export const whyItems = [
  },
  {
  n: "02",
- title: "Techniek die klopt",
- text: "IJsbankcapaciteit, spiralen, debiet, heldere specs voor installateurs en barontwerp.",
+ title: "Specs voor de werkvloer",
+ text: "IJsreserve, spiralen en debiet (L/u) staan per machine — bruikbaar voor installateurs en barontwerp.",
  delay: "reveal-delay-1",
  },
  {
