@@ -442,22 +442,14 @@
   pointer-events: none;
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 8, 12, 0.8) 0%,
-      rgba(5, 8, 12, 0.58) 24%,
-      rgba(5, 8, 12, 0.34) 48%,
-      rgba(5, 8, 12, 0.18) 72%,
-      rgba(5, 8, 12, 0.1) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(5, 8, 12, 0.32) 0%,
-      rgba(5, 8, 12, 0) 20%,
-      rgba(5, 8, 12, 0) 80%,
-      rgba(5, 8, 12, 0.28) 100%
-    );
+  /* Near-uniform soft dark overlay (~0.58–0.66) over full hero width/height; gentle vertical vignette only — no L→R panel. */
+  background: linear-gradient(
+    180deg,
+    rgba(5, 8, 12, 0.66) 0%,
+    rgba(5, 8, 12, 0.58) 18%,
+    rgba(5, 8, 12, 0.58) 82%,
+    rgba(5, 8, 12, 0.66) 100%
+  );
 }
 html.hero-read-fade .hero-read-veil {
   display: block;

@@ -21,6 +21,11 @@ export function counterpartPath(pathname: string): string {
     if (pathname.startsWith("/fr/a-propos")) return "/over-ons";
     if (pathname.startsWith("/fr/faq")) return "/faq";
     if (pathname.startsWith("/fr/contact")) return "/contact";
+    if (pathname.startsWith("/fr/refroidisseurs-biere")) return "/bierkoelers";
+    if (pathname.startsWith("/fr/refroidisseurs-fut")) return "/kegkoelers";
+    if (pathname.startsWith("/fr/serpentins")) return "/serpentijnen";
+    if (pathname.startsWith("/fr/colonnes-robinets")) return "/tap-zuilen";
+    if (pathname.startsWith("/fr/pieces")) return "/onderdelen";
     return "/";
   }
   if (pathname === "/" || pathname === "") return "/fr";
@@ -33,5 +38,10 @@ export function counterpartPath(pathname: string): string {
   if (pathname.startsWith("/over-ons")) return "/fr/a-propos";
   if (pathname.startsWith("/faq")) return "/fr/faq";
   if (pathname.startsWith("/contact")) return "/fr/contact";
+  if (pathname.startsWith("/bierkoelers")) return "/fr/refroidisseurs-biere";
+  if (pathname.startsWith("/kegkoelers")) return "/fr/refroidisseurs-fut";
+  if (pathname.startsWith("/serpentijnen")) return "/fr/serpentins";
+  if (pathname.startsWith("/tap-zuilen")) return "/fr/colonnes-robinets";
+  if (pathname.startsWith("/onderdelen")) return "/fr/pieces";
   return "/fr";
 }

@@ -791,6 +791,8 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  { href: "/gids/v100-vs-v200/", label: "V100 vs V200" },
  { href: "/gids/bierkoeler-voor-events/", label: "Events & festivals" },
  { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
+ { href: "/bierkoelers/", label: "Bierkoelers" },
+ { href: "/kegkoelers/", label: "Kegkoelers" },
  { href: "/producten/", label: "Catalogus" },
  { href: "/contact/", label: "Offerte" },
  ]}
@@ -849,6 +851,10 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  checklist in 7 stappen
  </a>{" "}
  · Machines:{" "}
+ <a href={withBase("/bierkoelers/")}>bierkoelers</a>
+ {" · "}
+ <a href={withBase("/kegkoelers/")}>kegkoelers</a>
+ {" · "}
  <a href={withBase("/producten/")}>catalogus</a>.
  </p>
  </Reveal>

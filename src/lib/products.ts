@@ -539,7 +539,7 @@ export function getProduct(id: string): Product | undefined {
 
 export const categories = [
  {
- href: withBase("/producten#bierkoelers"),
+ href: withBase("/bierkoelers"),
  image: withBase("/assets/cats/koelers.jpg"),
  alt: "Bierkoelers en ijsbankkoelers in het VanRobi-assortiment",
  index: "01",
@@ -547,7 +547,7 @@ export const categories = [
  delay: "",
  },
  {
- href: withBase("/producten#serpentijnen"),
+ href: withBase("/serpentijnen"),
  image: withBase("/assets/cats/serpentijnen.jpg"),
  alt: "RVS-serpentijnen voor bier en drank",
  index: "02",
@@ -555,7 +555,7 @@ export const categories = [
  delay: "reveal-delay-1",
  },
  {
- href: withBase("/producten#tap-zuilen"),
+ href: withBase("/tap-zuilen"),
  image: withBase("/assets/cats/dispensing.jpg"),
  alt: "Tapzuilen, kranen en lekbakken voor horeca",
  index: "03",
@@ -563,7 +563,7 @@ export const categories = [
  delay: "reveal-delay-2",
  },
  {
- href: withBase("/producten#onderdelen"),
+ href: withBase("/onderdelen"),
  image: withBase("/assets/cats/roermotoren.jpg"),
  alt: "Roermotoren en technische onderdelen",
  index: "04",

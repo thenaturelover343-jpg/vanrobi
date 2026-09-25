@@ -5,6 +5,15 @@ import { useLang } from "@/lib/i18n";
 import { frAssortmentCopy } from "@/lib/fr";
 import { withBase } from "@/lib/base";
 
+const frHubHrefs = [
+  withBase("/fr/refroidisseurs-biere"),
+  withBase("/fr/serpentins"),
+  withBase("/fr/colonnes-robinets"),
+  withBase("/fr/pieces"),
+  withBase("/fr"),
+  withBase("/fr/services"),
+];
+
 export function AssortmentCats() {
   const fr = useLang() === "fr";
   return (
@@ -34,7 +43,7 @@ export function AssortmentCats() {
           {categories.map((c, i) => (
             <a
               key={c.index}
-              href={fr ? withBase("/fr/produits") : c.href}
+              href={fr ? (frHubHrefs[i] ?? withBase("/fr/produits")) : c.href}
               className="group relative min-h-[280px] overflow-hidden bg-bg"
             >
               <OptimizedImage

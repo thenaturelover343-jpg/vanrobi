@@ -286,18 +286,14 @@ export function HomeHero() {
             </div>
             <ul className="hero-tiles mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5" aria-label={fr ? "Assortiment" : "Assortiment"}>
               {(fr ? frHero.tiles : [
-                { label: "Bierkoelers", hash: "bierkoelers" },
-                { label: "Kegkoelers", hash: "kegkoelers" },
-                { label: "Serpentijnen", hash: "serpentijnen" },
-                { label: "Tap & zuilen", hash: "tap-zuilen" },
-                { label: "Onderdelen", hash: "onderdelen" },
+                { label: "Bierkoelers", to: "/bierkoelers" },
+                { label: "Kegkoelers", to: "/kegkoelers" },
+                { label: "Serpentijnen", to: "/serpentijnen" },
+                { label: "Tap & zuilen", to: "/tap-zuilen" },
+                { label: "Onderdelen", to: "/onderdelen" },
               ]).map((tile) => (
-                <li key={tile.hash}>
-                  <Link
-                    to={fr ? "/fr/produits" : "/producten"}
-                    hash={tile.hash}
-                    className="hero-tile"
-                  >
+                <li key={tile.to}>
+                  <Link to={tile.to} className="hero-tile">
                     {tile.label}
                   </Link>
                 </li>

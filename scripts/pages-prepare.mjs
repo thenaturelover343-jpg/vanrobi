@@ -51,6 +51,17 @@ const staticPaths = [
   "fr/services",
   "fr/faq",
   "fr/a-propos",
+  "bierkoelers",
+  "kegkoelers",
+  "serpentijnen",
+  "tap-zuilen",
+  "onderdelen",
+  "fr/refroidisseurs-biere",
+  "fr/refroidisseurs-fut",
+  "fr/serpentins",
+  "fr/colonnes-robinets",
+  "fr/pieces",
+
 ];
 const routes = [
   ...staticPaths,

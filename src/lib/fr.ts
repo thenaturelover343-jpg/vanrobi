@@ -61,11 +61,11 @@ export const frHero = {
   iceReserve: "Réserve de glace",
   flow: "Débit",
   tiles: [
-    { label: "Refroidisseurs de bière", hash: "bierkoelers" },
-    { label: "Refroidisseurs de fût", hash: "kegkoelers" },
-    { label: "Serpentins", hash: "serpentijnen" },
-    { label: "Robinets et colonnes", hash: "tap-zuilen" },
-    { label: "Pièces", hash: "onderdelen" },
+    { label: "Refroidisseurs de bière", to: "/fr/refroidisseurs-biere" },
+    { label: "Refroidisseurs de fût", to: "/fr/refroidisseurs-fut" },
+    { label: "Serpentins", to: "/fr/serpentins" },
+    { label: "Robinets et colonnes", to: "/fr/colonnes-robinets" },
+    { label: "Pièces", to: "/fr/pieces" },
   ],
 };
 

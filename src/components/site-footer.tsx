@@ -69,6 +69,30 @@ export function SiteFooter() {
                 </li>
               );
             })}
+
+            {(isFr
+              ? [
+                  ["/fr/refroidisseurs-biere", "Refroidisseurs de bière"],
+                  ["/fr/refroidisseurs-fut", "Refroidisseurs de fût"],
+                  ["/fr/serpentins", "Serpentins"],
+                  ["/fr/colonnes-robinets", "Colonnes et robinets"],
+                  ["/fr/pieces", "Pièces"],
+                ]
+              : [
+                  ["/bierkoelers", "Bierkoelers"],
+                  ["/kegkoelers", "Kegkoelers"],
+                  ["/serpentijnen", "Serpentijnen"],
+                  ["/tap-zuilen", "Tap & zuilen"],
+                  ["/onderdelen", "Onderdelen"],
+                ]
+            ).map(([href, label]) => (
+              <li key={href}>
+                <a href={withBase(href)} className="text-muted hover:text-ice">
+                  {label}
+                </a>
+              </li>
+            ))}
+
             <li>
               <a href={withBase(isFr ? "/fr/produits" : "/producten")} className="text-muted hover:text-ice">
                 {isFr ? frFooter.catalog : "Volledige catalogus"}

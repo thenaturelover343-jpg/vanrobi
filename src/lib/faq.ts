@@ -5,7 +5,7 @@ export const generalFaqs: FaqItem[] = [
  {
  question: "Is een ijsbankkoeler hetzelfde als een bierkoeler of kegkoeler?",
  answer:
- "Een ijsbankkoeler is wat de meeste horecazaken een bierkoeler of tapkoeler noemen: spiralen in een ijswaterbad, met een ijsreserve als buffer. Een kegkoeler of fustenkoeler (barrilero) koelt het vat zelf. VanRobi levert beide: ijsbankkoelers voor de leiding en de Barrilero Doble als kegkoeler / fustenkoeler.",
+ "Een ijsbankkoeler is wat de meeste horecazaken een bierkoeler of tapkoeler noemen: spiralen in een ijswaterbad, met een ijsreserve als buffer. Een kegkoeler of fustenkoeler (barrilero) koelt het vat zelf. VanRobi levert beide: ijsbankkoelers voor de leiding (zie /bierkoelers) en de Barrilero Doble als kegkoeler / fustenkoeler (zie /kegkoelers).",
  },
  {
  question: "Is VanRobi specialist in ijsbankkoelers voor België en Nederland?",
