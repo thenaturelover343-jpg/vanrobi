@@ -206,17 +206,22 @@ export function HomeHero() {
   const setTemp = useCold((state) => state.setTemp);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const desktop = window.matchMedia("(min-width: 768px)");
+
+    const applyStatic = () => {
       setStory({ progress: 1, temperature: 2 });
       setGrow(0.73);
       setTemp(2);
-      return;
-    }
+    };
 
     let frame = 0;
     const update = () => {
       frame = 0;
+      if (!desktop.matches || reduceMotion.matches) {
+        applyStatic();
+        return;
+      }
       const hero = heroRef.current;
       if (!hero) return;
       const rect = hero.getBoundingClientRect();
@@ -230,19 +235,35 @@ export function HomeHero() {
     const onScroll = () => {
       if (!frame) frame = requestAnimationFrame(update);
     };
+
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+    desktop.addEventListener("change", onScroll);
+    reduceMotion.addEventListener("change", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
+      desktop.removeEventListener("change", onScroll);
+      reduceMotion.removeEventListener("change", onScroll);
       cancelAnimationFrame(frame);
     };
   }, [setGrow, setTemp]);
 
+  const tiles = fr
+    ? frHero.tiles
+    : [
+        { label: "Bierkoelers", to: "/bierkoelers" },
+        { label: "Kegkoelers", to: "/kegkoelers" },
+        { label: "Serpentijnen", to: "/serpentijnen" },
+        { label: "Tap & zuilen", to: "/tap-zuilen" },
+        { label: "Onderdelen", to: "/onderdelen" },
+      ];
+
   return (
-    <section ref={heroRef} className="relative h-[145svh]">
-      <div className="sticky top-0 min-h-[100svh] overflow-hidden ice-fallback">
+    <section ref={heroRef} className="relative md:h-[145svh]">
+      {/* Mobile: normal flow (~auto height). md+: sticky ice-bank scroll theater. */}
+      <div className="relative overflow-visible ice-fallback md:sticky md:top-0 md:min-h-[100svh] md:overflow-hidden">
         <OptimizedImage
           src={withBase("/worlds/ice-bank.jpg")}
           alt=""
@@ -257,21 +278,21 @@ export function HomeHero() {
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-20 pt-28 md:flex-row md:items-end md:justify-between md:px-8 md:pb-24">
+        <div className="relative z-10 mx-auto flex max-w-[1220px] flex-col justify-start px-5 pb-14 pt-24 md:min-h-[100svh] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
           <div className="hero-copy max-w-xl">
             <p className="kicker">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
-            <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
+            <p className="hero-slogan mt-4 font-display text-2xl italic text-ice md:mt-5 md:text-3xl">
               {fr ? frHero.slogan : tagline()}
             </p>
-            <h1 className="mt-5 font-display text-4xl leading-[1.08] text-white md:text-5xl">
+            <h1 className="mt-4 font-display text-[2.05rem] leading-[1.08] text-white md:mt-5 md:text-5xl">
               {fr ? frHero.title : "Bierkoelers en kegkoelers voor horeca"}
             </h1>
-            <p className="hero-lede mt-6 max-w-md text-[1.05rem] font-medium leading-relaxed">
+            <p className="hero-lede mt-4 max-w-md text-base font-medium leading-relaxed md:mt-6 md:text-[1.05rem]">
               {fr
                 ? frHero.lede
                 : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
               <MagneticCta>
                 <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
                   {fr ? frHero.cta : "Vraag een offerte"}
@@ -284,34 +305,39 @@ export function HomeHero() {
                 {fr ? frHero.ctaSecondary : "Bekijk machines"}
               </Link>
             </div>
-            <ul className="hero-tiles mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5" aria-label={fr ? "Assortiment" : "Assortiment"}>
-              {(fr ? frHero.tiles : [
-                { label: "Bierkoelers", to: "/bierkoelers" },
-                { label: "Kegkoelers", to: "/kegkoelers" },
-                { label: "Serpentijnen", to: "/serpentijnen" },
-                { label: "Tap & zuilen", to: "/tap-zuilen" },
-                { label: "Onderdelen", to: "/onderdelen" },
-              ]).map((tile) => (
-                <li key={tile.to}>
-                  <Link to={tile.to} className="hero-tile">
+            <ul
+              className="hero-tiles mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3 md:mt-6 md:grid-cols-5"
+              aria-label="Assortiment"
+            >
+              {tiles.map((tile, index) => (
+                <li
+                  key={tile.to}
+                  className={index === tiles.length - 1 ? "col-span-2 sm:col-span-1 md:col-span-1" : undefined}
+                >
+                  <Link
+                    to={tile.to}
+                    className={`hero-tile${index === tiles.length - 1 ? " hero-tile--orphan" : ""}`}
+                  >
                     {tile.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-white/80 uppercase">
+            <p className="hero-audience mt-8 flex flex-wrap gap-2 md:mt-8 md:gap-3" aria-label={fr ? "Publics" : "Doelgroepen"}>
               <span>Bars</span>
               <span>Events</span>
               <span>Installateurs</span>
             </p>
           </div>
 
-          <HeroMachine story={story} />
+          <div className="hidden md:block">
+            <HeroMachine story={story} />
+          </div>
         </div>
 
         <button
           type="button"
-          className="scroll-cue absolute bottom-5 left-1/2 z-20 -translate-x-1/2 text-[0.65rem] tracking-[0.2em] uppercase md:left-8 md:translate-x-0"
+          className="scroll-cue absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 text-[0.65rem] tracking-[0.2em] uppercase md:left-8 md:block md:translate-x-0"
           onClick={() => {
             const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
             document
