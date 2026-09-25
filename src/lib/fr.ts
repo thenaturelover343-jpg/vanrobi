@@ -84,8 +84,8 @@ export const frWhyHead = {
 
 export const frMachinesCopy = {
   kicker: "Assortiment",
-  title: "Huit machines.",
-  em: "Une norme.",
+  title: "Huit refroidisseurs à banquise en avant —",
+  em: "93 produits au total.",
   lede: "Refroidisseurs industriels, avec les specs dont les installateurs ont besoin.",
   view: "Voir",
   quote: "Devis pour",
