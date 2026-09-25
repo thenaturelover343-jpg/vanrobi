@@ -18,7 +18,7 @@ export function WhyVanRobi() {
           <p className="mt-5 max-w-md text-muted">
             {fr
               ? frHome.whyIntro
-              : "VanRobi is het merk voor professionele ijsbankkoelers in de Benelux-horeca, met advies, specs en levering die de bar begrijpt."}
+              : "VanRobi levert ijsbankkoelers voor horeca in België en Nederland: heldere specs, advies op maat, levering en onderhoud via Taponderhoud."}
           </p>
         </Reveal>
         <ol className="space-y-8">
