@@ -41,8 +41,8 @@ export const frHome = {
     },
     {
       n: "04",
-      title: "Sur mesure",
-      text: "De la Goldy à la V200, nous associons volume, espace et events à la bonne machine.",
+      title: "De Goldy à V500",
+      text: "Du compact over-bar (Goldy) à la V500 : nous associons volume, espace et events à la machine.",
     },
   ],
   catalogNl: "Catalogue complet (NL)",
