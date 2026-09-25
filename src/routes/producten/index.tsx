@@ -8,8 +8,8 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/producten/")({
   head: () =>
     seoHead({
-      title: `Ijsbankkoeler-catalogus — ${products.length} producten | VanRobi`,
-      description: `${products.length} producten in de VanRobi-catalogus: koelers, serpentijnen, dispensing en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`,
+      title: `Bierkoeler & ijsbankkoeler — ${products.length} producten | VanRobi`,
+      description: `${products.length} producten: ijsbankkoelers (bierkoelers, tapkoelers), serpentijnen, dispensing en onderdelen voor horeca en events in België en Nederland. Geen fustenkoelers.`,
       path: "/producten",
       frPath: "/fr/produits",
     }),
@@ -32,6 +32,10 @@ function Catalog() {
           <h2>Hulp bij de keuze?</h2>
           <p>
             Lees onze gidsen:{" "}
+            <Link to="/gids/$slug" params={{ slug: "bierkoeler-kegkoeler-of-ijsbank" }}>
+              bierkoeler, kegkoeler of ijsbank
+            </Link>
+            ,{" "}
             <Link to="/gids/$slug" params={{ slug: "wat-is-een-ijsbankkoeler" }}>
               wat is een ijsbankkoeler
             </Link>

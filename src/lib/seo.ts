@@ -32,7 +32,7 @@ export function localBusinessJsonLd() {
     },
     areaServed: ["BE", "NL"],
     description:
-      "Specialist in professionele ijsbankkoelers voor horeca en events in België en Nederland.",
+      "Specialist in professionele ijsbankkoelers (bierkoelers, tapkoelers) voor horeca en events in België en Nederland.",
   };
 }
 

@@ -1059,5 +1059,101 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  );
  }
 
+ if (slug === "bierkoeler-kegkoeler-of-ijsbank") {
+ return (
+ <section className="page-section">
+ <div className="wrap guide-body">
+ <Reveal className="prose guide-prose">
+ <h2>Waar mensen op zoeken</h2>
+ <p>
+ In België en Nederland typt horeca zelden het woord ijsbankkoeler.
+ De zoekwoorden die wél terugkomen bij leveranciers van tapkoeling:
+ </p>
+ <ul className="guide-list">
+ <li>
+ <strong>Bierkoeler / bierkoelers</strong> — de algemene naam voor een
+ machine die bier koud aan de kraan brengt.
+ </li>
+ <li>
+ <strong>Tapkoeler / biertapkoeler</strong> — dezelfde vraag, vanuit de
+ tapinstallatie.
+ </li>
+ <li>
+ <strong>Doorstroomkoeler / natte koeler</strong> — het technische
+ principe: drank door spiralen in een koud bad.
+ </li>
+ <li>
+ <strong>Droogkoeler / dry cooler</strong> — luchtgekoelde
+ doorstroomkoeler, zonder ijsbank als buffer.
+ </li>
+ <li>
+ <strong>Kegkoeler / fustenkoeler / vatenkoeler</strong> — een kast die
+ het vat zelf koelt, niet de leiding.
+ </li>
+ </ul>
+ <h2>Wat een ijsbankkoeler is</h2>
+ <p>
+ Een <strong>ijsbankkoeler</strong> is een natte bierkoeler. Spiralen
+ liggen in een waterbad. De compressor bouwt een ijslaag op. Die
+ ijsreserve houdt de temperatuur stabiel wanneer er in korte tijd veel
+ getapt wordt. Dat is het systeem van Goldy, Picky, V100, V200, V300
+ en V500, over-bar of onder-bar.
+ </p>
+ <h2>Wat een kegkoeler niet is</h2>
+ <p>
+ Een <strong>kegkoeler</strong> (fustenkoeler, vatenkoeler) is een
+ gekoelde kast voor het fust, vaak onder de tap of in de kelder. Het
+ bier staat koud in het vat. Dat is nuttig voor houdbaarheid, maar het
+ is geen ijsbank en het koelt de leiding naar de kraan niet op dezelfde
+ manier. VanRobi verkoopt geen fustenkoelkast. Zoekt u koeling in de
+ leiding, met buffer bij pieken, dan is een ijsbankkoeler de juiste
+ categorie.
+ </p>
+ <h2>Welke term past bij uw vraag</h2>
+ <ul className="guide-list">
+ <li>Koud bier aan de kraan, ook bij een piek → ijsbankkoeler (bierkoeler, tapkoeler).</li>
+ <li>Compact, zonder ijsreserve → dry cooler / droogkoeler.</li>
+ <li>Het vat zelf koud houden → kegkoeler of fustenkoeler, een ander toestel.</li>
+ </ul>
+ <p>
+ Basis:{" "}
+ <a href={withBase("/gids/wat-is-een-ijsbankkoeler/")}>wat is een ijsbankkoeler?</a>
+ {" · "}
+ <a href={withBase("/gids/ijsbankkoeler-vs-dry-cooler/")}>ijsbank vs dry cooler</a>
+ {" · "}
+ <a href={withBase("/producten/")}>catalogus</a>.
+ </p>
+ </Reveal>
+ <h2>Conclusie & volgende stap</h2>
+ <p>
+ Zoekterm en machine zijn niet hetzelfde. Een bierkoeler bij VanRobi is
+ een ijsbankkoeler. Een kegkoeler is dat niet. Mail aantal kranen,
+ piekvolume en of het vat al gekoeld staat naar{" "}
+ <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
+ </p>
+ <p>
+ <a className="text-link" href={withBase("/contact/")}>
+ Vraag een offerte of advies <span aria-hidden="true">→</span>
+ </a>
+ {" · "}
+ <a href={withBase("/producten/")}>Bekijk producten</a>
+ {" · "}
+ <a href={withBase("/faq/")}>FAQ</a>
+ </p>
+ <GuideAside
+ eyebrow="Verder"
+ links={[
+ { href: "/gids/wat-is-een-ijsbankkoeler/", label: "Wat is een ijsbankkoeler?" },
+ { href: "/gids/ijsbankkoeler-vs-dry-cooler/", label: "Ijsbank vs dry cooler" },
+ { href: "/gids/bierkoeler-kiezen-checklist/", label: "Checklist in 7 stappen" },
+ { href: "/producten/", label: "Catalogus" },
+ { href: "/contact/", label: "Offerte" },
+ ]}
+ />
+ </div>
+ </section>
+ );
+ }
+
  return null;
 }

@@ -3,6 +3,11 @@ export type FaqItem = { question: string; answer: string };
 /** General site FAQ (NL) */
 export const generalFaqs: FaqItem[] = [
  {
+ question: "Is een ijsbankkoeler hetzelfde als een bierkoeler of kegkoeler?",
+ answer:
+ "Een ijsbankkoeler is wat de meeste horecazaken een bierkoeler, tapkoeler of natte doorstroomkoeler noemen: spiralen in een ijswaterbad, met een ijsreserve als buffer. Een kegkoeler of fustenkoeler is een ander toestel: die koelt het vat zelf in een kast. VanRobi levert ijsbankkoelers voor de leiding, geen fustenkoelkast.",
+ },
+ {
  question: "Is VanRobi specialist in ijsbankkoelers voor België en Nederland?",
  answer:
  "Ja. VanRobi is de specialist in professionele ijsbankkoelers voor België en Nederland. U koopt via een erkend kanaal, geen grijze import, met correcte specs, garantieopvolging en lokale support.",

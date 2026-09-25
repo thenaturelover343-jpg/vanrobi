@@ -20,9 +20,9 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     seoHead({
-      title: "VanRobi — Professionele ijsbankkoelers voor horeca in België & Nederland",
+      title: "VanRobi — Bierkoeler & ijsbankkoeler voor horeca | België & Nederland",
       description:
-        "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben.",
+        "Professionele bierkoelers en ijsbankkoelers voor bars, restaurants en events in België en Nederland. Ook gezocht als tapkoeler of doorstroomkoeler. Een kegkoeler (fustenkoeler) koelt het vat; wij leveren ijsbankkoeling in de leiding.",
       path: "/",
       frPath: "/fr",
     }),
@@ -48,7 +48,7 @@ function Home() {
               <p className="kicker">Gidsen</p>
               <h2 className="mt-4 text-4xl md:text-6xl">Kiezen met kennis.</h2>
               <p className="mt-5 max-w-xl text-muted">
-                Uitleg, checklists en vergelijkingen — ijsbankkoeler, dry cooler, spiralen, onder-bar, events en ijsbankkoelers via VanRobi.
+                Uitleg, checklists en vergelijkingen — ijsbankkoeler, bierkoeler, tapkoeler, kegkoeler, dry cooler, spiralen, onder-bar en events.
               </p>
             </Reveal>
             <div className="mt-12 grid gap-px bg-line md:grid-cols-2">

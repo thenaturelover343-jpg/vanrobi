@@ -12,6 +12,16 @@ export type Guide = {
 
 export const guides: Guide[] = [
  {
+ slug: "bierkoeler-kegkoeler-of-ijsbank",
+ title: "Bierkoeler, kegkoeler of ijsbankkoeler?",
+ eyebrow: "Zoektermen",
+ description:
+ "Bierkoeler, tapkoeler, doorstroomkoeler, kegkoeler of fustenkoeler: wat mensen zoeken, en welk systeem een ijsbankkoeler echt is.",
+ lede: "In de horeca zoekt bijna niemand op “ijsbankkoeler”. Ze typen bierkoeler, tapkoeler of kegkoeler. Dit is het verschil, zonder de verkeerde machine te verkopen.",
+ updated: "2026-09-25",
+ published: "2026-09-25",
+ },
+ {
  slug: "ijsbankkoeler-vs-gamko",
  title: "Ijsbankkoeler of complete tapinstallatie: wat past bij uw bar?",
  eyebrow: "Vergelijking",
