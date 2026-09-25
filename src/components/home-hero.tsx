@@ -79,9 +79,9 @@ function HeroMachine({ story }: { story: StoryState }) {
   }, []);
 
   return (
-    <aside className="hero-machine mt-3 w-full max-w-md shrink-0 md:mt-0">
-      {/* Mobile: compact but complete card so H1+machine fit in sticky 100svh. md+: fuller aspect card. */}
-      <div className="hero-story-card relative h-[13.5rem] max-h-[38svh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto md:max-h-none">
+    <aside className="hero-machine mt-2 flex min-h-0 w-full max-w-md flex-1 flex-col md:mt-0 md:block md:flex-none md:shrink-0">
+      {/* Mobile: card grows into leftover 100svh so stack fills frame (no empty ice void / no space-between gap). md+: aspect card. */}
+      <div className="hero-story-card relative min-h-[15rem] flex-1 overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto md:min-h-0 md:flex-none md:max-h-none">
         <OptimizedImage
           src={withBase("/products/goldy.jpg")}
           alt="Goldy over-bar ijsbankkoeler"
@@ -280,9 +280,9 @@ export function HomeHero() {
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
-        {/* Mobile: compact top-aligned stack so H1 + machine fit in sticky 100svh. md+: end-aligned row. */}
-        <div className="hero-stage relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-14 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
-          <div className="hero-copy max-w-xl">
+        {/* Mobile: single filled stack — machine grows into leftover 100svh (no empty ice void). md+: end-aligned row. */}
+        <div className="hero-stage relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-11 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
+          <div className="hero-copy max-w-xl shrink-0">
             <p className="kicker hidden md:block">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-2 font-display text-xl italic text-ice md:mt-5 md:text-3xl">
               {fr ? frHero.slogan : tagline()}

@@ -462,14 +462,24 @@ html.hero-quiet .hero-cat-band {
   background: linear-gradient(180deg, rgba(5, 8, 12, 0.72), rgba(5, 8, 12, 0.84));
 }
 @media (max-width: 767px) {
+  /* Filled compose: keep top stack (NOT space-between — that left a large empty ice void). */
   html.hero-quiet .hero-stage {
-    justify-content: space-between;
-    padding-top: 5.25rem;
-    padding-bottom: 3.4rem;
+    justify-content: flex-start;
+    padding-top: 4.5rem;
+    padding-bottom: 2.75rem;
+  }
+  html.hero-quiet .hero-machine {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 0.65rem;
   }
   html.hero-quiet .hero-story-card {
-    height: 12.5rem;
-    max-height: 34svh;
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 15rem;
+    max-height: none;
   }
 }
 @media (min-width: 768px) {
@@ -645,6 +655,24 @@ html.hero-read-fade .hero-read-veil {
 html.hero-read-fade .hero-copy::before,
 html.hero-read-fade .hero-veil {
   display: none;
+}
+
+/* Mobile-only: slightly denser soft veil + stronger lede shadow (no L→R panel). */
+@media (max-width: 767px) {
+  html.hero-read-fade .hero-read-veil {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 8, 12, 0.72) 0%,
+      rgba(5, 8, 12, 0.64) 18%,
+      rgba(5, 8, 12, 0.64) 82%,
+      rgba(5, 8, 12, 0.72) 100%
+    );
+  }
+  .hero-copy .hero-lede {
+    text-shadow:
+      0 1px 18px rgba(5, 8, 12, 0.95),
+      0 0 2px rgba(5, 8, 12, 0.85);
+  }
 }
 
 img[data-vr-img="hidden"] {
