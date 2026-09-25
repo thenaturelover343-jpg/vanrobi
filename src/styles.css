@@ -444,6 +444,16 @@
     margin-inline: auto;
     width: 100%;
   }
+  /* Compact tiles/audience so sticky 100svh can hold H1 + HeroMachine */
+  .hero-tile {
+    min-height: 2.15rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.62rem;
+  }
+  .hero-audience span {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.6rem;
+  }
 }
 .hero-audience {
   margin: 0;

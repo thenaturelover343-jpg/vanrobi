@@ -79,8 +79,9 @@ function HeroMachine({ story }: { story: StoryState }) {
   }, []);
 
   return (
-    <aside className="hero-machine mt-6 w-full max-w-md shrink-0 md:mt-0">
-      <div className="hero-story-card relative h-[20rem] max-h-[68vh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto md:max-h-none">
+    <aside className="hero-machine mt-3 w-full max-w-md shrink-0 md:mt-0">
+      {/* Mobile: compact but complete card so H1+machine fit in sticky 100svh. md+: fuller aspect card. */}
+      <div className="hero-story-card relative h-[13.5rem] max-h-[38svh] overflow-hidden border border-line bg-bg-2 md:aspect-[4/5] md:h-auto md:max-h-none">
         <OptimizedImage
           src={withBase("/products/goldy.jpg")}
           alt="Goldy over-bar ijsbankkoeler"
@@ -91,16 +92,18 @@ function HeroMachine({ story }: { story: StoryState }) {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/70 to-bg" />
 
-        <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between gap-3">
-          <span className="text-[0.6rem] tracking-[0.16em] text-ice uppercase">{phase}</span>
-          <span className="spec-num border border-ice/40 bg-bg/80 px-3 py-1 font-display text-xl text-fg backdrop-blur-sm">
+        <div className="absolute inset-x-3 top-3 z-10 flex items-center justify-between gap-2 md:inset-x-5 md:top-5 md:gap-3">
+          <span className="text-[0.55rem] tracking-[0.14em] text-ice uppercase md:text-[0.6rem] md:tracking-[0.16em]">
+            {phase}
+          </span>
+          <span className="spec-num border border-ice/40 bg-bg/80 px-2 py-0.5 font-display text-lg text-fg backdrop-blur-sm md:px-3 md:py-1 md:text-xl">
             {story.temperature.toFixed(1)}°C
           </span>
         </div>
 
         <svg
           viewBox="0 0 280 220"
-          className="absolute inset-x-0 top-12 z-10 mx-auto h-[48%] w-auto max-w-[78%] md:top-14 md:h-[52%] md:max-w-[82%]"
+          className="absolute inset-x-0 top-9 z-10 mx-auto h-[46%] w-auto max-w-[72%] md:top-14 md:h-[52%] md:max-w-[82%]"
           role="img"
           aria-label={`IJsbank voor piekbelasting, ${Math.round(story.progress * 100)} procent opgebouwd`}
         >
@@ -171,23 +174,25 @@ function HeroMachine({ story }: { story: StoryState }) {
           ref={specsRef}
           className="absolute inset-x-0 bottom-0 z-20 grid grid-cols-3 gap-px border-t border-line bg-bg/92 backdrop-blur-sm"
         >
-          <div className="px-3 py-3 md:p-4">
-            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">Model</p>
-            <p className="mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">Goldy</p>
+          <div className="px-2 py-2 md:p-4">
+            <p className="text-[0.5rem] tracking-[0.14em] text-muted uppercase md:text-[0.55rem] md:tracking-[0.16em]">
+              Model
+            </p>
+            <p className="mt-1 font-display text-xl text-fg md:mt-2 md:text-3xl">Goldy</p>
           </div>
-          <div className="px-3 py-3 md:p-4">
-            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
+          <div className="px-2 py-2 md:p-4">
+            <p className="text-[0.5rem] tracking-[0.14em] text-muted uppercase md:text-[0.55rem] md:tracking-[0.16em]">
               {fr ? frHero.iceReserve : "IJsreserve"}
             </p>
-            <p className="spec-num mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">
+            <p className="spec-num mt-1 font-display text-xl text-fg md:mt-2 md:text-3xl">
               <CountUp value={9} suffix="kg" active={specsVisible} />
             </p>
           </div>
-          <div className="px-3 py-3 md:p-4">
-            <p className="text-[0.55rem] tracking-[0.16em] text-muted uppercase">
+          <div className="px-2 py-2 md:p-4">
+            <p className="text-[0.5rem] tracking-[0.14em] text-muted uppercase md:text-[0.55rem] md:tracking-[0.16em]">
               {fr ? frHero.flow : "Debiet"}
             </p>
-            <p className="spec-num mt-1.5 font-display text-2xl text-fg md:mt-2 md:text-3xl">
+            <p className="spec-num mt-1 font-display text-xl text-fg md:mt-2 md:text-3xl">
               <CountUp value={44} suffix={fr ? "L/h" : "L/u"} active={specsVisible} />
             </p>
           </div>
@@ -207,7 +212,6 @@ export function HomeHero() {
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const desktop = window.matchMedia("(min-width: 768px)");
 
     const applyStatic = () => {
       setStory({ progress: 1, temperature: 2 });
@@ -218,7 +222,7 @@ export function HomeHero() {
     let frame = 0;
     const update = () => {
       frame = 0;
-      if (!desktop.matches || reduceMotion.matches) {
+      if (reduceMotion.matches) {
         applyStatic();
         return;
       }
@@ -239,12 +243,10 @@ export function HomeHero() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
-    desktop.addEventListener("change", onScroll);
     reduceMotion.addEventListener("change", onScroll);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
-      desktop.removeEventListener("change", onScroll);
       reduceMotion.removeEventListener("change", onScroll);
       cancelAnimationFrame(frame);
     };
@@ -261,9 +263,8 @@ export function HomeHero() {
       ];
 
   return (
-    <section ref={heroRef} className="relative md:h-[145svh]">
-      {/* Mobile: normal flow (~auto height). md+: sticky ice-bank scroll theater. */}
-      <div className="relative overflow-visible ice-fallback md:sticky md:top-0 md:min-h-[100svh] md:overflow-hidden">
+    <section ref={heroRef} className="relative h-[145svh]">
+      <div className="sticky top-0 min-h-[100svh] overflow-hidden ice-fallback">
         <OptimizedImage
           src={withBase("/worlds/ice-bank.jpg")}
           alt=""
@@ -278,21 +279,22 @@ export function HomeHero() {
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-r from-bg/75 via-bg/25 to-transparent" />
         <div className="hero-veil pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/25 via-transparent to-bg/10" />
 
-        <div className="relative z-10 mx-auto flex max-w-[1220px] flex-col justify-start px-5 pb-10 pt-24 md:min-h-[100svh] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
+        {/* Mobile: compact top-aligned stack so H1 + machine fit in sticky 100svh. md+: end-aligned row. */}
+        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-start px-5 pb-14 pt-[4.25rem] md:flex-row md:items-end md:justify-between md:px-8 md:pb-24 md:pt-28">
           <div className="hero-copy max-w-xl">
             <p className="kicker">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
-            <p className="hero-slogan mt-4 font-display text-2xl italic text-ice md:mt-5 md:text-3xl">
+            <p className="hero-slogan mt-2 font-display text-xl italic text-ice md:mt-5 md:text-3xl">
               {fr ? frHero.slogan : tagline()}
             </p>
-            <h1 className="mt-4 font-display text-[2.05rem] leading-[1.08] text-white md:mt-5 md:text-5xl">
+            <h1 className="mt-2 font-display text-[1.7rem] leading-[1.08] text-white md:mt-5 md:text-5xl">
               {fr ? frHero.title : "Bierkoelers en kegkoelers voor horeca"}
             </h1>
-            <p className="hero-lede mt-4 max-w-md text-base font-medium leading-relaxed md:mt-6 md:text-[1.05rem]">
+            <p className="hero-lede mt-2 max-w-md text-[0.92rem] font-medium leading-snug md:mt-6 md:text-[1.05rem] md:leading-relaxed">
               {fr
                 ? frHero.lede
                 : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
+            <div className="mt-3 flex flex-wrap gap-2 md:mt-8 md:gap-3">
               <MagneticCta>
                 <Link to={fr ? "/fr/contact" : "/contact"} className="btn btn-ice">
                   {fr ? frHero.cta : "Vraag een offerte"}
@@ -306,7 +308,7 @@ export function HomeHero() {
               </Link>
             </div>
             <ul
-              className="hero-tiles mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3 md:mt-6 md:grid-cols-5"
+              className="hero-tiles mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3 md:mt-6 md:grid-cols-5 md:gap-2"
               aria-label="Assortiment"
             >
               {tiles.map((tile, index) => (
@@ -323,7 +325,10 @@ export function HomeHero() {
                 </li>
               ))}
             </ul>
-            <p className="hero-audience mt-5 flex flex-wrap gap-2 md:mt-8 md:gap-3" aria-label={fr ? "Publics" : "Doelgroepen"}>
+            <p
+              className="hero-audience mt-3 flex flex-wrap gap-1.5 md:mt-8 md:gap-3"
+              aria-label={fr ? "Publics" : "Doelgroepen"}
+            >
               <span>Bars</span>
               <span>Events</span>
               <span>Installateurs</span>
@@ -335,7 +340,7 @@ export function HomeHero() {
 
         <button
           type="button"
-          className="scroll-cue absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 text-[0.65rem] tracking-[0.2em] uppercase md:left-8 md:block md:translate-x-0"
+          className="scroll-cue absolute bottom-3 left-1/2 z-20 -translate-x-1/2 text-[0.6rem] tracking-[0.18em] uppercase md:bottom-5 md:left-8 md:translate-x-0 md:text-[0.65rem] md:tracking-[0.2em]"
           onClick={() => {
             const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
             document
