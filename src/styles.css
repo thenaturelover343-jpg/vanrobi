@@ -467,24 +467,21 @@ html.hero-quiet .hero-cat-band {
   display: none;
 }
 @media (max-width: 767px) {
-  /* Filled compose: keep top stack (NOT space-between — that left a large empty ice void). */
+  /* Top-aligned compact stack: larger copy + fixed card (no flex-grow into leftover 100svh). */
   html.hero-quiet .hero-stage {
     justify-content: flex-start;
-    padding-top: 4.5rem;
-    padding-bottom: 2.75rem;
+    padding-top: 4.35rem;
+    padding-bottom: 2.5rem;
+    gap: 0;
   }
   html.hero-quiet .hero-machine {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    min-height: 0;
-    margin-top: 0.65rem;
+    flex: none;
+    margin-top: 0.85rem;
   }
   html.hero-quiet .hero-story-card {
-    flex: 1 1 auto;
-    height: auto;
-    min-height: 15rem;
-    max-height: none;
+    flex: none;
+    height: 14.5rem;
+    max-height: 38svh;
   }
 }
 @media (min-width: 768px) {
