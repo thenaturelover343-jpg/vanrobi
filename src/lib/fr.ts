@@ -31,8 +31,8 @@ export const frHome = {
     },
     {
       n: "02",
-      title: "Technique claire",
-      text: "Capacité, spirales, débit, specs nettes pour installateurs et conception de bar.",
+      title: "Specs pour le terrain",
+      text: "Réserve de glace, spirales et débit (L/h) indiqués par machine — utilisables pour installateurs et conception de bar.",
     },
     {
       n: "03",
