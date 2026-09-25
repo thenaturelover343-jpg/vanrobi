@@ -20,7 +20,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "VanRobi: professionele ijsbankkoelers voor horeca en events in België en Nederland. Stabiele koude. Elke shift.",
+          "Bierkoeler en kegkoeler kopen voor horeca. De ijsbank koelt de leiding, de fustenkoeler het vat. België en Nederland.",
       },
       { name: "theme-color", content: experience.visualRefresh ? "#F7F9FA" : "#05080C" },
       { name: "robots", content: onPages ? "noindex, follow" : "index, follow" },

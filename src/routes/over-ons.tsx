@@ -8,7 +8,7 @@ export const Route = createFileRoute("/over-ons")({
   head: () =>
     seoHead({
       title: "Specialist bierkoelers | VanRobi",
-      description: "VanRobi levert bierkoelers en kegkoelers voor horeca in België en Nederland. Heldere specs en advies vanuit Kasterlee.",
+      description: "VanRobi levert bierkoelers en kegkoelers voor horeca in België en Nederland. Heldere specs, advies vanuit Kasterlee, onderhoud door Taponderhoud.",
       path: "/over-ons",
       frPath: "/fr/a-propos",
     }),

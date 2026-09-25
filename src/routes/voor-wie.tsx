@@ -9,7 +9,7 @@ export const Route = createFileRoute("/voor-wie")({
   head: () =>
     seoHead({
       title: "Bierkoeler voor horeca en events | VanRobi",
-      description: "Bierkoelers voor bars, restaurants, festivals en installateurs. Advies op piekvolume, barmeubel en stroom.",
+      description: "Bierkoelers voor bars, restaurants, festivals en installateurs. We stemmen debiet en ijsreserve af op uw piek en het barmeubel. Offerte, België en Nederland.",
       path: "/voor-wie",
     }),
   component: VoorWie,

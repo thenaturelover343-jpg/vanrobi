@@ -11,7 +11,7 @@ export const Route = createFileRoute("/vergelijk")({
   head: () =>
     seoHead({
       title: "Bierkoelers vergelijken | VanRobi",
-      description: "Vergelijk bierkoelers op ijsreserve, debiet en waterbad. Goldy, V100 en V200 naast elkaar, daarna een offerte.",
+      description: "Vergelijk bierkoelers op ijsreserve, debiet en waterbad. Zet Goldy, V100 en V200 naast elkaar en vraag daarna een offerte voor uw bar.",
       path: "/vergelijk",
     }),
   component: ComparePage,

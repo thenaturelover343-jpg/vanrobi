@@ -11,7 +11,7 @@ export const Route = createFileRoute("/fr/contact")({
     seoHead({
       title: "Devis refroidisseur de bière | VanRobi",
       description:
-        "Devis pour un refroidisseur de bière ou de fût. Décrivez votre bar ou event, réponse sous un jour ouvrable.",
+        "Devis pour un refroidisseur de bière ou de fût. Décrivez votre bar, votre event et le nombre de robinets. Réponse sous un jour ouvrable.",
       path: "/fr/contact",
       lang: "fr",
       nlPath: "/contact",

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/regio")({
   head: () =>
     seoHead({
       title: "Levering bierkoelers | VanRobi",
-      description: "Bierkoelers leveren in België en Nederland, vanuit Kasterlee in de Kempen. Advies voor Vlaanderen en Nederland.",
+      description: "Levering van bierkoelers in België en Nederland, vanuit Kasterlee in de Kempen. Advies voor bars, events en installateurs.",
       path: "/regio",
     }),
   component: RegioPage,

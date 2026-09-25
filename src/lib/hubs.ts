@@ -118,7 +118,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Fustenkoeler · Vatenkoeler · Barrilero",
       title: "Keg- en fustenkoeler kopen voor horeca | VanRobi",
       description:
-        "Kegkoeler kopen voor horeca: fustenkoeler die het vat koelt, niet de leiding. Alleen de Barrilero Doble. Offerte in België en Nederland.",
+        "Keg- en fustenkoeler kopen voor horeca: het vat koelt, niet de leiding. In het assortiment alleen de Barrilero Doble. Offerte voor België en Nederland.",
       intro:
         "Een kegkoeler — ook fustenkoeler, vatenkoeler of barrilero genoemd — koelt het vat zelf op temperatuur vóór het tappen, niet de leiding naar de kraan. Voor horeca; levering en advies in België en Nederland. Leidingkoeling vindt u bij onze bierkoelers (ijsbank). In dit overzicht: alleen de Barrilero Doble.",
       bodyExtra:
@@ -258,7 +258,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Tapkraan · Lekbak · Koppeling",
       title: "Tapzuilen en tapkranen kopen voor horeca | VanRobi",
       description:
-        "Tapzuilen kopen voor horeca, met tapkranen, lekbakken en koppelingen. Afgestemd op bierkoeler of kegkoeler. Offerte in België en Nederland.",
+        "Tapzuilen en tapkranen kopen voor horeca, met lekbakken en koppelingen. Afgestemd op uw bierkoeler of kegkoeler. Offerte in België en Nederland.",
       intro:
         "Tapzuilen — met tapkranen, lekbakken en koppelingen — maken de taplijn af. Voor horeca; levering en advies in België en Nederland. Afgestemd op uw koeler (bierkoeler of kegkoeler), debiet en barontwerp — niet op glycolcircuits.",
       relatedLabel: "Andere categorieën",
@@ -326,7 +326,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Roermotor · Thermostaat · Sonde",
       title: "Onderdelen bierkoeler kopen | VanRobi",
       description:
-        "Onderdelen kopen voor ijsbankkoelers: roermotoren, thermostaten en sondes voor de taplijn. Voor installateurs. Offerte, België en Nederland.",
+        "Onderdelen bierkoeler kopen: roermotoren, thermostaten en sondes voor de ijsbank en de taplijn. Voor installateurs. Offerte in België en Nederland.",
       intro:
         "Technische onderdelen en tapkraan-onderdelen: roermotoren, thermostaten, sondes en meer voor het VanRobi-ecosysteem. Voor horeca en installateurs; levering en advies in België en Nederland. Gericht op ijsbank- en taplijn, niet op glycolmodellen.",
       relatedLabel: "Andere categorieën",

@@ -18,7 +18,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler, kegkoeler of ijsbankkoeler?",
  eyebrow: "Zoektermen",
  description:
- "Bierkoeler, kegkoeler of ijsbankkoeler: wat elk woord betekent, en welke machine de leiding of het vat koelt.",
+ "Bierkoeler, kegkoeler of ijsbankkoeler: de ijsbank koelt de leiding naar de kraan, de fustenkoeler koelt het vat. Zo kiest u de juiste machine.",
  lede: "In de horeca zoekt bijna niemand op “ijsbankkoeler”. Ze typen bierkoeler, tapkoeler of kegkoeler. Dit is het verschil, zonder de verkeerde machine te verkopen.",
  updated: "2026-09-25",
  published: "2026-09-25",
@@ -39,7 +39,7 @@ export const guides: Guide[] = [
  title: "V100 vs V200: welke ijsbankkoeler kiest u?",
  eyebrow: "Vergelijking",
  description:
- "Verschil tussen V100 en V200: debiet, ijsreserve, formaat en wanneer u de zwaardere onder-bar kiest.",
+ "Verschil tussen V100 en V200: debiet, ijsreserve en formaat. De V100 voor dagelijkse horeca, de V200 wanneer de piek zwaarder is.",
  lede: 'Beide zijn onder-bar werkpaarden. Het verschil zit in volume en piekbelasting, niet in "goedkoop versus duur".',
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -49,7 +49,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler voor events & festivals",
  eyebrow: "Gids",
  description:
- "Bierkoeler voor events en festivals: Goldy, V100 portable of V200 portable, op stroom, opbouw en capaciteit.",
+ "Bierkoeler voor events en festivals: Goldy, V100 portable of V200 portable. Let op stroom, opbouwtijd en of de capaciteit de piek haalt.",
  lede: "Op het terrein telt mobiliteit, snelle opbouw en genoeg koude wanneer de piek komt. Deze gids helpt u kiezen.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -59,7 +59,7 @@ export const guides: Guide[] = [
  title: "Wat is een ijsbankkoeler?",
  eyebrow: "Uitleg",
  description:
- "Wat is een ijsbankkoeler? Werking, verschil met een doorstroomkoeler, en wanneer een bierkoeler past.",
+ "Wat is een ijsbankkoeler? Een bierkoeler met ijswaterbad en ijsreserve. Zo verschilt hij van een doorstroomkoeler zonder die buffer.",
  lede: "Een ijsbankkoeler koelt bier (of andere drank) via een ijsreserve in een waterbad, stabiel, stil en geschikt voor professionele horeca en events.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -70,7 +70,7 @@ export const guides: Guide[] = [
  eyebrow: "Koopgids",
  seoTitle: "Bierkoeler kopen: waar op letten",
  description:
- "Bierkoeler kopen in België of Nederland: capaciteit, levertijd en waar u op let voor u bestelt.",
+ "Bierkoeler kopen in België of Nederland: kies op debiet en ijsreserve, check het barmeubel en de levertijd, en vraag daarna een offerte.",
  lede: "Van Antwerpen tot Amsterdam: waar u let op bij aankoop, welke capaciteit u nodig heeft, en waarom een professioneel VanRobi-kanaal telt.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -91,7 +91,7 @@ export const guides: Guide[] = [
  title: "Onder-bar bierkoeler: V100 & V200",
  eyebrow: "Onder-bar",
  description:
- "Onder-bar bierkoeler kiezen: V100 of V200 voor vaste horeca, op debiet, ijsreserve en barmeubel.",
+ "Onder-bar bierkoeler kiezen: V100 of V200 voor vaste horeca. Vergelijk debiet, ijsreserve en of de machine in het barmeubel past.",
  lede: "Onder de bar verdwijnt de machine uit het zicht, maar capaciteit en voetafdruk blijven cruciaal. Zo kiest u tussen V100 en V200.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -101,7 +101,7 @@ export const guides: Guide[] = [
  title: "Goldy vs V100: over-bar of onder-bar?",
  eyebrow: "Vergelijking",
  description:
- "Goldy of V100: over-bar of onder-bar. Vergelijk debiet, ijsreserve en waar de machine in de bar past.",
+ "Goldy of V100: over-bar of onder-bar. Vergelijk debiet en ijsreserve, en kies of de koeler zichtbaar op de bar mag staan.",
  lede: "Compacte zichtbare Goldy of vast onder-bar werkpaard V100? De keuze hangt af van ruimte, volume en of de bar zichtbaar mag blijven.",
  updated: "2026-09-19",
  published: "2026-09-18",
@@ -131,7 +131,7 @@ export const guides: Guide[] = [
  title: "Bierkoeler kiezen: checklist in 7 stappen",
  eyebrow: "Checklist",
  description:
- "Checklist om een bierkoeler te kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom en spiralen.",
+ "Checklist om een bierkoeler te kiezen: vast of mobiel, debiet, ijsreserve, meubel, stroom en spiralen. Daarna vraagt u een offerte.",
  lede: "Zeven concrete stappen, van piekvolume tot onderhoudspartner, zodat u geen machine koopt die te klein of te groot is.",
  updated: "2026-09-19",
  published: "2026-09-19",
