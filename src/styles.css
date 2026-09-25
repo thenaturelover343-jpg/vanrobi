@@ -440,26 +440,52 @@
     width: auto;
   }
 }
-.hero-cat-band {
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid rgba(122, 212, 240, 0.35);
-  border-bottom: 1px solid var(--color-line);
+html.hero-quiet .hero-sticky {
+  height: 100svh;
+  max-height: 100svh;
 }
-.hero-cat-photo {
+html.hero-quiet .hero-cat-band {
   position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
+  z-index: 15;
+  left: 0;
+  right: 0;
+  bottom: 2.75rem;
+  border: 0;
+  background: linear-gradient(180deg, transparent, rgba(5, 8, 12, 0.28) 24%, rgba(5, 8, 12, 0.45));
+  padding: 0.35rem 0 0.2rem;
 }
-.hero-cat-photo img {
-  object-fit: cover;
-  object-position: center 70%;
+html.hero-quiet .hero-cat-head p:last-child {
+  display: none;
 }
-.hero-cat-scrim {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(5, 8, 12, 0.62), rgba(5, 8, 12, 0.78));
+@media (max-width: 767px) {
+  html.hero-quiet .hero-stage {
+    padding-bottom: 12.5rem;
+  }
+  html.hero-quiet .hero-machine {
+    margin-top: 0.65rem;
+  }
+  html.hero-quiet .hero-story-card {
+    height: 11rem;
+    max-height: 30svh;
+  }
+}
+@media (min-width: 768px) {
+  html.hero-quiet .hero-cat-band {
+    bottom: 0.85rem;
+  }
+  html.hero-quiet .hero-cat-head p:last-child {
+    display: block;
+  }
+  html.hero-quiet .hero-stage {
+    padding-bottom: 8.75rem;
+  }
+  html.hero-quiet .hero-story-card {
+    width: min(24rem, 34vw);
+    max-height: 62vh;
+  }
+  html.hero-quiet .scroll-cue {
+    bottom: 7.6rem;
+  }
 }
 .hero-cat-head {
   display: flex;
@@ -467,7 +493,7 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 0.35rem 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
 }
 .hero-cat-head p:last-child {
   margin: 0;
@@ -503,20 +529,6 @@
     grid-column: auto;
     justify-self: stretch;
     width: auto;
-  }
-}
-@media (max-width: 767px) {
-  html.hero-quiet .hero-stage {
-    padding-bottom: 3.4rem;
-  }
-  html.hero-quiet .hero-machine {
-    margin-top: auto;
-  }
-}
-@media (min-width: 768px) {
-  html.hero-quiet .hero-story-card {
-    width: min(24rem, 34vw);
-    max-height: 68vh;
   }
 }
 @media (max-width: 767px) {
