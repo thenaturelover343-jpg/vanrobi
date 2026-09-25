@@ -10,7 +10,8 @@ export const Route = createFileRoute("/fr/a-propos")({
   head: () =>
     seoHead({
       title: "À propos — VanRobi",
-      description: frAbout.lede,
+      description:
+        "VanRobi livre des refroidisseurs de bière et de fût pour l'horeca en Belgique et aux Pays-Bas. Specs claires, conseil depuis Kasterlee.",
       path: "/fr/a-propos",
       lang: "fr",
       nlPath: "/over-ons",

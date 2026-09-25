@@ -72,6 +72,39 @@ export function productJsonLd(p: {
   };
 }
 
+/** Meta descriptions: zoekwoord vooraan, één zin, afgekapt op een spatie. */
+export function clipMeta(text: string, max = 155): string {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (t.length <= max) return t;
+  const cut = t.slice(0, max - 1);
+  const sp = cut.lastIndexOf(" ");
+  return `${(sp > 90 ? cut.slice(0, sp) : cut).replace(/[.,;:–—-]+$/, "")}…`;
+}
+
+const productKind: Record<string, { nl: string; fr: string }> = {
+  koelers: { nl: "bierkoeler", fr: "refroidisseur de bière" },
+  kegkoelers: { nl: "kegkoeler", fr: "refroidisseur de fût" },
+  glycolkoelers: { nl: "glycolkoeler", fr: "refroidisseur glycol" },
+  serpentijnen: { nl: "serpentijn", fr: "serpentin" },
+  dispensing: { nl: "tapmateriaal", fr: "matériel de tirage" },
+  onderdelen: { nl: "onderdeel", fr: "pièce" },
+  service: { nl: "service", fr: "service" },
+  overig: { nl: "product", fr: "produit" },
+};
+
+export function productMetaDescription(
+  p: { name: string; group?: string; description: string },
+  lang: "nl" | "fr" = "nl",
+): string {
+  const kind = productKind[p.group ?? "overig"]?.[lang] ?? productKind.overig[lang];
+  const body = p.description.replace(/\s+/g, " ").trim();
+  const lead =
+    lang === "fr"
+      ? `${p.name}, ${kind} pour l'horeca. ${body}`
+      : `${p.name} ${kind} voor horeca. ${body}`;
+  return clipMeta(lead);
+}
+
 export function faqJsonLd(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",

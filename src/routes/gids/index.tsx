@@ -8,7 +8,7 @@ export const Route = createFileRoute("/gids/")({
   head: () =>
     seoHead({
       title: "Gidsen — VanRobi",
-      description: "Uitleg, checklists en vergelijkingen: ijsbankkoeler, dry cooler, spiralen, onder-bar, events en ijsbankkoelers via VanRobi in België & Nederland.",
+      description: "Gidsen over bierkoelers en kegkoelers: het verschil, capaciteit, events en een checklist. Advies voor horeca in België en Nederland.",
       path: "/gids",
     }),
   component: GidsIndex,

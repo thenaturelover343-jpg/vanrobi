@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
     seoHead({
       title: "Bierkoeler en kegkoeler kopen | VanRobi",
       description:
-        "Bierkoelers (ijsbankkoelers) voor de leiding, kegkoelers / fustenkoelers voor het vat, plus serpentijnen, kranen en zuilen. België en Nederland.",
+        "Bierkoeler en kegkoeler kopen voor horeca. De ijsbank koelt de leiding, de fustenkoeler het vat. Ook serpentijnen en tapkranen. België en Nederland.",
       path: "/",
       frPath: "/fr",
     }),

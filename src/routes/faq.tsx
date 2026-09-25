@@ -8,7 +8,7 @@ export const Route = createFileRoute("/faq")({
   head: () =>
     seoHead({
       title: "FAQ — VanRobi",
-      description: "Veelgestelde vragen over ijsbankkoelers, levering, onderhoud, V100 vs V200, events en offertes via VanRobi.",
+      description: "Vragen over bierkoelers en kegkoelers: V100 of V200, events, levering en onderhoud. Antwoord binnen één werkdag.",
       path: "/faq",
       frPath: "/fr/faq",
     }),

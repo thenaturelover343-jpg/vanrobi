@@ -10,7 +10,8 @@ export const Route = createFileRoute("/fr/services")({
   head: () =>
     seoHead({
       title: "Services — VanRobi",
-      description: frServices.lede,
+      description:
+        "Conseil et livraison de refroidisseurs de bière pour l'horeca. Entretien et réparations par Taponderhoud, depuis la Campine.",
       path: "/fr/services",
       lang: "fr",
       nlPath: "/diensten",

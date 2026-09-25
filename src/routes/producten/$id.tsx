@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getProduct } from "@/lib/products";
 import { ProductDetail } from "@/components/product-detail";
-import { breadcrumbJsonLd, productJsonLd, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, productJsonLd, productMetaDescription, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/producten/$id")({
   loader: ({ params }) => {
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/producten/$id")({
             : "assortiment";
     return seoHead({
       title: `${product.name} — ${kind} | VanRobi`,
-      description: product.longDescription || product.description,
+      description: productMetaDescription(product, "nl"),
       path: `/producten/${product.id}`,
       frPath: `/fr/produits/${product.id}`,
       jsonLd: [

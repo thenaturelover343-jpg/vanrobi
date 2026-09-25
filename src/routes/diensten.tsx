@@ -8,7 +8,7 @@ export const Route = createFileRoute("/diensten")({
   head: () =>
     seoHead({
       title: "Diensten — VanRobi",
-      description: "VanRobi levert en adviseert professionele ijsbankkoelers. Onderhoud, reiniging en herstellingen via Taponderhoud, met één lokaal team.",
+      description: "Advies en levering van bierkoelers voor horeca. Onderhoud, reiniging en herstellingen doet Taponderhoud, vanuit de Kempen.",
       path: "/diensten",
       frPath: "/fr/services",
     }),

@@ -20,7 +20,7 @@ export const Route = createFileRoute("/fr/")({
     seoHead({
       title: "Refroidisseur de bière et de fût acheter | VanRobi",
       description:
-        "Refroidisseurs de bière (banquise) pour la ligne, refroidisseurs de fût pour le fût, plus serpentins, robinets et colonnes. Belgique et Pays-Bas.",
+        "Refroidisseur de bière et de fût pour l'horeca : la ligne ou le fût, plus serpentins et robinets. Devis en Belgique et aux Pays-Bas.",
       path: "/fr",
       lang: "fr",
       nlPath: "/",

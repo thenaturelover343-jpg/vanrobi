@@ -46,7 +46,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Tapkoeler · Leidingkoeling · Ijsbankkoeler",
       title: "Bierkoelers kopen voor horeca | VanRobi",
       description:
-        "Bierkoelers (tapkoeler / leidingkoeling / ijsbankkoeler) voor horeca. Levering en advies in België en Nederland. Goldy, Picky, H50, V100–V500 en portables. Vraag een offerte.",
+        "Bierkoelers kopen voor horeca: ijsbankkoeler die de leiding naar de kraan koelt. Van Goldy tot V500. Offerte, levering in België en Nederland.",
       intro:
         "Een bierkoeler — ook tapkoeler, leidingkoeling of ijsbankkoeler genoemd — koelt de leiding naar de kraan. Bij VanRobi zijn dat ijsbankkoelers: spiralen in een ijswaterbad met ijsreserve als buffer bij pieken. Geschikt voor horeca; levering en advies in België en Nederland. Dat is iets anders dan een kegkoeler (vat) of een glycolkoeler (glycolcircuit).",
       bodyExtra:
@@ -79,7 +79,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Tirage · Ligne · Banquise",
       title: "Refroidisseurs de bière acheter | VanRobi",
       description:
-        "Refroidisseurs de bière (tirage / ligne / banquise) pour l'horeca. Livraison et conseil en Belgique et aux Pays-Bas. Goldy, Picky, H50, V100–V500 et portables. Demandez un devis.",
+        "Refroidisseur de bière à acheter pour l'horeca : banquise qui refroidit la ligne vers le robinet. De Goldy à V500. Devis, Belgique et Pays-Bas.",
       intro:
         "Un refroidisseur de bière — aussi appelé refroidisseur de tirage, refroidissement de ligne ou banquise — refroidit la ligne vers le robinet. Chez VanRobi, ce sont des refroidisseurs à banquise : serpentins dans un bain d'eau glacée avec réserve de glace. Pour l'horeca ; livraison et conseil en Belgique et aux Pays-Bas. Différent d'un refroidisseur de fût ou d'un refroidisseur glycol.",
       bodyExtra:
@@ -118,7 +118,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Fustenkoeler · Vatenkoeler · Barrilero",
       title: "Kegkoelers kopen voor horeca | VanRobi",
       description:
-        "Kegkoelers (fustenkoeler / vatenkoeler / barrilero) voor horeca. Levering en advies in België en Nederland. In het assortiment: Barrilero Doble. Vraag een offerte.",
+        "Kegkoeler kopen voor horeca: fustenkoeler die het vat koelt, niet de leiding. Alleen de Barrilero Doble. Offerte in België en Nederland.",
       intro:
         "Een kegkoeler — ook fustenkoeler, vatenkoeler of barrilero genoemd — koelt het vat zelf op temperatuur vóór het tappen, niet de leiding naar de kraan. Voor horeca; levering en advies in België en Nederland. Leidingkoeling vindt u bij onze bierkoelers (ijsbank). In dit overzicht: alleen de Barrilero Doble.",
       bodyExtra:
@@ -151,7 +151,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Keg · Barrilero · Fût",
       title: "Refroidisseurs de fût acheter | VanRobi",
       description:
-        "Refroidisseurs de fût (keg / barrilero) pour l'horeca. Livraison et conseil en Belgique et aux Pays-Bas. Assortiment : Barrilero Doble. Demandez un devis.",
+        "Refroidisseur de fût à acheter pour l'horeca : il refroidit le fût, pas la ligne. Un seul modèle, le Barrilero Doble. Devis, Belgique et Pays-Bas.",
       intro:
         "Un refroidisseur de fût — aussi keg ou barrilero — met le fût à température avant le tirage, pas la ligne vers le robinet. Pour l'horeca ; livraison et conseil en Belgique et aux Pays-Bas. Le froid de ligne se trouve chez nos refroidisseurs de bière (banquise). Ici : uniquement le Barrilero Doble.",
       bodyExtra:
@@ -190,7 +190,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Spiralen · Bier & drank",
       title: "Serpentijnen kopen voor horeca | VanRobi",
       description:
-        "Serpentijnen (spiralen) voor bier, water, cider en frisdrank in de ijsbank. Levering en advies in België en Nederland. Passend bij onze bierkoelers.",
+        "Serpentijnen kopen voor horeca: RVS-spiralen in de ijsbank voor bier, water en frisdrank. Passend bij uw bierkoeler. Offerte, België en Nederland.",
       intro:
         "Serpentijnen — ook spiralen genoemd — liggen in het ijswaterbad van de bierkoeler en brengen de drank op temperatuur vóór de kraan. Voor horeca; levering en advies in België en Nederland. Ze horen bij de ijsbanklijn, niet bij kegkoelers of glycolkoelers.",
       relatedLabel: "Andere categorieën",
@@ -221,7 +221,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Spirales · Bière & boissons",
       title: "Serpentins acheter | VanRobi",
       description:
-        "Serpentins (spirales) inox pour bière, eau, cidre et softs dans la banquise. Livraison et conseil en Belgique et aux Pays-Bas.",
+        "Serpentins à acheter pour l'horeca : spirales inox dans la banquise pour bière, eau et softs. Adaptés à votre refroidisseur. Devis, Belgique et Pays-Bas.",
       intro:
         "Les serpentins — aussi appelés spirales — se placent dans le bain d'eau glacée du refroidisseur et amènent la boisson à température avant le robinet. Pour l'horeca ; livraison et conseil en Belgique et aux Pays-Bas. Ils appartiennent à la ligne banquise, pas aux refroidisseurs de fût ou glycol.",
       relatedLabel: "Autres catégories",
@@ -258,7 +258,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Tapkraan · Lekbak · Koppeling",
       title: "Tapzuilen kopen voor horeca | VanRobi",
       description:
-        "Tapzuilen en tapkranen voor horeca: zuilen, kranen, lekbakken en koppelingen. Levering en advies in België en Nederland. Passend bij bierkoelers en kegkoelers.",
+        "Tapzuilen kopen voor horeca, met tapkranen, lekbakken en koppelingen. Afgestemd op bierkoeler of kegkoeler. Offerte in België en Nederland.",
       intro:
         "Tapzuilen — met tapkranen, lekbakken en koppelingen — maken de taplijn af. Voor horeca; levering en advies in België en Nederland. Afgestemd op uw koeler (bierkoeler of kegkoeler), debiet en barontwerp — niet op glycolcircuits.",
       relatedLabel: "Andere categorieën",
@@ -289,7 +289,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Robinet · Bac · Raccord",
       title: "Colonnes de tirage acheter | VanRobi",
       description:
-        "Colonnes et robinets pour l'horeca : colonnes, robinets, bacs et raccords. Livraison et conseil en Belgique et aux Pays-Bas.",
+        "Colonnes de tirage à acheter pour l'horeca, avec robinets, bacs et raccords. Adaptées au refroidisseur de bière ou de fût. Devis, Belgique et Pays-Bas.",
       intro:
         "Les colonnes de tirage — avec robinets, bacs d'égouttage et raccords — complètent la ligne. Pour l'horeca ; livraison et conseil en Belgique et aux Pays-Bas. Adaptés à votre refroidisseur (bière ou fût), au débit et au bar — pas aux circuits glycol.",
       relatedLabel: "Autres catégories",
@@ -326,7 +326,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Roermotor · Thermostaat · Sonde",
       title: "Onderdelen kopen voor horeca | VanRobi",
       description:
-        "Onderdelen voor ijsbankkoelers en de taplijn: roermotoren, thermostaten, sondes. Levering en advies in België en Nederland.",
+        "Onderdelen kopen voor ijsbankkoelers: roermotoren, thermostaten en sondes voor de taplijn. Voor installateurs. Offerte, België en Nederland.",
       intro:
         "Technische onderdelen en tapkraan-onderdelen: roermotoren, thermostaten, sondes en meer voor het VanRobi-ecosysteem. Voor horeca en installateurs; levering en advies in België en Nederland. Gericht op ijsbank- en taplijn, niet op glycolmodellen.",
       relatedLabel: "Andere categorieën",
@@ -357,7 +357,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Moteur · Thermostat · Sonde",
       title: "Pièces acheter | VanRobi",
       description:
-        "Pièces pour banquise et ligne de tirage : moteurs d'agitation, thermostats, sondes. Livraison et conseil en Belgique et aux Pays-Bas.",
+        "Pièces pour banquise à acheter : moteurs d'agitation, thermostats et sondes pour la ligne de tirage. Pour installateurs. Devis, Belgique et Pays-Bas.",
       intro:
         "Pièces techniques : moteurs d'agitation, thermostats, sondes et plus pour l'écosystème VanRobi. Pour l'horeca et les installateurs ; livraison et conseil en Belgique et aux Pays-Bas. Destinées à la banquise et à la ligne de tirage, pas aux modèles glycol.",
       relatedLabel: "Autres catégories",
@@ -394,7 +394,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Glycolcircuit · Geen ijsbank",
       title: "Glycolkoeler kopen | VanRobi",
       description:
-        "Glycolkoeler voor professionele koelcircuits. Levering en advies in België en Nederland. Geen ijsbank en geen leidingkoeler. In het assortiment: V90.",
+        "Glycolkoeler kopen voor horeca. De V90 koelt via een glycolcircuit: geen ijsbank en geen leidingkoeler. Offerte in België en Nederland.",
       intro:
         "Een glycolkoeler koelt via een glycolcircuit — dit is geen ijsbank en geen leidingkoeler (bierkoeler / tapkoeler). Voor horeca waar glycolkoeling nodig is; levering en advies in België en Nederland. Verschilt van bierkoelers (ijsbank) en kegkoelers (vat). In dit overzicht: de V90.",
       bodyExtra:
@@ -427,7 +427,7 @@ export const hubs: Record<HubKey, HubDef> = {
       kicker: "Circuit glycol · Pas une banquise",
       title: "Refroidisseur glycol acheter | VanRobi",
       description:
-        "Refroidisseur glycol pour circuits professionnels. Livraison et conseil en Belgique et aux Pays-Bas. Ce n'est ni une banquise ni un refroidisseur de ligne. Assortiment : V90.",
+        "Refroidisseur glycol à acheter pour l'horeca. La V90 refroidit par circuit glycol : ni banquise, ni refroidisseur de ligne. Devis, Belgique et Pays-Bas.",
       intro:
         "Un refroidisseur glycol refroidit via un circuit glycol — ce n'est ni une banquise ni un refroidisseur de ligne (bière / tirage). Pour l'horeca qui a besoin de glycol ; livraison et conseil en Belgique et aux Pays-Bas. Différent des refroidisseurs de bière (banquise) et de fût. Ici : la V90.",
       bodyExtra:

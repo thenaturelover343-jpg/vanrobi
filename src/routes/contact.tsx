@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     seoHead({
       title: "Contact — VanRobi offerte",
-      description: "Stuur uw aanvraag. We antwoorden binnen één werkdag. Machines via VanRobi, onderhoud via Taponderhoud.",
+      description: "Offerte voor een bierkoeler of kegkoeler. Beschrijf uw bar of event, antwoord binnen één werkdag. Onderhoud via Taponderhoud.",
       path: "/contact",
       frPath: "/fr/contact",
     }),

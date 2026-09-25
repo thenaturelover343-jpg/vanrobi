@@ -10,7 +10,7 @@ export const Route = createFileRoute("/producten/")({
     seoHead({
       title: "Bierkoeler, kegkoeler en ijsbankkoeler | VanRobi",
       description:
-        "Bierkoeler, tapkoeler, kegkoeler, fustenkoeler en serpentijn: ijsbankkoelers koelen de leiding, kegkoelers (barrilero) koelen het vat. Catalogus voor horeca in België en Nederland.",
+        "Catalogus bierkoelers, kegkoelers en serpentijnen voor horeca. Filter op capaciteit en vraag een offerte. Levering in België en Nederland.",
       path: "/producten",
       frPath: "/fr/produits",
     }),

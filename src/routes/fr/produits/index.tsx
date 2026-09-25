@@ -11,7 +11,7 @@ export const Route = createFileRoute("/fr/produits/")({
     seoHead({
       title: "Refroidisseur de bière, de fût et à banquise | VanRobi",
       description:
-        "Refroidisseur de bière, de fût, à banquise et serpentin : la banquise refroidit la ligne, le refroidisseur de fût (barrilero) refroidit le fût. Catalogue horeca BE & NL.",
+        "Catalogue de refroidisseurs de bière, de fût et de serpentins pour l'horeca. Filtrez par capacité et demandez un devis. Belgique et Pays-Bas.",
       path: "/fr/produits",
       lang: "fr",
       nlPath: "/producten",

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/over-ons")({
   head: () =>
     seoHead({
       title: "Over ons — VanRobi ijsbankkoelers",
-      description: "Het merk VanRobi voor professionele ijsbankkoelers in België en Nederland, met lokale expertise in tap- en koeltechniek.",
+      description: "VanRobi levert bierkoelers en kegkoelers voor horeca in België en Nederland. Heldere specs en advies vanuit Kasterlee.",
       path: "/over-ons",
       frPath: "/fr/a-propos",
     }),

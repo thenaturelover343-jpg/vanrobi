@@ -11,7 +11,7 @@ export const Route = createFileRoute("/vergelijk")({
   head: () =>
     seoHead({
       title: "Machines vergelijken — VanRobi",
-      description: "Vergelijk ijsbankkoelers side-by-side: ijsreserve, debiet en waterbad. Kies 2 of 3 machines in de catalogus.",
+      description: "Vergelijk bierkoelers op ijsreserve, debiet en waterbad. Goldy, V100 en V200 naast elkaar, daarna een offerte.",
       path: "/vergelijk",
     }),
   component: ComparePage,

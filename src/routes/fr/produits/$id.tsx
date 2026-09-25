@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getProduct } from "@/lib/products";
 import { frProductCopy } from "@/lib/fr";
 import { ProductDetail } from "@/components/product-detail";
-import { breadcrumbJsonLd, productJsonLd, seoHead } from "@/lib/seo";
+import { breadcrumbJsonLd, productJsonLd, productMetaDescription, seoHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/fr/produits/$id")({
   loader: ({ params }) => {
@@ -15,7 +15,10 @@ export const Route = createFileRoute("/fr/produits/$id")({
     const copy = product ? frProductCopy[product.id] : undefined;
     if (!product)
       return seoHead({ title: "Produit — VanRobi", description: "", path: "/fr/produits", lang: "fr" });
-    const description = copy?.longDescription ?? product.longDescription ?? product.description;
+    const description = productMetaDescription(
+      { name: product.name, group: product.group, description: copy?.description ?? product.description },
+      "fr",
+    );
     const kind =
       product.group === "kegkoelers"
         ? "refroidisseur de fût"
@@ -34,7 +37,7 @@ export const Route = createFileRoute("/fr/produits/$id")({
       jsonLd: [
         productJsonLd({
           name: product.name,
-          description,
+          description: copy?.longDescription ?? product.longDescription ?? description,
           image: product.image,
           path: `/fr/produits/${product.id}`,
         }),
