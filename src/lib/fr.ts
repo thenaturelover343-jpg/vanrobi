@@ -71,7 +71,7 @@ export const frHero = {
 
 export const frCutawayCopy = {
   kicker: "Froid sous contrôle",
-  line1: "Un froid qui tient le pic,",
+  line1: "Un froid qui tient en période de pointe,",
   em: "pas seulement les premiers verres.",
   sub: "Nous adaptons l'unité au volume et à l'espace. Livraison et suivi depuis la Campine. Un froid qui tient au volume de pointe.",
 };
