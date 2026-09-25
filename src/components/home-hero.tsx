@@ -325,7 +325,6 @@ export function HomeHero() {
                 </li>
               ))}
             </ul>
-            <p className="hero-audience mt-3 md:mt-6">Bars · Events · Installateurs</p>
           </div>
 
           <HeroMachine story={story} />
