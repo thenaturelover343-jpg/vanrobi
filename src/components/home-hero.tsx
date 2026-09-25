@@ -325,14 +325,7 @@ export function HomeHero() {
                 </li>
               ))}
             </ul>
-            <p
-              className="hero-audience mt-3 flex flex-wrap gap-1.5 md:mt-8 md:gap-3"
-              aria-label={fr ? "Publics" : "Doelgroepen"}
-            >
-              <span>Bars</span>
-              <span>Events</span>
-              <span>Installateurs</span>
-            </p>
+            <p className="hero-audience mt-3 md:mt-6">Bars · Events · Installateurs</p>
           </div>
 
           <HeroMachine story={story} />
