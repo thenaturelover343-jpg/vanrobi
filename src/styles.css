@@ -466,28 +466,30 @@
   background: rgba(5, 8, 12, 0.84);
 }
 
-/* Glas op hero-knoppen en categorieën. Uit: experience.heroGlass = false */
+/* Glas: 15–25% foto erdoor, lichte waas, haarlijn, zachte hoek, lichte schaduw.
+   Uit: experience.heroGlass = false */
 html.hero-glass .hero-tile,
 html.hero-glass .hero-actions .btn-ghost {
-  background: rgba(8, 14, 20, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 10px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(12px) saturate(1.35);
-  -webkit-backdrop-filter: blur(12px) saturate(1.35);
+  background: rgba(8, 14, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 html.hero-glass .hero-actions .btn-ice {
-  background: rgba(122, 212, 240, 0.84);
+  background: rgba(122, 212, 240, 0.8);
+  color: #071016;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 10px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
-  backdrop-filter: blur(12px) saturate(1.4);
-  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 html.hero-glass .hero-tile:hover,
 html.hero-glass .hero-actions .btn-ghost:hover {
-  background: rgba(8, 14, 20, 0.62);
-  border-color: rgba(122, 212, 240, 0.75);
+  background: rgba(8, 14, 20, 0.88);
+  border-color: rgba(255, 255, 255, 0.4);
   color: var(--color-ice);
 }
 @media (prefers-reduced-transparency: reduce) {
