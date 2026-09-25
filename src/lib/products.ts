@@ -609,8 +609,8 @@ export const whyItems = [
  },
  {
  n: "04",
- title: "Op maat",
- text: "Van Goldy tot V200. We matchen volume, ruimte en events aan de juiste unit.",
+ title: "Van Goldy tot V500",
+ text: "Van compact over-bar (Goldy) tot V500: we matchen volume, ruimte en events aan de unit.",
  delay: "reveal-delay-3",
  },
 ];
