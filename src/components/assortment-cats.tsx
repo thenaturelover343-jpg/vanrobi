@@ -4,6 +4,7 @@ import { OptimizedImage } from "./optimized-image";
 import { useLang } from "@/lib/i18n";
 import { frAssortmentCopy } from "@/lib/fr";
 import { withBase } from "@/lib/base";
+import { cn } from "@/lib/cn";
 
 const frHubHrefs = [
   withBase("/fr/refroidisseurs-biere"),
@@ -13,6 +14,9 @@ const frHubHrefs = [
   withBase("/fr"),
   withBase("/fr/services"),
 ];
+
+/** White-studio product plates — contain so taps/coil tops stay in frame on mobile. */
+const STUDIO_CONTAIN = new Set(["01", "02", "03", "04"]);
 
 export function AssortmentCats() {
   const fr = useLang() === "fr";
@@ -40,25 +44,36 @@ export function AssortmentCats() {
           </p>
         </Reveal>
         <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((c, i) => (
-            <a
-              key={c.index}
-              href={fr ? (frHubHrefs[i] ?? withBase("/fr/produits")) : c.href}
-              className="group relative min-h-[280px] overflow-hidden bg-bg"
-            >
-              <OptimizedImage
-                src={c.image}
-                alt={c.alt}
-                loading="lazy"
-                className="image-grade absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/30 to-transparent" />
-              <span className="relative flex h-full items-end p-6 font-display text-3xl">
-                <em className="mr-3 not-italic text-ice">{c.index}</em>{" "}
-                {fr ? frAssortmentCopy.labels[i] : c.label}
-              </span>
-            </a>
-          ))}
+          {categories.map((c, i) => {
+            const studio = STUDIO_CONTAIN.has(c.index);
+            return (
+              <a
+                key={c.index}
+                href={fr ? (frHubHrefs[i] ?? withBase("/fr/produits")) : c.href}
+                className={cn(
+                  "group relative min-h-[400px] overflow-hidden md:min-h-[320px]",
+                  studio ? "bg-well" : "bg-bg",
+                )}
+              >
+                <OptimizedImage
+                  src={c.image}
+                  alt={c.alt}
+                  loading="lazy"
+                  className={cn(
+                    "absolute inset-0 h-full w-full transition-transform duration-700 group-hover:scale-[1.04]",
+                    studio
+                      ? "image-grade object-contain object-center"
+                      : "image-grade object-cover object-center",
+                  )}
+                />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-bg/55 via-bg/10 to-transparent" />
+                <span className="relative flex h-full items-end p-6 font-display text-3xl text-fg">
+                  <em className="mr-3 not-italic text-ice">{c.index}</em>{" "}
+                  {fr ? frAssortmentCopy.labels[i] : c.label}
+                </span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -13,12 +13,18 @@ function publicPath(src: string) {
   return src.startsWith(base) ? src.slice(base.length) : src;
 }
 
-function imgOnlyClass(className?: string) {
+/** Classes that must live on <img>, never on <picture> (Safari compositing). */
+const IMG_ONLY =
+  /^(object-|mix-blend-|image-grade|opacity-|transition-|duration-|ease-|delay-|group-hover:|will-change-)/;
+
+function splitImageClass(className?: string) {
   const tokens = (className ?? "").split(/\s+/).filter(Boolean);
-  const keep = tokens.filter((token) =>
-    /^(object-|mix-blend-|image-grade|opacity-|transition-|duration-|group-hover:)/.test(token),
-  );
-  return cn("h-full w-full", keep);
+  const imgTokens = tokens.filter((token) => IMG_ONLY.test(token));
+  const layoutTokens = tokens.filter((token) => !IMG_ONLY.test(token));
+  return {
+    pictureClass: cn(layoutTokens),
+    imgClass: cn("h-full w-full", imgTokens),
+  };
 }
 
 export function OptimizedImage({
@@ -41,6 +47,7 @@ export function OptimizedImage({
   const base = path.replace(/\.(jpe?g|png)$/i, "");
   const avif = modern && avifFiles.has(`${base}.avif`);
   const webp = modern && webpFiles.has(`${base}.webp`);
+  const { pictureClass, imgClass } = splitImageClass(className);
 
   const image = (
     <img
@@ -51,7 +58,7 @@ export function OptimizedImage({
       fetchPriority={priority ? "high" : fetchPriority}
       decoding="async"
       data-vr-src={src}
-      className={avif || webp ? imgOnlyClass(className) : className}
+      className={avif || webp ? imgClass : className}
       {...props}
     />
   );
@@ -59,7 +66,7 @@ export function OptimizedImage({
   if (!avif && !webp) return image;
 
   return (
-    <picture className={className}>
+    <picture className={pictureClass}>
       {avif ? <source srcSet={withBase(`${base}.avif`)} type="image/avif" /> : null}
       {webp ? <source srcSet={withBase(`${base}.webp`)} type="image/webp" /> : null}
       {image}
