@@ -8,8 +8,9 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/producten/")({
   head: () =>
     seoHead({
-      title: `Bierkoeler & ijsbankkoeler — ${products.length} producten | VanRobi`,
-      description: `${products.length} producten: ijsbankkoelers (bierkoelers, tapkoelers), serpentijnen, dispensing en onderdelen voor horeca en events in België en Nederland. Geen fustenkoelers.`,
+      title: "Bierkoeler, kegkoeler en ijsbankkoeler | VanRobi",
+      description:
+        "Bierkoeler, tapkoeler, kegkoeler, fustenkoeler en serpentijn: ijsbankkoelers koelen de leiding, kegkoelers (barrilero) koelen het vat. Catalogus voor horeca in België en Nederland.",
       path: "/producten",
       frPath: "/fr/produits",
     }),
@@ -21,8 +22,8 @@ function Catalog() {
     <PageShell>
       <PageHero
         kicker="Assortiment"
-        title="Ijsbankkoeler-catalogus. Via VanRobi."
-        lede={`${products.length} producten: koelers, serpentijnen, tap & uitschenken en onderdelen. Filter op gebruik of productgroep — voor installateurs, horeca en events in België & Nederland.`}
+        title="Bierkoeler, kegkoeler en ijsbankkoeler"
+        lede={`${products.length} producten: bierkoelers (ijsbank), kegkoelers (fustenkoelers), serpentijnen, tap & zuilen en onderdelen. Een kegkoeler koelt het vat; een bierkoeler koelt de leiding. België & Nederland.`}
       />
       <section className="mx-auto max-w-[1220px] px-5 py-16 md:px-8">
         <ProductCatalog />

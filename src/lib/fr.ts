@@ -1,6 +1,6 @@
 export const frNav = [
   { href: "/fr", label: "Accueil" },
-  { href: "/fr/produits", label: "Produits" },
+  { href: "/fr/produits", label: "Bières & fûts" },
   { href: "/fr/services", label: "Services" },
   { href: "/fr/a-propos", label: "À propos" },
   { href: "/fr/faq", label: "FAQ" },
@@ -49,10 +49,10 @@ export const frHome = {
 };
 
 export const frHero = {
-  kicker: "Refroidisseurs à banquise · Belgique & Pays-Bas",
+  kicker: "Refroidisseurs de bière · Refroidisseurs de fût · Belgique & Pays-Bas",
   slogan: "Froid stable. Chaque verre, chaque service.",
-  title: "Refroidisseurs à banquise professionnels pour l'horeca",
-  lede: "VanRobi, spécialiste des refroidisseurs à banquise pour la Belgique et les Pays-Bas. Froid professionnel pour bars, restaurants, events et installateurs.",
+  title: "Refroidisseurs de bière et de fût pour l'horeca",
+  lede: "Refroidisseurs à banquise pour la ligne, refroidisseurs de fût pour le fût, plus robinets, colonnes et serpentins. Belgique et Pays-Bas.",
   cta: "Demander un devis",
   ctaSecondary: "Voir les machines",
   scroll: "Faites défiler pour former la banquise",
@@ -60,6 +60,13 @@ export const frHero = {
   tap: "FROID DE TIRAGE STABLE",
   iceReserve: "Réserve de glace",
   flow: "Débit",
+  tiles: [
+    { label: "Refroidisseurs de bière", hash: "bierkoelers" },
+    { label: "Refroidisseurs de fût", hash: "kegkoelers" },
+    { label: "Serpentins", hash: "serpentijnen" },
+    { label: "Robinets et colonnes", hash: "tap-zuilen" },
+    { label: "Pièces", hash: "onderdelen" },
+  ],
 };
 
 export const frCutawayCopy = {
@@ -89,11 +96,11 @@ export const frAssortmentCopy = {
   kicker: "Assortiment",
   title: "L'assortiment",
   em: "complet",
-  lede: "Refroidisseurs, serpentins, tirage et pièces — tout l'assortiment.",
+  lede: "Refroidisseurs de bière, de fût, serpentins, robinets, colonnes et pièces — tout l'assortiment.",
   labels: [
-    "Refroidisseurs",
+    "Refroidisseurs de bière",
     "Serpentins",
-    "Tirage",
+    "Robinets et colonnes",
     "Pièces",
     "Bars & restaurants",
     "Service sur mesure",
@@ -167,9 +174,10 @@ export const frUseLabels = {
 } as const;
 
 export const frGroupLabels = {
-  koelers: "Refroidisseurs",
+  koelers: "Refroidisseurs de bière",
+  kegkoelers: "Refroidisseurs de fût",
   serpentijnen: "Serpentins",
-  dispensing: "Tirage",
+  dispensing: "Robinets et colonnes",
   onderdelen: "Pièces",
   service: "Service",
   overig: "Autre",
@@ -298,8 +306,8 @@ export const frGallery = {
 
 export const frProductsIntro = {
   eyebrow: "Catalogue",
-  title: "Catalogue de refroidisseurs.",
-  lede: "Refroidisseurs, serpentins, tirage et pièces. Filtrez par usage ou famille — pour installateurs, horeca et events.",
+  title: "Refroidisseur de bière, de fût et à banquise.",
+  lede: "Refroidisseurs de bière (banquise), refroidisseurs de fût (barrilero), serpentins, robinets, colonnes et pièces. Un refroidisseur de fût refroidit le fût ; un refroidisseur de bière refroidit la ligne.",
   helpTitle: "Besoin d'aide pour choisir ?",
 };
 
@@ -342,6 +350,13 @@ export const frProductCopy: Record<
     description: "Refroidisseur mobile high volume pour festivals et grands events.",
     longDescription:
       "La V200 portable combine capacité high volume et mobilité. Pour festivals, stades et grands bars temporaires sans installation fixe.",
+  },
+  "barrilero-doble": {
+    badge: "Refroidisseur de fût · Keg",
+    description:
+      "Maintient le fût à température avant le tirage. Modèle double ; il existe aussi une version individuelle.",
+    longDescription:
+      "Maintient le fût à température avant le tirage. Modèle double ; il existe aussi une version individuelle. Un refroidisseur de fût refroidit le fût lui-même, pas la ligne — en complément de nos refroidisseurs à banquise pour la ligne de tirage.",
   },
 };
 
@@ -442,9 +457,14 @@ export const frFaq = {
   lede: "Si ce n'est pas dans cette liste, un e-mail va plus vite que de deviner. Machines via VanRobi, maintenance via Taponderhoud.",
   items: [
     {
+      question: "Un refroidisseur à banquise est-il la même chose qu'un refroidisseur de bière ou de fût ?",
+      answer:
+        "Un refroidisseur à banquise est ce que la plupart des établissements appellent un refroidisseur de bière ou de tirage : serpentins dans un bain d'eau glacée. Un refroidisseur de fût (keg / barrilero) refroidit le fût lui-même. VanRobi propose les deux : banquise pour la ligne et Barrilero Doble comme refroidisseur de fût.",
+    },
+    {
       question: "VanRobi est-il le spécialiste des refroidisseurs à banquise pour la BE et les NL ?",
       answer:
-        "Oui. VanRobi est le spécialiste des refroidisseurs à banquise pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu, avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
+        "Oui. VanRobi est spécialiste des refroidisseurs de bière (banquise) et de fût pour la Belgique et les Pays-Bas. Vous achetez via un canal reconnu, avec specs correctes, suivi de garantie et support local depuis Kasterlee (Tielen).",
     },
     {
       question: "Qui assure la maintenance de mon installation de tirage ?",
@@ -496,7 +516,7 @@ export const frCta = {
 
 export const frFooter = {
   blurb:
-    "Spécialiste des refroidisseurs à banquise professionnels pour la Belgique et les Pays-Bas. Livraison et maintenance via Taponderhoud.",
+    "Spécialiste des refroidisseurs de bière et de fût pour la Belgique et les Pays-Bas. Livraison et maintenance via Taponderhoud.",
   nav: "Navigation",
   machines: "Machines",
   catalog: "Catalogue complet",

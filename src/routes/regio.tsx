@@ -29,7 +29,7 @@ const regions = [
   },
   {
     name: "Brussel",
-    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal, geen grijze import.",
+    text: "Tweetalige horeca en events in Brussel. Professioneel VanRobi-kanaal met lokale opvolging.",
   },
   {
     name: "Oost-Vlaanderen",

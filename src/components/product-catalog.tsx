@@ -24,11 +24,23 @@ const useFilters: Array<ProductUse | "all"> = ["all", "horeca", "events", "onder
 
 const groupFilters: ProductGroup[] = [
   "koelers",
+  "kegkoelers",
   "serpentijnen",
   "dispensing",
   "onderdelen",
   "service",
 ];
+
+/** Hash aliases so home tiles can use search words (#bierkoelers → koelers). */
+const hashAliases: Record<string, FilterKey> = {
+  bierkoelers: "koelers",
+  ijsbankkoelers: "koelers",
+  kegkoelers: "kegkoelers",
+  fustenkoelers: "kegkoelers",
+  barrileros: "kegkoelers",
+  "tap-zuilen": "dispensing",
+  tap: "dispensing",
+};
 
 export function ProductCatalog() {
   const fr = useLang() === "fr";
@@ -47,15 +59,22 @@ export function ProductCatalog() {
   };
 
   useEffect(() => {
-    const raw = (hash || "").replace(/^#/, "") as FilterKey;
+    const raw = (hash || "").replace(/^#/, "");
+    if (!raw) return;
+    const resolved = (hashAliases[raw] ?? raw) as FilterKey;
     const allowed: FilterKey[] = ["all", ...useFilters.slice(1), ...groupFilters];
-    if (raw && allowed.includes(raw)) setActive(raw);
+    if (allowed.includes(resolved)) setActive(resolved);
   }, [hash]);
 
   const selectFilter = (f: FilterKey) => {
     setActive(f);
     const base = fr ? "/fr/produits" : "/producten";
-    const next = f === "all" || useFilters.includes(f as ProductUse | "all") ? base : `${base}#${f}`;
+    const hashFor =
+      f === "koelers" ? "bierkoelers" : f === "dispensing" ? "tap-zuilen" : f;
+    const next =
+      f === "all" || useFilters.includes(f as ProductUse | "all")
+        ? base
+        : `${base}#${hashFor}`;
     window.history.replaceState(null, "", withBase(next));
   };
 

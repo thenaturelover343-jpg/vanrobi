@@ -20,9 +20,9 @@ import { seoHead } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     seoHead({
-      title: "VanRobi — Bierkoeler & ijsbankkoeler voor horeca | België & Nederland",
+      title: "Bierkoeler en kegkoeler kopen | VanRobi België & Nederland",
       description:
-        "Professionele bierkoelers en ijsbankkoelers voor bars, restaurants en events in België en Nederland. Ook gezocht als tapkoeler of doorstroomkoeler. Een kegkoeler (fustenkoeler) koelt het vat; wij leveren ijsbankkoeling in de leiding.",
+        "Bierkoelers (ijsbankkoelers) voor de leiding, kegkoelers / fustenkoelers voor het vat, plus serpentijnen, kranen en zuilen. België en Nederland.",
       path: "/",
       frPath: "/fr",
     }),
@@ -48,7 +48,11 @@ function Home() {
               <p className="kicker">Gidsen</p>
               <h2 className="mt-4 text-4xl md:text-6xl">Kiezen met kennis.</h2>
               <p className="mt-5 max-w-xl text-muted">
-                Uitleg, checklists en vergelijkingen — ijsbankkoeler, bierkoeler, tapkoeler, kegkoeler, dry cooler, spiralen, onder-bar en events.
+                Uitleg, checklists en vergelijkingen — ijsbankkoeler, bierkoeler, tapkoeler, kegkoeler, dry cooler, spiralen, onder-bar en events. Start met{" "}
+                <Link to="/gids/$slug" params={{ slug: "bierkoeler-kegkoeler-of-ijsbank" }} className="text-ice hover:underline">
+                  bierkoeler, kegkoeler of ijsbankkoeler?
+                </Link>
+                .
               </p>
             </Reveal>
             <div className="mt-12 grid gap-px bg-line md:grid-cols-2">

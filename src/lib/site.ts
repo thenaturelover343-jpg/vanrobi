@@ -27,7 +27,7 @@ export const site = {
 } as const;
 
 export const nav = [
-  { href: "/producten", label: "Producten" },
+  { href: "/producten", label: "Bier- & kegkoelers" },
   { href: "/vergelijk", label: "Vergelijk" },
   { href: "/diensten", label: "Diensten" },
   { href: "/gids", label: "Gids" },

@@ -37,7 +37,7 @@ function OverOns() {
             VanRobi staat voor professionele ijsbankkoelers met industriële kwaliteit en heldere specs. Wij zijn het aanspreekpunt voor België en Nederland: selectie, advies en levering vanuit één loket, met lokale opvolging en onderhoud via Taponderhoud.
           </p>
           <p>
-            Geen grijze import. Wel heldere specs, betrouwbare levering en een lokale partner die de bar begrijpt, van vaste horeca tot festivalterrein.
+            Heldere specs, betrouwbare levering en een lokale partner die de bar begrijpt, van vaste horeca tot festivalterrein.
           </p>
         </div>
         <div className="prose">
@@ -81,7 +81,7 @@ function OverOns() {
         <div className="prose mx-auto max-w-[46rem]">
           <h2>Waarom VanRobi als merk?</h2>
           <p>
-            Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent — geen grijze import. VanRobi levert ijsbankkoelers en bierkoelers vanuit {contact.address.line}. Regio's: {contact.regions}, plus Nederland.
+            Correcte specs, garantieopvolging en iemand die BE/NL-praktijk kent. VanRobi levert bierkoelers en kegkoelers vanuit {contact.address.line}. Regio's: {contact.regions}, plus Nederland.
           </p>
           <h3>Assortiment & kennis</h3>
           <p>

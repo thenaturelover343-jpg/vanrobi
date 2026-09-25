@@ -24,7 +24,7 @@ const services = [
   {
     n: "02",
     title: "Levering BE & NL",
-    text: "Officiële VanRobi-distributie van ijsbankkoelers voor België en Nederland. Geen grijze import: juiste specs, garantie en opvolging.",
+    text: "Officiële VanRobi-distributie van bierkoelers en kegkoelers voor België en Nederland. Juiste specs, garantie en opvolging.",
   },
   {
     n: "03",

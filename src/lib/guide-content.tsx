@@ -37,7 +37,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h2>Wanneer kiezen voor VanRobi?</h2>
  <ul className="guide-list">
  <li>U zoekt een dedicated ijsbankkoeler met heldere debiet- en ijsspecs.</li>
- <li>U wilt het merk VanRobi met lokale opvolging in BE/NL (geen grijze import).</li>
+ <li>U wilt het merk VanRobi met lokale opvolging in BE/NL.</li>
  <li>Events/festivals: portable-modellen (V100/V200 portable, Goldy).</li>
  <li>Onderhoud en reiniging dichtbij via Taponderhoud.</li>
  </ul>
@@ -401,7 +401,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h3>3. Lokaal kanaal telt</h3>
  <p>
  Officiële distributie betekent correcte specs, garantieopvolging en
- iemand die BE/NL-praktijk kent, geen grijze import. Service en
+ iemand die BE/NL-praktijk kent. Service en
  reiniging lopen via Taponderhoud (taponderhoud.be), vanuit dezelfde
  regio.
  </p>
@@ -471,7 +471,7 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <Reveal className="prose guide-prose">
  <h2>Specialist in ijsbankkoelers BE &amp; NL</h2>
  <p>
- <strong>VanRobi</strong> is de specialist in professionele ijsbankkoelers voor <strong>België en Nederland</strong>. U koopt via een erkend kanaal: juiste machine-specs, levering, advies en lokale opvolging, zonder grijze import of onduidelijke documentatie.
+ <strong>VanRobi</strong> is de specialist in professionele ijsbankkoelers voor <strong>België en Nederland</strong>. U koopt via een erkend kanaal: juiste machine-specs, levering, advies en lokale opvolging, zonder onduidelijke documentatie.
  </p>
  <h2>Wat betekent het merk VanRobi?</h2>
  <ul className="guide-list">
@@ -1099,21 +1099,20 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  getapt wordt. Dat is het systeem van Goldy, Picky, V100, V200, V300
  en V500, over-bar of onder-bar.
  </p>
- <h2>Wat een kegkoeler niet is</h2>
+ <h2>Wat een kegkoeler is</h2>
  <p>
- Een <strong>kegkoeler</strong> (fustenkoeler, vatenkoeler) is een
- gekoelde kast voor het fust, vaak onder de tap of in de kelder. Het
- bier staat koud in het vat. Dat is nuttig voor houdbaarheid, maar het
- is geen ijsbank en het koelt de leiding naar de kraan niet op dezelfde
- manier. VanRobi verkoopt geen fustenkoelkast. Zoekt u koeling in de
- leiding, met buffer bij pieken, dan is een ijsbankkoeler de juiste
- categorie.
+ Een <strong>kegkoeler</strong> (fustenkoeler, vatenkoeler, barrilero) is een
+ koelunit voor het fust: die brengt het vat op temperatuur vóór het tappen.
+ Dat is geen ijsbank en koelt de leiding naar de kraan niet op dezelfde
+ manier. In ons assortiment: de <strong>Barrilero Doble</strong> (dubbel
+ model; er is ook een individuele uitvoering). Geen maten online — vraag
+ advies bij offerte.
  </p>
  <h2>Welke term past bij uw vraag</h2>
  <ul className="guide-list">
  <li>Koud bier aan de kraan, ook bij een piek → ijsbankkoeler (bierkoeler, tapkoeler).</li>
  <li>Compact, zonder ijsreserve → dry cooler / droogkoeler.</li>
- <li>Het vat zelf koud houden → kegkoeler of fustenkoeler, een ander toestel.</li>
+ <li>Het vat zelf koud houden → kegkoeler / fustenkoeler (Barrilero Doble).</li>
  </ul>
  <p>
  Basis:{" "}
@@ -1127,8 +1126,9 @@ export function GuideBody({ slug }: { slug: string }): ReactNode {
  <h2>Conclusie & volgende stap</h2>
  <p>
  Zoekterm en machine zijn niet hetzelfde. Een bierkoeler bij VanRobi is
- een ijsbankkoeler. Een kegkoeler is dat niet. Mail aantal kranen,
- piekvolume en of het vat al gekoeld staat naar{" "}
+ meestal een ijsbankkoeler (leiding). Een kegkoeler / barrilero koelt het
+ vat. Mail aantal kranen, piekvolume en of u leiding- of vatkoeling nodig
+ hebt naar{" "}
  <a href="mailto:info@vanrobi.be">info@vanrobi.be</a>.
  </p>
  <p>

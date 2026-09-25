@@ -27,7 +27,7 @@ export function AssortmentCats() {
           <p className="mt-5 max-w-lg text-muted">
             {fr
               ? frAssortmentCopy.lede
-              : "Ijsbankkoelers, serpentijnen, tap & uitschenken en onderdelen, het volledige assortiment via VanRobi."}
+              : "Bierkoelers, kegkoelers, serpentijnen, tap & zuilen en onderdelen — het volledige assortiment."}
           </p>
         </Reveal>
         <div className="mt-12 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">

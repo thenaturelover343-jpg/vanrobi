@@ -5,6 +5,7 @@ export type ProductUse = "horeca" | "events" | "onder-bar" | "mobiel";
 
 export type ProductGroup =
   | "koelers"
+  | "kegkoelers"
   | "serpentijnen"
   | "dispensing"
   | "onderdelen"
@@ -38,9 +39,10 @@ export const useLabels: Record<ProductUse, string> = {
 };
 
 export const groupLabels: Record<ProductGroup, string> = {
-  koelers: "Koelers",
+  koelers: "Bierkoelers",
+  kegkoelers: "Kegkoelers",
   serpentijnen: "Serpentijnen",
-  dispensing: "Tap & uitschenken",
+  dispensing: "Tap & zuilen",
   onderdelen: "Onderdelen",
   service: "Service",
   overig: "Overig",
@@ -53,11 +55,11 @@ const productsCore: Product[] = [
  name: "Goldy",
  badge: "Events · Over-bar",
  description:
- "Compacte over-bar ijsbankkoeler voor events, beurzen en craftbars, met gepatenteerde opbouw via VanRobi.",
+ "Compacte over-bar ijsbankkoeler voor events, beurzen en craftbars.",
  longDescription:
  "De Goldy is de compacte over-bar ijsbankkoeler in het VanRobi-assortiment: ideaal wanneer ruimte schaars is en de bar zichtbaar mag blijven. Perfect voor events, craftbars en pop-ups. Via VanRobi geleverd met advies over spiralen, debiet en opstelling.",
  image: withBase("/assets/products-official/goldy.jpg"),
- alt: "Goldy over-bar ijsbankkoeler met kranen, bierkoeler via VanRobi België",
+ alt: "Goldy bierkoeler, over-bar ijsbankkoeler",
  cropClass: "crop-goldy",
  uses: ["events", "mobiel", "horeca"],
  featured: true,
@@ -80,7 +82,7 @@ const productsCore: Product[] = [
  longDescription:
  "De Picky is de kleinste over-bar ijsbankkoeler in ons assortiment, gemaakt voor krappe ruimtes zonder in te boeten op professionele koeling. Ideaal voor foodtrucks, pop-ups en compacte craftbars.",
  image: withBase("/assets/products-catalog/picky.jpg"),
- alt: "Picky compacte over-bar ijsbankkoeler voor events, via VanRobi",
+ alt: "Picky bierkoeler, compacte over-bar ijsbankkoeler",
  cropClass: "crop-picky",
  uses: ["events", "mobiel", "horeca"],
  featured: true,
@@ -124,7 +126,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V100 is het werkpaard voor restaurants en bars. Medium formaat, stabiel debiet en voldoende ijsreserve voor dagelijks horecagebruik. Ook als horizontale variant, VanRobi helpt bij de juiste keuze.",
  image: withBase("/assets/products-official/v100.jpg"),
- alt: "V100 onder-bar ijsbankkoeler / bierkoeler voor horeca, via VanRobi",
+ alt: "V100 bierkoeler, onder-bar ijsbankkoeler",
  cropClass: "crop-v100",
  uses: ["horeca", "onder-bar"],
  featured: true,
@@ -147,7 +149,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V100 portable brengt V100-capaciteit naar het festivalterrein. Op wielen, snel opgebouwd, optioneel met tapzuil. Ideaal voor cateraars en tijdelijke bars.",
  image: withBase("/assets/products-official/v100-portable.jpg"),
- alt: "V100 portable mobiele bierkoeler op wielen voor festivals, via VanRobi",
+ alt: "V100 portable bierkoeler voor festivals",
  cropClass: "crop-v100-portable",
  uses: ["events", "mobiel"],
  featured: true,
@@ -170,7 +172,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V200 is gebouwd voor drukke bars. Maximale ijsreserve en hoog debiet. Ook horizontaal leverbaar, VanRobi matcht volume, ruimte en openingsuren.",
  image: withBase("/assets/products-official/v200.jpg"),
- alt: "V200 high-volume onder-bar bierkoeler, via VanRobi België & Nederland",
+ alt: "V200 bierkoeler, high-volume onder-bar",
  cropClass: "crop-v200",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -193,7 +195,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V200 portable combineert high-volume capaciteit met mobiliteit. Voor festivals, stadions en grote tijdelijke bars die geen vaste installatie kunnen plaatsen.",
  image: withBase("/assets/products-catalog/v200-portable.jpg"),
- alt: "V200 portable high-volume event bierkoeler, via VanRobi",
+ alt: "V200 portable bierkoeler voor events",
  cropClass: "crop-v200-portable",
  uses: ["events", "mobiel"],
  featured: true,
@@ -216,7 +218,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V300 levert hogere capaciteit voor drukke horeca. Meer spiralen, meer debiet, wanneer de V200 net niet genoeg is.",
  image: withBase("/assets/products-catalog/v300.jpg"),
- alt: "V300 onder-bar ijsbankkoeler, via VanRobi",
+ alt: "V300 bierkoeler, onder-bar ijsbankkoeler",
  cropClass: "crop-v300",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -285,7 +287,7 @@ const productsCore: Product[] = [
  longDescription:
  "De V500 is het topmodel in ons assortiment voor extreme volumes: 100 L ijsreservoir, 60 kg ijs, tot 282 L/u. Ook als speciale tankkoelvariant. VanRobi adviseert bij dimensionering.",
  image: withBase("/assets/products-catalog/v500.jpg"),
- alt: "V500 high-volume ijsbankkoeler, via VanRobi",
+ alt: "V500 bierkoeler, high-volume ijsbankkoeler",
  cropClass: "crop-v500",
  uses: ["horeca", "onder-bar", "events"],
  featured: true,
@@ -301,14 +303,14 @@ const productsCore: Product[] = [
  {
  id: "barrilero-doble",
  index: "12",
- name: "Dubbele vatkoeler",
- badge: "Vatkoeling · Horeca",
+ name: "Barrilero Doble",
+ badge: "Kegkoeler · Fustenkoeler",
  description:
- "Dubbele vatkoeler voor bieropslag dicht bij de tap.",
+ "Koelt het vat op temperatuur vóór het tappen. Dubbel model; er is ook een individuele uitvoering.",
  longDescription:
- "De dubbele vatkoeler houdt twee vaten op temperatuur, dicht bij de taplijn. Voor bars die korte leidingen en stabiele vatkoeling willen.",
+ "Koelt het vat op temperatuur vóór het tappen. Dubbel model; er is ook een individuele uitvoering. Een kegkoeler / fustenkoeler koelt het vat zelf, niet de leiding — naast onze ijsbankkoelers (bierkoelers) voor de taplijn.",
  image: withBase("/assets/products-catalog/barrilero-doble.jpg"),
- alt: "Dubbele vatkoeler, via VanRobi",
+ alt: "Barrilero Doble kegkoeler",
  cropClass: "crop-barrilero-doble",
  uses: ["horeca", "onder-bar"],
  featured: false,
@@ -508,7 +510,7 @@ const coreGroupById: Record<string, ProductGroup> = {
   v90: "koelers",
   h50: "koelers",
   v500: "koelers",
-  "barrilero-doble": "koelers",
+  "barrilero-doble": "kegkoelers",
   "unidad-condensadora": "onderdelen",
   "g8-agua-aire": "onderdelen",
   "g8-aire": "onderdelen",
@@ -537,11 +539,11 @@ export function getProduct(id: string): Product | undefined {
 
 export const categories = [
  {
- href: withBase("/producten#koelers"),
+ href: withBase("/producten#bierkoelers"),
  image: withBase("/assets/cats/koelers.jpg"),
- alt: "Ijsbankkoelers en bierkoelers in het VanRobi-assortiment",
+ alt: "Bierkoelers en ijsbankkoelers in het VanRobi-assortiment",
  index: "01",
- label: "Ijsbankkoelers",
+ label: "Bierkoelers",
  delay: "",
  },
  {
@@ -553,11 +555,11 @@ export const categories = [
  delay: "reveal-delay-1",
  },
  {
- href: withBase("/producten#dispensing"),
+ href: withBase("/producten#tap-zuilen"),
  image: withBase("/assets/cats/dispensing.jpg"),
  alt: "Tapzuilen, kranen en lekbakken voor horeca",
  index: "03",
- label: "Tap & uitschenken",
+ label: "Tap & zuilen",
  delay: "reveal-delay-2",
  },
  {
@@ -591,7 +593,7 @@ export const whyItems = [
  {
  n: "01",
  title: "Merk VanRobi",
- text: "VanRobi is het merk voor ijsbankkoelers in België en Nederland. Heldere specs, geen grijze import.",
+ text: "VanRobi is het merk voor bierkoelers en kegkoelers in België en Nederland. Heldere specs, lokale opvolging.",
  delay: "",
  },
  {

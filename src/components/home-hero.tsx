@@ -259,17 +259,17 @@ export function HomeHero() {
 
         <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1220px] flex-col justify-end px-5 pb-20 pt-28 md:flex-row md:items-end md:justify-between md:px-8 md:pb-24">
           <div className="hero-copy max-w-xl">
-            <p className="kicker">{fr ? frHero.kicker : "Ijsbankkoelers · België & Nederland"}</p>
+            <p className="kicker">{fr ? frHero.kicker : "Bierkoelers · Kegkoelers · België & Nederland"}</p>
             <p className="hero-slogan mt-5 font-display text-2xl italic text-ice md:text-3xl">
               {fr ? frHero.slogan : tagline()}
             </p>
             <h1 className="mt-5 font-display text-4xl leading-[1.08] text-white md:text-5xl">
-              {fr ? frHero.title : "Professionele ijsbankkoelers voor horeca"}
+              {fr ? frHero.title : "Bierkoelers en kegkoelers voor horeca"}
             </h1>
             <p className="hero-lede mt-6 max-w-md text-[1.05rem] font-medium leading-relaxed">
               {fr
                 ? frHero.lede
-                : "Via VanRobi, specialist in ijsbankkoelers voor België en Nederland. Professionele koeling voor bars, restaurants, events en installateurs die stabiele tapkoude nodig hebben."}
+                : "Ijsbankkoelers voor de leiding, fustenkoelers voor het vat, plus kranen, zuilen en serpentijnen. België en Nederland."}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <MagneticCta>
@@ -284,6 +284,25 @@ export function HomeHero() {
                 {fr ? frHero.ctaSecondary : "Bekijk machines"}
               </Link>
             </div>
+            <ul className="hero-tiles mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5" aria-label={fr ? "Assortiment" : "Assortiment"}>
+              {(fr ? frHero.tiles : [
+                { label: "Bierkoelers", hash: "bierkoelers" },
+                { label: "Kegkoelers", hash: "kegkoelers" },
+                { label: "Serpentijnen", hash: "serpentijnen" },
+                { label: "Tap & zuilen", hash: "tap-zuilen" },
+                { label: "Onderdelen", hash: "onderdelen" },
+              ]).map((tile) => (
+                <li key={tile.hash}>
+                  <Link
+                    to={fr ? "/fr/produits" : "/producten"}
+                    hash={tile.hash}
+                    className="hero-tile"
+                  >
+                    {tile.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
             <p className="mt-6 flex gap-5 text-[0.68rem] tracking-[0.16em] text-white/80 uppercase">
               <span>Bars</span>
               <span>Events</span>
